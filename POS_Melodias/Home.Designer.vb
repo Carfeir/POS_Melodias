@@ -23,31 +23,35 @@ Partial Class Home
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        Me.Panel7.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel7.SuspendLayout()
+        Me.Panel8.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Coral
+        Me.Panel1.Controls.Add(Me.Panel8)
         Me.Panel1.Controls.Add(Me.Panel7)
         Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.Panel6)
@@ -60,6 +64,26 @@ Partial Class Home
         Me.Panel1.Size = New System.Drawing.Size(200, 450)
         Me.Panel1.TabIndex = 0
         '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.DarkRed
+        Me.Panel7.Controls.Add(Me.Label7)
+        Me.Panel7.ForeColor = System.Drawing.Color.White
+        Me.Panel7.Location = New System.Drawing.Point(12, 392)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(176, 46)
+        Me.Panel7.TabIndex = 5
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(36, 16)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(118, 19)
+        Me.Label7.TabIndex = 5
+        Me.Label7.Text = "Cerrar Sesion"
+        '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.MistyRose
@@ -68,6 +92,16 @@ Partial Class Home
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(176, 46)
         Me.Panel5.TabIndex = 4
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(50, 13)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(64, 19)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Ventas"
         '
         'Panel6
         '
@@ -78,6 +112,16 @@ Partial Class Home
         Me.Panel6.Size = New System.Drawing.Size(176, 46)
         Me.Panel6.TabIndex = 3
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(50, 14)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(73, 19)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Clientes"
+        '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.MistyRose
@@ -87,6 +131,16 @@ Partial Class Home
         Me.Panel4.Size = New System.Drawing.Size(176, 46)
         Me.Panel4.TabIndex = 2
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(50, 14)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(110, 19)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Proveedores"
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.MistyRose
@@ -95,6 +149,16 @@ Partial Class Home
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(176, 46)
         Me.Panel3.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(52, 17)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(89, 19)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Productos"
         '
         'Label1
         '
@@ -127,65 +191,24 @@ Partial Class Home
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Inicio"
         '
-        'Label3
+        'Panel8
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(52, 17)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 19)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Productos"
+        Me.Panel8.BackColor = System.Drawing.Color.MistyRose
+        Me.Panel8.Controls.Add(Me.Label8)
+        Me.Panel8.Location = New System.Drawing.Point(12, 322)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(176, 46)
+        Me.Panel8.TabIndex = 6
         '
-        'Label4
+        'Label8
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(50, 14)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(110, 19)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Proveedores"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(50, 14)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 19)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Clientes"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(50, 13)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(64, 19)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Ventas"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(36, 16)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(118, 19)
-        Me.Label7.TabIndex = 5
-        Me.Label7.Text = "Cerrar Sesion"
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.DarkRed
-        Me.Panel7.Controls.Add(Me.Label7)
-        Me.Panel7.ForeColor = System.Drawing.Color.White
-        Me.Panel7.Location = New System.Drawing.Point(12, 392)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(176, 46)
-        Me.Panel7.TabIndex = 5
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Miriam", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(50, 13)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(79, 19)
+        Me.Label8.TabIndex = 5
+        Me.Label8.Text = "Usuarios"
         '
         'Home
         '
@@ -199,6 +222,8 @@ Partial Class Home
         Me.Text = "Home"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel6.ResumeLayout(False)
@@ -209,8 +234,8 @@ Partial Class Home
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -229,4 +254,6 @@ Partial Class Home
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Label8 As Label
 End Class
