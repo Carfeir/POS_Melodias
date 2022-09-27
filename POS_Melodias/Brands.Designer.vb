@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Categories
+Partial Class Brands
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -27,7 +27,7 @@ Partial Class Categories
         Me.Button4 = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.CategoriaID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.MarcaID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -55,7 +55,7 @@ Partial Class Categories
         '
         Me.GroupBox3.Controls.Add(Me.Button3)
         Me.GroupBox3.Controls.Add(Me.Button4)
-        Me.GroupBox3.Location = New System.Drawing.Point(544, 222)
+        Me.GroupBox3.Location = New System.Drawing.Point(541, 222)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(126, 89)
         Me.GroupBox3.TabIndex = 162
@@ -83,12 +83,12 @@ Partial Class Categories
         '
         'ListView1
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.CategoriaID, Me.ColumnHeader2})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.MarcaID, Me.ColumnHeader2})
         Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(15, 208)
+        Me.ListView1.Location = New System.Drawing.Point(12, 208)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(501, 153)
         Me.ListView1.TabIndex = 161
@@ -99,10 +99,10 @@ Partial Class Categories
         '
         Me.ColumnHeader1.Width = 0
         '
-        'CategoriaID
+        'MarcaID
         '
-        Me.CategoriaID.Text = "ID"
-        Me.CategoriaID.Width = 104
+        Me.MarcaID.Text = "ID"
+        Me.MarcaID.Width = 104
         '
         'ColumnHeader2
         '
@@ -114,7 +114,7 @@ Partial Class Categories
         '
         Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(15, 148)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 148)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(501, 46)
         Me.GroupBox2.TabIndex = 160
@@ -131,7 +131,7 @@ Partial Class Categories
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Button2.Location = New System.Drawing.Point(567, 335)
+        Me.Button2.Location = New System.Drawing.Point(564, 335)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(79, 26)
         Me.Button2.TabIndex = 159
@@ -146,12 +146,12 @@ Partial Class Categories
         Me.GroupBox1.Controls.Add(Me.txtCategoryID)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(15, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(501, 106)
         Me.GroupBox1.TabIndex = 158
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Detalles de Categoria"
+        Me.GroupBox1.Text = "Detalles de Marca"
         '
         'Button1
         '
@@ -207,7 +207,7 @@ Partial Class Categories
         Me.panel1.Controls.Add(Me.btnDelete)
         Me.panel1.Controls.Add(Me.btnSave)
         Me.panel1.Controls.Add(Me.Label1)
-        Me.panel1.Location = New System.Drawing.Point(567, 12)
+        Me.panel1.Location = New System.Drawing.Point(564, 12)
         Me.panel1.Name = "panel1"
         Me.panel1.Size = New System.Drawing.Size(103, 176)
         Me.panel1.TabIndex = 157
@@ -273,12 +273,12 @@ Partial Class Categories
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "."
         '
-        'Categories
+        'Brands
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(684, 373)
+        Me.ClientSize = New System.Drawing.Size(684, 374)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.GroupBox2)
@@ -286,8 +286,8 @@ Partial Class Categories
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.panel1)
         Me.Font = New System.Drawing.Font("Miriam", 8.25!)
-        Me.Name = "Categories"
-        Me.Text = "Categoria"
+        Me.Name = "Brands"
+        Me.Text = "Marca"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -304,7 +304,7 @@ Partial Class Categories
     Friend WithEvents Button4 As Button
     Friend WithEvents ListView1 As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents CategoriaID As ColumnHeader
+    Friend WithEvents MarcaID As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents TextBox1 As TextBox

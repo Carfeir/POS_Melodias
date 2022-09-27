@@ -45,11 +45,14 @@ Partial Class Registration
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.panel1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -270,14 +273,32 @@ Partial Class Registration
         Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader4.Width = 186
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 260)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(382, 46)
+        Me.GroupBox2.TabIndex = 148
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Buscador"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(40, 16)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(325, 20)
+        Me.TextBox2.TabIndex = 53
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.Button2)
         Me.GroupBox3.Controls.Add(Me.Button3)
-        Me.GroupBox3.Location = New System.Drawing.Point(14, 262)
+        Me.GroupBox3.Location = New System.Drawing.Point(414, 251)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(254, 50)
-        Me.GroupBox3.TabIndex = 146
+        Me.GroupBox3.Size = New System.Drawing.Size(254, 55)
+        Me.GroupBox3.TabIndex = 150
         Me.GroupBox3.TabStop = False
         '
         'Button2
@@ -304,9 +325,11 @@ Partial Class Registration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 559)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.panel1)
@@ -316,6 +339,8 @@ Partial Class Registration
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.panel1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -345,6 +370,8 @@ Partial Class Registration
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader7 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button

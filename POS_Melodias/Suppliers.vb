@@ -1,3 +1,3 @@
-﻿Public Class suppliers
+﻿Public Class Suppliers
 
 End Class

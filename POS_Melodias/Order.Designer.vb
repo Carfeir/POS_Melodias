@@ -34,14 +34,13 @@ Partial Class Order
         Me.Label17 = New System.Windows.Forms.Label()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ProductCode = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ProductID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.NewRecord = New System.Windows.Forms.Button()
@@ -53,11 +52,13 @@ Partial Class Order
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtOrderNo = New System.Windows.Forms.TextBox()
         Me.dtpOrderDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.txtCustomerNo = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.txtTotalAmount = New System.Windows.Forms.TextBox()
-        Me.txtPacketsPerCarton = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -66,24 +67,26 @@ Partial Class Order
         Me.txtProductName = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtWeight = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtAvailableCartons = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtCustomerNo = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnRemove
         '
         Me.btnRemove.Enabled = False
         Me.btnRemove.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnRemove.Location = New System.Drawing.Point(875, 536)
+        Me.btnRemove.Location = New System.Drawing.Point(917, 333)
         Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Size = New System.Drawing.Size(158, 29)
+        Me.btnRemove.Size = New System.Drawing.Size(102, 44)
         Me.btnRemove.TabIndex = 145
         Me.btnRemove.Text = "Borrar"
         Me.btnRemove.UseVisualStyleBackColor = True
@@ -99,24 +102,24 @@ Partial Class Order
         Me.Panel2.Controls.Add(Me.Label15)
         Me.Panel2.Controls.Add(Me.txtSubTotal)
         Me.Panel2.Controls.Add(Me.Label17)
-        Me.Panel2.Location = New System.Drawing.Point(791, 373)
+        Me.Panel2.Location = New System.Drawing.Point(791, 401)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(323, 125)
+        Me.Panel2.Size = New System.Drawing.Size(323, 106)
         Me.Panel2.TabIndex = 144
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(116, 82)
+        Me.txtTotal.Location = New System.Drawing.Point(116, 69)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(111, 20)
+        Me.txtTotal.Size = New System.Drawing.Size(111, 19)
         Me.txtTotal.TabIndex = 3
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label16.Location = New System.Drawing.Point(19, 83)
+        Me.Label16.Location = New System.Drawing.Point(19, 70)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(34, 12)
         Me.Label16.TabIndex = 94
@@ -124,10 +127,10 @@ Partial Class Order
         '
         'txtTaxAmt
         '
-        Me.txtTaxAmt.Location = New System.Drawing.Point(220, 47)
+        Me.txtTaxAmt.Location = New System.Drawing.Point(220, 40)
         Me.txtTaxAmt.Name = "txtTaxAmt"
         Me.txtTaxAmt.ReadOnly = True
-        Me.txtTaxAmt.Size = New System.Drawing.Size(80, 20)
+        Me.txtTaxAmt.Size = New System.Drawing.Size(80, 19)
         Me.txtTaxAmt.TabIndex = 2
         '
         'Label24
@@ -136,7 +139,7 @@ Partial Class Order
         Me.Label24.BackColor = System.Drawing.Color.White
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.Black
-        Me.Label24.Location = New System.Drawing.Point(174, 47)
+        Me.Label24.Location = New System.Drawing.Point(174, 40)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(23, 20)
         Me.Label24.TabIndex = 92
@@ -144,16 +147,16 @@ Partial Class Order
         '
         'txtTaxPer
         '
-        Me.txtTaxPer.Location = New System.Drawing.Point(116, 48)
+        Me.txtTaxPer.Location = New System.Drawing.Point(116, 41)
         Me.txtTaxPer.Name = "txtTaxPer"
-        Me.txtTaxPer.Size = New System.Drawing.Size(52, 20)
+        Me.txtTaxPer.Size = New System.Drawing.Size(52, 19)
         Me.txtTaxPer.TabIndex = 1
         '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label15.Location = New System.Drawing.Point(19, 50)
+        Me.Label15.Location = New System.Drawing.Point(19, 42)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(57, 12)
         Me.Label15.TabIndex = 90
@@ -161,17 +164,17 @@ Partial Class Order
         '
         'txtSubTotal
         '
-        Me.txtSubTotal.Location = New System.Drawing.Point(116, 14)
+        Me.txtSubTotal.Location = New System.Drawing.Point(116, 12)
         Me.txtSubTotal.Name = "txtSubTotal"
         Me.txtSubTotal.ReadOnly = True
-        Me.txtSubTotal.Size = New System.Drawing.Size(184, 20)
+        Me.txtSubTotal.Size = New System.Drawing.Size(184, 19)
         Me.txtSubTotal.TabIndex = 0
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label17.Location = New System.Drawing.Point(19, 16)
+        Me.Label17.Location = New System.Drawing.Point(19, 14)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(60, 12)
         Me.Label17.TabIndex = 77
@@ -179,14 +182,14 @@ Partial Class Order
         '
         'ListView1
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductCode, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductID, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
         Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(22, 373)
+        Me.ListView1.Location = New System.Drawing.Point(22, 316)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(744, 225)
+        Me.ListView1.Size = New System.Drawing.Size(744, 191)
         Me.ListView1.TabIndex = 143
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -195,10 +198,10 @@ Partial Class Order
         '
         Me.ColumnHeader1.Width = 0
         '
-        'ProductCode
+        'ProductID
         '
-        Me.ProductCode.Text = "Cod. Producto"
-        Me.ProductCode.Width = 90
+        Me.ProductID.Text = "ID Producto"
+        Me.ProductID.Width = 90
         '
         'ColumnHeader2
         '
@@ -236,35 +239,6 @@ Partial Class Order
         Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader6.Width = 65
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.txtTotalAmount)
-        Me.GroupBox1.Controls.Add(Me.txtPacketsPerCarton)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Button7)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.txtProductCode)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.txtProductName)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.txtWeight)
-        Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.Label13)
-        Me.GroupBox1.Controls.Add(Me.txtPrice)
-        Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Controls.Add(Me.txtAvailableCartons)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.txtCustomerNo)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox1.Location = New System.Drawing.Point(22, 114)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(601, 243)
-        Me.GroupBox1.TabIndex = 142
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Detalles de Producto"
-        '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -272,18 +246,18 @@ Partial Class Order
         Me.Panel1.Controls.Add(Me.NewRecord)
         Me.Panel1.Controls.Add(Me.Delete)
         Me.Panel1.Controls.Add(Me.Save)
-        Me.Panel1.Location = New System.Drawing.Point(860, 87)
+        Me.Panel1.Location = New System.Drawing.Point(631, 254)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(127, 151)
+        Me.Panel1.Size = New System.Drawing.Size(447, 46)
         Me.Panel1.TabIndex = 129
         '
         'btnUpdate
         '
         Me.btnUpdate.Enabled = False
         Me.btnUpdate.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnUpdate.Location = New System.Drawing.Point(14, 113)
+        Me.btnUpdate.Location = New System.Drawing.Point(332, 7)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(99, 29)
+        Me.btnUpdate.Size = New System.Drawing.Size(99, 25)
         Me.btnUpdate.TabIndex = 3
         Me.btnUpdate.Text = "&Actualizar"
         Me.btnUpdate.UseVisualStyleBackColor = True
@@ -291,9 +265,9 @@ Partial Class Order
         'NewRecord
         '
         Me.NewRecord.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.NewRecord.Location = New System.Drawing.Point(14, 8)
+        Me.NewRecord.Location = New System.Drawing.Point(14, 7)
         Me.NewRecord.Name = "NewRecord"
-        Me.NewRecord.Size = New System.Drawing.Size(99, 29)
+        Me.NewRecord.Size = New System.Drawing.Size(99, 25)
         Me.NewRecord.TabIndex = 0
         Me.NewRecord.Text = "&Nuevo"
         Me.NewRecord.UseVisualStyleBackColor = True
@@ -302,19 +276,19 @@ Partial Class Order
         '
         Me.Delete.Enabled = False
         Me.Delete.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.Delete.Location = New System.Drawing.Point(14, 78)
+        Me.Delete.Location = New System.Drawing.Point(227, 7)
         Me.Delete.Name = "Delete"
-        Me.Delete.Size = New System.Drawing.Size(99, 29)
+        Me.Delete.Size = New System.Drawing.Size(99, 25)
         Me.Delete.TabIndex = 2
         Me.Delete.Text = "&Eliminar"
         Me.Delete.UseVisualStyleBackColor = True
         '
         'Save
         '
-        Me.Save.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.Save.Location = New System.Drawing.Point(14, 43)
+        Me.Save.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Save.Location = New System.Drawing.Point(122, 8)
         Me.Save.Name = "Save"
-        Me.Save.Size = New System.Drawing.Size(99, 29)
+        Me.Save.Size = New System.Drawing.Size(99, 25)
         Me.Save.TabIndex = 1
         Me.Save.Text = "&Guardar"
         Me.Save.UseVisualStyleBackColor = True
@@ -324,7 +298,7 @@ Partial Class Order
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.LightGray
         Me.Label1.Font = New System.Drawing.Font("Miriam", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(19, 15)
+        Me.Label1.Location = New System.Drawing.Point(19, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(140, 16)
         Me.Label1.TabIndex = 135
@@ -332,9 +306,10 @@ Partial Class Order
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(339, 47)
+        Me.Button4.Font = New System.Drawing.Font("Miriam", 10.0!)
+        Me.Button4.Location = New System.Drawing.Point(339, 36)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(29, 21)
+        Me.Button4.Size = New System.Drawing.Size(29, 19)
         Me.Button4.TabIndex = 134
         Me.Button4.Text = "<"
         Me.Button4.UseVisualStyleBackColor = True
@@ -343,7 +318,7 @@ Partial Class Order
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label4.Location = New System.Drawing.Point(20, 47)
+        Me.Label4.Location = New System.Drawing.Point(20, 40)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 12)
         Me.Label4.TabIndex = 132
@@ -353,7 +328,7 @@ Partial Class Order
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(20, 78)
+        Me.Label3.Location = New System.Drawing.Point(20, 66)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(83, 12)
         Me.Label3.TabIndex = 133
@@ -361,69 +336,105 @@ Partial Class Order
         '
         'txtOrderNo
         '
-        Me.txtOrderNo.Location = New System.Drawing.Point(136, 47)
+        Me.txtOrderNo.Location = New System.Drawing.Point(136, 36)
         Me.txtOrderNo.Name = "txtOrderNo"
         Me.txtOrderNo.ReadOnly = True
-        Me.txtOrderNo.Size = New System.Drawing.Size(185, 20)
+        Me.txtOrderNo.Size = New System.Drawing.Size(185, 19)
         Me.txtOrderNo.TabIndex = 131
         '
         'dtpOrderDate
         '
         Me.dtpOrderDate.CustomFormat = "dd/MMM/yyyy"
         Me.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpOrderDate.Location = New System.Drawing.Point(136, 79)
+        Me.dtpOrderDate.Location = New System.Drawing.Point(136, 63)
         Me.dtpOrderDate.Name = "dtpOrderDate"
-        Me.dtpOrderDate.Size = New System.Drawing.Size(120, 20)
+        Me.dtpOrderDate.Size = New System.Drawing.Size(120, 19)
         Me.dtpOrderDate.TabIndex = 130
         '
-        'Label2
+        'GroupBox2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(23, 26)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 12)
-        Me.Label2.TabIndex = 142
-        Me.Label2.Text = "Distribuidor ID"
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(22, 264)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(501, 46)
+        Me.GroupBox2.TabIndex = 149
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Buscador"
         '
-        'Button2
+        'TextBox1
         '
-        Me.Button2.Location = New System.Drawing.Point(349, 22)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(29, 21)
-        Me.Button2.TabIndex = 143
-        Me.Button2.Text = "<"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.TextBox1.Location = New System.Drawing.Point(40, 16)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(443, 20)
+        Me.TextBox1.TabIndex = 53
         '
-        'txtCustomerNo
+        'GroupBox1
         '
-        Me.txtCustomerNo.Location = New System.Drawing.Point(131, 22)
-        Me.txtCustomerNo.Name = "txtCustomerNo"
-        Me.txtCustomerNo.ReadOnly = True
-        Me.txtCustomerNo.Size = New System.Drawing.Size(185, 21)
-        Me.txtCustomerNo.TabIndex = 141
+        Me.GroupBox1.Controls.Add(Me.ComboBox3)
+        Me.GroupBox1.Controls.Add(Me.ComboBox2)
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.txtTotalAmount)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Button7)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.txtProductCode)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.txtProductName)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Controls.Add(Me.txtPrice)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.txtCustomerNo)
+        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Location = New System.Drawing.Point(404, 20)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(601, 206)
+        Me.GroupBox1.TabIndex = 150
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Detalles de Producto"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(412, 145)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(94, 21)
+        Me.ComboBox3.TabIndex = 163
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(156, 141)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(94, 21)
+        Me.ComboBox2.TabIndex = 162
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(156, 113)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(94, 21)
+        Me.ComboBox1.TabIndex = 161
         '
         'txtTotalAmount
         '
-        Me.txtTotalAmount.Location = New System.Drawing.Point(156, 207)
+        Me.txtTotalAmount.Location = New System.Drawing.Point(156, 175)
         Me.txtTotalAmount.Name = "txtTotalAmount"
         Me.txtTotalAmount.ReadOnly = True
         Me.txtTotalAmount.Size = New System.Drawing.Size(94, 21)
         Me.txtTotalAmount.TabIndex = 159
         '
-        'txtPacketsPerCarton
-        '
-        Me.txtPacketsPerCarton.Location = New System.Drawing.Point(412, 168)
-        Me.txtPacketsPerCarton.Name = "txtPacketsPerCarton"
-        Me.txtPacketsPerCarton.ReadOnly = True
-        Me.txtPacketsPerCarton.Size = New System.Drawing.Size(89, 21)
-        Me.txtPacketsPerCarton.TabIndex = 158
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(296, 171)
+        Me.Label5.Location = New System.Drawing.Point(296, 145)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(35, 12)
         Me.Label5.TabIndex = 157
@@ -432,9 +443,9 @@ Partial Class Order
         'Button7
         '
         Me.Button7.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Button7.Location = New System.Drawing.Point(489, 41)
+        Me.Button7.Location = New System.Drawing.Point(489, 35)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 32)
+        Me.Button7.Size = New System.Drawing.Size(75, 27)
         Me.Button7.TabIndex = 149
         Me.Button7.Text = "Agregar"
         Me.Button7.UseVisualStyleBackColor = True
@@ -443,15 +454,15 @@ Partial Class Order
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label7.Location = New System.Drawing.Point(23, 72)
+        Me.Label7.Location = New System.Drawing.Point(23, 61)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(89, 12)
+        Me.Label7.Size = New System.Drawing.Size(62, 12)
         Me.Label7.TabIndex = 151
-        Me.Label7.Text = "Cod. de Producto"
+        Me.Label7.Text = "ID Producto"
         '
         'txtProductCode
         '
-        Me.txtProductCode.Location = New System.Drawing.Point(156, 71)
+        Me.txtProductCode.Location = New System.Drawing.Point(156, 60)
         Me.txtProductCode.Name = "txtProductCode"
         Me.txtProductCode.ReadOnly = True
         Me.txtProductCode.Size = New System.Drawing.Size(185, 21)
@@ -461,7 +472,7 @@ Partial Class Order
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label9.Location = New System.Drawing.Point(23, 103)
+        Me.Label9.Location = New System.Drawing.Point(23, 87)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(105, 12)
         Me.Label9.TabIndex = 152
@@ -469,7 +480,7 @@ Partial Class Order
         '
         'txtProductName
         '
-        Me.txtProductName.Location = New System.Drawing.Point(156, 103)
+        Me.txtProductName.Location = New System.Drawing.Point(156, 87)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.ReadOnly = True
         Me.txtProductName.Size = New System.Drawing.Size(366, 21)
@@ -477,9 +488,10 @@ Partial Class Order
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(382, 70)
+        Me.Button1.Font = New System.Drawing.Font("Miriam", 10.0!)
+        Me.Button1.Location = New System.Drawing.Point(382, 59)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(29, 21)
+        Me.Button1.Size = New System.Drawing.Size(29, 22)
         Me.Button1.TabIndex = 155
         Me.Button1.Text = "<"
         Me.Button1.UseVisualStyleBackColor = True
@@ -488,25 +500,17 @@ Partial Class Order
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label10.Location = New System.Drawing.Point(23, 135)
+        Me.Label10.Location = New System.Drawing.Point(23, 114)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(52, 12)
         Me.Label10.TabIndex = 150
         Me.Label10.Text = "Categoria"
         '
-        'txtWeight
-        '
-        Me.txtWeight.Location = New System.Drawing.Point(156, 134)
-        Me.txtWeight.Name = "txtWeight"
-        Me.txtWeight.ReadOnly = True
-        Me.txtWeight.Size = New System.Drawing.Size(94, 21)
-        Me.txtWeight.TabIndex = 146
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label12.Location = New System.Drawing.Point(296, 135)
+        Me.Label12.Location = New System.Drawing.Point(296, 114)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(75, 12)
         Me.Label12.TabIndex = 156
@@ -516,7 +520,7 @@ Partial Class Order
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label13.Location = New System.Drawing.Point(23, 173)
+        Me.Label13.Location = New System.Drawing.Point(23, 146)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(31, 12)
         Me.Label13.TabIndex = 153
@@ -524,7 +528,7 @@ Partial Class Order
         '
         'txtPrice
         '
-        Me.txtPrice.Location = New System.Drawing.Point(412, 133)
+        Me.txtPrice.Location = New System.Drawing.Point(412, 113)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.ReadOnly = True
         Me.txtPrice.Size = New System.Drawing.Size(89, 21)
@@ -534,29 +538,50 @@ Partial Class Order
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label14.Location = New System.Drawing.Point(23, 211)
+        Me.Label14.Location = New System.Drawing.Point(23, 179)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(48, 12)
         Me.Label14.TabIndex = 154
         Me.Label14.Text = "Cantidad"
         '
-        'txtAvailableCartons
+        'Label2
         '
-        Me.txtAvailableCartons.Location = New System.Drawing.Point(156, 169)
-        Me.txtAvailableCartons.Name = "txtAvailableCartons"
-        Me.txtAvailableCartons.ReadOnly = True
-        Me.txtAvailableCartons.Size = New System.Drawing.Size(93, 21)
-        Me.txtAvailableCartons.TabIndex = 148
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label2.Location = New System.Drawing.Point(23, 22)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(73, 12)
+        Me.Label2.TabIndex = 142
+        Me.Label2.Text = "ID Distribuidor"
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Miriam", 10.0!)
+        Me.Button2.Location = New System.Drawing.Point(349, 19)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(29, 21)
+        Me.Button2.TabIndex = 143
+        Me.Button2.Text = "<"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'txtCustomerNo
+        '
+        Me.txtCustomerNo.Location = New System.Drawing.Point(131, 19)
+        Me.txtCustomerNo.Name = "txtCustomerNo"
+        Me.txtCustomerNo.ReadOnly = True
+        Me.txtCustomerNo.Size = New System.Drawing.Size(185, 21)
+        Me.txtCustomerNo.TabIndex = 141
         '
         'Order
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1126, 614)
+        Me.ClientSize = New System.Drawing.Size(1126, 520)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button4)
@@ -564,13 +589,16 @@ Partial Class Order
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtOrderNo)
         Me.Controls.Add(Me.dtpOrderDate)
+        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
         Me.Name = "Order"
         Me.Text = "Orden"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -588,14 +616,13 @@ Partial Class Order
     Friend WithEvents Label17 As Label
     Friend WithEvents ListView1 As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ProductCode As ColumnHeader
+    Friend WithEvents ProductID As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader7 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents ColumnHeader5 As ColumnHeader
     Friend WithEvents ColumnHeader6 As ColumnHeader
-    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnUpdate As Button
     Friend WithEvents NewRecord As Button
@@ -607,8 +634,13 @@ Partial Class Order
     Friend WithEvents Label3 As Label
     Friend WithEvents txtOrderNo As TextBox
     Friend WithEvents dtpOrderDate As DateTimePicker
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents txtTotalAmount As TextBox
-    Friend WithEvents txtPacketsPerCarton As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Button7 As Button
     Friend WithEvents Label7 As Label
@@ -617,12 +649,10 @@ Partial Class Order
     Friend WithEvents txtProductName As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label10 As Label
-    Friend WithEvents txtWeight As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents txtPrice As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents txtAvailableCartons As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents txtCustomerNo As TextBox

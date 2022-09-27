@@ -24,11 +24,10 @@ Partial Class Colors
     Private Sub InitializeComponent()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ProductCode = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColorID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -42,14 +41,19 @@ Partial Class Colors
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.panel1.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'ListView1
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductCode, Me.ColumnHeader2})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColorID, Me.ColumnHeader2})
         Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
@@ -65,10 +69,10 @@ Partial Class Colors
         '
         Me.ColumnHeader1.Width = 0
         '
-        'ProductCode
+        'ColorID
         '
-        Me.ProductCode.Text = "ID Categoria"
-        Me.ProductCode.Width = 104
+        Me.ColorID.Text = "ID"
+        Me.ColorID.Width = 104
         '
         'ColumnHeader2
         '
@@ -93,16 +97,6 @@ Partial Class Colors
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(443, 20)
         Me.TextBox1.TabIndex = 53
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Button2.Location = New System.Drawing.Point(576, 333)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(79, 26)
-        Me.Button2.TabIndex = 147
-        Me.Button2.Text = "&Volver"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -134,9 +128,9 @@ Partial Class Colors
         Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.Label2.Location = New System.Drawing.Point(11, 66)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 12)
+        Me.Label2.Size = New System.Drawing.Size(44, 12)
         Me.Label2.TabIndex = 56
-        Me.Label2.Text = "Nombre de Color"
+        Me.Label2.Text = "Nombre"
         '
         'txtCategoryName
         '
@@ -147,6 +141,7 @@ Partial Class Colors
         '
         'txtCategoryID
         '
+        Me.txtCategoryID.BackColor = System.Drawing.Color.White
         Me.txtCategoryID.Location = New System.Drawing.Point(141, 26)
         Me.txtCategoryID.Name = "txtCategoryID"
         Me.txtCategoryID.ReadOnly = True
@@ -159,9 +154,9 @@ Partial Class Colors
         Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.Label4.Location = New System.Drawing.Point(11, 26)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 12)
+        Me.Label4.Size = New System.Drawing.Size(16, 12)
         Me.Label4.TabIndex = 55
-        Me.Label4.Text = "Color ID"
+        Me.Label4.Text = "ID"
         '
         'panel1
         '
@@ -238,11 +233,54 @@ Partial Class Colors
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "."
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Button2.Location = New System.Drawing.Point(564, 333)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(79, 26)
+        Me.Button2.TabIndex = 147
+        Me.Button2.Text = "&Volver"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Button3)
+        Me.GroupBox3.Controls.Add(Me.Button4)
+        Me.GroupBox3.Location = New System.Drawing.Point(541, 220)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(126, 89)
+        Me.GroupBox3.TabIndex = 156
+        Me.GroupBox3.TabStop = False
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button3.Location = New System.Drawing.Point(6, 18)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(112, 26)
+        Me.Button3.TabIndex = 0
+        Me.Button3.Text = "&Obtener Datos"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button4.Location = New System.Drawing.Point(6, 50)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(112, 26)
+        Me.Button4.TabIndex = 1
+        Me.Button4.Text = "&Reiniciar"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Colors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(684, 373)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Button2)
@@ -250,24 +288,24 @@ Partial Class Colors
         Me.Controls.Add(Me.panel1)
         Me.Font = New System.Drawing.Font("Miriam", 8.25!)
         Me.Name = "Colors"
-        Me.Text = " "
+        Me.Text = " Color"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.panel1.ResumeLayout(False)
         Me.panel1.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents ListView1 As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ProductCode As ColumnHeader
+    Friend WithEvents ColorID As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents TextBox1 As TextBox
-    Private WithEvents Button2 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
@@ -281,4 +319,8 @@ Partial Class Colors
     Public WithEvents btnDelete As Button
     Private WithEvents btnSave As Button
     Public WithEvents Label1 As Label
+    Private WithEvents Button2 As Button
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
