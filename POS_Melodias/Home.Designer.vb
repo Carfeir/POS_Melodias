@@ -27,49 +27,25 @@ Partial Class Home
         Me.RegistrationToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VendorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InvoiceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoginDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProfileEntryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VendorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProfileEntryToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StockToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OrdersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MarcaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VendorsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CustomersToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OrderToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrationToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalesToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OrderToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InvoiceToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NotepadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TaskManagerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MSWordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SystemInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.WordpadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ProductCode = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ProductID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -78,8 +54,10 @@ Partial Class Home
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MarcaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgregarVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistroDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -88,7 +66,7 @@ Partial Class Home
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrationToolStripMenuItem1, Me.ProductToolStripMenuItem, Me.CustomerToolStripMenuItem, Me.VendorToolStripMenuItem, Me.ToolStripMenuItem1, Me.OrderToolStripMenuItem, Me.InvoiceToolStripMenuItem, Me.LogoutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrderToolStripMenuItem, Me.RegistrationToolStripMenuItem1, Me.CustomerToolStripMenuItem, Me.VendorToolStripMenuItem, Me.ToolStripMenuItem1, Me.InvoiceToolStripMenuItem, Me.LogoutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 24)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 73)
@@ -101,8 +79,8 @@ Partial Class Home
         Me.RegistrationToolStripMenuItem1.Image = CType(resources.GetObject("RegistrationToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.RegistrationToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RegistrationToolStripMenuItem1.Name = "RegistrationToolStripMenuItem1"
-        Me.RegistrationToolStripMenuItem1.Size = New System.Drawing.Size(71, 69)
-        Me.RegistrationToolStripMenuItem1.Text = "Registro"
+        Me.RegistrationToolStripMenuItem1.Size = New System.Drawing.Size(139, 69)
+        Me.RegistrationToolStripMenuItem1.Text = "Registro de Ventas"
         Me.RegistrationToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'CustomerToolStripMenuItem
@@ -111,8 +89,8 @@ Partial Class Home
         Me.CustomerToolStripMenuItem.Image = CType(resources.GetObject("CustomerToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CustomerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CustomerToolStripMenuItem.Name = "CustomerToolStripMenuItem"
-        Me.CustomerToolStripMenuItem.Size = New System.Drawing.Size(89, 69)
-        Me.CustomerToolStripMenuItem.Text = "Distribuidor"
+        Me.CustomerToolStripMenuItem.Size = New System.Drawing.Size(70, 69)
+        Me.CustomerToolStripMenuItem.Text = "Clientes"
         Me.CustomerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'VendorToolStripMenuItem
@@ -121,20 +99,19 @@ Partial Class Home
         Me.VendorToolStripMenuItem.Image = CType(resources.GetObject("VendorToolStripMenuItem.Image"), System.Drawing.Image)
         Me.VendorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.VendorToolStripMenuItem.Name = "VendorToolStripMenuItem"
-        Me.VendorToolStripMenuItem.Size = New System.Drawing.Size(80, 69)
-        Me.VendorToolStripMenuItem.Text = "Vendedor"
+        Me.VendorToolStripMenuItem.Size = New System.Drawing.Size(67, 69)
+        Me.VendorToolStripMenuItem.Text = "Usuario"
         Me.VendorToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'ProductToolStripMenuItem
+        'ToolStripMenuItem1
         '
-        Me.ProductToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
-        Me.ProductToolStripMenuItem.Image = CType(resources.GetObject("ProductToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ProductToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ProductToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ProductToolStripMenuItem.Name = "ProductToolStripMenuItem"
-        Me.ProductToolStripMenuItem.Size = New System.Drawing.Size(62, 69)
-        Me.ProductToolStripMenuItem.Text = "Stock"
-        Me.ProductToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(75, 69)
+        Me.ToolStripMenuItem1.Text = "Producto"
+        Me.ToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'OrderToolStripMenuItem
         '
@@ -143,7 +120,7 @@ Partial Class Home
         Me.OrderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.OrderToolStripMenuItem.Name = "OrderToolStripMenuItem"
         Me.OrderToolStripMenuItem.Size = New System.Drawing.Size(62, 69)
-        Me.OrderToolStripMenuItem.Text = "Orden"
+        Me.OrderToolStripMenuItem.Text = "Venta"
         Me.OrderToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'InvoiceToolStripMenuItem
@@ -152,8 +129,8 @@ Partial Class Home
         Me.InvoiceToolStripMenuItem.Image = CType(resources.GetObject("InvoiceToolStripMenuItem.Image"), System.Drawing.Image)
         Me.InvoiceToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.InvoiceToolStripMenuItem.Name = "InvoiceToolStripMenuItem"
-        Me.InvoiceToolStripMenuItem.Size = New System.Drawing.Size(66, 69)
-        Me.InvoiceToolStripMenuItem.Text = "Factura"
+        Me.InvoiceToolStripMenuItem.Size = New System.Drawing.Size(83, 69)
+        Me.InvoiceToolStripMenuItem.Text = "Proveedor"
         Me.InvoiceToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'LogoutToolStripMenuItem
@@ -169,7 +146,7 @@ Partial Class Home
         'MenuStrip2
         '
         Me.MenuStrip2.BackColor = System.Drawing.SystemColors.Control
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsersToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.VendorsToolStripMenuItem, Me.InventoryToolStripMenuItem, Me.OrdersToolStripMenuItem, Me.RecordToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsersToolStripMenuItem, Me.VendorsToolStripMenuItem, Me.RecordToolStripMenuItem, Me.InventoryToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.ReportsToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(800, 24)
@@ -178,57 +155,29 @@ Partial Class Home
         '
         'UsersToolStripMenuItem
         '
-        Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrationToolStripMenuItem, Me.LoginDetailsToolStripMenuItem})
+        Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarVentaToolStripMenuItem, Me.RegistroDeVentasToolStripMenuItem})
         Me.UsersToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
-        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
-        Me.UsersToolStripMenuItem.Text = "Usuarios"
-        '
-        'RegistrationToolStripMenuItem
-        '
-        Me.RegistrationToolStripMenuItem.Image = CType(resources.GetObject("RegistrationToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.RegistrationToolStripMenuItem.Name = "RegistrationToolStripMenuItem"
-        Me.RegistrationToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.RegistrationToolStripMenuItem.Text = "Registro"
-        '
-        'LoginDetailsToolStripMenuItem
-        '
-        Me.LoginDetailsToolStripMenuItem.Image = CType(resources.GetObject("LoginDetailsToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.LoginDetailsToolStripMenuItem.Name = "LoginDetailsToolStripMenuItem"
-        Me.LoginDetailsToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.LoginDetailsToolStripMenuItem.Text = "Detalles de Ingreso"
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
+        Me.UsersToolStripMenuItem.Text = "Venta"
         '
         'CustomersToolStripMenuItem
         '
-        Me.CustomersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileEntryToolStripMenuItem})
         Me.CustomersToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.CustomersToolStripMenuItem.Name = "CustomersToolStripMenuItem"
-        Me.CustomersToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
-        Me.CustomersToolStripMenuItem.Text = "Distribuidores"
-        '
-        'ProfileEntryToolStripMenuItem
-        '
-        Me.ProfileEntryToolStripMenuItem.Name = "ProfileEntryToolStripMenuItem"
-        Me.ProfileEntryToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.ProfileEntryToolStripMenuItem.Text = "Entrada de Perfil"
+        Me.CustomersToolStripMenuItem.Size = New System.Drawing.Size(78, 20)
+        Me.CustomersToolStripMenuItem.Text = "Proveedores"
         '
         'VendorsToolStripMenuItem
         '
-        Me.VendorsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileEntryToolStripMenuItem1})
         Me.VendorsToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.VendorsToolStripMenuItem.Name = "VendorsToolStripMenuItem"
-        Me.VendorsToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
-        Me.VendorsToolStripMenuItem.Text = "Vendedores"
-        '
-        'ProfileEntryToolStripMenuItem1
-        '
-        Me.ProfileEntryToolStripMenuItem1.Name = "ProfileEntryToolStripMenuItem1"
-        Me.ProfileEntryToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
-        Me.ProfileEntryToolStripMenuItem1.Text = "Entrada de Perfil"
+        Me.VendorsToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.VendorsToolStripMenuItem.Text = "Clientes"
         '
         'InventoryToolStripMenuItem
         '
-        Me.InventoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CategoryToolStripMenuItem, Me.ColorToolStripMenuItem, Me.MarcaToolStripMenuItem, Me.StockToolStripMenuItem1, Me.SalesToolStripMenuItem1})
+        Me.InventoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CategoryToolStripMenuItem, Me.ColorToolStripMenuItem, Me.MarcaToolStripMenuItem})
         Me.InventoryToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
         Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
@@ -237,177 +186,41 @@ Partial Class Home
         'CategoryToolStripMenuItem
         '
         Me.CategoryToolStripMenuItem.Name = "CategoryToolStripMenuItem"
-        Me.CategoryToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CategoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CategoryToolStripMenuItem.Text = "Categoria"
         '
-        'StockToolStripMenuItem1
+        'ColorToolStripMenuItem
         '
-        Me.StockToolStripMenuItem1.Name = "StockToolStripMenuItem1"
-        Me.StockToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.StockToolStripMenuItem1.Text = "Stock"
+        Me.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
+        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ColorToolStripMenuItem.Text = "Color"
         '
-        'SalesToolStripMenuItem1
+        'MarcaToolStripMenuItem
         '
-        Me.SalesToolStripMenuItem1.Name = "SalesToolStripMenuItem1"
-        Me.SalesToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.SalesToolStripMenuItem1.Text = "Ventas"
-        '
-        'OrdersToolStripMenuItem
-        '
-        Me.OrdersToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.OrdersToolStripMenuItem.Name = "OrdersToolStripMenuItem"
-        Me.OrdersToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
-        Me.OrdersToolStripMenuItem.Text = "Ordenes"
+        Me.MarcaToolStripMenuItem.Name = "MarcaToolStripMenuItem"
+        Me.MarcaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MarcaToolStripMenuItem.Text = "Marca"
         '
         'RecordToolStripMenuItem
         '
-        Me.RecordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VendorsToolStripMenuItem1, Me.CustomersToolStripMenuItem1, Me.ProductsToolStripMenuItem, Me.SalesToolStripMenuItem, Me.OrderToolStripMenuItem1})
         Me.RecordToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
-        Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.RecordToolStripMenuItem.Text = "Registros"
-        '
-        'VendorsToolStripMenuItem1
-        '
-        Me.VendorsToolStripMenuItem1.Name = "VendorsToolStripMenuItem1"
-        Me.VendorsToolStripMenuItem1.Size = New System.Drawing.Size(135, 22)
-        Me.VendorsToolStripMenuItem1.Text = "Vendedores"
-        '
-        'CustomersToolStripMenuItem1
-        '
-        Me.CustomersToolStripMenuItem1.Name = "CustomersToolStripMenuItem1"
-        Me.CustomersToolStripMenuItem1.Size = New System.Drawing.Size(135, 22)
-        Me.CustomersToolStripMenuItem1.Text = "Distribuidores"
-        '
-        'ProductsToolStripMenuItem
-        '
-        Me.ProductsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MasterToolStripMenuItem, Me.StockToolStripMenuItem})
-        Me.ProductsToolStripMenuItem.Name = "ProductsToolStripMenuItem"
-        Me.ProductsToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
-        Me.ProductsToolStripMenuItem.Text = "Productos"
-        '
-        'MasterToolStripMenuItem
-        '
-        Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
-        Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
-        Me.MasterToolStripMenuItem.Text = "Master"
-        '
-        'StockToolStripMenuItem
-        '
-        Me.StockToolStripMenuItem.Name = "StockToolStripMenuItem"
-        Me.StockToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
-        Me.StockToolStripMenuItem.Text = "Stock"
-        '
-        'SalesToolStripMenuItem
-        '
-        Me.SalesToolStripMenuItem.Name = "SalesToolStripMenuItem"
-        Me.SalesToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
-        Me.SalesToolStripMenuItem.Text = "Ventas"
-        '
-        'OrderToolStripMenuItem1
-        '
-        Me.OrderToolStripMenuItem1.Name = "OrderToolStripMenuItem1"
-        Me.OrderToolStripMenuItem1.Size = New System.Drawing.Size(135, 22)
-        Me.OrderToolStripMenuItem1.Text = "Ordenes"
+        Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.RecordToolStripMenuItem.Text = "Usuarios"
         '
         'ReportsToolStripMenuItem
         '
-        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrationToolStripMenuItem2, Me.SalesToolStripMenuItem2, Me.OrderToolStripMenuItem2, Me.InvoiceToolStripMenuItem1})
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrationToolStripMenuItem2, Me.BackUpToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.ReportsToolStripMenuItem.Text = "Reportes"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(83, 20)
+        Me.ReportsToolStripMenuItem.Text = "Configuracion"
         '
         'RegistrationToolStripMenuItem2
         '
         Me.RegistrationToolStripMenuItem2.Name = "RegistrationToolStripMenuItem2"
-        Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(111, 22)
-        Me.RegistrationToolStripMenuItem2.Text = "Registro"
-        '
-        'SalesToolStripMenuItem2
-        '
-        Me.SalesToolStripMenuItem2.Name = "SalesToolStripMenuItem2"
-        Me.SalesToolStripMenuItem2.Size = New System.Drawing.Size(111, 22)
-        Me.SalesToolStripMenuItem2.Text = "Ventas"
-        '
-        'OrderToolStripMenuItem2
-        '
-        Me.OrderToolStripMenuItem2.Name = "OrderToolStripMenuItem2"
-        Me.OrderToolStripMenuItem2.Size = New System.Drawing.Size(111, 22)
-        Me.OrderToolStripMenuItem2.Text = "Ordenes"
-        '
-        'InvoiceToolStripMenuItem1
-        '
-        Me.InvoiceToolStripMenuItem1.Name = "InvoiceToolStripMenuItem1"
-        Me.InvoiceToolStripMenuItem1.Size = New System.Drawing.Size(111, 22)
-        Me.InvoiceToolStripMenuItem1.Text = "Factura"
-        '
-        'ToolsToolStripMenuItem
-        '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CalculatorToolStripMenuItem, Me.NotepadToolStripMenuItem, Me.TaskManagerToolStripMenuItem, Me.MSWordToolStripMenuItem, Me.SystemInfoToolStripMenuItem, Me.WordpadToolStripMenuItem})
-        Me.ToolsToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
-        Me.ToolsToolStripMenuItem.Text = "Herramientas"
-        '
-        'CalculatorToolStripMenuItem
-        '
-        Me.CalculatorToolStripMenuItem.Image = CType(resources.GetObject("CalculatorToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.CalculatorToolStripMenuItem.Name = "CalculatorToolStripMenuItem"
-        Me.CalculatorToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.CalculatorToolStripMenuItem.Text = "Calculadora"
-        '
-        'NotepadToolStripMenuItem
-        '
-        Me.NotepadToolStripMenuItem.Image = CType(resources.GetObject("NotepadToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.NotepadToolStripMenuItem.Name = "NotepadToolStripMenuItem"
-        Me.NotepadToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.NotepadToolStripMenuItem.Text = "Bloc de Notas"
-        '
-        'TaskManagerToolStripMenuItem
-        '
-        Me.TaskManagerToolStripMenuItem.Image = CType(resources.GetObject("TaskManagerToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.TaskManagerToolStripMenuItem.Name = "TaskManagerToolStripMenuItem"
-        Me.TaskManagerToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.TaskManagerToolStripMenuItem.Text = "Administrador de Tareas"
-        '
-        'MSWordToolStripMenuItem
-        '
-        Me.MSWordToolStripMenuItem.Image = CType(resources.GetObject("MSWordToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.MSWordToolStripMenuItem.Name = "MSWordToolStripMenuItem"
-        Me.MSWordToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.MSWordToolStripMenuItem.Text = "MS Word"
-        '
-        'SystemInfoToolStripMenuItem
-        '
-        Me.SystemInfoToolStripMenuItem.Image = CType(resources.GetObject("SystemInfoToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.SystemInfoToolStripMenuItem.Name = "SystemInfoToolStripMenuItem"
-        Me.SystemInfoToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.SystemInfoToolStripMenuItem.Text = "Informacion del Sistema"
-        '
-        'WordpadToolStripMenuItem
-        '
-        Me.WordpadToolStripMenuItem.Image = CType(resources.GetObject("WordpadToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.WordpadToolStripMenuItem.Name = "WordpadToolStripMenuItem"
-        Me.WordpadToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
-        Me.WordpadToolStripMenuItem.Text = "Wordpad"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
-        Me.AboutToolStripMenuItem.Text = "Sobre De"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Miriam", 11.25!)
-        Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
-        Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(75, 69)
-        Me.ToolStripMenuItem1.Text = "Producto"
-        Me.ToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.RegistrationToolStripMenuItem2.Text = "Cambiar Contraseña"
         '
         'Label13
         '
@@ -422,7 +235,7 @@ Partial Class Home
         '
         'ListView1
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductCode, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductID, Me.ColumnHeader8, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
         Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
@@ -438,10 +251,10 @@ Partial Class Home
         '
         Me.ColumnHeader1.Width = 0
         '
-        'ProductCode
+        'ProductID
         '
-        Me.ProductCode.Text = "Cod. Producto"
-        Me.ProductCode.Width = 65
+        Me.ProductID.Text = "ID Producto"
+        Me.ProductID.Width = 65
         '
         'ColumnHeader2
         '
@@ -500,17 +313,28 @@ Partial Class Home
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingreso como:"
         '
-        'ColorToolStripMenuItem
+        'BackUpToolStripMenuItem
         '
-        Me.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
-        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ColorToolStripMenuItem.Text = "Color"
+        Me.BackUpToolStripMenuItem.Name = "BackUpToolStripMenuItem"
+        Me.BackUpToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BackUpToolStripMenuItem.Text = "Back Up"
         '
-        'MarcaToolStripMenuItem
+        'AgregarVentaToolStripMenuItem
         '
-        Me.MarcaToolStripMenuItem.Name = "MarcaToolStripMenuItem"
-        Me.MarcaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.MarcaToolStripMenuItem.Text = "Marca"
+        Me.AgregarVentaToolStripMenuItem.Name = "AgregarVentaToolStripMenuItem"
+        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarVentaToolStripMenuItem.Text = "Agregar Venta"
+        '
+        'RegistroDeVentasToolStripMenuItem
+        '
+        Me.RegistroDeVentasToolStripMenuItem.Name = "RegistroDeVentasToolStripMenuItem"
+        Me.RegistroDeVentasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RegistroDeVentasToolStripMenuItem.Text = "Registro de Ventas"
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Proveedor"
+        Me.ColumnHeader8.Width = 82
         '
         'Home
         '
@@ -538,7 +362,6 @@ Partial Class Home
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents RegistrationToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ProductToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CustomerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VendorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
@@ -547,42 +370,17 @@ Partial Class Home
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RegistrationToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LoginDetailsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CustomersToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProfileEntryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VendorsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProfileEntryToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents InventoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CategoryToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StockToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents SalesToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents OrdersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RecordToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents VendorsToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents CustomersToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ProductsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MasterToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StockToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SalesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents OrderToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrationToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents SalesToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents OrderToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents InvoiceToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CalculatorToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NotepadToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TaskManagerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MSWordToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SystemInfoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents WordpadToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label13 As Label
     Friend WithEvents ListView1 As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ProductCode As ColumnHeader
+    Friend WithEvents ProductID As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader7 As ColumnHeader
@@ -593,4 +391,8 @@ Partial Class Home
     Friend WithEvents Label1 As Label
     Friend WithEvents ColorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MarcaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AgregarVentaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistroDeVentasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BackUpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ColumnHeader8 As ColumnHeader
 End Class

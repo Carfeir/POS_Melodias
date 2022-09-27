@@ -34,6 +34,12 @@ Partial Class Products
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.txtTotalAmount = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -46,9 +52,6 @@ Partial Class Products
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -57,6 +60,7 @@ Partial Class Products
         Me.Delete = New System.Windows.Forms.Button()
         Me.Save = New System.Windows.Forms.Button()
         Me.Update_Record = New System.Windows.Forms.Button()
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -65,12 +69,12 @@ Partial Class Products
         '
         'ListView1
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductID, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductID, Me.ColumnHeader8, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
         Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 278)
+        Me.ListView1.Location = New System.Drawing.Point(12, 302)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(776, 146)
         Me.ListView1.TabIndex = 145
@@ -84,13 +88,13 @@ Partial Class Products
         'ProductID
         '
         Me.ProductID.Text = "ID"
-        Me.ProductID.Width = 65
+        Me.ProductID.Width = 38
         '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "Nombre"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 257
+        Me.ColumnHeader2.Width = 212
         '
         'ColumnHeader3
         '
@@ -114,7 +118,7 @@ Partial Class Products
         '
         Me.ColumnHeader5.Text = "Marca"
         Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader5.Width = 99
+        Me.ColumnHeader5.Width = 69
         '
         'ColumnHeader6
         '
@@ -126,7 +130,7 @@ Partial Class Products
         '
         Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 207)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 228)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(501, 55)
         Me.GroupBox2.TabIndex = 146
@@ -142,6 +146,9 @@ Partial Class Products
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.Button4)
         Me.GroupBox1.Controls.Add(Me.ComboBox3)
         Me.GroupBox1.Controls.Add(Me.ComboBox2)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
@@ -160,16 +167,69 @@ Partial Class Products
         Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(544, 174)
+        Me.GroupBox1.Size = New System.Drawing.Size(544, 199)
         Me.GroupBox1.TabIndex = 147
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Producto"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label1.Location = New System.Drawing.Point(22, 49)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(62, 12)
+        Me.Label1.TabIndex = 179
+        Me.Label1.Text = "ID Producto"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.Window
+        Me.TextBox2.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.TextBox2.Location = New System.Drawing.Point(155, 48)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(185, 20)
+        Me.TextBox2.TabIndex = 178
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(381, 47)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(29, 18)
+        Me.Button4.TabIndex = 180
+        Me.Button4.Text = "<"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(411, 131)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(89, 20)
+        Me.ComboBox3.TabIndex = 177
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(155, 131)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(94, 20)
+        Me.ComboBox2.TabIndex = 176
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(154, 103)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(95, 20)
+        Me.ComboBox1.TabIndex = 175
         '
         'txtTotalAmount
         '
         Me.txtTotalAmount.BackColor = System.Drawing.SystemColors.Window
         Me.txtTotalAmount.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtTotalAmount.Location = New System.Drawing.Point(156, 139)
+        Me.txtTotalAmount.Location = New System.Drawing.Point(155, 164)
         Me.txtTotalAmount.Name = "txtTotalAmount"
         Me.txtTotalAmount.ReadOnly = True
         Me.txtTotalAmount.Size = New System.Drawing.Size(94, 20)
@@ -179,7 +239,7 @@ Partial Class Products
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(296, 109)
+        Me.Label5.Location = New System.Drawing.Point(295, 134)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(35, 12)
         Me.Label5.TabIndex = 172
@@ -191,15 +251,15 @@ Partial Class Products
         Me.Label7.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.Label7.Location = New System.Drawing.Point(23, 23)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(16, 12)
+        Me.Label7.Size = New System.Drawing.Size(69, 12)
         Me.Label7.TabIndex = 166
-        Me.Label7.Text = "ID"
+        Me.Label7.Text = "ID Proveedor"
         '
         'txtProductCode
         '
         Me.txtProductCode.BackColor = System.Drawing.SystemColors.Window
         Me.txtProductCode.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtProductCode.Location = New System.Drawing.Point(156, 22)
+        Me.txtProductCode.Location = New System.Drawing.Point(154, 22)
         Me.txtProductCode.Name = "txtProductCode"
         Me.txtProductCode.ReadOnly = True
         Me.txtProductCode.Size = New System.Drawing.Size(185, 20)
@@ -209,7 +269,7 @@ Partial Class Products
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label9.Location = New System.Drawing.Point(23, 49)
+        Me.Label9.Location = New System.Drawing.Point(22, 74)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(44, 12)
         Me.Label9.TabIndex = 167
@@ -219,7 +279,7 @@ Partial Class Products
         '
         Me.txtProductName.BackColor = System.Drawing.SystemColors.Window
         Me.txtProductName.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtProductName.Location = New System.Drawing.Point(156, 49)
+        Me.txtProductName.Location = New System.Drawing.Point(155, 74)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.ReadOnly = True
         Me.txtProductName.Size = New System.Drawing.Size(366, 20)
@@ -227,7 +287,7 @@ Partial Class Products
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(382, 21)
+        Me.Button1.Location = New System.Drawing.Point(381, 20)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(29, 18)
         Me.Button1.TabIndex = 170
@@ -238,7 +298,7 @@ Partial Class Products
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label10.Location = New System.Drawing.Point(23, 78)
+        Me.Label10.Location = New System.Drawing.Point(22, 103)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(52, 12)
         Me.Label10.TabIndex = 165
@@ -248,7 +308,7 @@ Partial Class Products
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label12.Location = New System.Drawing.Point(296, 78)
+        Me.Label12.Location = New System.Drawing.Point(295, 103)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(75, 12)
         Me.Label12.TabIndex = 171
@@ -258,7 +318,7 @@ Partial Class Products
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label13.Location = New System.Drawing.Point(23, 110)
+        Me.Label13.Location = New System.Drawing.Point(22, 135)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(31, 12)
         Me.Label13.TabIndex = 168
@@ -268,7 +328,7 @@ Partial Class Products
         '
         Me.txtPrice.BackColor = System.Drawing.SystemColors.Window
         Me.txtPrice.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtPrice.Location = New System.Drawing.Point(412, 76)
+        Me.txtPrice.Location = New System.Drawing.Point(411, 101)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.ReadOnly = True
         Me.txtPrice.Size = New System.Drawing.Size(89, 20)
@@ -278,41 +338,17 @@ Partial Class Products
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label14.Location = New System.Drawing.Point(23, 142)
+        Me.Label14.Location = New System.Drawing.Point(22, 167)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(48, 12)
         Me.Label14.TabIndex = 169
         Me.Label14.Text = "Cantidad"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(155, 78)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(95, 20)
-        Me.ComboBox1.TabIndex = 175
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(156, 106)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(94, 20)
-        Me.ComboBox2.TabIndex = 176
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(412, 106)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(89, 20)
-        Me.ComboBox3.TabIndex = 177
-        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.Button2)
         Me.GroupBox3.Controls.Add(Me.Button3)
-        Me.GroupBox3.Location = New System.Drawing.Point(534, 207)
+        Me.GroupBox3.Location = New System.Drawing.Point(534, 228)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(254, 55)
         Me.GroupBox3.TabIndex = 149
@@ -345,7 +381,7 @@ Partial Class Products
         Me.Panel1.Controls.Add(Me.Delete)
         Me.Panel1.Controls.Add(Me.Save)
         Me.Panel1.Controls.Add(Me.Update_Record)
-        Me.Panel1.Location = New System.Drawing.Point(622, 27)
+        Me.Panel1.Location = New System.Drawing.Point(622, 52)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(122, 159)
         Me.Panel1.TabIndex = 154
@@ -392,12 +428,17 @@ Partial Class Products
         Me.Update_Record.Text = "&Actualizar"
         Me.Update_Record.UseVisualStyleBackColor = True
         '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Proveedor"
+        Me.ColumnHeader8.Width = 102
+        '
         'Products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(800, 436)
+        Me.ClientSize = New System.Drawing.Size(800, 460)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
@@ -450,4 +491,8 @@ Partial Class Products
     Friend WithEvents Delete As Button
     Friend WithEvents Save As Button
     Friend WithEvents Update_Record As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents ColumnHeader8 As ColumnHeader
 End Class
