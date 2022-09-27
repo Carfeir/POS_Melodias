@@ -31,9 +31,10 @@ Partial Class Users
         Me.Save = New System.Windows.Forms.Button()
         Me.Update_Record = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtProductCode = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -52,11 +53,14 @@ Partial Class Users
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.GroupBox3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -100,9 +104,9 @@ Partial Class Users
         Me.Panel1.Controls.Add(Me.Delete)
         Me.Panel1.Controls.Add(Me.Save)
         Me.Panel1.Controls.Add(Me.Update_Record)
-        Me.Panel1.Location = New System.Drawing.Point(632, 92)
+        Me.Panel1.Location = New System.Drawing.Point(133, 190)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(122, 159)
+        Me.Panel1.Size = New System.Drawing.Size(531, 58)
         Me.Panel1.TabIndex = 158
         '
         'NewRecord
@@ -119,7 +123,7 @@ Partial Class Users
         '
         Me.Delete.Enabled = False
         Me.Delete.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.Delete.Location = New System.Drawing.Point(14, 112)
+        Me.Delete.Location = New System.Drawing.Point(418, 14)
         Me.Delete.Name = "Delete"
         Me.Delete.Size = New System.Drawing.Size(93, 25)
         Me.Delete.TabIndex = 3
@@ -129,7 +133,7 @@ Partial Class Users
         'Save
         '
         Me.Save.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Save.Location = New System.Drawing.Point(14, 48)
+        Me.Save.Location = New System.Drawing.Point(148, 14)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(93, 25)
         Me.Save.TabIndex = 1
@@ -140,7 +144,7 @@ Partial Class Users
         '
         Me.Update_Record.Enabled = False
         Me.Update_Record.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.Update_Record.Location = New System.Drawing.Point(14, 80)
+        Me.Update_Record.Location = New System.Drawing.Point(283, 14)
         Me.Update_Record.Name = "Update_Record"
         Me.Update_Record.Size = New System.Drawing.Size(93, 25)
         Me.Update_Record.TabIndex = 2
@@ -149,9 +153,13 @@ Partial Class Users
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.TextBox7)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.ComboBox2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
@@ -167,10 +175,29 @@ Partial Class Users
         Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 8)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(544, 243)
+        Me.GroupBox1.Size = New System.Drawing.Size(776, 166)
         Me.GroupBox1.TabIndex = 157
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Usuario"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.BackColor = System.Drawing.Color.White
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(546, 134)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(206, 20)
+        Me.ComboBox2.TabIndex = 178
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label1.Location = New System.Drawing.Point(413, 141)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(21, 12)
+        Me.Label1.TabIndex = 174
+        Me.Label1.Text = "Rol"
         '
         'TextBox4
         '
@@ -178,7 +205,7 @@ Partial Class Users
         Me.TextBox4.Location = New System.Drawing.Point(156, 134)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(366, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(206, 20)
         Me.TextBox4.TabIndex = 173
         '
         'TextBox3
@@ -187,17 +214,8 @@ Partial Class Users
         Me.TextBox3.Location = New System.Drawing.Point(156, 102)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(366, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(206, 20)
         Me.TextBox3.TabIndex = 172
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(156, 70)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(366, 20)
-        Me.TextBox2.TabIndex = 171
         '
         'Label7
         '
@@ -215,7 +233,7 @@ Partial Class Users
         Me.txtProductCode.Location = New System.Drawing.Point(156, 15)
         Me.txtProductCode.Name = "txtProductCode"
         Me.txtProductCode.ReadOnly = True
-        Me.txtProductCode.Size = New System.Drawing.Size(185, 20)
+        Me.txtProductCode.Size = New System.Drawing.Size(161, 20)
         Me.txtProductCode.TabIndex = 160
         '
         'Label9
@@ -234,12 +252,12 @@ Partial Class Users
         Me.txtProductName.Location = New System.Drawing.Point(156, 41)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.ReadOnly = True
-        Me.txtProductName.Size = New System.Drawing.Size(366, 20)
+        Me.txtProductName.Size = New System.Drawing.Size(206, 20)
         Me.txtProductName.TabIndex = 161
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(357, 15)
+        Me.Button1.Location = New System.Drawing.Point(333, 14)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(29, 20)
         Me.Button1.TabIndex = 170
@@ -250,7 +268,7 @@ Partial Class Users
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label10.Location = New System.Drawing.Point(23, 110)
+        Me.Label10.Location = New System.Drawing.Point(23, 78)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(72, 12)
         Me.Label10.TabIndex = 165
@@ -260,7 +278,7 @@ Partial Class Users
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label13.Location = New System.Drawing.Point(23, 142)
+        Me.Label13.Location = New System.Drawing.Point(23, 110)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(94, 12)
         Me.Label13.TabIndex = 168
@@ -270,7 +288,7 @@ Partial Class Users
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label14.Location = New System.Drawing.Point(23, 174)
+        Me.Label14.Location = New System.Drawing.Point(23, 142)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(49, 12)
         Me.Label14.TabIndex = 169
@@ -347,47 +365,75 @@ Partial Class Users
         Me.ColumnHeader5.Text = "Direccion"
         Me.ColumnHeader5.Width = 128
         '
-        'Label1
+        'ColumnHeader6
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(23, 205)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(21, 12)
-        Me.Label1.TabIndex = 174
-        Me.Label1.Text = "Rol"
+        Me.ColumnHeader6.Text = "Rol"
         '
-        'ComboBox2
+        'TextBox2
         '
-        Me.ComboBox2.BackColor = System.Drawing.Color.White
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(156, 197)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(366, 20)
-        Me.ComboBox2.TabIndex = 178
+        Me.TextBox2.BackColor = System.Drawing.Color.White
+        Me.TextBox2.Location = New System.Drawing.Point(156, 70)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox2.TabIndex = 171
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label3.Location = New System.Drawing.Point(413, 49)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(97, 12)
+        Me.Label3.TabIndex = 183
+        Me.Label3.Text = "Nombre de usuario"
         '
         'TextBox5
         '
         Me.TextBox5.BackColor = System.Drawing.Color.White
-        Me.TextBox5.Location = New System.Drawing.Point(156, 166)
+        Me.TextBox5.Location = New System.Drawing.Point(546, 41)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(366, 20)
-        Me.TextBox5.TabIndex = 177
+        Me.TextBox5.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox5.TabIndex = 182
         '
-        'Label2
+        'Label4
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(23, 78)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(97, 12)
-        Me.Label2.TabIndex = 179
-        Me.Label2.Text = "Nombre de usuario"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label4.Location = New System.Drawing.Point(413, 78)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(61, 12)
+        Me.Label4.TabIndex = 185
+        Me.Label4.Text = "Contraseña"
         '
-        'ColumnHeader6
+        'TextBox6
         '
-        Me.ColumnHeader6.Text = "Rol"
+        Me.TextBox6.BackColor = System.Drawing.Color.White
+        Me.TextBox6.Location = New System.Drawing.Point(546, 70)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ReadOnly = True
+        Me.TextBox6.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox6.TabIndex = 184
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label5.Location = New System.Drawing.Point(413, 110)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(112, 12)
+        Me.Label5.TabIndex = 187
+        Me.Label5.Text = "Confirmar Contraseña"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.BackColor = System.Drawing.Color.White
+        Me.TextBox7.Location = New System.Drawing.Point(546, 102)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
+        Me.TextBox7.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox7.TabIndex = 186
         '
         'Users
         '
@@ -425,7 +471,6 @@ Partial Class Users
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtProductCode As TextBox
     Friend WithEvents Label9 As Label
@@ -444,8 +489,13 @@ Partial Class Users
     Friend WithEvents ColumnHeader7 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents ColumnHeader5 As ColumnHeader
-    Friend WithEvents Label2 As Label
     Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox2 As TextBox
 End Class
