@@ -41,7 +41,6 @@ Partial Class Home
         Me.ProfileEntryToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductMasterEntryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StockToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrdersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,6 +78,8 @@ Partial Class Home
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MarcaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -227,7 +228,7 @@ Partial Class Home
         '
         'InventoryToolStripMenuItem
         '
-        Me.InventoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CategoryToolStripMenuItem, Me.ProductMasterEntryToolStripMenuItem, Me.StockToolStripMenuItem1, Me.SalesToolStripMenuItem1})
+        Me.InventoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CategoryToolStripMenuItem, Me.ColorToolStripMenuItem, Me.MarcaToolStripMenuItem, Me.StockToolStripMenuItem1, Me.SalesToolStripMenuItem1})
         Me.InventoryToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
         Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
@@ -239,17 +240,11 @@ Partial Class Home
         Me.CategoryToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CategoryToolStripMenuItem.Text = "Categoria"
         '
-        'ProductMasterEntryToolStripMenuItem
-        '
-        Me.ProductMasterEntryToolStripMenuItem.Name = "ProductMasterEntryToolStripMenuItem"
-        Me.ProductMasterEntryToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ProductMasterEntryToolStripMenuItem.Text = "Entrada Maestra"
-        '
         'StockToolStripMenuItem1
         '
         Me.StockToolStripMenuItem1.Name = "StockToolStripMenuItem1"
-        Me.StockToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.StockToolStripMenuItem1.Text = "Entrada de Stock"
+        Me.StockToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.StockToolStripMenuItem1.Text = "Stock"
         '
         'SalesToolStripMenuItem1
         '
@@ -428,7 +423,7 @@ Partial Class Home
         'ListView1
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductCode, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
-        Me.ListView1.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
@@ -505,6 +500,18 @@ Partial Class Home
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingreso como:"
         '
+        'ColorToolStripMenuItem
+        '
+        Me.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
+        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ColorToolStripMenuItem.Text = "Color"
+        '
+        'MarcaToolStripMenuItem
+        '
+        Me.MarcaToolStripMenuItem.Name = "MarcaToolStripMenuItem"
+        Me.MarcaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MarcaToolStripMenuItem.Text = "Marca"
+        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -548,7 +555,6 @@ Partial Class Home
     Friend WithEvents ProfileEntryToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents InventoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CategoryToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProductMasterEntryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StockToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents SalesToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents OrdersToolStripMenuItem As ToolStripMenuItem
@@ -585,4 +591,6 @@ Partial Class Home
     Friend WithEvents ColumnHeader6 As ColumnHeader
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents ColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MarcaToolStripMenuItem As ToolStripMenuItem
 End Class

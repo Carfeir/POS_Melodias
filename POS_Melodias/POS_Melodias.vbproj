@@ -91,6 +91,12 @@
     <Compile Include="Clients.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Colors.Designer.vb">
+      <DependentUpon>Colors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Colors.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Home.Designer.vb">
       <DependentUpon>Home.vb</DependentUpon>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colors.resx">
+      <DependentUpon>Colors.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>

@@ -80,10 +80,10 @@ Partial Class Order
         'btnRemove
         '
         Me.btnRemove.Enabled = False
-        Me.btnRemove.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRemove.Location = New System.Drawing.Point(918, 539)
+        Me.btnRemove.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnRemove.Location = New System.Drawing.Point(875, 536)
         Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Size = New System.Drawing.Size(142, 29)
+        Me.btnRemove.Size = New System.Drawing.Size(158, 29)
         Me.btnRemove.TabIndex = 145
         Me.btnRemove.Text = "Borrar"
         Me.btnRemove.UseVisualStyleBackColor = True
@@ -99,7 +99,7 @@ Partial Class Order
         Me.Panel2.Controls.Add(Me.Label15)
         Me.Panel2.Controls.Add(Me.txtSubTotal)
         Me.Panel2.Controls.Add(Me.Label17)
-        Me.Panel2.Location = New System.Drawing.Point(818, 373)
+        Me.Panel2.Location = New System.Drawing.Point(791, 373)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(323, 125)
         Me.Panel2.TabIndex = 144
@@ -115,10 +115,10 @@ Partial Class Order
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label16.Location = New System.Drawing.Point(19, 83)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(37, 17)
+        Me.Label16.Size = New System.Drawing.Size(34, 12)
         Me.Label16.TabIndex = 94
         Me.Label16.Text = "Total"
         '
@@ -152,10 +152,10 @@ Partial Class Order
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label15.Location = New System.Drawing.Point(19, 50)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(60, 17)
+        Me.Label15.Size = New System.Drawing.Size(57, 12)
         Me.Label15.TabIndex = 90
         Me.Label15.Text = "Impuesto"
         '
@@ -170,10 +170,10 @@ Partial Class Order
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label17.Location = New System.Drawing.Point(19, 16)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(61, 17)
+        Me.Label17.Size = New System.Drawing.Size(60, 12)
         Me.Label17.TabIndex = 77
         Me.Label17.Text = "Sub Total"
         '
@@ -186,7 +186,7 @@ Partial Class Order
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(22, 373)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(781, 225)
+        Me.ListView1.Size = New System.Drawing.Size(744, 225)
         Me.ListView1.TabIndex = 143
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -204,13 +204,13 @@ Partial Class Order
         '
         Me.ColumnHeader2.Text = "Nombre"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 249
+        Me.ColumnHeader2.Width = 218
         '
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "Categoria"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 90
+        Me.ColumnHeader3.Width = 109
         '
         'ColumnHeader7
         '
@@ -234,7 +234,7 @@ Partial Class Order
         '
         Me.ColumnHeader6.Text = "Cantidad"
         Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader6.Width = 92
+        Me.ColumnHeader6.Width = 65
         '
         'GroupBox1
         '
@@ -258,7 +258,7 @@ Partial Class Order
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.txtCustomerNo)
         Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox1.Location = New System.Drawing.Point(22, 117)
+        Me.GroupBox1.Location = New System.Drawing.Point(22, 114)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(601, 243)
         Me.GroupBox1.TabIndex = 142
@@ -272,7 +272,7 @@ Partial Class Order
         Me.Panel1.Controls.Add(Me.NewRecord)
         Me.Panel1.Controls.Add(Me.Delete)
         Me.Panel1.Controls.Add(Me.Save)
-        Me.Panel1.Location = New System.Drawing.Point(675, 47)
+        Me.Panel1.Location = New System.Drawing.Point(860, 87)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(127, 151)
         Me.Panel1.TabIndex = 129
@@ -432,9 +432,9 @@ Partial Class Order
         'Button7
         '
         Me.Button7.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Button7.Location = New System.Drawing.Point(506, 65)
+        Me.Button7.Location = New System.Drawing.Point(489, 41)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 26)
+        Me.Button7.Size = New System.Drawing.Size(75, 32)
         Me.Button7.TabIndex = 149
         Me.Button7.Text = "Agregar"
         Me.Button7.UseVisualStyleBackColor = True
@@ -552,7 +552,7 @@ Partial Class Order
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1151, 614)
+        Me.ClientSize = New System.Drawing.Size(1126, 614)
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ListView1)

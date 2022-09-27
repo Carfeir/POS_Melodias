@@ -37,19 +37,20 @@ Partial Class Registration
         Me.Delete = New System.Windows.Forms.Button()
         Me.Save = New System.Windows.Forms.Button()
         Me.NewRecord = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.panel1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label11
@@ -210,48 +211,6 @@ Partial Class Registration
         Me.NewRecord.Text = "&Nuevo"
         Me.NewRecord.UseVisualStyleBackColor = True
         '
-        'ListView1
-        '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4})
-        Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 298)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(781, 225)
-        Me.ListView1.TabIndex = 144
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Width = 0
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Nombre de Usuario"
-        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 249
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Nombre"
-        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 195
-        '
-        'ColumnHeader7
-        '
-        Me.ColumnHeader7.Text = "Nro. de Contacto"
-        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader7.Width = 140
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Correo Electronico"
-        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader4.Width = 190
-        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(167, 154)
@@ -269,31 +228,85 @@ Partial Class Registration
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Correo Electronico"
         '
-        'GroupBox2
+        'ListView1
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
-        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 246)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(501, 46)
-        Me.GroupBox2.TabIndex = 147
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Buscador"
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4})
+        Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.ListView1.FullRowSelect = True
+        Me.ListView1.GridLines = True
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(12, 326)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(656, 192)
+        Me.ListView1.TabIndex = 147
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
-        'TextBox2
+        'ColumnHeader1
         '
-        Me.TextBox2.Location = New System.Drawing.Point(40, 16)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(443, 20)
-        Me.TextBox2.TabIndex = 53
+        Me.ColumnHeader1.Width = 0
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Nombre de Usuario"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader2.Width = 141
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Nombre"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader3.Width = 184
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "Nro. de Contacto"
+        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader7.Width = 140
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Correo Electronico"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 186
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Button2)
+        Me.GroupBox3.Controls.Add(Me.Button3)
+        Me.GroupBox3.Location = New System.Drawing.Point(14, 262)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(254, 50)
+        Me.GroupBox3.TabIndex = 146
+        Me.GroupBox3.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button2.Location = New System.Drawing.Point(18, 17)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(112, 26)
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "&Obtener Datos"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button3.Location = New System.Drawing.Point(136, 17)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(94, 26)
+        Me.Button3.TabIndex = 1
+        Me.Button3.Text = "&Reiniciar"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Registration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 535)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(700, 559)
         Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.panel1)
@@ -303,8 +316,7 @@ Partial Class Registration
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.panel1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -333,6 +345,7 @@ Partial Class Registration
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader7 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class
