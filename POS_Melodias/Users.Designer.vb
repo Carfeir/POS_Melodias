@@ -31,10 +31,17 @@ Partial Class Users
         Me.Save = New System.Windows.Forms.Button()
         Me.Update_Record = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtProductCode = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -54,17 +61,13 @@ Partial Class Users
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -104,7 +107,7 @@ Partial Class Users
         Me.Panel1.Controls.Add(Me.Delete)
         Me.Panel1.Controls.Add(Me.Save)
         Me.Panel1.Controls.Add(Me.Update_Record)
-        Me.Panel1.Location = New System.Drawing.Point(133, 190)
+        Me.Panel1.Location = New System.Drawing.Point(233, 190)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(531, 58)
         Me.Panel1.TabIndex = 158
@@ -180,6 +183,63 @@ Partial Class Users
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Usuario"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label5.Location = New System.Drawing.Point(413, 110)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(112, 12)
+        Me.Label5.TabIndex = 187
+        Me.Label5.Text = "Confirmar Contraseña"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.BackColor = System.Drawing.Color.White
+        Me.TextBox7.Location = New System.Drawing.Point(546, 102)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
+        Me.TextBox7.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox7.TabIndex = 186
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label4.Location = New System.Drawing.Point(413, 78)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(61, 12)
+        Me.Label4.TabIndex = 185
+        Me.Label4.Text = "Contraseña"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.BackColor = System.Drawing.Color.White
+        Me.TextBox6.Location = New System.Drawing.Point(546, 70)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ReadOnly = True
+        Me.TextBox6.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox6.TabIndex = 184
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label3.Location = New System.Drawing.Point(413, 49)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(97, 12)
+        Me.Label3.TabIndex = 183
+        Me.Label3.Text = "Nombre de usuario"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.Color.White
+        Me.TextBox5.Location = New System.Drawing.Point(546, 41)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.ReadOnly = True
+        Me.TextBox5.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox5.TabIndex = 182
+        '
         'ComboBox2
         '
         Me.ComboBox2.BackColor = System.Drawing.Color.White
@@ -216,6 +276,15 @@ Partial Class Users
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(206, 20)
         Me.TextBox3.TabIndex = 172
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.White
+        Me.TextBox2.Location = New System.Drawing.Point(156, 70)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox2.TabIndex = 171
         '
         'Label7
         '
@@ -340,7 +409,7 @@ Partial Class Users
         '
         Me.ColumnHeader2.Text = "Nombre y Apellido"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 208
+        Me.ColumnHeader2.Width = 187
         '
         'ColumnHeader3
         '
@@ -363,77 +432,31 @@ Partial Class Users
         'ColumnHeader5
         '
         Me.ColumnHeader5.Text = "Direccion"
-        Me.ColumnHeader5.Width = 128
+        Me.ColumnHeader5.Width = 106
         '
         'ColumnHeader6
         '
         Me.ColumnHeader6.Text = "Rol"
+        Me.ColumnHeader6.Width = 70
         '
-        'TextBox2
+        'GroupBox5
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(156, 70)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox2.TabIndex = 171
+        Me.GroupBox5.Controls.Add(Me.Button5)
+        Me.GroupBox5.Location = New System.Drawing.Point(37, 190)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(151, 58)
+        Me.GroupBox5.TabIndex = 161
+        Me.GroupBox5.TabStop = False
         '
-        'Label3
+        'Button5
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(413, 49)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 12)
-        Me.Label3.TabIndex = 183
-        Me.Label3.Text = "Nombre de usuario"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.BackColor = System.Drawing.Color.White
-        Me.TextBox5.Location = New System.Drawing.Point(546, 41)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox5.TabIndex = 182
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label4.Location = New System.Drawing.Point(413, 78)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 12)
-        Me.Label4.TabIndex = 185
-        Me.Label4.Text = "Contraseña"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.BackColor = System.Drawing.Color.White
-        Me.TextBox6.Location = New System.Drawing.Point(546, 70)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox6.TabIndex = 184
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(413, 110)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(112, 12)
-        Me.Label5.TabIndex = 187
-        Me.Label5.Text = "Confirmar Contraseña"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.BackColor = System.Drawing.Color.White
-        Me.TextBox7.Location = New System.Drawing.Point(546, 102)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox7.TabIndex = 186
+        Me.Button5.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button5.Location = New System.Drawing.Point(18, 17)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(112, 26)
+        Me.Button5.TabIndex = 0
+        Me.Button5.Text = "&Volver"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Users
         '
@@ -441,6 +464,7 @@ Partial Class Users
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 508)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
@@ -455,6 +479,7 @@ Partial Class Users
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -498,4 +523,6 @@ Partial Class Users
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents Button5 As Button
 End Class

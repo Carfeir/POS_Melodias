@@ -103,6 +103,18 @@
     <Compile Include="Colors.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HomeAdmin.Designer.vb">
+      <DependentUpon>HomeAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomeAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeSupervisor.Designer.vb">
+      <DependentUpon>HomeSupervisor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomeSupervisor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SellsRecord.Designer.vb">
       <DependentUpon>SellsRecord.vb</DependentUpon>
     </Compile>
@@ -121,10 +133,10 @@
     <Compile Include="Users.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.vb">
-      <DependentUpon>Home.vb</DependentUpon>
+    <Compile Include="HomeEmpleado.Designer.vb">
+      <DependentUpon>HomeEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Home.vb">
+    <Compile Include="HomeEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -178,6 +190,12 @@
     <EmbeddedResource Include="Colors.resx">
       <DependentUpon>Colors.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeSupervisor.resx">
+      <DependentUpon>HomeSupervisor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SellsRecord.resx">
       <DependentUpon>SellsRecord.vb</DependentUpon>
     </EmbeddedResource>
@@ -187,8 +205,8 @@
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.vb</DependentUpon>
+    <EmbeddedResource Include="HomeEmpleado.resx">
+      <DependentUpon>HomeEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
