@@ -56,6 +56,14 @@ Partial Class SellsRecord
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.cmbCustomerName = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.GroupBox14 = New System.Windows.Forms.GroupBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -71,6 +79,10 @@ Partial Class SellsRecord
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox13.SuspendLayout()
+        Me.GroupBox14.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -84,18 +96,19 @@ Partial Class SellsRecord
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(706, 485)
+        Me.TabControl1.Size = New System.Drawing.Size(835, 485)
         Me.TabControl1.TabIndex = 2
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.GroupBox5)
         Me.TabPage1.Controls.Add(Me.GroupBox2)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 21)
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TabPage1.Size = New System.Drawing.Size(698, 460)
+        Me.TabPage1.Size = New System.Drawing.Size(761, 460)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Por Fecha de Pedido"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -182,13 +195,14 @@ Partial Class SellsRecord
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.GroupBox6)
         Me.TabPage2.Controls.Add(Me.GroupBox11)
         Me.TabPage2.Controls.Add(Me.GroupBox12)
         Me.TabPage2.Location = New System.Drawing.Point(4, 21)
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TabPage2.Size = New System.Drawing.Size(698, 460)
+        Me.TabPage2.Size = New System.Drawing.Size(806, 460)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Por No. de Venta"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -244,6 +258,7 @@ Partial Class SellsRecord
         '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(Me.GroupBox13)
         Me.TabPage5.Controls.Add(Me.GroupBox10)
         Me.TabPage5.Controls.Add(Me.GroupBox3)
         Me.TabPage5.Controls.Add(Me.GroupBox4)
@@ -251,7 +266,7 @@ Partial Class SellsRecord
         Me.TabPage5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TabPage5.Size = New System.Drawing.Size(698, 460)
+        Me.TabPage5.Size = New System.Drawing.Size(817, 460)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Por Producto"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -334,6 +349,7 @@ Partial Class SellsRecord
         '
         'TabPage6
         '
+        Me.TabPage6.Controls.Add(Me.GroupBox14)
         Me.TabPage6.Controls.Add(Me.GroupBox7)
         Me.TabPage6.Controls.Add(Me.GroupBox8)
         Me.TabPage6.Controls.Add(Me.GroupBox9)
@@ -341,7 +357,7 @@ Partial Class SellsRecord
         Me.TabPage6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TabPage6.Size = New System.Drawing.Size(698, 460)
+        Me.TabPage6.Size = New System.Drawing.Size(827, 460)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Por Proveedor"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -422,12 +438,88 @@ Partial Class SellsRecord
         Me.Label16.TabIndex = 9
         Me.Label16.Text = "Nombre de Proveedor"
         '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.Button5)
+        Me.GroupBox5.Location = New System.Drawing.Point(619, 8)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(134, 87)
+        Me.GroupBox5.TabIndex = 167
+        Me.GroupBox5.TabStop = False
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button5.Location = New System.Drawing.Point(18, 26)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(99, 40)
+        Me.Button5.TabIndex = 0
+        Me.Button5.Text = "&Volver"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.Button3)
+        Me.GroupBox6.Location = New System.Drawing.Point(447, 3)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(134, 91)
+        Me.GroupBox6.TabIndex = 168
+        Me.GroupBox6.TabStop = False
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button3.Location = New System.Drawing.Point(18, 26)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(99, 40)
+        Me.Button3.TabIndex = 0
+        Me.Button3.Text = "&Volver"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'GroupBox13
+        '
+        Me.GroupBox13.Controls.Add(Me.Button4)
+        Me.GroupBox13.Location = New System.Drawing.Point(687, 3)
+        Me.GroupBox13.Name = "GroupBox13"
+        Me.GroupBox13.Size = New System.Drawing.Size(125, 87)
+        Me.GroupBox13.TabIndex = 169
+        Me.GroupBox13.TabStop = False
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button4.Location = New System.Drawing.Point(13, 26)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(99, 40)
+        Me.Button4.TabIndex = 0
+        Me.Button4.Text = "&Volver"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'GroupBox14
+        '
+        Me.GroupBox14.Controls.Add(Me.Button7)
+        Me.GroupBox14.Location = New System.Drawing.Point(698, 3)
+        Me.GroupBox14.Name = "GroupBox14"
+        Me.GroupBox14.Size = New System.Drawing.Size(125, 87)
+        Me.GroupBox14.TabIndex = 170
+        Me.GroupBox14.TabStop = False
+        '
+        'Button7
+        '
+        Me.Button7.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button7.Location = New System.Drawing.Point(13, 26)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(99, 40)
+        Me.Button7.TabIndex = 0
+        Me.Button7.Text = "&Volver"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'SellsRecord
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(718, 585)
+        Me.ClientSize = New System.Drawing.Size(839, 494)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "SellsRecord"
         Me.Text = "Reporte de Ventas"
@@ -452,6 +544,10 @@ Partial Class SellsRecord
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox9.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox13.ResumeLayout(False)
+        Me.GroupBox14.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -490,4 +586,12 @@ Partial Class SellsRecord
     Friend WithEvents GroupBox9 As GroupBox
     Friend WithEvents cmbCustomerName As ComboBox
     Friend WithEvents Label16 As Label
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents GroupBox13 As GroupBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents GroupBox14 As GroupBox
+    Friend WithEvents Button7 As Button
 End Class

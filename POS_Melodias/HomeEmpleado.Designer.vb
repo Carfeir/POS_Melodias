@@ -33,6 +33,7 @@ Partial Class HomeEmpleado
         Me.AgregarVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistroDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VendorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgregarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrationToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -48,7 +49,6 @@ Partial Class HomeEmpleado
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.AgregarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -125,13 +125,13 @@ Partial Class HomeEmpleado
         'AgregarVentaToolStripMenuItem
         '
         Me.AgregarVentaToolStripMenuItem.Name = "AgregarVentaToolStripMenuItem"
-        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AgregarVentaToolStripMenuItem.Text = "Agregar Venta"
         '
         'RegistroDeVentasToolStripMenuItem
         '
         Me.RegistroDeVentasToolStripMenuItem.Name = "RegistroDeVentasToolStripMenuItem"
-        Me.RegistroDeVentasToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.RegistroDeVentasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.RegistroDeVentasToolStripMenuItem.Text = "Registro de Ventas"
         '
         'VendorsToolStripMenuItem
@@ -141,6 +141,12 @@ Partial Class HomeEmpleado
         Me.VendorsToolStripMenuItem.Name = "VendorsToolStripMenuItem"
         Me.VendorsToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.VendorsToolStripMenuItem.Text = "Clientes"
+        '
+        'AgregarClienteToolStripMenuItem
+        '
+        Me.AgregarClienteToolStripMenuItem.Name = "AgregarClienteToolStripMenuItem"
+        Me.AgregarClienteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarClienteToolStripMenuItem.Text = "Agregar Cliente"
         '
         'ReportsToolStripMenuItem
         '
@@ -153,7 +159,7 @@ Partial Class HomeEmpleado
         'RegistrationToolStripMenuItem2
         '
         Me.RegistrationToolStripMenuItem2.Name = "RegistrationToolStripMenuItem2"
-        Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(170, 22)
+        Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.RegistrationToolStripMenuItem2.Text = "Cambiar Contraseña"
         '
         'Label13
@@ -251,12 +257,6 @@ Partial Class HomeEmpleado
         Me.Label1.Size = New System.Drawing.Size(121, 11)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingreso como: Empleado"
-        '
-        'AgregarClienteToolStripMenuItem
-        '
-        Me.AgregarClienteToolStripMenuItem.Name = "AgregarClienteToolStripMenuItem"
-        Me.AgregarClienteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AgregarClienteToolStripMenuItem.Text = "Agregar Cliente"
         '
         'HomeEmpleado
         '

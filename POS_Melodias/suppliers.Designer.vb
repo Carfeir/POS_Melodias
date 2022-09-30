@@ -31,6 +31,7 @@ Partial Class Suppliers
         Me.Save = New System.Windows.Forms.Button()
         Me.Update_Record = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -53,11 +54,13 @@ Partial Class Suppliers
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -97,7 +100,7 @@ Partial Class Suppliers
         Me.Panel1.Controls.Add(Me.Delete)
         Me.Panel1.Controls.Add(Me.Save)
         Me.Panel1.Controls.Add(Me.Update_Record)
-        Me.Panel1.Location = New System.Drawing.Point(627, 52)
+        Me.Panel1.Location = New System.Drawing.Point(629, 25)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(122, 159)
         Me.Panel1.TabIndex = 163
@@ -166,6 +169,15 @@ Partial Class Suppliers
         Me.GroupBox1.TabIndex = 162
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Proveedor"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.Color.White
+        Me.TextBox5.Location = New System.Drawing.Point(156, 165)
+        Me.TextBox5.Multiline = True
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(366, 55)
+        Me.TextBox5.TabIndex = 175
         '
         'Label1
         '
@@ -352,14 +364,24 @@ Partial Class Suppliers
         Me.ColumnHeader5.Text = "Descripcion"
         Me.ColumnHeader5.Width = 152
         '
-        'TextBox5
+        'GroupBox5
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.White
-        Me.TextBox5.Location = New System.Drawing.Point(156, 165)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(366, 55)
-        Me.TextBox5.TabIndex = 175
+        Me.GroupBox5.Controls.Add(Me.Button5)
+        Me.GroupBox5.Location = New System.Drawing.Point(613, 203)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(151, 58)
+        Me.GroupBox5.TabIndex = 165
+        Me.GroupBox5.TabStop = False
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button5.Location = New System.Drawing.Point(18, 17)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(112, 26)
+        Me.Button5.TabIndex = 0
+        Me.Button5.Text = "&Volver"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Suppliers
         '
@@ -367,6 +389,7 @@ Partial Class Suppliers
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 495)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
@@ -381,6 +404,7 @@ Partial Class Suppliers
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -417,4 +441,6 @@ Partial Class Suppliers
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents ColumnHeader5 As ColumnHeader
     Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents Button5 As Button
 End Class

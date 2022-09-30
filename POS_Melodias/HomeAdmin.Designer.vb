@@ -35,6 +35,7 @@ Partial Class Home
         Me.ColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MarcaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgregarProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrationToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -50,7 +51,6 @@ Partial Class Home
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.AgregarProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -155,6 +155,12 @@ Partial Class Home
         Me.CustomersToolStripMenuItem.Name = "CustomersToolStripMenuItem"
         Me.CustomersToolStripMenuItem.Size = New System.Drawing.Size(78, 20)
         Me.CustomersToolStripMenuItem.Text = "Proveedores"
+        '
+        'AgregarProveedorToolStripMenuItem
+        '
+        Me.AgregarProveedorToolStripMenuItem.Name = "AgregarProveedorToolStripMenuItem"
+        Me.AgregarProveedorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarProveedorToolStripMenuItem.Text = "Agregar Proveedor"
         '
         'ReportsToolStripMenuItem
         '
@@ -265,12 +271,6 @@ Partial Class Home
         Me.Label1.Size = New System.Drawing.Size(137, 11)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingreso como: Administrador"
-        '
-        'AgregarProveedorToolStripMenuItem
-        '
-        Me.AgregarProveedorToolStripMenuItem.Name = "AgregarProveedorToolStripMenuItem"
-        Me.AgregarProveedorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AgregarProveedorToolStripMenuItem.Text = "Agregar Proveedor"
         '
         'Home
         '

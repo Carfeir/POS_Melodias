@@ -25,6 +25,7 @@ Partial Class Products
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ProductID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -60,11 +61,13 @@ Partial Class Products
         Me.Delete = New System.Windows.Forms.Button()
         Me.Save = New System.Windows.Forms.Button()
         Me.Update_Record = New System.Windows.Forms.Button()
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox13.SuspendLayout()
         Me.SuspendLayout()
         '
         'ListView1
@@ -89,6 +92,11 @@ Partial Class Products
         '
         Me.ProductID.Text = "ID"
         Me.ProductID.Width = 38
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Proveedor"
+        Me.ColumnHeader8.Width = 102
         '
         'ColumnHeader2
         '
@@ -381,7 +389,7 @@ Partial Class Products
         Me.Panel1.Controls.Add(Me.Delete)
         Me.Panel1.Controls.Add(Me.Save)
         Me.Panel1.Controls.Add(Me.Update_Record)
-        Me.Panel1.Location = New System.Drawing.Point(622, 52)
+        Me.Panel1.Location = New System.Drawing.Point(626, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(122, 159)
         Me.Panel1.TabIndex = 154
@@ -428,10 +436,24 @@ Partial Class Products
         Me.Update_Record.Text = "&Actualizar"
         Me.Update_Record.UseVisualStyleBackColor = True
         '
-        'ColumnHeader8
+        'GroupBox13
         '
-        Me.ColumnHeader8.Text = "Proveedor"
-        Me.ColumnHeader8.Width = 102
+        Me.GroupBox13.Controls.Add(Me.Button5)
+        Me.GroupBox13.Location = New System.Drawing.Point(609, 176)
+        Me.GroupBox13.Name = "GroupBox13"
+        Me.GroupBox13.Size = New System.Drawing.Size(125, 46)
+        Me.GroupBox13.TabIndex = 170
+        Me.GroupBox13.TabStop = False
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button5.Location = New System.Drawing.Point(6, 15)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(113, 22)
+        Me.Button5.TabIndex = 0
+        Me.Button5.Text = "&Volver"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Products
         '
@@ -439,6 +461,7 @@ Partial Class Products
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 460)
+        Me.Controls.Add(Me.GroupBox13)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
@@ -453,6 +476,7 @@ Partial Class Products
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        Me.GroupBox13.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -495,4 +519,6 @@ Partial Class Products
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents GroupBox13 As GroupBox
+    Friend WithEvents Button5 As Button
 End Class

@@ -51,6 +51,7 @@ Partial Class Clients
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -94,15 +95,15 @@ Partial Class Clients
         Me.Panel1.Controls.Add(Me.Delete)
         Me.Panel1.Controls.Add(Me.Save)
         Me.Panel1.Controls.Add(Me.Update_Record)
-        Me.Panel1.Location = New System.Drawing.Point(621, 25)
+        Me.Panel1.Location = New System.Drawing.Point(624, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(122, 159)
+        Me.Panel1.Size = New System.Drawing.Size(122, 139)
         Me.Panel1.TabIndex = 153
         '
         'NewRecord
         '
         Me.NewRecord.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.NewRecord.Location = New System.Drawing.Point(14, 14)
+        Me.NewRecord.Location = New System.Drawing.Point(14, 6)
         Me.NewRecord.Name = "NewRecord"
         Me.NewRecord.Size = New System.Drawing.Size(93, 25)
         Me.NewRecord.TabIndex = 0
@@ -113,7 +114,7 @@ Partial Class Clients
         '
         Me.Delete.Enabled = False
         Me.Delete.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.Delete.Location = New System.Drawing.Point(14, 112)
+        Me.Delete.Location = New System.Drawing.Point(14, 104)
         Me.Delete.Name = "Delete"
         Me.Delete.Size = New System.Drawing.Size(93, 25)
         Me.Delete.TabIndex = 3
@@ -123,7 +124,7 @@ Partial Class Clients
         'Save
         '
         Me.Save.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Save.Location = New System.Drawing.Point(14, 48)
+        Me.Save.Location = New System.Drawing.Point(14, 40)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(93, 25)
         Me.Save.TabIndex = 1
@@ -134,7 +135,7 @@ Partial Class Clients
         '
         Me.Update_Record.Enabled = False
         Me.Update_Record.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.Update_Record.Location = New System.Drawing.Point(14, 80)
+        Me.Update_Record.Location = New System.Drawing.Point(14, 72)
         Me.Update_Record.Name = "Update_Record"
         Me.Update_Record.Size = New System.Drawing.Size(93, 25)
         Me.Update_Record.TabIndex = 2
@@ -332,12 +333,23 @@ Partial Class Clients
         Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader4.Width = 137
         '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Button4.Location = New System.Drawing.Point(639, 173)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(79, 26)
+        Me.Button4.TabIndex = 155
+        Me.Button4.Text = "&Volver"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Clients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 429)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
@@ -385,4 +397,5 @@ Partial Class Clients
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
+    Private WithEvents Button4 As Button
 End Class

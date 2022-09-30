@@ -31,6 +31,7 @@ Partial Class ChangePassword
         Me.OldPassword = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'UserName
@@ -54,7 +55,7 @@ Partial Class ChangePassword
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(128, 175)
+        Me.Button1.Location = New System.Drawing.Point(175, 175)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(142, 32)
         Me.Button1.TabIndex = 15
@@ -115,12 +116,23 @@ Partial Class ChangePassword
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Contraseña Vieja"
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Button2.Location = New System.Drawing.Point(58, 181)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(79, 26)
+        Me.Button2.TabIndex = 148
+        Me.Button2.Text = "&Volver"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'ChangePassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(395, 227)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.UserName)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
@@ -147,4 +159,5 @@ Partial Class ChangePassword
     Friend WithEvents OldPassword As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Private WithEvents Button2 As Button
 End Class

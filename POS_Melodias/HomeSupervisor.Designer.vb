@@ -27,13 +27,14 @@ Partial Class HomeSupervisor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.VendorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.RecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgregarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrationToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VendorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.UserID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -43,7 +44,6 @@ Partial Class HomeSupervisor
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.AgregarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
@@ -91,6 +91,16 @@ Partial Class HomeSupervisor
         Me.MenuStrip1.TabIndex = 146
         Me.MenuStrip1.Text = "MenuStrip1"
         '
+        'VendorToolStripMenuItem
+        '
+        Me.VendorToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.VendorToolStripMenuItem.Image = CType(resources.GetObject("VendorToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.VendorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.VendorToolStripMenuItem.Name = "VendorToolStripMenuItem"
+        Me.VendorToolStripMenuItem.Size = New System.Drawing.Size(67, 69)
+        Me.VendorToolStripMenuItem.Text = "Usuario"
+        Me.VendorToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
@@ -111,6 +121,20 @@ Partial Class HomeSupervisor
         Me.MenuStrip2.TabIndex = 147
         Me.MenuStrip2.Text = "MenuStrip2"
         '
+        'RecordToolStripMenuItem
+        '
+        Me.RecordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarUsuarioToolStripMenuItem})
+        Me.RecordToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
+        Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.RecordToolStripMenuItem.Text = "Usuarios"
+        '
+        'AgregarUsuarioToolStripMenuItem
+        '
+        Me.AgregarUsuarioToolStripMenuItem.Name = "AgregarUsuarioToolStripMenuItem"
+        Me.AgregarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarUsuarioToolStripMenuItem.Text = "Agregar Usuario"
+        '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrationToolStripMenuItem2, Me.BackupToolStripMenuItem})
@@ -125,29 +149,11 @@ Partial Class HomeSupervisor
         Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.RegistrationToolStripMenuItem2.Text = "Cambiar Contraseña"
         '
-        'VendorToolStripMenuItem
-        '
-        Me.VendorToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
-        Me.VendorToolStripMenuItem.Image = CType(resources.GetObject("VendorToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.VendorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.VendorToolStripMenuItem.Name = "VendorToolStripMenuItem"
-        Me.VendorToolStripMenuItem.Size = New System.Drawing.Size(67, 69)
-        Me.VendorToolStripMenuItem.Text = "Usuario"
-        Me.VendorToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
         'BackupToolStripMenuItem
         '
         Me.BackupToolStripMenuItem.Name = "BackupToolStripMenuItem"
         Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.BackupToolStripMenuItem.Text = "Backup"
-        '
-        'RecordToolStripMenuItem
-        '
-        Me.RecordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarUsuarioToolStripMenuItem})
-        Me.RecordToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
-        Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
-        Me.RecordToolStripMenuItem.Text = "Usuarios"
         '
         'ListView1
         '
@@ -205,12 +211,6 @@ Partial Class HomeSupervisor
         '
         Me.ColumnHeader6.Text = "Rol"
         Me.ColumnHeader6.Width = 70
-        '
-        'AgregarUsuarioToolStripMenuItem
-        '
-        Me.AgregarUsuarioToolStripMenuItem.Name = "AgregarUsuarioToolStripMenuItem"
-        Me.AgregarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AgregarUsuarioToolStripMenuItem.Text = "Agregar Usuario"
         '
         'HomeSupervisor
         '
