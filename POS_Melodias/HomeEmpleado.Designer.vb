@@ -33,6 +33,7 @@ Partial Class HomeEmpleado
         Me.AgregarVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistroDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VendorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgregarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrationToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -48,7 +49,6 @@ Partial Class HomeEmpleado
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.AgregarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -60,47 +60,47 @@ Partial Class HomeEmpleado
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrderToolStripMenuItem, Me.RegistrationToolStripMenuItem1, Me.CustomerToolStripMenuItem, Me.LogoutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 24)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 73)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 76)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'OrderToolStripMenuItem
         '
-        Me.OrderToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.OrderToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.OrderToolStripMenuItem.Image = CType(resources.GetObject("OrderToolStripMenuItem.Image"), System.Drawing.Image)
         Me.OrderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.OrderToolStripMenuItem.Name = "OrderToolStripMenuItem"
-        Me.OrderToolStripMenuItem.Size = New System.Drawing.Size(62, 69)
+        Me.OrderToolStripMenuItem.Size = New System.Drawing.Size(62, 72)
         Me.OrderToolStripMenuItem.Text = "Venta"
         Me.OrderToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'RegistrationToolStripMenuItem1
         '
-        Me.RegistrationToolStripMenuItem1.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.RegistrationToolStripMenuItem1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.RegistrationToolStripMenuItem1.Image = CType(resources.GetObject("RegistrationToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.RegistrationToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RegistrationToolStripMenuItem1.Name = "RegistrationToolStripMenuItem1"
-        Me.RegistrationToolStripMenuItem1.Size = New System.Drawing.Size(139, 69)
+        Me.RegistrationToolStripMenuItem1.Size = New System.Drawing.Size(145, 72)
         Me.RegistrationToolStripMenuItem1.Text = "Registro de Ventas"
         Me.RegistrationToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'CustomerToolStripMenuItem
         '
-        Me.CustomerToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.CustomerToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.CustomerToolStripMenuItem.Image = CType(resources.GetObject("CustomerToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CustomerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CustomerToolStripMenuItem.Name = "CustomerToolStripMenuItem"
-        Me.CustomerToolStripMenuItem.Size = New System.Drawing.Size(70, 69)
+        Me.CustomerToolStripMenuItem.Size = New System.Drawing.Size(73, 72)
         Me.CustomerToolStripMenuItem.Text = "Clientes"
         Me.CustomerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'LogoutToolStripMenuItem
         '
-        Me.LogoutToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.LogoutToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.LogoutToolStripMenuItem.Image = CType(resources.GetObject("LogoutToolStripMenuItem.Image"), System.Drawing.Image)
         Me.LogoutToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(62, 69)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(62, 72)
         Me.LogoutToolStripMenuItem.Text = "Salir"
         Me.LogoutToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -117,60 +117,66 @@ Partial Class HomeEmpleado
         'UsersToolStripMenuItem
         '
         Me.UsersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarVentaToolStripMenuItem, Me.RegistroDeVentasToolStripMenuItem})
-        Me.UsersToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.UsersToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
-        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.UsersToolStripMenuItem.Text = "Venta"
         '
         'AgregarVentaToolStripMenuItem
         '
         Me.AgregarVentaToolStripMenuItem.Name = "AgregarVentaToolStripMenuItem"
-        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.AgregarVentaToolStripMenuItem.Text = "Agregar Venta"
         '
         'RegistroDeVentasToolStripMenuItem
         '
         Me.RegistroDeVentasToolStripMenuItem.Name = "RegistroDeVentasToolStripMenuItem"
-        Me.RegistroDeVentasToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.RegistroDeVentasToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.RegistroDeVentasToolStripMenuItem.Text = "Registro de Ventas"
         '
         'VendorsToolStripMenuItem
         '
         Me.VendorsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarClienteToolStripMenuItem})
-        Me.VendorsToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.VendorsToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.VendorsToolStripMenuItem.Name = "VendorsToolStripMenuItem"
-        Me.VendorsToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.VendorsToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
         Me.VendorsToolStripMenuItem.Text = "Clientes"
+        '
+        'AgregarClienteToolStripMenuItem
+        '
+        Me.AgregarClienteToolStripMenuItem.Name = "AgregarClienteToolStripMenuItem"
+        Me.AgregarClienteToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.AgregarClienteToolStripMenuItem.Text = "Agregar Cliente"
         '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrationToolStripMenuItem2})
-        Me.ReportsToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.ReportsToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(83, 20)
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(95, 20)
         Me.ReportsToolStripMenuItem.Text = "Configuracion"
         '
         'RegistrationToolStripMenuItem2
         '
         Me.RegistrationToolStripMenuItem2.Name = "RegistrationToolStripMenuItem2"
-        Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(170, 22)
+        Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(187, 22)
         Me.RegistrationToolStripMenuItem2.Text = "Cambiar Contraseña"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.LightGray
-        Me.Label13.Font = New System.Drawing.Font("Miriam", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label13.Location = New System.Drawing.Point(23, 116)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(49, 16)
+        Me.Label13.Size = New System.Drawing.Size(55, 20)
         Me.Label13.TabIndex = 99
         Me.Label13.Text = "Stock"
         '
         'ListView1
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductID, Me.ColumnHeader8, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
-        Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
@@ -237,7 +243,7 @@ Partial Class HomeEmpleado
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Panel1.Location = New System.Drawing.Point(0, 420)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(800, 30)
@@ -248,15 +254,9 @@ Partial Class HomeEmpleado
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(10, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(121, 11)
+        Me.Label1.Size = New System.Drawing.Size(124, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingreso como: Empleado"
-        '
-        'AgregarClienteToolStripMenuItem
-        '
-        Me.AgregarClienteToolStripMenuItem.Name = "AgregarClienteToolStripMenuItem"
-        Me.AgregarClienteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AgregarClienteToolStripMenuItem.Text = "Agregar Cliente"
         '
         'HomeEmpleado
         '
@@ -269,7 +269,9 @@ Partial Class HomeEmpleado
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.MenuStrip2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "HomeEmpleado"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

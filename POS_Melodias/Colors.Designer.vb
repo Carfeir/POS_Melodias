@@ -22,6 +22,7 @@ Partial Class Colors
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Colors))
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColorID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -54,7 +55,7 @@ Partial Class Colors
         'ListView1
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColorID, Me.ColumnHeader2})
-        Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
@@ -83,7 +84,7 @@ Partial Class Colors
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 146)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(501, 46)
@@ -95,7 +96,7 @@ Partial Class Colors
         '
         Me.TextBox1.Location = New System.Drawing.Point(40, 16)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(443, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(443, 21)
         Me.TextBox1.TabIndex = 53
         '
         'GroupBox1
@@ -105,7 +106,7 @@ Partial Class Colors
         Me.GroupBox1.Controls.Add(Me.txtCategoryName)
         Me.GroupBox1.Controls.Add(Me.txtCategoryID)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(501, 106)
@@ -125,10 +126,10 @@ Partial Class Colors
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label2.Location = New System.Drawing.Point(11, 66)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 12)
+        Me.Label2.Size = New System.Drawing.Size(52, 15)
         Me.Label2.TabIndex = 56
         Me.Label2.Text = "Nombre"
         '
@@ -136,7 +137,7 @@ Partial Class Colors
         '
         Me.txtCategoryName.Location = New System.Drawing.Point(141, 65)
         Me.txtCategoryName.Name = "txtCategoryName"
-        Me.txtCategoryName.Size = New System.Drawing.Size(252, 20)
+        Me.txtCategoryName.Size = New System.Drawing.Size(252, 21)
         Me.txtCategoryName.TabIndex = 53
         '
         'txtCategoryID
@@ -145,16 +146,16 @@ Partial Class Colors
         Me.txtCategoryID.Location = New System.Drawing.Point(141, 26)
         Me.txtCategoryID.Name = "txtCategoryID"
         Me.txtCategoryID.ReadOnly = True
-        Me.txtCategoryID.Size = New System.Drawing.Size(108, 20)
+        Me.txtCategoryID.Size = New System.Drawing.Size(108, 21)
         Me.txtCategoryID.TabIndex = 54
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label4.Location = New System.Drawing.Point(11, 26)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(16, 12)
+        Me.Label4.Size = New System.Drawing.Size(19, 15)
         Me.Label4.TabIndex = 55
         Me.Label4.Text = "ID"
         '
@@ -174,7 +175,7 @@ Partial Class Colors
         '
         'btnGetDetails
         '
-        Me.btnGetDetails.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnGetDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnGetDetails.Location = New System.Drawing.Point(11, 135)
         Me.btnGetDetails.Name = "btnGetDetails"
         Me.btnGetDetails.Size = New System.Drawing.Size(79, 26)
@@ -185,7 +186,7 @@ Partial Class Colors
         'btnUpdate_record
         '
         Me.btnUpdate_record.Enabled = False
-        Me.btnUpdate_record.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnUpdate_record.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnUpdate_record.Location = New System.Drawing.Point(11, 104)
         Me.btnUpdate_record.Name = "btnUpdate_record"
         Me.btnUpdate_record.Size = New System.Drawing.Size(79, 26)
@@ -195,7 +196,7 @@ Partial Class Colors
         '
         'btnNewRecord
         '
-        Me.btnNewRecord.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnNewRecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnNewRecord.Location = New System.Drawing.Point(11, 10)
         Me.btnNewRecord.Name = "btnNewRecord"
         Me.btnNewRecord.Size = New System.Drawing.Size(79, 26)
@@ -206,7 +207,7 @@ Partial Class Colors
         'btnDelete
         '
         Me.btnDelete.Enabled = False
-        Me.btnDelete.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnDelete.Location = New System.Drawing.Point(11, 73)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(79, 26)
@@ -216,7 +217,7 @@ Partial Class Colors
         '
         'btnSave
         '
-        Me.btnSave.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnSave.Location = New System.Drawing.Point(11, 41)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(79, 26)
@@ -229,13 +230,13 @@ Partial Class Colors
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(334, 26)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(8, 11)
+        Me.Label1.Size = New System.Drawing.Size(10, 13)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "."
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Button2.Location = New System.Drawing.Point(564, 333)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(79, 26)
@@ -255,7 +256,7 @@ Partial Class Colors
         '
         'Button3
         '
-        Me.Button3.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Button3.Location = New System.Drawing.Point(6, 18)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(112, 26)
@@ -265,7 +266,7 @@ Partial Class Colors
         '
         'Button4
         '
-        Me.Button4.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Button4.Location = New System.Drawing.Point(6, 50)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(112, 26)
@@ -275,7 +276,7 @@ Partial Class Colors
         '
         'Colors
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
         Me.BackColor = System.Drawing.Color.White
@@ -286,8 +287,10 @@ Partial Class Colors
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.panel1)
-        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Colors"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " Color"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

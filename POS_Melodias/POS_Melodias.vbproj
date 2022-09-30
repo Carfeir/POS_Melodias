@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Back_up.Designer.vb">
+      <DependentUpon>Back_up.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Back_up.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Brands.Designer.vb">
       <DependentUpon>Brands.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Back_up.resx">
+      <DependentUpon>Back_up.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Brands.resx">
       <DependentUpon>Brands.vb</DependentUpon>
     </EmbeddedResource>

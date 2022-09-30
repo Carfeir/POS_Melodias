@@ -25,6 +25,7 @@ Partial Class Products
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ProductID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -60,17 +61,19 @@ Partial Class Products
         Me.Delete = New System.Windows.Forms.Button()
         Me.Save = New System.Windows.Forms.Button()
         Me.Update_Record = New System.Windows.Forms.Button()
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox13.SuspendLayout()
         Me.SuspendLayout()
         '
         'ListView1
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductID, Me.ColumnHeader8, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
-        Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
@@ -89,6 +92,11 @@ Partial Class Products
         '
         Me.ProductID.Text = "ID"
         Me.ProductID.Width = 38
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Proveedor"
+        Me.ColumnHeader8.Width = 102
         '
         'ColumnHeader2
         '
@@ -129,7 +137,7 @@ Partial Class Products
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 228)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(501, 55)
@@ -141,7 +149,7 @@ Partial Class Products
         '
         Me.TextBox1.Location = New System.Drawing.Point(40, 16)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(443, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(443, 21)
         Me.TextBox1.TabIndex = 53
         '
         'GroupBox1
@@ -164,7 +172,7 @@ Partial Class Products
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.txtPrice)
         Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(544, 199)
@@ -175,10 +183,10 @@ Partial Class Products
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label1.Location = New System.Drawing.Point(22, 49)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(62, 12)
+        Me.Label1.Size = New System.Drawing.Size(71, 15)
         Me.Label1.TabIndex = 179
         Me.Label1.Text = "ID Producto"
         '
@@ -189,7 +197,7 @@ Partial Class Products
         Me.TextBox2.Location = New System.Drawing.Point(155, 48)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(185, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(185, 21)
         Me.TextBox2.TabIndex = 178
         '
         'Button4
@@ -206,7 +214,7 @@ Partial Class Products
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Location = New System.Drawing.Point(411, 131)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(89, 20)
+        Me.ComboBox3.Size = New System.Drawing.Size(89, 23)
         Me.ComboBox3.TabIndex = 177
         '
         'ComboBox2
@@ -214,7 +222,7 @@ Partial Class Products
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(155, 131)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(94, 20)
+        Me.ComboBox2.Size = New System.Drawing.Size(94, 23)
         Me.ComboBox2.TabIndex = 176
         '
         'ComboBox1
@@ -222,7 +230,7 @@ Partial Class Products
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(154, 103)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(95, 20)
+        Me.ComboBox1.Size = New System.Drawing.Size(95, 23)
         Me.ComboBox1.TabIndex = 175
         '
         'txtTotalAmount
@@ -232,26 +240,26 @@ Partial Class Products
         Me.txtTotalAmount.Location = New System.Drawing.Point(155, 164)
         Me.txtTotalAmount.Name = "txtTotalAmount"
         Me.txtTotalAmount.ReadOnly = True
-        Me.txtTotalAmount.Size = New System.Drawing.Size(94, 20)
+        Me.txtTotalAmount.Size = New System.Drawing.Size(94, 21)
         Me.txtTotalAmount.TabIndex = 174
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label5.Location = New System.Drawing.Point(295, 134)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(35, 12)
+        Me.Label5.Size = New System.Drawing.Size(42, 15)
         Me.Label5.TabIndex = 172
         Me.Label5.Text = "Marca"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label7.Location = New System.Drawing.Point(23, 23)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(69, 12)
+        Me.Label7.Size = New System.Drawing.Size(78, 15)
         Me.Label7.TabIndex = 166
         Me.Label7.Text = "ID Proveedor"
         '
@@ -262,16 +270,16 @@ Partial Class Products
         Me.txtProductCode.Location = New System.Drawing.Point(154, 22)
         Me.txtProductCode.Name = "txtProductCode"
         Me.txtProductCode.ReadOnly = True
-        Me.txtProductCode.Size = New System.Drawing.Size(185, 20)
+        Me.txtProductCode.Size = New System.Drawing.Size(185, 21)
         Me.txtProductCode.TabIndex = 160
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label9.Location = New System.Drawing.Point(22, 74)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(44, 12)
+        Me.Label9.Size = New System.Drawing.Size(52, 15)
         Me.Label9.TabIndex = 167
         Me.Label9.Text = "Nombre"
         '
@@ -282,7 +290,7 @@ Partial Class Products
         Me.txtProductName.Location = New System.Drawing.Point(155, 74)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.ReadOnly = True
-        Me.txtProductName.Size = New System.Drawing.Size(366, 20)
+        Me.txtProductName.Size = New System.Drawing.Size(366, 21)
         Me.txtProductName.TabIndex = 161
         '
         'Button1
@@ -297,30 +305,30 @@ Partial Class Products
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label10.Location = New System.Drawing.Point(22, 103)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(52, 12)
+        Me.Label10.Size = New System.Drawing.Size(60, 15)
         Me.Label10.TabIndex = 165
         Me.Label10.Text = "Categoria"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label12.Location = New System.Drawing.Point(295, 103)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(75, 12)
+        Me.Label12.Size = New System.Drawing.Size(88, 15)
         Me.Label12.TabIndex = 171
         Me.Label12.Text = "Precio Unitario"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label13.Location = New System.Drawing.Point(22, 135)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(31, 12)
+        Me.Label13.Size = New System.Drawing.Size(36, 15)
         Me.Label13.TabIndex = 168
         Me.Label13.Text = "Color"
         '
@@ -331,16 +339,16 @@ Partial Class Products
         Me.txtPrice.Location = New System.Drawing.Point(411, 101)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.ReadOnly = True
-        Me.txtPrice.Size = New System.Drawing.Size(89, 20)
+        Me.txtPrice.Size = New System.Drawing.Size(89, 21)
         Me.txtPrice.TabIndex = 163
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label14.Location = New System.Drawing.Point(22, 167)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(48, 12)
+        Me.Label14.Size = New System.Drawing.Size(56, 15)
         Me.Label14.TabIndex = 169
         Me.Label14.Text = "Cantidad"
         '
@@ -356,7 +364,7 @@ Partial Class Products
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Button2.Location = New System.Drawing.Point(18, 17)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(112, 26)
@@ -366,7 +374,7 @@ Partial Class Products
         '
         'Button3
         '
-        Me.Button3.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Button3.Location = New System.Drawing.Point(136, 17)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(94, 26)
@@ -381,14 +389,14 @@ Partial Class Products
         Me.Panel1.Controls.Add(Me.Delete)
         Me.Panel1.Controls.Add(Me.Save)
         Me.Panel1.Controls.Add(Me.Update_Record)
-        Me.Panel1.Location = New System.Drawing.Point(622, 52)
+        Me.Panel1.Location = New System.Drawing.Point(626, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(122, 159)
         Me.Panel1.TabIndex = 154
         '
         'NewRecord
         '
-        Me.NewRecord.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.NewRecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.NewRecord.Location = New System.Drawing.Point(14, 14)
         Me.NewRecord.Name = "NewRecord"
         Me.NewRecord.Size = New System.Drawing.Size(93, 25)
@@ -399,7 +407,7 @@ Partial Class Products
         'Delete
         '
         Me.Delete.Enabled = False
-        Me.Delete.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Delete.Location = New System.Drawing.Point(14, 112)
         Me.Delete.Name = "Delete"
         Me.Delete.Size = New System.Drawing.Size(93, 25)
@@ -409,7 +417,7 @@ Partial Class Products
         '
         'Save
         '
-        Me.Save.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Save.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Save.Location = New System.Drawing.Point(14, 48)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(93, 25)
@@ -420,7 +428,7 @@ Partial Class Products
         'Update_Record
         '
         Me.Update_Record.Enabled = False
-        Me.Update_Record.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Update_Record.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Update_Record.Location = New System.Drawing.Point(14, 80)
         Me.Update_Record.Name = "Update_Record"
         Me.Update_Record.Size = New System.Drawing.Size(93, 25)
@@ -428,24 +436,40 @@ Partial Class Products
         Me.Update_Record.Text = "&Actualizar"
         Me.Update_Record.UseVisualStyleBackColor = True
         '
-        'ColumnHeader8
+        'GroupBox13
         '
-        Me.ColumnHeader8.Text = "Proveedor"
-        Me.ColumnHeader8.Width = 102
+        Me.GroupBox13.Controls.Add(Me.Button5)
+        Me.GroupBox13.Location = New System.Drawing.Point(609, 176)
+        Me.GroupBox13.Name = "GroupBox13"
+        Me.GroupBox13.Size = New System.Drawing.Size(125, 46)
+        Me.GroupBox13.TabIndex = 170
+        Me.GroupBox13.TabStop = False
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.Button5.Location = New System.Drawing.Point(6, 15)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(113, 22)
+        Me.Button5.TabIndex = 0
+        Me.Button5.Text = "&Volver"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Products
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 460)
+        Me.Controls.Add(Me.GroupBox13)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.ListView1)
-        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Name = "Products"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Producto"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -453,6 +477,7 @@ Partial Class Products
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        Me.GroupBox13.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -495,4 +520,6 @@ Partial Class Products
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents GroupBox13 As GroupBox
+    Friend WithEvents Button5 As Button
 End Class

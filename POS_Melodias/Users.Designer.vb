@@ -22,6 +22,7 @@ Partial Class Users
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Users))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -82,7 +83,7 @@ Partial Class Users
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Button2.Location = New System.Drawing.Point(18, 17)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(112, 26)
@@ -92,7 +93,7 @@ Partial Class Users
         '
         'Button3
         '
-        Me.Button3.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Button3.Location = New System.Drawing.Point(136, 17)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(94, 26)
@@ -114,7 +115,7 @@ Partial Class Users
         '
         'NewRecord
         '
-        Me.NewRecord.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.NewRecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.NewRecord.Location = New System.Drawing.Point(14, 14)
         Me.NewRecord.Name = "NewRecord"
         Me.NewRecord.Size = New System.Drawing.Size(93, 25)
@@ -125,7 +126,7 @@ Partial Class Users
         'Delete
         '
         Me.Delete.Enabled = False
-        Me.Delete.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Delete.Location = New System.Drawing.Point(418, 14)
         Me.Delete.Name = "Delete"
         Me.Delete.Size = New System.Drawing.Size(93, 25)
@@ -135,7 +136,7 @@ Partial Class Users
         '
         'Save
         '
-        Me.Save.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Save.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Save.Location = New System.Drawing.Point(148, 14)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(93, 25)
@@ -146,7 +147,7 @@ Partial Class Users
         'Update_Record
         '
         Me.Update_Record.Enabled = False
-        Me.Update_Record.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Update_Record.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Update_Record.Location = New System.Drawing.Point(283, 14)
         Me.Update_Record.Name = "Update_Record"
         Me.Update_Record.Size = New System.Drawing.Size(93, 25)
@@ -175,7 +176,7 @@ Partial Class Users
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 8)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(776, 166)
@@ -186,10 +187,10 @@ Partial Class Users
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label5.Location = New System.Drawing.Point(413, 110)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(112, 12)
+        Me.Label5.Size = New System.Drawing.Size(127, 15)
         Me.Label5.TabIndex = 187
         Me.Label5.Text = "Confirmar Contraseña"
         '
@@ -199,16 +200,16 @@ Partial Class Users
         Me.TextBox7.Location = New System.Drawing.Point(546, 102)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(206, 21)
         Me.TextBox7.TabIndex = 186
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label4.Location = New System.Drawing.Point(413, 78)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 12)
+        Me.Label4.Size = New System.Drawing.Size(70, 15)
         Me.Label4.TabIndex = 185
         Me.Label4.Text = "Contraseña"
         '
@@ -218,16 +219,16 @@ Partial Class Users
         Me.TextBox6.Location = New System.Drawing.Point(546, 70)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(206, 21)
         Me.TextBox6.TabIndex = 184
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label3.Location = New System.Drawing.Point(413, 49)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 12)
+        Me.Label3.Size = New System.Drawing.Size(113, 15)
         Me.Label3.TabIndex = 183
         Me.Label3.Text = "Nombre de usuario"
         '
@@ -237,7 +238,7 @@ Partial Class Users
         Me.TextBox5.Location = New System.Drawing.Point(546, 41)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(206, 21)
         Me.TextBox5.TabIndex = 182
         '
         'ComboBox2
@@ -246,16 +247,16 @@ Partial Class Users
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(546, 134)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(206, 20)
+        Me.ComboBox2.Size = New System.Drawing.Size(206, 23)
         Me.ComboBox2.TabIndex = 178
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label1.Location = New System.Drawing.Point(413, 141)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(21, 12)
+        Me.Label1.Size = New System.Drawing.Size(26, 15)
         Me.Label1.TabIndex = 174
         Me.Label1.Text = "Rol"
         '
@@ -265,7 +266,7 @@ Partial Class Users
         Me.TextBox4.Location = New System.Drawing.Point(156, 134)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(206, 21)
         Me.TextBox4.TabIndex = 173
         '
         'TextBox3
@@ -274,7 +275,7 @@ Partial Class Users
         Me.TextBox3.Location = New System.Drawing.Point(156, 102)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(206, 21)
         Me.TextBox3.TabIndex = 172
         '
         'TextBox2
@@ -283,16 +284,16 @@ Partial Class Users
         Me.TextBox2.Location = New System.Drawing.Point(156, 70)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(206, 21)
         Me.TextBox2.TabIndex = 171
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label7.Location = New System.Drawing.Point(23, 23)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(16, 12)
+        Me.Label7.Size = New System.Drawing.Size(19, 15)
         Me.Label7.TabIndex = 166
         Me.Label7.Text = "ID"
         '
@@ -302,16 +303,16 @@ Partial Class Users
         Me.txtProductCode.Location = New System.Drawing.Point(156, 15)
         Me.txtProductCode.Name = "txtProductCode"
         Me.txtProductCode.ReadOnly = True
-        Me.txtProductCode.Size = New System.Drawing.Size(161, 20)
+        Me.txtProductCode.Size = New System.Drawing.Size(161, 21)
         Me.txtProductCode.TabIndex = 160
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label9.Location = New System.Drawing.Point(23, 49)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(92, 12)
+        Me.Label9.Size = New System.Drawing.Size(107, 15)
         Me.Label9.TabIndex = 167
         Me.Label9.Text = "Nombre y Apellido"
         '
@@ -321,7 +322,7 @@ Partial Class Users
         Me.txtProductName.Location = New System.Drawing.Point(156, 41)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.ReadOnly = True
-        Me.txtProductName.Size = New System.Drawing.Size(206, 20)
+        Me.txtProductName.Size = New System.Drawing.Size(206, 21)
         Me.txtProductName.TabIndex = 161
         '
         'Button1
@@ -336,37 +337,37 @@ Partial Class Users
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label10.Location = New System.Drawing.Point(23, 78)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(72, 12)
+        Me.Label10.Size = New System.Drawing.Size(81, 15)
         Me.Label10.TabIndex = 165
         Me.Label10.Text = "Nro. Contacto"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label13.Location = New System.Drawing.Point(23, 110)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(94, 12)
+        Me.Label13.Size = New System.Drawing.Size(108, 15)
         Me.Label13.TabIndex = 168
         Me.Label13.Text = "Correo Electronico"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label14.Location = New System.Drawing.Point(23, 142)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(49, 12)
+        Me.Label14.Size = New System.Drawing.Size(59, 15)
         Me.Label14.TabIndex = 169
         Me.Label14.Text = "Direccion"
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 275)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(501, 55)
@@ -379,13 +380,13 @@ Partial Class Users
         Me.TextBox1.BackColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(40, 16)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(443, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(443, 21)
         Me.TextBox1.TabIndex = 53
         '
         'ListView1
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.UserID, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
-        Me.ListView1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
@@ -450,7 +451,7 @@ Partial Class Users
         '
         'Button5
         '
-        Me.Button5.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Button5.Location = New System.Drawing.Point(18, 17)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(112, 26)
@@ -460,7 +461,7 @@ Partial Class Users
         '
         'Users
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 508)
@@ -470,8 +471,10 @@ Partial Class Users
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.ListView1)
-        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Users"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Usuario"
         Me.GroupBox3.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
