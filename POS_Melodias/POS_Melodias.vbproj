@@ -126,6 +126,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>melodiasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="melodiasDataSet.vb">
+      <DependentUpon>melodiasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SellsRecord.Designer.vb">
       <DependentUpon>SellsRecord.vb</DependentUpon>
     </Compile>

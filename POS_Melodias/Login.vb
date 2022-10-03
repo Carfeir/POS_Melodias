@@ -24,11 +24,8 @@ Public Class Login
                 TContraseña.Clear()
             Else
                 MsgBox("El usuario y/o contraseña no es correcta")
-
             End If
-
         End If
-
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

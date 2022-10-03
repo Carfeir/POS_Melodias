@@ -29,17 +29,12 @@ Partial Class Clients
         Dim ApellidosLabel As System.Windows.Forms.Label
         Dim NroContactoLabel As System.Windows.Forms.Label
         Dim CorreoElectronicoLabel As System.Windows.Forms.Label
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.ClienteBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -75,46 +70,14 @@ Partial Class Clients
         ApellidosLabel = New System.Windows.Forms.Label()
         NroContactoLabel = New System.Windows.Forms.Label()
         CorreoElectronicoLabel = New System.Windows.Forms.Label()
-        Me.GroupBox3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.ClienteBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClienteBindingNavigator.SuspendLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.Button2)
-        Me.GroupBox3.Controls.Add(Me.Button3)
-        Me.GroupBox3.Location = New System.Drawing.Point(34, 405)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(254, 47)
-        Me.GroupBox3.TabIndex = 154
-        Me.GroupBox3.TabStop = False
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.Button2.Location = New System.Drawing.Point(18, 14)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 22)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "&Obtener Datos"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.Button3.Location = New System.Drawing.Point(136, 14)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(94, 22)
-        Me.Button3.TabIndex = 1
-        Me.Button3.Text = "&Reiniciar"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -189,25 +152,6 @@ Partial Class Clients
         Me.GroupBox1.TabIndex = 152
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Cliente"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(66, 457)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(501, 47)
-        Me.GroupBox2.TabIndex = 151
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Buscador"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(40, 14)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(443, 21)
-        Me.TextBox1.TabIndex = 53
         '
         'btnVolver
         '
@@ -504,10 +448,8 @@ Partial Class Clients
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(567, 498)
+        Me.ClientSize = New System.Drawing.Size(567, 368)
         Me.Controls.Add(Me.btnMostrar)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.ClienteDataGridView)
         Me.Controls.Add(Me.ClienteBindingNavigator)
         Me.Controls.Add(Me.btnVolver)
@@ -518,12 +460,9 @@ Partial Class Clients
         Me.Name = "Clients"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cliente"
-        Me.GroupBox3.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.ClienteBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClienteBindingNavigator.ResumeLayout(False)
         Me.ClienteBindingNavigator.PerformLayout()
@@ -534,18 +473,12 @@ Partial Class Clients
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnAgregar As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnBuscar As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
     Private WithEvents btnVolver As Button
     Friend WithEvents MelodiasDataSet As melodiasDataSet
     Friend WithEvents ClienteBindingSource As BindingSource
