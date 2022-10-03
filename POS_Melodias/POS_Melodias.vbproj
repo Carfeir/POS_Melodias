@@ -121,6 +121,11 @@
     <Compile Include="HomeSupervisor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="melodiasDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>melodiasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SellsRecord.Designer.vb">
       <DependentUpon>SellsRecord.vb</DependentUpon>
     </Compile>
@@ -234,6 +239,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="melodiasDataSet.xsc">
+      <DependentUpon>melodiasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="melodiasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>melodiasDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="melodiasDataSet.xss">
+      <DependentUpon>melodiasDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
