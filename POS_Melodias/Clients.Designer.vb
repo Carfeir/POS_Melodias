@@ -103,7 +103,9 @@ Partial Class Clients
         '
         'NewRecord
         '
-        Me.NewRecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+
+        Me.NewRecord.Font = New System.Drawing.Font("Miriam", 9.75!)
+
         Me.NewRecord.Location = New System.Drawing.Point(14, 6)
         Me.NewRecord.Name = "NewRecord"
         Me.NewRecord.Size = New System.Drawing.Size(93, 25)
@@ -114,7 +116,9 @@ Partial Class Clients
         'Delete
         '
         Me.Delete.Enabled = False
-        Me.Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+
+        Me.Delete.Font = New System.Drawing.Font("Miriam", 9.75!)
+
         Me.Delete.Location = New System.Drawing.Point(14, 104)
         Me.Delete.Name = "Delete"
         Me.Delete.Size = New System.Drawing.Size(93, 25)
@@ -124,7 +128,9 @@ Partial Class Clients
         '
         'Save
         '
-        Me.Save.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
+
+        Me.Save.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold)
+
         Me.Save.Location = New System.Drawing.Point(14, 40)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(93, 25)
@@ -135,7 +141,9 @@ Partial Class Clients
         'Update_Record
         '
         Me.Update_Record.Enabled = False
-        Me.Update_Record.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+
+        Me.Update_Record.Font = New System.Drawing.Font("Miriam", 9.75!)
+
         Me.Update_Record.Location = New System.Drawing.Point(14, 72)
         Me.Update_Record.Name = "Update_Record"
         Me.Update_Record.Size = New System.Drawing.Size(93, 25)
@@ -336,7 +344,9 @@ Partial Class Clients
         '
         'Button4
         '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+
+        Me.Button4.Font = New System.Drawing.Font("Miriam", 9.0!)
+
         Me.Button4.Location = New System.Drawing.Point(639, 173)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(79, 26)

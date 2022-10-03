@@ -93,11 +93,13 @@ Partial Class HomeSupervisor
         '
         'VendorToolStripMenuItem
         '
-        Me.VendorToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+
+        Me.VendorToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
         Me.VendorToolStripMenuItem.Image = CType(resources.GetObject("VendorToolStripMenuItem.Image"), System.Drawing.Image)
         Me.VendorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.VendorToolStripMenuItem.Name = "VendorToolStripMenuItem"
         Me.VendorToolStripMenuItem.Size = New System.Drawing.Size(72, 72)
+
         Me.VendorToolStripMenuItem.Text = "Usuario"
         Me.VendorToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -124,15 +126,19 @@ Partial Class HomeSupervisor
         'RecordToolStripMenuItem
         '
         Me.RecordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarUsuarioToolStripMenuItem})
-        Me.RecordToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+
+        Me.RecordToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
         Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
+
         Me.RecordToolStripMenuItem.Text = "Usuarios"
         '
         'AgregarUsuarioToolStripMenuItem
         '
         Me.AgregarUsuarioToolStripMenuItem.Name = "AgregarUsuarioToolStripMenuItem"
+
         Me.AgregarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+
         Me.AgregarUsuarioToolStripMenuItem.Text = "Agregar Usuario"
         '
         'ReportsToolStripMenuItem

@@ -447,7 +447,9 @@ Partial Class Products
         '
         'Button5
         '
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+
+        Me.Button5.Font = New System.Drawing.Font("Miriam", 9.75!)
+
         Me.Button5.Location = New System.Drawing.Point(6, 15)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(113, 22)

@@ -55,7 +55,9 @@ Partial Class ChangePassword
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+
+        Me.Button1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+
         Me.Button1.Location = New System.Drawing.Point(175, 175)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(142, 32)
@@ -119,7 +121,9 @@ Partial Class ChangePassword
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+
+        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
+
         Me.Button2.Location = New System.Drawing.Point(58, 181)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(79, 26)

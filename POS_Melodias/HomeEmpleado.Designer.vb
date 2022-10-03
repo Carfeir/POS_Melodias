@@ -125,13 +125,17 @@ Partial Class HomeEmpleado
         'AgregarVentaToolStripMenuItem
         '
         Me.AgregarVentaToolStripMenuItem.Name = "AgregarVentaToolStripMenuItem"
+
         Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+
         Me.AgregarVentaToolStripMenuItem.Text = "Agregar Venta"
         '
         'RegistroDeVentasToolStripMenuItem
         '
         Me.RegistroDeVentasToolStripMenuItem.Name = "RegistroDeVentasToolStripMenuItem"
+
         Me.RegistroDeVentasToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+
         Me.RegistroDeVentasToolStripMenuItem.Text = "Registro de Ventas"
         '
         'VendorsToolStripMenuItem
@@ -145,7 +149,9 @@ Partial Class HomeEmpleado
         'AgregarClienteToolStripMenuItem
         '
         Me.AgregarClienteToolStripMenuItem.Name = "AgregarClienteToolStripMenuItem"
+
         Me.AgregarClienteToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+
         Me.AgregarClienteToolStripMenuItem.Text = "Agregar Cliente"
         '
         'ReportsToolStripMenuItem
@@ -159,7 +165,9 @@ Partial Class HomeEmpleado
         'RegistrationToolStripMenuItem2
         '
         Me.RegistrationToolStripMenuItem2.Name = "RegistrationToolStripMenuItem2"
+
         Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(187, 22)
+
         Me.RegistrationToolStripMenuItem2.Text = "Cambiar Contraseña"
         '
         'Label13

@@ -1,4 +1,6 @@
+
 ﻿Public Class HomeAdmin
+
     Private Sub ProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductoToolStripMenuItem.Click
         Products.Show()
     End Sub

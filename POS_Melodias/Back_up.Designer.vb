@@ -22,7 +22,9 @@ Partial Class Back_up
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Back_up))
+
         Me.UserName = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -42,16 +44,16 @@ Partial Class Back_up
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.Label4.Location = New System.Drawing.Point(43, 35)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(113, 15)
+        Me.Label4.Size = New System.Drawing.Size(97, 12)
         Me.Label4.TabIndex = 26
         Me.Label4.Text = "Nombre de Backup"
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Button1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Button1.Location = New System.Drawing.Point(162, 117)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(142, 32)
@@ -70,16 +72,18 @@ Partial Class Back_up
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+
+        Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.Label1.Location = New System.Drawing.Point(43, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 15)
+        Me.Label1.Size = New System.Drawing.Size(49, 12)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Direccion"
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+
+        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.Button2.Location = New System.Drawing.Point(45, 123)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(79, 26)
@@ -98,9 +102,11 @@ Partial Class Back_up
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.OldPassword)
         Me.Controls.Add(Me.Label1)
+        
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Back_up"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+
         Me.Text = "Backup"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -159,7 +159,9 @@ Partial Class HomeAdmin
         'AgregarProveedorToolStripMenuItem
         '
         Me.AgregarProveedorToolStripMenuItem.Name = "AgregarProveedorToolStripMenuItem"
+
         Me.AgregarProveedorToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+
         Me.AgregarProveedorToolStripMenuItem.Text = "Agregar Proveedor"
         '
         'ReportsToolStripMenuItem
