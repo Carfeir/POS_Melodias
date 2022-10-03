@@ -33,7 +33,7 @@
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         If Not Validar_campos() Then
             MessageBox.Show("Completar todos los campos para agregar el cliente", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
-        ElseIf Me.ClienteTableAdapter.BuscarCliente(MelodiasDataSet.cliente, DNITextBox.Text, NombresTextBox.Text, ApellidosTextBox.Text, NroContactoTextBox.Text, CorreoElectronicoTextBox.Text) Then
+        ElseIf Me.ClienteTableAdapter.BuscarCliente(MelodiasDataSet.cliente, DNITextBox.Text) Then
             MessageBox.Show("Ya existe un cliente con los datos ingresados", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         Else
             Me.ClienteTableAdapter.AgregarCliente(DNITextBox.Text, NombresTextBox.Text, ApellidosTextBox.Text, NroContactoTextBox.Text, CorreoElectronicoTextBox.Text)
@@ -59,7 +59,7 @@
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        Me.ClienteTableAdapter.BuscarCliente(MelodiasDataSet.cliente, DNITextBox.Text, NombresTextBox.Text, ApellidosTextBox.Text, NroContactoTextBox.Text, CorreoElectronicoTextBox.Text)
+        Me.ClienteTableAdapter.BuscarCliente(MelodiasDataSet.cliente, DNITextBox.Text)
     End Sub
 
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
