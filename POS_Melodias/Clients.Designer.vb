@@ -23,46 +23,46 @@ Partial Class Clients
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Clients))
         Dim DNILabel As System.Windows.Forms.Label
         Dim NombresLabel As System.Windows.Forms.Label
         Dim ApellidosLabel As System.Windows.Forms.Label
         Dim NroContactoLabel As System.Windows.Forms.Label
         Dim CorreoElectronicoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Clients))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnVolver = New System.Windows.Forms.Button()
-        Me.ClienteBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.ClienteBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.ClienteDataGridView = New System.Windows.Forms.DataGridView()
         Me.DNITextBox = New System.Windows.Forms.TextBox()
+        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
         Me.NombresTextBox = New System.Windows.Forms.TextBox()
         Me.ApellidosTextBox = New System.Windows.Forms.TextBox()
         Me.NroContactoTextBox = New System.Windows.Forms.TextBox()
         Me.CorreoElectronicoTextBox = New System.Windows.Forms.TextBox()
-        Me.btnMostrar = New System.Windows.Forms.Button()
+        Me.btnVolver = New System.Windows.Forms.Button()
+        Me.ClienteBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ClienteBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ClienteDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.btnMostrar = New System.Windows.Forms.Button()
         Me.ClienteTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.clienteTableAdapter()
         Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         DNILabel = New System.Windows.Forms.Label()
@@ -72,12 +72,62 @@ Partial Class Clients
         CorreoElectronicoLabel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClienteBindingNavigator.SuspendLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'DNILabel
+        '
+        DNILabel.AutoSize = True
+        DNILabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        DNILabel.Location = New System.Drawing.Point(20, 24)
+        DNILabel.Name = "DNILabel"
+        DNILabel.Size = New System.Drawing.Size(27, 12)
+        DNILabel.TabIndex = 0
+        DNILabel.Text = "DNI:"
+        '
+        'NombresLabel
+        '
+        NombresLabel.AutoSize = True
+        NombresLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NombresLabel.Location = New System.Drawing.Point(20, 47)
+        NombresLabel.Name = "NombresLabel"
+        NombresLabel.Size = New System.Drawing.Size(52, 12)
+        NombresLabel.TabIndex = 2
+        NombresLabel.Text = "Nombres:"
+        '
+        'ApellidosLabel
+        '
+        ApellidosLabel.AutoSize = True
+        ApellidosLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        ApellidosLabel.Location = New System.Drawing.Point(20, 69)
+        ApellidosLabel.Name = "ApellidosLabel"
+        ApellidosLabel.Size = New System.Drawing.Size(50, 12)
+        ApellidosLabel.TabIndex = 4
+        ApellidosLabel.Text = "Apellidos:"
+        '
+        'NroContactoLabel
+        '
+        NroContactoLabel.AutoSize = True
+        NroContactoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NroContactoLabel.Location = New System.Drawing.Point(20, 92)
+        NroContactoLabel.Name = "NroContactoLabel"
+        NroContactoLabel.Size = New System.Drawing.Size(75, 12)
+        NroContactoLabel.TabIndex = 6
+        NroContactoLabel.Text = "Nro. Contacto:"
+        '
+        'CorreoElectronicoLabel
+        '
+        CorreoElectronicoLabel.AutoSize = True
+        CorreoElectronicoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 115)
+        CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
+        CorreoElectronicoLabel.Size = New System.Drawing.Size(97, 12)
+        CorreoElectronicoLabel.TabIndex = 8
+        CorreoElectronicoLabel.Text = "Correo Electronico:"
         '
         'Panel1
         '
@@ -153,6 +203,61 @@ Partial Class Clients
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Cliente"
         '
+        'DNITextBox
+        '
+        Me.DNITextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "DNI", True))
+        Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.DNITextBox.Location = New System.Drawing.Point(154, 21)
+        Me.DNITextBox.Name = "DNITextBox"
+        Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
+        Me.DNITextBox.TabIndex = 1
+        '
+        'ClienteBindingSource
+        '
+        Me.ClienteBindingSource.DataMember = "cliente"
+        Me.ClienteBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'MelodiasDataSet
+        '
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'NombresTextBox
+        '
+        Me.NombresTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nombres", True))
+        Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombresTextBox.Location = New System.Drawing.Point(154, 44)
+        Me.NombresTextBox.Name = "NombresTextBox"
+        Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NombresTextBox.TabIndex = 3
+        '
+        'ApellidosTextBox
+        '
+        Me.ApellidosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "apellidos", True))
+        Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.ApellidosTextBox.Location = New System.Drawing.Point(154, 67)
+        Me.ApellidosTextBox.Name = "ApellidosTextBox"
+        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.ApellidosTextBox.TabIndex = 5
+        '
+        'NroContactoTextBox
+        '
+        Me.NroContactoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nroContacto", True))
+        Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(154, 90)
+        Me.NroContactoTextBox.Name = "NroContactoTextBox"
+        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NroContactoTextBox.TabIndex = 7
+        '
+        'CorreoElectronicoTextBox
+        '
+        Me.CorreoElectronicoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "correoElectronico", True))
+        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(154, 113)
+        Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
+        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.CorreoElectronicoTextBox.TabIndex = 9
+        '
         'btnVolver
         '
         Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
@@ -182,6 +287,31 @@ Partial Class Clients
         Me.ClienteBindingNavigator.TabIndex = 156
         Me.ClienteBindingNavigator.Text = "BindingNavigator1"
         Me.ClienteBindingNavigator.Visible = False
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 18)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 18)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 18)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -216,16 +346,9 @@ Partial Class Clients
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 18)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 21)
         '
         'BindingNavigatorMoveNextItem
@@ -248,26 +371,8 @@ Partial Class Clients
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 21)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 18)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 18)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'ClienteBindingNavigatorSaveItem
         '
@@ -287,111 +392,6 @@ Partial Class Clients
         Me.ClienteDataGridView.Name = "ClienteDataGridView"
         Me.ClienteDataGridView.Size = New System.Drawing.Size(543, 154)
         Me.ClienteDataGridView.TabIndex = 156
-        '
-        'DNILabel
-        '
-        DNILabel.AutoSize = True
-        DNILabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        DNILabel.Location = New System.Drawing.Point(20, 24)
-        DNILabel.Name = "DNILabel"
-        DNILabel.Size = New System.Drawing.Size(27, 12)
-        DNILabel.TabIndex = 0
-        DNILabel.Text = "DNI:"
-        '
-        'DNITextBox
-        '
-        Me.DNITextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "DNI", True))
-        Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(154, 21)
-        Me.DNITextBox.Name = "DNITextBox"
-        Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
-        Me.DNITextBox.TabIndex = 1
-        '
-        'NombresLabel
-        '
-        NombresLabel.AutoSize = True
-        NombresLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        NombresLabel.Location = New System.Drawing.Point(20, 47)
-        NombresLabel.Name = "NombresLabel"
-        NombresLabel.Size = New System.Drawing.Size(52, 12)
-        NombresLabel.TabIndex = 2
-        NombresLabel.Text = "Nombres:"
-        '
-        'NombresTextBox
-        '
-        Me.NombresTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nombres", True))
-        Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(154, 44)
-        Me.NombresTextBox.Name = "NombresTextBox"
-        Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
-        Me.NombresTextBox.TabIndex = 3
-        '
-        'ApellidosLabel
-        '
-        ApellidosLabel.AutoSize = True
-        ApellidosLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        ApellidosLabel.Location = New System.Drawing.Point(20, 69)
-        ApellidosLabel.Name = "ApellidosLabel"
-        ApellidosLabel.Size = New System.Drawing.Size(50, 12)
-        ApellidosLabel.TabIndex = 4
-        ApellidosLabel.Text = "Apellidos:"
-        '
-        'ApellidosTextBox
-        '
-        Me.ApellidosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "apellidos", True))
-        Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.ApellidosTextBox.Location = New System.Drawing.Point(154, 67)
-        Me.ApellidosTextBox.Name = "ApellidosTextBox"
-        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 20)
-        Me.ApellidosTextBox.TabIndex = 5
-        '
-        'NroContactoLabel
-        '
-        NroContactoLabel.AutoSize = True
-        NroContactoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        NroContactoLabel.Location = New System.Drawing.Point(20, 92)
-        NroContactoLabel.Name = "NroContactoLabel"
-        NroContactoLabel.Size = New System.Drawing.Size(75, 12)
-        NroContactoLabel.TabIndex = 6
-        NroContactoLabel.Text = "Nro. Contacto:"
-        '
-        'NroContactoTextBox
-        '
-        Me.NroContactoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nroContacto", True))
-        Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NroContactoTextBox.Location = New System.Drawing.Point(154, 90)
-        Me.NroContactoTextBox.Name = "NroContactoTextBox"
-        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 20)
-        Me.NroContactoTextBox.TabIndex = 7
-        '
-        'CorreoElectronicoLabel
-        '
-        CorreoElectronicoLabel.AutoSize = True
-        CorreoElectronicoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 115)
-        CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
-        CorreoElectronicoLabel.Size = New System.Drawing.Size(97, 12)
-        CorreoElectronicoLabel.TabIndex = 8
-        CorreoElectronicoLabel.Text = "Correo Electronico:"
-        '
-        'CorreoElectronicoTextBox
-        '
-        Me.CorreoElectronicoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "correoElectronico", True))
-        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(154, 113)
-        Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
-        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 20)
-        Me.CorreoElectronicoTextBox.TabIndex = 9
-        '
-        'btnMostrar
-        '
-        Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnMostrar.Location = New System.Drawing.Point(380, 134)
-        Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(175, 21)
-        Me.btnMostrar.TabIndex = 4
-        Me.btnMostrar.Text = "&Mostrar Clientes"
-        Me.btnMostrar.UseVisualStyleBackColor = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -423,15 +423,15 @@ Partial Class Clients
         Me.DataGridViewTextBoxColumn5.HeaderText = "correoElectronico"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
-        'ClienteBindingSource
+        'btnMostrar
         '
-        Me.ClienteBindingSource.DataMember = "cliente"
-        Me.ClienteBindingSource.DataSource = Me.MelodiasDataSet
-        '
-        'MelodiasDataSet
-        '
-        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
-        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnMostrar.Location = New System.Drawing.Point(380, 134)
+        Me.btnMostrar.Name = "btnMostrar"
+        Me.btnMostrar.Size = New System.Drawing.Size(175, 21)
+        Me.btnMostrar.TabIndex = 4
+        Me.btnMostrar.Text = "&Mostrar Clientes"
+        Me.btnMostrar.UseVisualStyleBackColor = True
         '
         'ClienteTableAdapter
         '
@@ -463,12 +463,12 @@ Partial Class Clients
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClienteBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClienteBindingNavigator.ResumeLayout(False)
         Me.ClienteBindingNavigator.PerformLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
