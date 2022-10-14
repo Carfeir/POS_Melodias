@@ -29,6 +29,7 @@ Partial Class Clients
         Dim NroContactoLabel As System.Windows.Forms.Label
         Dim CorreoElectronicoLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Clients))
+        Dim Label1 As System.Windows.Forms.Label
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -65,11 +66,14 @@ Partial Class Clients
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.ClienteTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.clienteTableAdapter()
         Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
         NroContactoLabel = New System.Windows.Forms.Label()
         CorreoElectronicoLabel = New System.Windows.Forms.Label()
+        Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,6 +81,7 @@ Partial Class Clients
         CType(Me.ClienteBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClienteBindingNavigator.SuspendLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'DNILabel
@@ -135,17 +140,16 @@ Partial Class Clients
         Me.Panel1.Controls.Add(Me.btnAgregar)
         Me.Panel1.Controls.Add(Me.btnEliminar)
         Me.Panel1.Controls.Add(Me.btnModificar)
-        Me.Panel1.Controls.Add(Me.btnBuscar)
         Me.Panel1.Font = New System.Drawing.Font("Miriam", 8.25!)
         Me.Panel1.Location = New System.Drawing.Point(413, 18)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(106, 111)
+        Me.Panel1.Size = New System.Drawing.Size(106, 96)
         Me.Panel1.TabIndex = 153
         '
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnAgregar.Location = New System.Drawing.Point(5, 3)
+        Me.btnAgregar.Location = New System.Drawing.Point(5, 8)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(93, 21)
         Me.btnAgregar.TabIndex = 0
@@ -155,7 +159,7 @@ Partial Class Clients
         'btnEliminar
         '
         Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnEliminar.Location = New System.Drawing.Point(5, 58)
+        Me.btnEliminar.Location = New System.Drawing.Point(5, 63)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(93, 21)
         Me.btnEliminar.TabIndex = 3
@@ -165,7 +169,7 @@ Partial Class Clients
         'btnModificar
         '
         Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnModificar.Location = New System.Drawing.Point(5, 30)
+        Me.btnModificar.Location = New System.Drawing.Point(5, 35)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(93, 21)
         Me.btnModificar.TabIndex = 1
@@ -176,7 +180,7 @@ Partial Class Clients
         '
         Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(5, 85)
+        Me.btnBuscar.Location = New System.Drawing.Point(426, 20)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(93, 21)
         Me.btnBuscar.TabIndex = 2
@@ -261,7 +265,7 @@ Partial Class Clients
         'btnVolver
         '
         Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnVolver.Location = New System.Drawing.Point(12, 338)
+        Me.btnVolver.Location = New System.Drawing.Point(12, 414)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(79, 22)
         Me.btnVolver.TabIndex = 155
@@ -340,7 +344,6 @@ Partial Class Clients
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -388,7 +391,7 @@ Partial Class Clients
         Me.ClienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClienteDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.ClienteDataGridView.DataSource = Me.ClienteBindingSource
-        Me.ClienteDataGridView.Location = New System.Drawing.Point(12, 169)
+        Me.ClienteDataGridView.Location = New System.Drawing.Point(12, 245)
         Me.ClienteDataGridView.Name = "ClienteDataGridView"
         Me.ClienteDataGridView.Size = New System.Drawing.Size(543, 154)
         Me.ClienteDataGridView.TabIndex = 156
@@ -426,9 +429,9 @@ Partial Class Clients
         'btnMostrar
         '
         Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnMostrar.Location = New System.Drawing.Point(380, 134)
+        Me.btnMostrar.Location = New System.Drawing.Point(380, 125)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(175, 21)
+        Me.btnMostrar.Size = New System.Drawing.Size(175, 30)
         Me.btnMostrar.TabIndex = 4
         Me.btnMostrar.Text = "&Mostrar Clientes"
         Me.btnMostrar.UseVisualStyleBackColor = True
@@ -443,12 +446,44 @@ Partial Class Clients
         Me.TableAdapterManager.clienteTableAdapter = Me.ClienteTableAdapter
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Label1)
+        Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
+        Me.GroupBox2.Controls.Add(Me.btnBuscar)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 173)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(543, 55)
+        Me.GroupBox2.TabIndex = 157
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Buscador"
+        '
+        'BuscadorTextBox
+        '
+        Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.BuscadorTextBox.Location = New System.Drawing.Point(65, 20)
+        Me.BuscadorTextBox.Name = "BuscadorTextBox"
+        Me.BuscadorTextBox.Size = New System.Drawing.Size(341, 21)
+        Me.BuscadorTextBox.TabIndex = 53
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label1.Location = New System.Drawing.Point(24, 27)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(27, 12)
+        Label1.TabIndex = 54
+        Label1.Text = "DNI:"
+        '
         'Clients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(567, 368)
+        Me.ClientSize = New System.Drawing.Size(567, 448)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.ClienteDataGridView)
         Me.Controls.Add(Me.ClienteBindingNavigator)
@@ -469,6 +504,8 @@ Partial Class Clients
         Me.ClienteBindingNavigator.ResumeLayout(False)
         Me.ClienteBindingNavigator.PerformLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -509,4 +546,6 @@ Partial Class Clients
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents btnMostrar As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents BuscadorTextBox As TextBox
 End Class
