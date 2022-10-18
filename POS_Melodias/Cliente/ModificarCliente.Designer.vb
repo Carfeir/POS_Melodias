@@ -152,6 +152,7 @@ Partial Class ModificarCliente
         Me.DNITextBox.Location = New System.Drawing.Point(154, 21)
         Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DNITextBox.Name = "DNITextBox"
+        Me.DNITextBox.ReadOnly = True
         Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
         Me.DNITextBox.TabIndex = 1
         '

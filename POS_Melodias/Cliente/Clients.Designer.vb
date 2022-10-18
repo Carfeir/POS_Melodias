@@ -28,8 +28,8 @@ Partial Class Clients
         Dim ApellidosLabel As System.Windows.Forms.Label
         Dim NroContactoLabel As System.Windows.Forms.Label
         Dim CorreoElectronicoLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Clients))
         Dim Label1 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Clients))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -134,6 +134,16 @@ Partial Class Clients
         CorreoElectronicoLabel.TabIndex = 8
         CorreoElectronicoLabel.Text = "Correo Electronico:"
         '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label1.Location = New System.Drawing.Point(24, 27)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(27, 12)
+        Label1.TabIndex = 54
+        Label1.Text = "DNI:"
+        '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -213,6 +223,7 @@ Partial Class Clients
         Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.DNITextBox.Location = New System.Drawing.Point(154, 21)
         Me.DNITextBox.Name = "DNITextBox"
+        Me.DNITextBox.ReadOnly = True
         Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
         Me.DNITextBox.TabIndex = 1
         '
@@ -232,6 +243,7 @@ Partial Class Clients
         Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.NombresTextBox.Location = New System.Drawing.Point(154, 44)
         Me.NombresTextBox.Name = "NombresTextBox"
+        Me.NombresTextBox.ReadOnly = True
         Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
         Me.NombresTextBox.TabIndex = 3
         '
@@ -241,6 +253,7 @@ Partial Class Clients
         Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.ApellidosTextBox.Location = New System.Drawing.Point(154, 67)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
+        Me.ApellidosTextBox.ReadOnly = True
         Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 20)
         Me.ApellidosTextBox.TabIndex = 5
         '
@@ -250,6 +263,7 @@ Partial Class Clients
         Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.NroContactoTextBox.Location = New System.Drawing.Point(154, 90)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
+        Me.NroContactoTextBox.ReadOnly = True
         Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 20)
         Me.NroContactoTextBox.TabIndex = 7
         '
@@ -259,6 +273,7 @@ Partial Class Clients
         Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(154, 113)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
+        Me.CorreoElectronicoTextBox.ReadOnly = True
         Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 20)
         Me.CorreoElectronicoTextBox.TabIndex = 9
         '
@@ -344,6 +359,7 @@ Partial Class Clients
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -466,16 +482,6 @@ Partial Class Clients
         Me.BuscadorTextBox.Name = "BuscadorTextBox"
         Me.BuscadorTextBox.Size = New System.Drawing.Size(341, 21)
         Me.BuscadorTextBox.TabIndex = 53
-        '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label1.Location = New System.Drawing.Point(24, 27)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(27, 12)
-        Label1.TabIndex = 54
-        Label1.Text = "DNI:"
         '
         'Clients
         '
