@@ -30,11 +30,16 @@
         End If
     End Sub
 
-    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs)
         Me.ClienteTableAdapter.BuscarCliente(MelodiasDataSet.cliente, BuscadorTextBox.Text)
     End Sub
 
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
         Me.ClienteTableAdapter.Fill(Me.MelodiasDataSet.cliente)
     End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        BuscadorTextBox.Clear()
+    End Sub
+
 End Class
