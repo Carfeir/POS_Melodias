@@ -96,6 +96,7 @@ Partial Class AgregarCliente
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnLimpiar)
         Me.GroupBox1.Controls.Add(DNILabel)
         Me.GroupBox1.Controls.Add(Me.DNITextBox)
         Me.GroupBox1.Controls.Add(NombresLabel)
@@ -111,7 +112,7 @@ Partial Class AgregarCliente
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(343, 145)
+        Me.GroupBox1.Size = New System.Drawing.Size(307, 171)
         Me.GroupBox1.TabIndex = 153
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Cliente"
@@ -119,7 +120,7 @@ Partial Class AgregarCliente
         'DNITextBox
         '
         Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(154, 21)
+        Me.DNITextBox.Location = New System.Drawing.Point(128, 20)
         Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DNITextBox.Name = "DNITextBox"
         Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
@@ -128,7 +129,7 @@ Partial Class AgregarCliente
         'NombresTextBox
         '
         Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(154, 44)
+        Me.NombresTextBox.Location = New System.Drawing.Point(128, 43)
         Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NombresTextBox.Name = "NombresTextBox"
         Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
@@ -137,7 +138,7 @@ Partial Class AgregarCliente
         'ApellidosTextBox
         '
         Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.ApellidosTextBox.Location = New System.Drawing.Point(154, 67)
+        Me.ApellidosTextBox.Location = New System.Drawing.Point(128, 66)
         Me.ApellidosTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
         Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 20)
@@ -146,7 +147,7 @@ Partial Class AgregarCliente
         'NroContactoTextBox
         '
         Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NroContactoTextBox.Location = New System.Drawing.Point(154, 90)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(128, 89)
         Me.NroContactoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
         Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 20)
@@ -155,7 +156,7 @@ Partial Class AgregarCliente
         'CorreoElectronicoTextBox
         '
         Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(154, 113)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(128, 112)
         Me.CorreoElectronicoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
         Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 20)
@@ -164,7 +165,7 @@ Partial Class AgregarCliente
         'btnCancelar
         '
         Me.btnCancelar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnCancelar.Location = New System.Drawing.Point(12, 184)
+        Me.btnCancelar.Location = New System.Drawing.Point(12, 200)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(93, 21)
         Me.btnCancelar.TabIndex = 155
@@ -174,7 +175,7 @@ Partial Class AgregarCliente
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnAgregar.Location = New System.Drawing.Point(262, 184)
+        Me.btnAgregar.Location = New System.Drawing.Point(226, 200)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(93, 21)
         Me.btnAgregar.TabIndex = 0
@@ -183,10 +184,11 @@ Partial Class AgregarCliente
         '
         'btnLimpiar
         '
+        Me.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(134, 184)
+        Me.btnLimpiar.Location = New System.Drawing.Point(3, 146)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(93, 21)
+        Me.btnLimpiar.Size = New System.Drawing.Size(301, 21)
         Me.btnLimpiar.TabIndex = 1
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
@@ -196,8 +198,7 @@ Partial Class AgregarCliente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(374, 221)
-        Me.Controls.Add(Me.btnLimpiar)
+        Me.ClientSize = New System.Drawing.Size(330, 233)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.GroupBox1)

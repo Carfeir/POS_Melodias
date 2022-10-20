@@ -158,7 +158,7 @@ Partial Class Clients
         'btnModificar
         '
         Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnModificar.Location = New System.Drawing.Point(228, 146)
+        Me.btnModificar.Location = New System.Drawing.Point(200, 146)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(93, 21)
         Me.btnModificar.TabIndex = 1
@@ -182,7 +182,7 @@ Partial Class Clients
         Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(343, 182)
+        Me.GroupBox1.Size = New System.Drawing.Size(321, 182)
         Me.GroupBox1.TabIndex = 152
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Cliente"
@@ -191,7 +191,7 @@ Partial Class Clients
         '
         Me.DNITextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "DNI", True))
         Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(154, 21)
+        Me.DNITextBox.Location = New System.Drawing.Point(126, 21)
         Me.DNITextBox.Name = "DNITextBox"
         Me.DNITextBox.ReadOnly = True
         Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
@@ -211,7 +211,7 @@ Partial Class Clients
         '
         Me.NombresTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nombres", True))
         Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(154, 44)
+        Me.NombresTextBox.Location = New System.Drawing.Point(126, 44)
         Me.NombresTextBox.Name = "NombresTextBox"
         Me.NombresTextBox.ReadOnly = True
         Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
@@ -221,7 +221,7 @@ Partial Class Clients
         '
         Me.ApellidosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "apellidos", True))
         Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.ApellidosTextBox.Location = New System.Drawing.Point(154, 67)
+        Me.ApellidosTextBox.Location = New System.Drawing.Point(126, 67)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
         Me.ApellidosTextBox.ReadOnly = True
         Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 20)
@@ -231,7 +231,7 @@ Partial Class Clients
         '
         Me.NroContactoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nroContacto", True))
         Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NroContactoTextBox.Location = New System.Drawing.Point(154, 90)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(126, 90)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
         Me.NroContactoTextBox.ReadOnly = True
         Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 20)
@@ -241,7 +241,7 @@ Partial Class Clients
         '
         Me.CorreoElectronicoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "correoElectronico", True))
         Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(154, 113)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(126, 113)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
         Me.CorreoElectronicoTextBox.ReadOnly = True
         Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 20)
@@ -415,7 +415,7 @@ Partial Class Clients
         'btnMostrar
         '
         Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnMostrar.Location = New System.Drawing.Point(380, 162)
+        Me.btnMostrar.Location = New System.Drawing.Point(374, 162)
         Me.btnMostrar.Name = "btnMostrar"
         Me.btnMostrar.Size = New System.Drawing.Size(175, 30)
         Me.btnMostrar.TabIndex = 4

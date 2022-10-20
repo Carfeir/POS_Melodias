@@ -79,16 +79,16 @@
     <Compile Include="Back_up.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Brands.Designer.vb">
+    <Compile Include="Producto\Marca\Brands.Designer.vb">
       <DependentUpon>Brands.vb</DependentUpon>
     </Compile>
-    <Compile Include="Brands.vb">
+    <Compile Include="Producto\Marca\Brands.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Categories.Designer.vb">
+    <Compile Include="Producto\Categoria\Categories.Designer.vb">
       <DependentUpon>Categories.vb</DependentUpon>
     </Compile>
-    <Compile Include="Categories.vb">
+    <Compile Include="Producto\Categoria\Categories.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChangePassword.Designer.vb">
@@ -115,10 +115,10 @@
     <Compile Include="Cliente\ModificarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Colors.Designer.vb">
+    <Compile Include="Producto\Color\Colors.Designer.vb">
       <DependentUpon>Colors.vb</DependentUpon>
     </Compile>
-    <Compile Include="Colors.vb">
+    <Compile Include="Producto\Color\Colors.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomeAdmin.Designer.vb">
@@ -140,6 +140,18 @@
     </Compile>
     <Compile Include="melodiasDataSet.vb">
       <DependentUpon>melodiasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\AgregarProducto.Designer.vb">
+      <DependentUpon>AgregarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\AgregarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producto\ModificarProducto.Designer.vb">
+      <DependentUpon>ModificarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Producto\ModificarProducto.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="SellsRecord.Designer.vb">
       <DependentUpon>SellsRecord.vb</DependentUpon>
@@ -205,10 +217,10 @@
     <Compile Include="Sell.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Products.Designer.vb">
+    <Compile Include="Producto\Products.Designer.vb">
       <DependentUpon>Products.vb</DependentUpon>
     </Compile>
-    <Compile Include="Products.vb">
+    <Compile Include="Producto\Products.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -216,10 +228,10 @@
     <EmbeddedResource Include="Back_up.resx">
       <DependentUpon>Back_up.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Brands.resx">
+    <EmbeddedResource Include="Producto\Marca\Brands.resx">
       <DependentUpon>Brands.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Categories.resx">
+    <EmbeddedResource Include="Producto\Categoria\Categories.resx">
       <DependentUpon>Categories.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
@@ -234,7 +246,7 @@
     <EmbeddedResource Include="Cliente\ModificarCliente.resx">
       <DependentUpon>ModificarCliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Colors.resx">
+    <EmbeddedResource Include="Producto\Color\Colors.resx">
       <DependentUpon>Colors.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeAdmin.resx">
@@ -242,6 +254,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomeSupervisor.resx">
       <DependentUpon>HomeSupervisor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto\ModificarProducto.resx">
+      <DependentUpon>ModificarProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SellsRecord.resx">
       <DependentUpon>SellsRecord.vb</DependentUpon>
@@ -273,7 +291,7 @@
     <EmbeddedResource Include="Sell.resx">
       <DependentUpon>Sell.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Products.resx">
+    <EmbeddedResource Include="Producto\Products.resx">
       <DependentUpon>Products.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
