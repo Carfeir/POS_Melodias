@@ -25,6 +25,11 @@ Partial Class Users
         Dim Label4 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Users))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -43,22 +48,29 @@ Partial Class Users
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnVolver = New System.Windows.Forms.Button()
-        Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TSAgregarUsuario = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Label4
+        '
+        Label4.AutoSize = True
+        Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label4.Location = New System.Drawing.Point(24, 35)
+        Label4.Name = "Label4"
+        Label4.Size = New System.Drawing.Size(34, 12)
+        Label4.TabIndex = 54
+        Label4.Text = "CUIT:"
         '
         'GroupBox1
         '
@@ -83,6 +95,54 @@ Partial Class Users
         Me.GroupBox1.TabIndex = 157
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Usuario"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox7.Location = New System.Drawing.Point(156, 166)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
+        Me.TextBox7.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox7.TabIndex = 186
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnEliminar.Location = New System.Drawing.Point(29, 204)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(93, 21)
+        Me.btnEliminar.TabIndex = 3
+        Me.btnEliminar.Text = "&Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label2.Location = New System.Drawing.Point(23, 140)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(102, 12)
+        Me.Label2.TabIndex = 185
+        Me.Label2.Text = "Nombre de Usuario:"
+        '
+        'btnModificar
+        '
+        Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnModificar.Location = New System.Drawing.Point(247, 204)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(93, 21)
+        Me.btnModificar.TabIndex = 1
+        Me.btnModificar.Text = "&Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
+        '
+        'TextBox6
+        '
+        Me.TextBox6.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox6.Location = New System.Drawing.Point(156, 50)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ReadOnly = True
+        Me.TextBox6.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox6.TabIndex = 184
         '
         'Label3
         '
@@ -227,34 +287,6 @@ Partial Class Users
         Me.ColumnHeader6.Text = "Rol"
         Me.ColumnHeader6.Width = 70
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(23, 140)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 12)
-        Me.Label2.TabIndex = 185
-        Me.Label2.Text = "Nombre de Usuario:"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox6.Location = New System.Drawing.Point(156, 50)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox6.TabIndex = 184
-        '
-        'TextBox7
-        '
-        Me.TextBox7.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox7.Location = New System.Drawing.Point(156, 166)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox7.TabIndex = 186
-        '
         'btnMostrar
         '
         Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
@@ -279,15 +311,15 @@ Partial Class Users
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Buscador"
         '
-        'Label4
+        'Button1
         '
-        Label4.AutoSize = True
-        Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label4.Location = New System.Drawing.Point(24, 35)
-        Label4.Name = "Label4"
-        Label4.Size = New System.Drawing.Size(34, 12)
-        Label4.TabIndex = 54
-        Label4.Text = "CUIT:"
+        Me.Button1.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button1.Location = New System.Drawing.Point(566, 28)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(93, 23)
+        Me.Button1.TabIndex = 187
+        Me.Button1.Text = "Limpiar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'BuscadorTextBox
         '
@@ -308,26 +340,6 @@ Partial Class Users
         Me.btnBuscar.Text = "&Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'btnEliminar
-        '
-        Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnEliminar.Location = New System.Drawing.Point(29, 204)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(93, 21)
-        Me.btnEliminar.TabIndex = 3
-        Me.btnEliminar.Text = "&Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
-        '
-        'btnModificar
-        '
-        Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnModificar.Location = New System.Drawing.Point(247, 204)
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(93, 21)
-        Me.btnModificar.TabIndex = 1
-        Me.btnModificar.Text = "&Modificar"
-        Me.btnModificar.UseVisualStyleBackColor = True
-        '
         'btnVolver
         '
         Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
@@ -338,25 +350,26 @@ Partial Class Users
         Me.btnVolver.Text = "&Volver"
         Me.btnVolver.UseVisualStyleBackColor = True
         '
-        'btnAgregar
+        'TSAgregarUsuario
         '
-        Me.btnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnAgregar.Location = New System.Drawing.Point(534, 87)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(150, 49)
-        Me.btnAgregar.TabIndex = 163
-        Me.btnAgregar.Text = "&Agregar Nuevo Usuario"
-        Me.btnAgregar.UseVisualStyleBackColor = True
+        Me.TSAgregarUsuario.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.TSAgregarUsuario.Image = CType(resources.GetObject("TSAgregarUsuario.Image"), System.Drawing.Image)
+        Me.TSAgregarUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.TSAgregarUsuario.Name = "TSAgregarUsuario"
+        Me.TSAgregarUsuario.Size = New System.Drawing.Size(165, 71)
+        Me.TSAgregarUsuario.Text = "&Agregar Nuevo Usuario"
+        Me.TSAgregarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'Button1
+        'MenuStrip1
         '
-        Me.Button1.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.Button1.Location = New System.Drawing.Point(566, 28)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 23)
-        Me.Button1.TabIndex = 187
-        Me.Button1.Text = "Limpiar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarUsuario})
+        Me.MenuStrip1.Location = New System.Drawing.Point(521, 87)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(173, 75)
+        Me.MenuStrip1.TabIndex = 164
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'Users
         '
@@ -364,7 +377,7 @@ Partial Class Users
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 545)
-        Me.Controls.Add(Me.btnAgregar)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnMostrar)
@@ -379,7 +392,10 @@ Partial Class Users
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As GroupBox
@@ -411,6 +427,7 @@ Partial Class Users
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnModificar As Button
     Private WithEvents btnVolver As Button
-    Friend WithEvents btnAgregar As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents TSAgregarUsuario As ToolStripMenuItem
+    Friend WithEvents MenuStrip1 As MenuStrip
 End Class

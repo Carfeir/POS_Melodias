@@ -30,7 +30,6 @@ Partial Class Clients
         Dim CorreoElectronicoLabel As System.Windows.Forms.Label
         Dim Label1 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Clients))
-        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -65,9 +64,11 @@ Partial Class Clients
         Me.ClienteTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.clienteTableAdapter()
         Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.TSAgregarCliente = New System.Windows.Forms.ToolStripMenuItem()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
@@ -81,6 +82,7 @@ Partial Class Clients
         Me.ClienteBindingNavigator.SuspendLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DNILabel
@@ -142,16 +144,6 @@ Partial Class Clients
         Label1.Size = New System.Drawing.Size(27, 12)
         Label1.TabIndex = 54
         Label1.Text = "DNI:"
-        '
-        'btnAgregar
-        '
-        Me.btnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnAgregar.Location = New System.Drawing.Point(407, 65)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(122, 41)
-        Me.btnAgregar.TabIndex = 0
-        Me.btnAgregar.Text = "&Agregar Nuevo Cliente"
-        Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
@@ -454,13 +446,15 @@ Partial Class Clients
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Buscador"
         '
-        'BuscadorTextBox
+        'btnLimpiar
         '
-        Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.BuscadorTextBox.Location = New System.Drawing.Point(65, 20)
-        Me.BuscadorTextBox.Name = "BuscadorTextBox"
-        Me.BuscadorTextBox.Size = New System.Drawing.Size(256, 21)
-        Me.BuscadorTextBox.TabIndex = 53
+        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnLimpiar.Location = New System.Drawing.Point(349, 22)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(79, 22)
+        Me.btnLimpiar.TabIndex = 158
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'btnBuscar
         '
@@ -473,15 +467,34 @@ Partial Class Clients
         Me.btnBuscar.Text = "&Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'btnLimpiar
+        'BuscadorTextBox
         '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(349, 22)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(79, 22)
-        Me.btnLimpiar.TabIndex = 158
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
+        Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.BuscadorTextBox.Location = New System.Drawing.Point(65, 20)
+        Me.BuscadorTextBox.Name = "BuscadorTextBox"
+        Me.BuscadorTextBox.Size = New System.Drawing.Size(256, 21)
+        Me.BuscadorTextBox.TabIndex = 53
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarCliente})
+        Me.MenuStrip1.Location = New System.Drawing.Point(380, 57)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(169, 75)
+        Me.MenuStrip1.TabIndex = 165
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'TSAgregarCliente
+        '
+        Me.TSAgregarCliente.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.TSAgregarCliente.Image = CType(resources.GetObject("TSAgregarCliente.Image"), System.Drawing.Image)
+        Me.TSAgregarCliente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.TSAgregarCliente.Name = "TSAgregarCliente"
+        Me.TSAgregarCliente.Size = New System.Drawing.Size(161, 71)
+        Me.TSAgregarCliente.Text = "&Agregar Nuevo Cliente"
+        Me.TSAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'Clients
         '
@@ -489,7 +502,7 @@ Partial Class Clients
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(567, 490)
-        Me.Controls.Add(Me.btnAgregar)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.ClienteDataGridView)
@@ -511,11 +524,12 @@ Partial Class Clients
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnAgregar As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents GroupBox1 As GroupBox
@@ -553,4 +567,6 @@ Partial Class Clients
     Friend WithEvents BuscadorTextBox As TextBox
     Private WithEvents btnLimpiar As Button
     Friend WithEvents btnBuscar As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents TSAgregarCliente As ToolStripMenuItem
 End Class

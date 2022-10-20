@@ -14,7 +14,7 @@
         Me.ClienteTableAdapter.Fill(Me.MelodiasDataSet.cliente)
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs)
         AgregarCliente.Show()
     End Sub
 
@@ -41,5 +41,6 @@
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         BuscadorTextBox.Clear()
     End Sub
+
 
 End Class
