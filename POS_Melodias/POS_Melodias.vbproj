@@ -121,16 +121,16 @@
     <Compile Include="Producto\Color\Colors.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeAdmin.Designer.vb">
+    <Compile Include="Home\HomeAdmin.Designer.vb">
       <DependentUpon>HomeAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="HomeAdmin.vb">
+    <Compile Include="Home\HomeAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeSupervisor.Designer.vb">
+    <Compile Include="Home\HomeSupervisor.Designer.vb">
       <DependentUpon>HomeSupervisor.vb</DependentUpon>
     </Compile>
-    <Compile Include="HomeSupervisor.vb">
+    <Compile Include="Home\HomeSupervisor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="melodiasDataSet.Designer.vb">
@@ -165,10 +165,16 @@
     <Compile Include="Proveedor\ModificarProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SellsRecord.Designer.vb">
-      <DependentUpon>SellsRecord.vb</DependentUpon>
+    <Compile Include="Venta\ListaVentas.Designer.vb">
+      <DependentUpon>ListaVentas.vb</DependentUpon>
     </Compile>
-    <Compile Include="SellsRecord.vb">
+    <Compile Include="Venta\ListaVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\ModificarVenta.Designer.vb">
+      <DependentUpon>ModificarVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\ModificarVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Proveedor\Suppliers.Designer.vb">
@@ -195,10 +201,10 @@
     <Compile Include="Usuario\Users.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomeEmpleado.Designer.vb">
+    <Compile Include="Home\HomeEmpleado.Designer.vb">
       <DependentUpon>HomeEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="HomeEmpleado.vb">
+    <Compile Include="Home\HomeEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -223,10 +229,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Sell.Designer.vb">
-      <DependentUpon>Sell.vb</DependentUpon>
+    <Compile Include="Venta\AgregarVenta.Designer.vb">
+      <DependentUpon>AgregarVenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Sell.vb">
+    <Compile Include="Venta\AgregarVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Producto\Products.Designer.vb">
@@ -261,10 +267,10 @@
     <EmbeddedResource Include="Producto\Color\Colors.resx">
       <DependentUpon>Colors.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeAdmin.resx">
+    <EmbeddedResource Include="Home\HomeAdmin.resx">
       <DependentUpon>HomeAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeSupervisor.resx">
+    <EmbeddedResource Include="Home\HomeSupervisor.resx">
       <DependentUpon>HomeSupervisor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto\AgregarProducto.resx">
@@ -279,9 +285,6 @@
     <EmbeddedResource Include="Proveedor\ModificarProveedor.resx">
       <DependentUpon>ModificarProveedor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SellsRecord.resx">
-      <DependentUpon>SellsRecord.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Proveedor\Suppliers.resx">
       <DependentUpon>Suppliers.vb</DependentUpon>
     </EmbeddedResource>
@@ -294,7 +297,7 @@
     <EmbeddedResource Include="Usuario\Users.resx">
       <DependentUpon>Users.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeEmpleado.resx">
+    <EmbeddedResource Include="Home\HomeEmpleado.resx">
       <DependentUpon>HomeEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -306,8 +309,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sell.resx">
-      <DependentUpon>Sell.vb</DependentUpon>
+    <EmbeddedResource Include="Venta\AgregarVenta.resx">
+      <DependentUpon>AgregarVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Producto\Products.resx">
       <DependentUpon>Products.vb</DependentUpon>
