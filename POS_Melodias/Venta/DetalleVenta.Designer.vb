@@ -1,0 +1,814 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class DetalleVenta
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        Dim DNILabel As System.Windows.Forms.Label
+        Dim NombresLabel As System.Windows.Forms.Label
+        Dim ApellidosLabel As System.Windows.Forms.Label
+        Dim NroContactoLabel As System.Windows.Forms.Label
+        Dim CorreoElectronicoLabel As System.Windows.Forms.Label
+        Dim Label2 As System.Windows.Forms.Label
+        Dim Label5 As System.Windows.Forms.Label
+        Dim Label7 As System.Windows.Forms.Label
+        Dim Label9 As System.Windows.Forms.Label
+        Dim Label10 As System.Windows.Forms.Label
+        Dim Label12 As System.Windows.Forms.Label
+        Dim Label13 As System.Windows.Forms.Label
+        Dim Label14 As System.Windows.Forms.Label
+        Dim Label18 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DetalleVenta))
+        Me.btnRemove = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.txtTaxAmt = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.txtTaxPer = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtSubTotal = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtOrderNo = New System.Windows.Forms.TextBox()
+        Me.dtpOrderDate = New System.Windows.Forms.DateTimePicker()
+        Me.Save = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DNITextBox = New System.Windows.Forms.TextBox()
+        Me.NombresTextBox = New System.Windows.Forms.TextBox()
+        Me.ApellidosTextBox = New System.Windows.Forms.TextBox()
+        Me.NroContactoTextBox = New System.Windows.Forms.TextBox()
+        Me.CorreoElectronicoTextBox = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.btnQuitar = New System.Windows.Forms.Button()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ProductID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        DNILabel = New System.Windows.Forms.Label()
+        NombresLabel = New System.Windows.Forms.Label()
+        ApellidosLabel = New System.Windows.Forms.Label()
+        NroContactoLabel = New System.Windows.Forms.Label()
+        CorreoElectronicoLabel = New System.Windows.Forms.Label()
+        Label2 = New System.Windows.Forms.Label()
+        Label5 = New System.Windows.Forms.Label()
+        Label7 = New System.Windows.Forms.Label()
+        Label9 = New System.Windows.Forms.Label()
+        Label10 = New System.Windows.Forms.Label()
+        Label12 = New System.Windows.Forms.Label()
+        Label13 = New System.Windows.Forms.Label()
+        Label14 = New System.Windows.Forms.Label()
+        Label18 = New System.Windows.Forms.Label()
+        Me.Panel2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'DNILabel
+        '
+        DNILabel.AutoSize = True
+        DNILabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        DNILabel.Location = New System.Drawing.Point(20, 24)
+        DNILabel.Name = "DNILabel"
+        DNILabel.Size = New System.Drawing.Size(27, 12)
+        DNILabel.TabIndex = 0
+        DNILabel.Text = "DNI:"
+        '
+        'NombresLabel
+        '
+        NombresLabel.AutoSize = True
+        NombresLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NombresLabel.Location = New System.Drawing.Point(20, 47)
+        NombresLabel.Name = "NombresLabel"
+        NombresLabel.Size = New System.Drawing.Size(52, 12)
+        NombresLabel.TabIndex = 2
+        NombresLabel.Text = "Nombres:"
+        '
+        'ApellidosLabel
+        '
+        ApellidosLabel.AutoSize = True
+        ApellidosLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        ApellidosLabel.Location = New System.Drawing.Point(20, 69)
+        ApellidosLabel.Name = "ApellidosLabel"
+        ApellidosLabel.Size = New System.Drawing.Size(50, 12)
+        ApellidosLabel.TabIndex = 4
+        ApellidosLabel.Text = "Apellidos:"
+        '
+        'NroContactoLabel
+        '
+        NroContactoLabel.AutoSize = True
+        NroContactoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NroContactoLabel.Location = New System.Drawing.Point(20, 92)
+        NroContactoLabel.Name = "NroContactoLabel"
+        NroContactoLabel.Size = New System.Drawing.Size(75, 12)
+        NroContactoLabel.TabIndex = 6
+        NroContactoLabel.Text = "Nro. Contacto:"
+        '
+        'CorreoElectronicoLabel
+        '
+        CorreoElectronicoLabel.AutoSize = True
+        CorreoElectronicoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 115)
+        CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
+        CorreoElectronicoLabel.Size = New System.Drawing.Size(97, 12)
+        CorreoElectronicoLabel.TabIndex = 8
+        CorreoElectronicoLabel.Text = "Correo Electronico:"
+        '
+        'btnRemove
+        '
+        Me.btnRemove.Enabled = False
+        Me.btnRemove.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnRemove.Location = New System.Drawing.Point(388, 618)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(102, 36)
+        Me.btnRemove.TabIndex = 145
+        Me.btnRemove.Text = "Cancelar"
+        Me.btnRemove.UseVisualStyleBackColor = True
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.txtTotal)
+        Me.Panel2.Controls.Add(Me.Label16)
+        Me.Panel2.Controls.Add(Me.txtTaxAmt)
+        Me.Panel2.Controls.Add(Me.Label24)
+        Me.Panel2.Controls.Add(Me.txtTaxPer)
+        Me.Panel2.Controls.Add(Me.Label15)
+        Me.Panel2.Controls.Add(Me.txtSubTotal)
+        Me.Panel2.Controls.Add(Me.Label17)
+        Me.Panel2.Location = New System.Drawing.Point(24, 592)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(321, 90)
+        Me.Panel2.TabIndex = 144
+        '
+        'txtTotal
+        '
+        Me.txtTotal.Location = New System.Drawing.Point(116, 58)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.ReadOnly = True
+        Me.txtTotal.Size = New System.Drawing.Size(111, 19)
+        Me.txtTotal.TabIndex = 3
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label16.Location = New System.Drawing.Point(20, 62)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(34, 12)
+        Me.Label16.TabIndex = 94
+        Me.Label16.Text = "Total"
+        '
+        'txtTaxAmt
+        '
+        Me.txtTaxAmt.Location = New System.Drawing.Point(220, 34)
+        Me.txtTaxAmt.Name = "txtTaxAmt"
+        Me.txtTaxAmt.ReadOnly = True
+        Me.txtTaxAmt.Size = New System.Drawing.Size(80, 19)
+        Me.txtTaxAmt.TabIndex = 2
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.BackColor = System.Drawing.Color.White
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.Black
+        Me.Label24.Location = New System.Drawing.Point(174, 34)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(23, 20)
+        Me.Label24.TabIndex = 92
+        Me.Label24.Text = "%"
+        '
+        'txtTaxPer
+        '
+        Me.txtTaxPer.Location = New System.Drawing.Point(116, 35)
+        Me.txtTaxPer.Name = "txtTaxPer"
+        Me.txtTaxPer.Size = New System.Drawing.Size(52, 19)
+        Me.txtTaxPer.TabIndex = 1
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label15.Location = New System.Drawing.Point(20, 38)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(57, 12)
+        Me.Label15.TabIndex = 90
+        Me.Label15.Text = "Impuesto"
+        '
+        'txtSubTotal
+        '
+        Me.txtSubTotal.Location = New System.Drawing.Point(116, 9)
+        Me.txtSubTotal.Name = "txtSubTotal"
+        Me.txtSubTotal.ReadOnly = True
+        Me.txtSubTotal.Size = New System.Drawing.Size(184, 19)
+        Me.txtSubTotal.TabIndex = 0
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label17.Location = New System.Drawing.Point(20, 14)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(60, 12)
+        Me.Label17.TabIndex = 77
+        Me.Label17.Text = "Sub Total"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.LightGray
+        Me.Label1.Font = New System.Drawing.Font("Miriam", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(20, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(166, 19)
+        Me.Label1.TabIndex = 135
+        Me.Label1.Text = "Detalles de Venta"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label4.Location = New System.Drawing.Point(32, 73)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(71, 12)
+        Me.Label4.TabIndex = 132
+        Me.Label4.Text = "No. de Venta:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label3.Location = New System.Drawing.Point(32, 103)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(84, 12)
+        Me.Label3.TabIndex = 133
+        Me.Label3.Text = "Fecha de Venta:"
+        '
+        'txtOrderNo
+        '
+        Me.txtOrderNo.BackColor = System.Drawing.SystemColors.Control
+        Me.txtOrderNo.Location = New System.Drawing.Point(127, 68)
+        Me.txtOrderNo.Name = "txtOrderNo"
+        Me.txtOrderNo.ReadOnly = True
+        Me.txtOrderNo.Size = New System.Drawing.Size(185, 19)
+        Me.txtOrderNo.TabIndex = 131
+        '
+        'dtpOrderDate
+        '
+        Me.dtpOrderDate.CustomFormat = "dd/MMM/yyyy"
+        Me.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpOrderDate.Location = New System.Drawing.Point(127, 99)
+        Me.dtpOrderDate.Name = "dtpOrderDate"
+        Me.dtpOrderDate.Size = New System.Drawing.Size(103, 19)
+        Me.dtpOrderDate.TabIndex = 130
+        Me.dtpOrderDate.Value = New Date(2022, 10, 21, 0, 0, 0, 0)
+        '
+        'Save
+        '
+        Me.Save.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Save.Location = New System.Drawing.Point(547, 617)
+        Me.Save.Name = "Save"
+        Me.Save.Size = New System.Drawing.Size(102, 36)
+        Me.Save.TabIndex = 1
+        Me.Save.Text = "&Guardar"
+        Me.Save.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label6.Location = New System.Drawing.Point(32, 132)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(55, 12)
+        Me.Label6.TabIndex = 167
+        Me.Label6.Text = "ID Cliente:"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox3.Location = New System.Drawing.Point(127, 127)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.Size = New System.Drawing.Size(185, 19)
+        Me.TextBox3.TabIndex = 166
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(DNILabel)
+        Me.GroupBox3.Controls.Add(Me.DNITextBox)
+        Me.GroupBox3.Controls.Add(NombresLabel)
+        Me.GroupBox3.Controls.Add(Me.NombresTextBox)
+        Me.GroupBox3.Controls.Add(ApellidosLabel)
+        Me.GroupBox3.Controls.Add(Me.ApellidosTextBox)
+        Me.GroupBox3.Controls.Add(NroContactoLabel)
+        Me.GroupBox3.Controls.Add(Me.NroContactoTextBox)
+        Me.GroupBox3.Controls.Add(CorreoElectronicoLabel)
+        Me.GroupBox3.Controls.Add(Me.CorreoElectronicoTextBox)
+        Me.GroupBox3.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox3.Location = New System.Drawing.Point(356, 44)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(321, 147)
+        Me.GroupBox3.TabIndex = 180
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Detalles de Cliente"
+        '
+        'DNITextBox
+        '
+        Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.DNITextBox.Location = New System.Drawing.Point(126, 21)
+        Me.DNITextBox.Name = "DNITextBox"
+        Me.DNITextBox.ReadOnly = True
+        Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
+        Me.DNITextBox.TabIndex = 1
+        '
+        'NombresTextBox
+        '
+        Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombresTextBox.Location = New System.Drawing.Point(126, 44)
+        Me.NombresTextBox.Name = "NombresTextBox"
+        Me.NombresTextBox.ReadOnly = True
+        Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NombresTextBox.TabIndex = 3
+        '
+        'ApellidosTextBox
+        '
+        Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.ApellidosTextBox.Location = New System.Drawing.Point(126, 67)
+        Me.ApellidosTextBox.Name = "ApellidosTextBox"
+        Me.ApellidosTextBox.ReadOnly = True
+        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.ApellidosTextBox.TabIndex = 5
+        '
+        'NroContactoTextBox
+        '
+        Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(126, 90)
+        Me.NroContactoTextBox.Name = "NroContactoTextBox"
+        Me.NroContactoTextBox.ReadOnly = True
+        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NroContactoTextBox.TabIndex = 7
+        '
+        'CorreoElectronicoTextBox
+        '
+        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(126, 113)
+        Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
+        Me.CorreoElectronicoTextBox.ReadOnly = True
+        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.CorreoElectronicoTextBox.TabIndex = 9
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Label18)
+        Me.GroupBox1.Controls.Add(Me.TextBox10)
+        Me.GroupBox1.Controls.Add(Label14)
+        Me.GroupBox1.Controls.Add(Me.TextBox9)
+        Me.GroupBox1.Controls.Add(Me.btnAgregar)
+        Me.GroupBox1.Controls.Add(Me.btnBuscar)
+        Me.GroupBox1.Controls.Add(Me.TextBox8)
+        Me.GroupBox1.Controls.Add(Me.btnQuitar)
+        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.TextBox7)
+        Me.GroupBox1.Controls.Add(Label2)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Label5)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Label7)
+        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Label9)
+        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Label10)
+        Me.GroupBox1.Controls.Add(Label12)
+        Me.GroupBox1.Controls.Add(Label13)
+        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Location = New System.Drawing.Point(22, 229)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(655, 136)
+        Me.GroupBox1.TabIndex = 187
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Detalles de Producto"
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnAgregar.Location = New System.Drawing.Point(552, 99)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(78, 21)
+        Me.btnAgregar.TabIndex = 182
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox8.Location = New System.Drawing.Point(76, 77)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.ReadOnly = True
+        Me.TextBox8.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox8.TabIndex = 168
+        '
+        'btnQuitar
+        '
+        Me.btnQuitar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnQuitar.Location = New System.Drawing.Point(468, 99)
+        Me.btnQuitar.Name = "btnQuitar"
+        Me.btnQuitar.Size = New System.Drawing.Size(78, 21)
+        Me.btnQuitar.TabIndex = 184
+        Me.btnQuitar.Text = "Quitar"
+        Me.btnQuitar.UseVisualStyleBackColor = True
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox6.Location = New System.Drawing.Point(76, 49)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox6.TabIndex = 166
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox7.Location = New System.Drawing.Point(296, 77)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
+        Me.TextBox7.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox7.TabIndex = 167
+        '
+        'Label2
+        '
+        Label2.AutoSize = True
+        Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label2.Location = New System.Drawing.Point(12, 108)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(49, 12)
+        Label2.TabIndex = 162
+        Label2.Text = "Precio U:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(76, 105)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox1.TabIndex = 163
+        '
+        'Label5
+        '
+        Label5.AutoSize = True
+        Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label5.Location = New System.Drawing.Point(225, 108)
+        Label5.Name = "Label5"
+        Label5.Size = New System.Drawing.Size(63, 12)
+        Label5.TabIndex = 164
+        Label5.Text = "Cant. Stock:"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox2.Location = New System.Drawing.Point(296, 105)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox2.TabIndex = 165
+        '
+        'Label7
+        '
+        Label7.AutoSize = True
+        Label7.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label7.Location = New System.Drawing.Point(12, 24)
+        Label7.Name = "Label7"
+        Label7.Size = New System.Drawing.Size(58, 12)
+        Label7.TabIndex = 0
+        Label7.Text = "Proveedor:"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox4.Location = New System.Drawing.Point(76, 21)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox4.TabIndex = 1
+        '
+        'Label9
+        '
+        Label9.AutoSize = True
+        Label9.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label9.Location = New System.Drawing.Point(225, 52)
+        Label9.Name = "Label9"
+        Label9.Size = New System.Drawing.Size(47, 12)
+        Label9.TabIndex = 2
+        Label9.Text = "Nombre:"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox5.Location = New System.Drawing.Point(296, 49)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox5.TabIndex = 3
+        '
+        'Label10
+        '
+        Label10.AutoSize = True
+        Label10.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label10.Location = New System.Drawing.Point(12, 52)
+        Label10.Name = "Label10"
+        Label10.Size = New System.Drawing.Size(55, 12)
+        Label10.TabIndex = 4
+        Label10.Text = "Categoria:"
+        '
+        'Label12
+        '
+        Label12.AutoSize = True
+        Label12.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label12.Location = New System.Drawing.Point(225, 80)
+        Label12.Name = "Label12"
+        Label12.Size = New System.Drawing.Size(38, 12)
+        Label12.TabIndex = 6
+        Label12.Text = "Marca:"
+        '
+        'Label13
+        '
+        Label13.AutoSize = True
+        Label13.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label13.Location = New System.Drawing.Point(12, 80)
+        Label13.Name = "Label13"
+        Label13.Size = New System.Drawing.Size(34, 12)
+        Label13.TabIndex = 8
+        Label13.Text = "Color:"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.LightGray
+        Me.Label11.Font = New System.Drawing.Font("Miriam", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label11.Location = New System.Drawing.Point(21, 200)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(49, 16)
+        Me.Label11.TabIndex = 186
+        Me.Label11.Text = "Stock"
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(503, 20)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(93, 30)
+        Me.btnBuscar.TabIndex = 55
+        Me.btnBuscar.Text = "&Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductID, Me.ColumnHeader8, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.ListView1.FullRowSelect = True
+        Me.ListView1.GridLines = True
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(24, 410)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(653, 162)
+        Me.ListView1.TabIndex = 184
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Width = 0
+        '
+        'ProductID
+        '
+        Me.ProductID.Text = "ID Producto"
+        Me.ProductID.Width = 39
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Proveedor"
+        Me.ColumnHeader8.Width = 84
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Nombre"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader2.Width = 138
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Categoria"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader3.Width = 89
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "Precio U"
+        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader7.Width = 81
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Color"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 59
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Marca"
+        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader5.Width = 90
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Cantidad"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader6.Width = 64
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.LightGray
+        Me.Label8.Font = New System.Drawing.Font("Miriam", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Location = New System.Drawing.Point(21, 381)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(122, 16)
+        Me.Label8.TabIndex = 188
+        Me.Label8.Text = "Lista de Pedido"
+        '
+        'Label14
+        '
+        Label14.AutoSize = True
+        Label14.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label14.Location = New System.Drawing.Point(225, 24)
+        Label14.Name = "Label14"
+        Label14.Size = New System.Drawing.Size(65, 12)
+        Label14.TabIndex = 185
+        Label14.Text = "ID Producto:"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox9.Location = New System.Drawing.Point(296, 21)
+        Me.TextBox9.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox9.TabIndex = 186
+        '
+        'Label18
+        '
+        Label18.AutoSize = True
+        Label18.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label18.Location = New System.Drawing.Point(490, 75)
+        Label18.Name = "Label18"
+        Label18.Size = New System.Drawing.Size(51, 12)
+        Label18.TabIndex = 187
+        Label18.Text = "Cantidad:"
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox10.Location = New System.Drawing.Point(561, 72)
+        Me.TextBox10.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(52, 20)
+        Me.TextBox10.TabIndex = 188
+        Me.TextBox10.Text = "1"
+        '
+        'DetalleVenta
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(691, 693)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Save)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.btnRemove)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txtOrderNo)
+        Me.Controls.Add(Me.dtpOrderDate)
+        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "DetalleVenta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Agregar Venta"
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+    Friend WithEvents btnRemove As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents txtTotal As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents txtTaxAmt As TextBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents txtTaxPer As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents txtSubTotal As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtOrderNo As TextBox
+    Friend WithEvents dtpOrderDate As DateTimePicker
+    Friend WithEvents Save As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents DNITextBox As TextBox
+    Friend WithEvents NombresTextBox As TextBox
+    Friend WithEvents ApellidosTextBox As TextBox
+    Friend WithEvents NroContactoTextBox As TextBox
+    Friend WithEvents CorreoElectronicoTextBox As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents btnAgregar As Button
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents btnQuitar As Button
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ProductID As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents Label8 As Label
+End Class
