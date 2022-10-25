@@ -1,6 +1,6 @@
 ﻿Public Class HomeEmpleado
     Private Sub AgregarVentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarVentaToolStripMenuItem.Click
-        DetalleVenta.Show()
+        AgregarVenta.Show()
     End Sub
 
     Private Sub RegistroDeVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroDeVentasToolStripMenuItem.Click
@@ -16,7 +16,7 @@
     End Sub
 
     Private Sub OrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderToolStripMenuItem.Click
-        DetalleVenta.Show()
+        AgregarVenta.Show()
     End Sub
 
     Private Sub RegistrationToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RegistrationToolStripMenuItem1.Click

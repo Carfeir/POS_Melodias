@@ -25,8 +25,7 @@ Partial Class Venta
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Venta))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TSAgregarCliente = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -34,10 +33,10 @@ Partial Class Venta
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarCliente})
-        Me.MenuStrip1.Location = New System.Drawing.Point(573, 46)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarCliente, Me.ReporteDeVentasToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(186, 60)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(162, 75)
+        Me.MenuStrip1.Size = New System.Drawing.Size(275, 75)
         Me.MenuStrip1.TabIndex = 181
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -51,32 +50,18 @@ Partial Class Venta
         Me.TSAgregarCliente.Text = "&Agregar Nueva Venta"
         Me.TSAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'Label1
+        'ReporteDeVentasToolStripMenuItem
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(49, 61)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 11)
-        Me.Label1.TabIndex = 182
-        Me.Label1.Text = "Cliente registrado"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(363, 72)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 11)
-        Me.Label2.TabIndex = 183
-        Me.Label2.Text = "Nuevo CLiente"
+        Me.ReporteDeVentasToolStripMenuItem.Name = "ReporteDeVentasToolStripMenuItem"
+        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(113, 71)
+        Me.ReporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas"
         '
         'Venta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(800, 213)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(726, 272)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Miriam", 8.25!)
         Me.Name = "Venta"
@@ -90,6 +75,5 @@ Partial Class Venta
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents TSAgregarCliente As ToolStripMenuItem
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents ReporteDeVentasToolStripMenuItem As ToolStripMenuItem
 End Class

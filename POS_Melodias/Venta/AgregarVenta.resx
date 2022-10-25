@@ -132,12 +132,6 @@
   <metadata name="CorreoElectronicoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="Label18.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="Label14.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="Label2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
@@ -159,7 +153,47 @@
   <metadata name="Label13.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="Label14.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label18.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label19.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="BtnAgregarNuevoCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAaCAYAAABCfffNAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5goUEAgOqkWOKQAABFZJREFU
+        SEudlm1sU1UYx59uHaPsJWVjIgqYyUtAv6GomxLZZG7DvZYqA82C44vRDfyA8YMmzHcZa9etLd3S4TQB
+        wUgCBIKagHxAEnV8UD84E00UjboRCXtzG53t8f8/t7d29bIpp/nn9pzneX7POfc5954rVm1LIF+e6imU
+        al+WVHjssuJFji2aX+PLctZ0Zudj3Ml+4R7RdvrRn3FztqaDd0vpPhGApLRNpM7vzH6sY35xpTdjT4Un
+        /d0KT9rH0Hnjmv4ex2mnH/11HOKbDt4VJ6Y0d7BAFj0nstk7j7PO2NyRWQbQ0fJ22+Cj7RKFlIWitNOP
+        /joO8eS4g7fEyfG2vXu5yJ0ilVh6TWdOHq6tCP7dAnpD0Z9x8XiRO0S2dS+LZ0B76E0k8GZwuQWYVQ+C
+        IqmQ/6gI48khbwO4utV25ejC1fsXOlDEdjhOpwTGZVOwa5V70izsCU3DZ3+9P89Bbm1njogrkCf37NW1
+        2IYlD1sEqbL9oraGblVHPn9Lnf66R73wQYkes/KlyCFvXSv4/jwR7A6sZMFtmN0FqwBqE4A731mrroz+
+        otgOfLpLj1n5miKPXPLl4bf1Kp7E7ZiwcqaMJGvU4MhPKoZf8FzznEnIqwSXfP2QoVh91o6Gbi6JoH7p
+        feRzRy3F0vqTjbzfj7T9o5J9onb0rlKDwz/qJP6zz+qxZB+rpORWgy9VPsc6dC6bhjKoMVyoWk/Uq1dO
+        urT4P3CuRV37c0gnOfNNWO09UZewv3pyi3r+/QdVpdeemuQy+Sh85gY+taaBM/J8slNNXB9V16cnoQmt
+        yF9TOgHbdDSSGKfY/+z74wp3RU8ykQRc8rm7iso9tl+Tk7R91KhnPTp5VY1QE3+osalrKhqL6iSTkXE9
+        NjJpaHxqWJ3/7iiSZM1MAi753L6rsawB00CnJw4sVrsOF6ndh4u1Wg49oN441aCujv+mV3Os34Ox++FT
+        rLUbt6oJWxyFTiQwkqQNkI8nMtcJ45lkIwvPFW2KFxRvVvV072rsrpmFN+3mNZlBkUu+fHgpbEPBXsZg
+        LNXJFAE3sYVj5B6/1GvThw7u270oUmKHpcpIsvZ/JQHvZ3LJ1weNO1AwDx2+HC1XYyYZSiRpmStJjDxy
+        yZfcZ3CEeu14XhasRKEuWgToGrmD+Spwtln1XXhJNR9aP/sLEhzyyCVfGkK3y1ao+HW+LDM3wuFbq0CK
+        YC0LmynGk1MEHtkNoaX6SJG6LqfxSkbDMVoKxy+sAHOJcYwnx4WPCnJntBpftri6Fsr610SqOhxrsP1C
+        KN6QFSxV9EMNQoxjPCeMYzhOTmnY0/J4cLHecS5/vgOz2oj/PszwSyOhbcw4Emxj7GO8H+e5D34l9MfE
+        dDw5szbsCOkfuKiPZECkoXuZvdqXvQTb8T6cO1WQm1f2sXOWbO9ZbqcffOSrKz/8+ytltkbnxjDeCPgG
+        AFB/aODh0l80+oo+x2u7cmVHeBVWcCO4yN/d+BoxzEnb3gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="Label22.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label23.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAvAAAAAEAIAAoCAMAFgAAACgAAAC8AAAAAAIAAAEAIAAAAAAAAPACAAAAAAAAAAAAAAAAAAAA
