@@ -51,6 +51,9 @@ Partial Class HomeAdmin
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgregarVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -72,8 +75,8 @@ Partial Class HomeAdmin
         Me.RegistrationToolStripMenuItem1.Image = CType(resources.GetObject("RegistrationToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.RegistrationToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RegistrationToolStripMenuItem1.Name = "RegistrationToolStripMenuItem1"
-        Me.RegistrationToolStripMenuItem1.Size = New System.Drawing.Size(139, 69)
-        Me.RegistrationToolStripMenuItem1.Text = "Registro de Ventas"
+        Me.RegistrationToolStripMenuItem1.Size = New System.Drawing.Size(63, 69)
+        Me.RegistrationToolStripMenuItem1.Text = "Ventas"
         Me.RegistrationToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripMenuItem1
@@ -109,7 +112,7 @@ Partial Class HomeAdmin
         'MenuStrip2
         '
         Me.MenuStrip2.BackColor = System.Drawing.SystemColors.Control
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InventoryToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.ReportsToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.InventoryToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.ReportsToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(800, 24)
@@ -272,6 +275,25 @@ Partial Class HomeAdmin
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingreso como: Administrador"
         '
+        'VentasToolStripMenuItem
+        '
+        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeVentasToolStripMenuItem, Me.AgregarVentaToolStripMenuItem})
+        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.VentasToolStripMenuItem.Text = "Ventas"
+        '
+        'ReporteDeVentasToolStripMenuItem
+        '
+        Me.ReporteDeVentasToolStripMenuItem.Name = "ReporteDeVentasToolStripMenuItem"
+        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas"
+        '
+        'AgregarVentaToolStripMenuItem
+        '
+        Me.AgregarVentaToolStripMenuItem.Name = "AgregarVentaToolStripMenuItem"
+        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarVentaToolStripMenuItem.Text = "Agregar Venta"
+        '
         'HomeAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
@@ -327,4 +349,7 @@ Partial Class HomeAdmin
     Friend WithEvents ColumnHeader8 As ColumnHeader
     Friend WithEvents ProductoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregarProveedorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDeVentasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AgregarVentaToolStripMenuItem As ToolStripMenuItem
 End Class

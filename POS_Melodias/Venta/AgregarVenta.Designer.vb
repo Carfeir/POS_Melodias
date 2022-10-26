@@ -36,10 +36,10 @@ Partial Class AgregarVenta
         Dim Label13 As System.Windows.Forms.Label
         Dim Label14 As System.Windows.Forms.Label
         Dim Label18 As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AgregarVenta))
         Dim Label19 As System.Windows.Forms.Label
         Dim Label22 As System.Windows.Forms.Label
         Dim Label23 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AgregarVenta))
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtTotal = New System.Windows.Forms.TextBox()
@@ -57,6 +57,8 @@ Partial Class AgregarVenta
         Me.dtpOrderDate = New System.Windows.Forms.DateTimePicker()
         Me.Save = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnSeleccionar = New System.Windows.Forms.Button()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.DNITextBox = New System.Windows.Forms.TextBox()
         Me.NombresTextBox = New System.Windows.Forms.TextBox()
         Me.ApellidosTextBox = New System.Windows.Forms.TextBox()
@@ -87,7 +89,6 @@ Partial Class AgregarVenta
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label8 = New System.Windows.Forms.Label()
         Me.BtnAgregarNuevoCliente = New System.Windows.Forms.Button()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -95,7 +96,6 @@ Partial Class AgregarVenta
         Me.Button1 = New System.Windows.Forms.Button()
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
         Me.ClienteDataGridView = New System.Windows.Forms.DataGridView()
-        Me.btnSeleccionar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -268,6 +268,36 @@ Partial Class AgregarVenta
         Label18.TabIndex = 187
         Label18.Text = "Cantidad:"
         '
+        'Label19
+        '
+        Label19.AutoSize = True
+        Label19.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label19.Location = New System.Drawing.Point(13, 93)
+        Label19.Name = "Label19"
+        Label19.Size = New System.Drawing.Size(55, 12)
+        Label19.TabIndex = 10
+        Label19.Text = "ID Cliente:"
+        '
+        'Label22
+        '
+        Label22.AutoSize = True
+        Label22.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label22.Location = New System.Drawing.Point(24, 27)
+        Label22.Name = "Label22"
+        Label22.Size = New System.Drawing.Size(27, 12)
+        Label22.TabIndex = 54
+        Label22.Text = "DNI:"
+        '
+        'Label23
+        '
+        Label23.AutoSize = True
+        Label23.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label23.Location = New System.Drawing.Point(13, 27)
+        Label23.Name = "Label23"
+        Label23.Size = New System.Drawing.Size(47, 12)
+        Label23.TabIndex = 54
+        Label23.Text = "Nombre:"
+        '
         'btnRemove
         '
         Me.btnRemove.Enabled = False
@@ -375,9 +405,9 @@ Partial Class AgregarVenta
         Me.Label1.Font = New System.Drawing.Font("Miriam", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(20, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(166, 19)
+        Me.Label1.Size = New System.Drawing.Size(122, 19)
         Me.Label1.TabIndex = 135
-        Me.Label1.Text = "Detalles de Venta"
+        Me.Label1.Text = "Nueva Venta"
         '
         'Label4
         '
@@ -450,6 +480,26 @@ Partial Class AgregarVenta
         Me.GroupBox3.TabIndex = 180
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Detalles de Cliente"
+        '
+        'btnSeleccionar
+        '
+        Me.btnSeleccionar.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.btnSeleccionar.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSeleccionar.Location = New System.Drawing.Point(3, 165)
+        Me.btnSeleccionar.Name = "btnSeleccionar"
+        Me.btnSeleccionar.Size = New System.Drawing.Size(257, 27)
+        Me.btnSeleccionar.TabIndex = 12
+        Me.btnSeleccionar.Text = "Seleccionar"
+        Me.btnSeleccionar.UseVisualStyleBackColor = True
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox11.Location = New System.Drawing.Point(119, 90)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.ReadOnly = True
+        Me.TextBox11.Size = New System.Drawing.Size(127, 20)
+        Me.TextBox11.TabIndex = 11
         '
         'DNITextBox
         '
@@ -716,9 +766,9 @@ Partial Class AgregarVenta
         Me.Label8.Font = New System.Drawing.Font("Miriam", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.Location = New System.Drawing.Point(21, 654)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(122, 16)
+        Me.Label8.Size = New System.Drawing.Size(130, 16)
         Me.Label8.TabIndex = 188
-        Me.Label8.Text = "Lista de Pedido"
+        Me.Label8.Text = "Detalle de Venta"
         '
         'BtnAgregarNuevoCliente
         '
@@ -734,25 +784,6 @@ Partial Class AgregarVenta
         Me.BtnAgregarNuevoCliente.Text = "Agregar Nuevo Cliente"
         Me.BtnAgregarNuevoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnAgregarNuevoCliente.UseVisualStyleBackColor = True
-        '
-        'Label19
-        '
-        Label19.AutoSize = True
-        Label19.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label19.Location = New System.Drawing.Point(13, 93)
-        Label19.Name = "Label19"
-        Label19.Size = New System.Drawing.Size(55, 12)
-        Label19.TabIndex = 10
-        Label19.Text = "ID Cliente:"
-        '
-        'TextBox11
-        '
-        Me.TextBox11.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.TextBox11.Location = New System.Drawing.Point(119, 90)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(127, 20)
-        Me.TextBox11.TabIndex = 11
         '
         'Label21
         '
@@ -808,16 +839,6 @@ Partial Class AgregarVenta
         Me.Button1.Text = "&Buscar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label22
-        '
-        Label22.AutoSize = True
-        Label22.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label22.Location = New System.Drawing.Point(24, 27)
-        Label22.Name = "Label22"
-        Label22.Size = New System.Drawing.Size(27, 12)
-        Label22.TabIndex = 54
-        Label22.Text = "DNI:"
-        '
         'BuscadorTextBox
         '
         Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
@@ -833,17 +854,6 @@ Partial Class AgregarVenta
         Me.ClienteDataGridView.Name = "ClienteDataGridView"
         Me.ClienteDataGridView.Size = New System.Drawing.Size(464, 91)
         Me.ClienteDataGridView.TabIndex = 193
-        '
-        'btnSeleccionar
-        '
-        Me.btnSeleccionar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnSeleccionar.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionar.Location = New System.Drawing.Point(3, 165)
-        Me.btnSeleccionar.Name = "btnSeleccionar"
-        Me.btnSeleccionar.Size = New System.Drawing.Size(257, 27)
-        Me.btnSeleccionar.TabIndex = 12
-        Me.btnSeleccionar.Text = "Seleccionar"
-        Me.btnSeleccionar.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -898,16 +908,6 @@ Partial Class AgregarVenta
         Me.Button3.TabIndex = 55
         Me.Button3.Text = "&Buscar"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Label23
-        '
-        Label23.AutoSize = True
-        Label23.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label23.Location = New System.Drawing.Point(13, 27)
-        Label23.Name = "Label23"
-        Label23.Size = New System.Drawing.Size(47, 12)
-        Label23.TabIndex = 54
-        Label23.Text = "Nombre:"
         '
         'TextBox3
         '
