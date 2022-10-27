@@ -25,7 +25,7 @@ Public Class HomeAdmin
     End Sub
 
     Private Sub RegistrationToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RegistrationToolStripMenuItem1.Click
-        SellsRecord.Show()
+        Venta.Show()
     End Sub
 
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
@@ -40,4 +40,6 @@ Public Class HomeAdmin
         Me.Close()
         Login.Show()
     End Sub
+
+
 End Class

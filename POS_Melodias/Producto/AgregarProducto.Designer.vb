@@ -33,13 +33,13 @@ Partial Class AgregarProducto
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.DNITextBox = New System.Windows.Forms.TextBox()
         Me.NombresTextBox = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
@@ -48,6 +48,7 @@ Partial Class AgregarProducto
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DNILabel
@@ -114,7 +115,7 @@ Partial Class AgregarProducto
         '
         Label2.AutoSize = True
         Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label2.Location = New System.Drawing.Point(20, 172)
+        Label2.Location = New System.Drawing.Point(20, 171)
         Label2.Name = "Label2"
         Label2.Size = New System.Drawing.Size(51, 12)
         Label2.TabIndex = 164
@@ -123,7 +124,7 @@ Partial Class AgregarProducto
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnAgregar.Location = New System.Drawing.Point(197, 248)
+        Me.btnAgregar.Location = New System.Drawing.Point(197, 253)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(93, 21)
         Me.btnAgregar.TabIndex = 156
@@ -133,7 +134,7 @@ Partial Class AgregarProducto
         'btnCancelar
         '
         Me.btnCancelar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnCancelar.Location = New System.Drawing.Point(12, 248)
+        Me.btnCancelar.Location = New System.Drawing.Point(12, 253)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(93, 21)
         Me.btnCancelar.TabIndex = 158
@@ -142,10 +143,10 @@ Partial Class AgregarProducto
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox1.Controls.Add(Label1)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.ComboBox3)
         Me.GroupBox1.Controls.Add(Me.ComboBox2)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
@@ -162,7 +163,7 @@ Partial Class AgregarProducto
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(278, 219)
+        Me.GroupBox1.Size = New System.Drawing.Size(278, 228)
         Me.GroupBox1.TabIndex = 157
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Producto"
@@ -175,15 +176,6 @@ Partial Class AgregarProducto
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(167, 21)
         Me.TextBox1.TabIndex = 163
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(93, 165)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(167, 21)
-        Me.TextBox2.TabIndex = 165
         '
         'ComboBox3
         '
@@ -216,7 +208,7 @@ Partial Class AgregarProducto
         '
         Me.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(3, 194)
+        Me.btnLimpiar.Location = New System.Drawing.Point(3, 203)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(272, 21)
         Me.btnLimpiar.TabIndex = 1
@@ -241,12 +233,20 @@ Partial Class AgregarProducto
         Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NombresTextBox.TabIndex = 3
         '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(93, 166)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(167, 21)
+        Me.NumericUpDown1.TabIndex = 159
+        '
         'AgregarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(302, 281)
+        Me.ClientSize = New System.Drawing.Size(302, 286)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.GroupBox1)
@@ -255,6 +255,7 @@ Partial Class AgregarProducto
         Me.Text = "Agregar Producto"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -269,5 +270,5 @@ Partial Class AgregarProducto
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents NumericUpDown1 As NumericUpDown
 End Class

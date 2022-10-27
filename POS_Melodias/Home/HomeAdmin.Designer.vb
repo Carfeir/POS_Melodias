@@ -150,25 +150,25 @@ Partial Class HomeAdmin
         'ProductoToolStripMenuItem
         '
         Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
-        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.ProductoToolStripMenuItem.Text = "Producto"
         '
         'CategoryToolStripMenuItem
         '
         Me.CategoryToolStripMenuItem.Name = "CategoryToolStripMenuItem"
-        Me.CategoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CategoryToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.CategoryToolStripMenuItem.Text = "Categoria"
         '
         'ColorToolStripMenuItem
         '
         Me.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
-        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.ColorToolStripMenuItem.Text = "Color"
         '
         'MarcaToolStripMenuItem
         '
         Me.MarcaToolStripMenuItem.Name = "MarcaToolStripMenuItem"
-        Me.MarcaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MarcaToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.MarcaToolStripMenuItem.Text = "Marca"
         '
         'CustomersToolStripMenuItem
@@ -182,7 +182,7 @@ Partial Class HomeAdmin
         'AgregarProveedorToolStripMenuItem
         '
         Me.AgregarProveedorToolStripMenuItem.Name = "AgregarProveedorToolStripMenuItem"
-        Me.AgregarProveedorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarProveedorToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.AgregarProveedorToolStripMenuItem.Text = "Agregar Proveedor"
         '
         'ReportsToolStripMenuItem
@@ -196,7 +196,7 @@ Partial Class HomeAdmin
         'RegistrationToolStripMenuItem2
         '
         Me.RegistrationToolStripMenuItem2.Name = "RegistrationToolStripMenuItem2"
-        Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(170, 22)
         Me.RegistrationToolStripMenuItem2.Text = "Cambiar Contraseña"
         '
         'Label13

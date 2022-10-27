@@ -35,13 +35,13 @@ Partial Class ModificarProducto
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.DNITextBox = New System.Windows.Forms.TextBox()
         Me.NombresTextBox = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
         DNILabel = New System.Windows.Forms.Label()
@@ -51,6 +51,7 @@ Partial Class ModificarProducto
         CorreoElectronicoLabel = New System.Windows.Forms.Label()
         Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -67,7 +68,7 @@ Partial Class ModificarProducto
         '
         Label2.AutoSize = True
         Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label2.Location = New System.Drawing.Point(20, 190)
+        Label2.Location = New System.Drawing.Point(20, 188)
         Label2.Name = "Label2"
         Label2.Size = New System.Drawing.Size(51, 12)
         Label2.TabIndex = 164
@@ -155,12 +156,12 @@ Partial Class ModificarProducto
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox1.Controls.Add(Label3)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
         Me.GroupBox1.Controls.Add(Label1)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.ComboBox3)
         Me.GroupBox1.Controls.Add(Me.ComboBox2)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
@@ -200,15 +201,6 @@ Partial Class ModificarProducto
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(167, 21)
         Me.TextBox1.TabIndex = 163
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(93, 183)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(167, 21)
-        Me.TextBox2.TabIndex = 165
         '
         'ComboBox3
         '
@@ -266,6 +258,14 @@ Partial Class ModificarProducto
         Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NombresTextBox.TabIndex = 3
         '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(93, 182)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(167, 21)
+        Me.NumericUpDown1.TabIndex = 168
+        '
         'ModificarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
@@ -280,6 +280,7 @@ Partial Class ModificarProducto
         Me.Text = "Modificar Producto"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -289,11 +290,11 @@ Partial Class ModificarProducto
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents btnLimpiar As Button
     Friend WithEvents DNITextBox As TextBox
     Friend WithEvents NombresTextBox As TextBox
+    Friend WithEvents NumericUpDown1 As NumericUpDown
 End Class

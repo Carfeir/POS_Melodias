@@ -25,14 +25,14 @@ Partial Class ChangePassword
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChangePassword))
         Me.UserName = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnCambiarContraseña = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ConfirmPassword = New System.Windows.Forms.TextBox()
         Me.NewPassword = New System.Windows.Forms.TextBox()
         Me.OldPassword = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BtnVolver = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'UserName
@@ -53,15 +53,15 @@ Partial Class ChangePassword
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Nombre de Usuario:"
         '
-        'Button1
+        'BtnCambiarContraseña
         '
-        Me.Button1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(135, 167)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(142, 32)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "&Cambiar Contraseña"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnCambiarContraseña.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnCambiarContraseña.Location = New System.Drawing.Point(135, 167)
+        Me.BtnCambiarContraseña.Name = "BtnCambiarContraseña"
+        Me.BtnCambiarContraseña.Size = New System.Drawing.Size(142, 32)
+        Me.BtnCambiarContraseña.TabIndex = 15
+        Me.BtnCambiarContraseña.Text = "&Cambiar Contraseña"
+        Me.BtnCambiarContraseña.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -117,15 +117,15 @@ Partial Class ChangePassword
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Contraseña Vieja:"
         '
-        'Button2
+        'BtnVolver
         '
-        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Button2.Location = New System.Drawing.Point(19, 173)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(79, 26)
-        Me.Button2.TabIndex = 148
-        Me.Button2.Text = "&Volver"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.BtnVolver.Location = New System.Drawing.Point(19, 173)
+        Me.BtnVolver.Name = "BtnVolver"
+        Me.BtnVolver.Size = New System.Drawing.Size(79, 26)
+        Me.BtnVolver.TabIndex = 148
+        Me.BtnVolver.Text = "&Volver"
+        Me.BtnVolver.UseVisualStyleBackColor = True
         '
         'ChangePassword
         '
@@ -133,10 +133,10 @@ Partial Class ChangePassword
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(303, 215)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.BtnVolver)
         Me.Controls.Add(Me.UserName)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnCambiarContraseña)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ConfirmPassword)
         Me.Controls.Add(Me.NewPassword)
@@ -155,12 +155,12 @@ Partial Class ChangePassword
 
     Friend WithEvents UserName As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnCambiarContraseña As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents ConfirmPassword As TextBox
     Friend WithEvents NewPassword As TextBox
     Friend WithEvents OldPassword As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Private WithEvents Button2 As Button
+    Private WithEvents BtnVolver As Button
 End Class

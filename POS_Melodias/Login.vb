@@ -2,7 +2,6 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Login
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
         'Se comparan los datos de usuario para acceder a su determinada cuenta'
         If Not Validar_campos() Then
             MsgBox("No puede haber campos vacios")
