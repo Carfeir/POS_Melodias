@@ -45,37 +45,37 @@ Partial Class Venta
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarCliente, Me.ReporteDeVentasToolStripMenuItem, Me.VolverToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(726, 75)
+        Me.MenuStrip1.Size = New System.Drawing.Size(726, 78)
         Me.MenuStrip1.TabIndex = 181
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'TSAgregarCliente
         '
-        Me.TSAgregarCliente.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.TSAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.TSAgregarCliente.Image = CType(resources.GetObject("TSAgregarCliente.Image"), System.Drawing.Image)
         Me.TSAgregarCliente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.TSAgregarCliente.Name = "TSAgregarCliente"
-        Me.TSAgregarCliente.Size = New System.Drawing.Size(154, 71)
+        Me.TSAgregarCliente.Size = New System.Drawing.Size(158, 74)
         Me.TSAgregarCliente.Text = "&Agregar Nueva Venta"
         Me.TSAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ReporteDeVentasToolStripMenuItem
         '
-        Me.ReporteDeVentasToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.ReporteDeVentasToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.ReporteDeVentasToolStripMenuItem.Image = CType(resources.GetObject("ReporteDeVentasToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ReporteDeVentasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ReporteDeVentasToolStripMenuItem.Name = "ReporteDeVentasToolStripMenuItem"
-        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(137, 71)
+        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(142, 74)
         Me.ReporteDeVentasToolStripMenuItem.Text = "&Reporte de Ventas"
         Me.ReporteDeVentasToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'VolverToolStripMenuItem
         '
-        Me.VolverToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.VolverToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.VolverToolStripMenuItem.Image = CType(resources.GetObject("VolverToolStripMenuItem.Image"), System.Drawing.Image)
         Me.VolverToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
-        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(62, 71)
+        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(62, 74)
         Me.VolverToolStripMenuItem.Text = "Volver"
         Me.VolverToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -83,10 +83,10 @@ Partial Class Venta
         '
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.LightGray
-        Me.Label13.Font = New System.Drawing.Font("Miriam", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label13.Location = New System.Drawing.Point(12, 91)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(138, 16)
+        Me.Label13.Size = New System.Drawing.Size(152, 20)
         Me.Label13.TabIndex = 182
         Me.Label13.Text = "Ultimas 10 ventas"
         '
@@ -144,14 +144,15 @@ Partial Class Venta
         '
         'Venta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(726, 300)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Venta"
         Me.Text = "Venta"
         Me.MenuStrip1.ResumeLayout(False)

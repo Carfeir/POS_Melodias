@@ -315,6 +315,9 @@
     <EmbeddedResource Include="Producto\Products.resx">
       <DependentUpon>Products.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Venta\ReporteVenta.resx">
+      <DependentUpon>ReporteVenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Venta\Venta.resx">
       <DependentUpon>Venta.vb</DependentUpon>
     </EmbeddedResource>

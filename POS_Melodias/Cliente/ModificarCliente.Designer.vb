@@ -27,6 +27,7 @@ Partial Class ModificarCliente
         Dim NroContactoLabel As System.Windows.Forms.Label
         Dim CorreoElectronicoLabel As System.Windows.Forms.Label
         Dim ApellidosLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ModificarCliente))
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
@@ -47,68 +48,68 @@ Partial Class ModificarCliente
         'DNILabel
         '
         DNILabel.AutoSize = True
-        DNILabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        DNILabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         DNILabel.Location = New System.Drawing.Point(20, 24)
         DNILabel.Name = "DNILabel"
-        DNILabel.Size = New System.Drawing.Size(27, 12)
+        DNILabel.Size = New System.Drawing.Size(31, 15)
         DNILabel.TabIndex = 0
         DNILabel.Text = "DNI:"
         '
         'NombresLabel
         '
         NombresLabel.AutoSize = True
-        NombresLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NombresLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         NombresLabel.Location = New System.Drawing.Point(20, 47)
         NombresLabel.Name = "NombresLabel"
-        NombresLabel.Size = New System.Drawing.Size(52, 12)
+        NombresLabel.Size = New System.Drawing.Size(61, 15)
         NombresLabel.TabIndex = 2
         NombresLabel.Text = "Nombres:"
         '
         'NroContactoLabel
         '
         NroContactoLabel.AutoSize = True
-        NroContactoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NroContactoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         NroContactoLabel.Location = New System.Drawing.Point(20, 92)
         NroContactoLabel.Name = "NroContactoLabel"
-        NroContactoLabel.Size = New System.Drawing.Size(75, 12)
+        NroContactoLabel.Size = New System.Drawing.Size(84, 15)
         NroContactoLabel.TabIndex = 6
         NroContactoLabel.Text = "Nro. Contacto:"
         '
         'CorreoElectronicoLabel
         '
         CorreoElectronicoLabel.AutoSize = True
-        CorreoElectronicoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 115)
+        CorreoElectronicoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        CorreoElectronicoLabel.Location = New System.Drawing.Point(13, 118)
         CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
-        CorreoElectronicoLabel.Size = New System.Drawing.Size(97, 12)
+        CorreoElectronicoLabel.Size = New System.Drawing.Size(111, 15)
         CorreoElectronicoLabel.TabIndex = 8
         CorreoElectronicoLabel.Text = "Correo Electronico:"
         '
         'ApellidosLabel
         '
         ApellidosLabel.AutoSize = True
-        ApellidosLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        ApellidosLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         ApellidosLabel.Location = New System.Drawing.Point(20, 69)
         ApellidosLabel.Name = "ApellidosLabel"
-        ApellidosLabel.Size = New System.Drawing.Size(50, 12)
+        ApellidosLabel.Size = New System.Drawing.Size(60, 15)
         ApellidosLabel.TabIndex = 4
         ApellidosLabel.Text = "Apellidos:"
         '
         'btnLimpiar
         '
         Me.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(3, 149)
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.btnLimpiar.Location = New System.Drawing.Point(3, 141)
         Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(311, 21)
+        Me.btnLimpiar.Size = New System.Drawing.Size(311, 29)
         Me.btnLimpiar.TabIndex = 157
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'btnModificar
         '
-        Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnModificar.Location = New System.Drawing.Point(236, 199)
         Me.btnModificar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnModificar.Name = "btnModificar"
@@ -119,7 +120,7 @@ Partial Class ModificarCliente
         '
         'btnCancelar
         '
-        Me.btnCancelar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnCancelar.Location = New System.Drawing.Point(12, 199)
         Me.btnCancelar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnCancelar.Name = "btnCancelar"
@@ -141,7 +142,7 @@ Partial Class ModificarCliente
         Me.GroupBox1.Controls.Add(Me.NroContactoTextBox)
         Me.GroupBox1.Controls.Add(CorreoElectronicoLabel)
         Me.GroupBox1.Controls.Add(Me.CorreoElectronicoTextBox)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 13)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
@@ -206,8 +207,10 @@ Partial Class ModificarCliente
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "ModificarCliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Modificar Cliente"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

@@ -26,6 +26,7 @@ Partial Class ModificarUsuario
         Dim NombresLabel As System.Windows.Forms.Label
         Dim NroContactoLabel As System.Windows.Forms.Label
         Dim CorreoElectronicoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ModificarUsuario))
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -49,46 +50,46 @@ Partial Class ModificarUsuario
         'DNILabel
         '
         DNILabel.AutoSize = True
-        DNILabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        DNILabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         DNILabel.Location = New System.Drawing.Point(18, 24)
         DNILabel.Name = "DNILabel"
-        DNILabel.Size = New System.Drawing.Size(34, 12)
+        DNILabel.Size = New System.Drawing.Size(37, 15)
         DNILabel.TabIndex = 0
         DNILabel.Text = "CUIT:"
         '
         'NombresLabel
         '
         NombresLabel.AutoSize = True
-        NombresLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NombresLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         NombresLabel.Location = New System.Drawing.Point(18, 47)
         NombresLabel.Name = "NombresLabel"
-        NombresLabel.Size = New System.Drawing.Size(95, 12)
+        NombresLabel.Size = New System.Drawing.Size(110, 15)
         NombresLabel.TabIndex = 2
         NombresLabel.Text = "Nombre y Apellido:"
         '
         'NroContactoLabel
         '
         NroContactoLabel.AutoSize = True
-        NroContactoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NroContactoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         NroContactoLabel.Location = New System.Drawing.Point(18, 70)
         NroContactoLabel.Name = "NroContactoLabel"
-        NroContactoLabel.Size = New System.Drawing.Size(75, 12)
+        NroContactoLabel.Size = New System.Drawing.Size(84, 15)
         NroContactoLabel.TabIndex = 6
         NroContactoLabel.Text = "Nro. Contacto:"
         '
         'CorreoElectronicoLabel
         '
         CorreoElectronicoLabel.AutoSize = True
-        CorreoElectronicoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        CorreoElectronicoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         CorreoElectronicoLabel.Location = New System.Drawing.Point(18, 93)
         CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
-        CorreoElectronicoLabel.Size = New System.Drawing.Size(97, 12)
+        CorreoElectronicoLabel.Size = New System.Drawing.Size(111, 15)
         CorreoElectronicoLabel.TabIndex = 8
         CorreoElectronicoLabel.Text = "Correo Electronico:"
         '
         'btnModificar
         '
-        Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnModificar.Location = New System.Drawing.Point(225, 235)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(104, 21)
@@ -98,7 +99,7 @@ Partial Class ModificarUsuario
         '
         'btnCancelar
         '
-        Me.btnCancelar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnCancelar.Location = New System.Drawing.Point(13, 235)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(93, 21)
@@ -122,7 +123,7 @@ Partial Class ModificarUsuario
         Me.GroupBox1.Controls.Add(Me.NroContactoTextBox)
         Me.GroupBox1.Controls.Add(CorreoElectronicoLabel)
         Me.GroupBox1.Controls.Add(Me.CorreoElectronicoTextBox)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
@@ -134,7 +135,7 @@ Partial Class ModificarUsuario
         '
         'btnCambiarContraseña
         '
-        Me.btnCambiarContraseña.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnCambiarContraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnCambiarContraseña.Location = New System.Drawing.Point(13, 172)
         Me.btnCambiarContraseña.Name = "btnCambiarContraseña"
         Me.btnCambiarContraseña.Size = New System.Drawing.Size(143, 21)
@@ -144,7 +145,7 @@ Partial Class ModificarUsuario
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnLimpiar.Location = New System.Drawing.Point(205, 172)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(93, 21)
@@ -164,20 +165,20 @@ Partial Class ModificarUsuario
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label5.Location = New System.Drawing.Point(18, 116)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 12)
+        Me.Label5.Size = New System.Drawing.Size(118, 15)
         Me.Label5.TabIndex = 189
         Me.Label5.Text = "Nombre de Usuario:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label6.Location = New System.Drawing.Point(18, 140)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(24, 12)
+        Me.Label6.Size = New System.Drawing.Size(29, 15)
         Me.Label6.TabIndex = 188
         Me.Label6.Text = "Rol:"
         '
@@ -229,15 +230,17 @@ Partial Class ModificarUsuario
         '
         'ModificarUsuario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(345, 268)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ModificarUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Modificar Usuario"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
