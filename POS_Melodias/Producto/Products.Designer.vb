@@ -57,10 +57,10 @@ Partial Class Products
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.CBoxFiltroBuscador = New System.Windows.Forms.ComboBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
-        Me.CBoxFiltroBuscador = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -73,7 +73,7 @@ Partial Class Products
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 256)
+        Me.ListView1.Location = New System.Drawing.Point(12, 231)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(776, 124)
         Me.ListView1.TabIndex = 145
@@ -153,7 +153,7 @@ Partial Class Products
         Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(527, 178)
+        Me.GroupBox1.Size = New System.Drawing.Size(527, 153)
         Me.GroupBox1.TabIndex = 147
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Producto"
@@ -163,7 +163,7 @@ Partial Class Products
         Me.TextBox5.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox5.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox5.Location = New System.Drawing.Point(99, 87)
+        Me.TextBox5.Location = New System.Drawing.Point(99, 61)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(139, 21)
@@ -173,7 +173,7 @@ Partial Class Products
         '
         Me.btnEliminar.Enabled = False
         Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnEliminar.Location = New System.Drawing.Point(26, 150)
+        Me.btnEliminar.Location = New System.Drawing.Point(25, 118)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(93, 21)
         Me.btnEliminar.TabIndex = 3
@@ -184,7 +184,7 @@ Partial Class Products
         '
         Me.btnModificar.Enabled = False
         Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnModificar.Location = New System.Drawing.Point(414, 150)
+        Me.btnModificar.Location = New System.Drawing.Point(413, 118)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(93, 21)
         Me.btnModificar.TabIndex = 2
@@ -196,7 +196,7 @@ Partial Class Products
         Me.TextBox4.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox4.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox4.Location = New System.Drawing.Point(369, 87)
+        Me.TextBox4.Location = New System.Drawing.Point(368, 85)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(138, 21)
@@ -207,10 +207,10 @@ Partial Class Products
         Me.TextBox3.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox3.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox3.Location = New System.Drawing.Point(99, 62)
+        Me.TextBox3.Location = New System.Drawing.Point(368, 37)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(139, 21)
+        Me.TextBox3.Size = New System.Drawing.Size(138, 21)
         Me.TextBox3.TabIndex = 180
         '
         'Label1
@@ -228,7 +228,7 @@ Partial Class Products
         Me.TextBox2.BackColor = System.Drawing.SystemColors.Control
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox2.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox2.Location = New System.Drawing.Point(369, 13)
+        Me.TextBox2.Location = New System.Drawing.Point(368, 13)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(138, 21)
@@ -239,7 +239,7 @@ Partial Class Products
         Me.txtTotalAmount.BackColor = System.Drawing.SystemColors.Control
         Me.txtTotalAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtTotalAmount.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtTotalAmount.Location = New System.Drawing.Point(99, 112)
+        Me.txtTotalAmount.Location = New System.Drawing.Point(99, 85)
         Me.txtTotalAmount.Name = "txtTotalAmount"
         Me.txtTotalAmount.ReadOnly = True
         Me.txtTotalAmount.Size = New System.Drawing.Size(139, 21)
@@ -249,7 +249,7 @@ Partial Class Products
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(296, 69)
+        Me.Label5.Location = New System.Drawing.Point(296, 68)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(38, 12)
         Me.Label5.TabIndex = 172
@@ -294,14 +294,14 @@ Partial Class Products
         Me.txtProductName.Location = New System.Drawing.Point(99, 37)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.ReadOnly = True
-        Me.txtProductName.Size = New System.Drawing.Size(408, 21)
+        Me.txtProductName.Size = New System.Drawing.Size(139, 21)
         Me.txtProductName.TabIndex = 161
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label10.Location = New System.Drawing.Point(24, 69)
+        Me.Label10.Location = New System.Drawing.Point(296, 44)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(55, 12)
         Me.Label10.TabIndex = 165
@@ -311,7 +311,7 @@ Partial Class Products
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label12.Location = New System.Drawing.Point(296, 94)
+        Me.Label12.Location = New System.Drawing.Point(296, 92)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(49, 12)
         Me.Label12.TabIndex = 171
@@ -321,7 +321,7 @@ Partial Class Products
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label13.Location = New System.Drawing.Point(24, 94)
+        Me.Label13.Location = New System.Drawing.Point(24, 68)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(34, 12)
         Me.Label13.TabIndex = 168
@@ -332,7 +332,7 @@ Partial Class Products
         Me.txtPrice.BackColor = System.Drawing.SystemColors.Control
         Me.txtPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtPrice.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtPrice.Location = New System.Drawing.Point(369, 62)
+        Me.txtPrice.Location = New System.Drawing.Point(368, 61)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.ReadOnly = True
         Me.txtPrice.Size = New System.Drawing.Size(138, 21)
@@ -342,7 +342,7 @@ Partial Class Products
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label14.Location = New System.Drawing.Point(24, 119)
+        Me.Label14.Location = New System.Drawing.Point(24, 92)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(51, 12)
         Me.Label14.TabIndex = 169
@@ -351,7 +351,7 @@ Partial Class Products
         'btnVolver
         '
         Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnVolver.Location = New System.Drawing.Point(12, 392)
+        Me.btnVolver.Location = New System.Drawing.Point(12, 370)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(79, 19)
         Me.btnVolver.TabIndex = 172
@@ -373,7 +373,7 @@ Partial Class Products
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarCliente})
-        Me.MenuStrip1.Location = New System.Drawing.Point(589, 74)
+        Me.MenuStrip1.Location = New System.Drawing.Point(574, 50)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(181, 75)
         Me.MenuStrip1.TabIndex = 174
@@ -382,7 +382,7 @@ Partial Class Products
         'btnMostrar
         '
         Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnMostrar.Location = New System.Drawing.Point(589, 162)
+        Me.btnMostrar.Location = New System.Drawing.Point(574, 138)
         Me.btnMostrar.Name = "btnMostrar"
         Me.btnMostrar.Size = New System.Drawing.Size(181, 25)
         Me.btnMostrar.TabIndex = 173
@@ -396,12 +396,22 @@ Partial Class Products
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
         Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 194)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 169)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(776, 56)
         Me.GroupBox2.TabIndex = 194
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Buscador Por"
+        '
+        'CBoxFiltroBuscador
+        '
+        Me.CBoxFiltroBuscador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CBoxFiltroBuscador.FormattingEnabled = True
+        Me.CBoxFiltroBuscador.Items.AddRange(New Object() {"Nombre", "Proveedor", "Categoria", "Marca", "Color"})
+        Me.CBoxFiltroBuscador.Location = New System.Drawing.Point(17, 21)
+        Me.CBoxFiltroBuscador.Name = "CBoxFiltroBuscador"
+        Me.CBoxFiltroBuscador.Size = New System.Drawing.Size(121, 23)
+        Me.CBoxFiltroBuscador.TabIndex = 159
         '
         'btnLimpiar
         '
@@ -432,22 +442,12 @@ Partial Class Products
         Me.BuscadorTextBox.Size = New System.Drawing.Size(398, 21)
         Me.BuscadorTextBox.TabIndex = 53
         '
-        'CBoxFiltroBuscador
-        '
-        Me.CBoxFiltroBuscador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.CBoxFiltroBuscador.FormattingEnabled = True
-        Me.CBoxFiltroBuscador.Items.AddRange(New Object() {"Nombre", "Proveedor", "Categoria", "Marca", "Color"})
-        Me.CBoxFiltroBuscador.Location = New System.Drawing.Point(17, 21)
-        Me.CBoxFiltroBuscador.Name = "CBoxFiltroBuscador"
-        Me.CBoxFiltroBuscador.Size = New System.Drawing.Size(121, 23)
-        Me.CBoxFiltroBuscador.TabIndex = 159
-        '
         'Products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(800, 421)
+        Me.ClientSize = New System.Drawing.Size(800, 397)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.btnMostrar)

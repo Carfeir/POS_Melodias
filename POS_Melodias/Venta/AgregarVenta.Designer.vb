@@ -40,11 +40,9 @@ Partial Class AgregarVenta
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AgregarVenta))
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txtTaxAmt = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.txtTaxPer = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtSubTotal = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -63,7 +61,6 @@ Partial Class AgregarVenta
         Me.NroContactoTextBox = New System.Windows.Forms.TextBox()
         Me.CorreoElectronicoTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -102,6 +99,12 @@ Partial Class AgregarVenta
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
@@ -124,6 +127,7 @@ Partial Class AgregarVenta
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DNILabel
@@ -280,7 +284,7 @@ Partial Class AgregarVenta
         '
         Me.btnRemove.Enabled = False
         Me.btnRemove.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnRemove.Location = New System.Drawing.Point(461, 892)
+        Me.btnRemove.Location = New System.Drawing.Point(566, 892)
         Me.btnRemove.Name = "btnRemove"
         Me.btnRemove.Size = New System.Drawing.Size(102, 36)
         Me.btnRemove.TabIndex = 145
@@ -290,45 +294,39 @@ Partial Class AgregarVenta
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.txtTotal)
+        Me.Panel2.Controls.Add(Me.Label23)
+        Me.Panel2.Controls.Add(Me.Label20)
+        Me.Panel2.Controls.Add(Me.TextBox13)
+        Me.Panel2.Controls.Add(Me.Label22)
+        Me.Panel2.Controls.Add(Me.ComboBox1)
         Me.Panel2.Controls.Add(Me.Label16)
         Me.Panel2.Controls.Add(Me.txtTaxAmt)
         Me.Panel2.Controls.Add(Me.Label24)
-        Me.Panel2.Controls.Add(Me.txtTaxPer)
         Me.Panel2.Controls.Add(Me.Label15)
         Me.Panel2.Controls.Add(Me.txtSubTotal)
         Me.Panel2.Controls.Add(Me.Label17)
-        Me.Panel2.Location = New System.Drawing.Point(121, 861)
+        Me.Panel2.Location = New System.Drawing.Point(24, 861)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(278, 90)
+        Me.Panel2.Size = New System.Drawing.Size(500, 90)
         Me.Panel2.TabIndex = 144
-        '
-        'txtTotal
-        '
-        Me.txtTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txtTotal.Location = New System.Drawing.Point(91, 60)
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(161, 20)
-        Me.txtTotal.TabIndex = 3
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label16.Location = New System.Drawing.Point(20, 62)
+        Me.Label16.Location = New System.Drawing.Point(19, 40)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(34, 12)
+        Me.Label16.Size = New System.Drawing.Size(98, 12)
         Me.Label16.TabIndex = 94
-        Me.Label16.Text = "Total"
+        Me.Label16.Text = "Metodo de Pago"
         '
         'txtTaxAmt
         '
         Me.txtTaxAmt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txtTaxAmt.Location = New System.Drawing.Point(178, 36)
+        Me.txtTaxAmt.Location = New System.Drawing.Point(171, 58)
         Me.txtTaxAmt.Name = "txtTaxAmt"
         Me.txtTaxAmt.ReadOnly = True
-        Me.txtTaxAmt.Size = New System.Drawing.Size(74, 20)
+        Me.txtTaxAmt.Size = New System.Drawing.Size(99, 20)
         Me.txtTaxAmt.TabIndex = 2
         '
         'Label24
@@ -337,44 +335,36 @@ Partial Class AgregarVenta
         Me.Label24.BackColor = System.Drawing.Color.White
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.Black
-        Me.Label24.Location = New System.Drawing.Point(149, 36)
+        Me.Label24.Location = New System.Drawing.Point(138, 58)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(23, 20)
         Me.Label24.TabIndex = 92
         Me.Label24.Text = "%"
         '
-        'txtTaxPer
-        '
-        Me.txtTaxPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txtTaxPer.Location = New System.Drawing.Point(91, 37)
-        Me.txtTaxPer.Name = "txtTaxPer"
-        Me.txtTaxPer.Size = New System.Drawing.Size(52, 20)
-        Me.txtTaxPer.TabIndex = 1
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label15.Location = New System.Drawing.Point(20, 38)
+        Me.Label15.Location = New System.Drawing.Point(19, 65)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(57, 12)
+        Me.Label15.Size = New System.Drawing.Size(53, 12)
         Me.Label15.TabIndex = 90
-        Me.Label15.Text = "Impuesto"
+        Me.Label15.Text = "Recargo"
         '
         'txtSubTotal
         '
         Me.txtSubTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txtSubTotal.Location = New System.Drawing.Point(91, 11)
+        Me.txtSubTotal.Location = New System.Drawing.Point(167, 11)
         Me.txtSubTotal.Name = "txtSubTotal"
         Me.txtSubTotal.ReadOnly = True
-        Me.txtSubTotal.Size = New System.Drawing.Size(161, 20)
+        Me.txtSubTotal.Size = New System.Drawing.Size(103, 20)
         Me.txtSubTotal.TabIndex = 0
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label17.Location = New System.Drawing.Point(20, 14)
+        Me.Label17.Location = New System.Drawing.Point(19, 16)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(60, 12)
         Me.Label17.TabIndex = 77
@@ -434,7 +424,7 @@ Partial Class AgregarVenta
         'Save
         '
         Me.Save.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Save.Location = New System.Drawing.Point(615, 892)
+        Me.Save.Location = New System.Drawing.Point(698, 892)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(102, 36)
         Me.Save.TabIndex = 1
@@ -531,8 +521,8 @@ Partial Class AgregarVenta
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox1.Controls.Add(Label18)
-        Me.GroupBox1.Controls.Add(Me.TextBox10)
         Me.GroupBox1.Controls.Add(Label14)
         Me.GroupBox1.Controls.Add(Me.TextBox9)
         Me.GroupBox1.Controls.Add(Me.btnAgregar)
@@ -560,16 +550,6 @@ Partial Class AgregarVenta
         Me.GroupBox1.TabIndex = 187
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Producto"
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox10.Location = New System.Drawing.Point(140, 213)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(52, 21)
-        Me.TextBox10.TabIndex = 188
-        Me.TextBox10.Text = "1"
         '
         'TextBox9
         '
@@ -925,12 +905,72 @@ Partial Class AgregarVenta
         Me.TextBox3.Size = New System.Drawing.Size(162, 21)
         Me.TextBox3.TabIndex = 53
         '
+        'TextBox13
+        '
+        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TextBox13.Location = New System.Drawing.Point(346, 38)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.ReadOnly = True
+        Me.TextBox13.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox13.TabIndex = 95
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label20.Location = New System.Drawing.Point(344, 16)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(45, 12)
+        Me.Label20.TabIndex = 96
+        Me.Label20.Text = "TOTAL"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Efectivo", "Tarjeta de Debito", "Tarjeta de Credito"})
+        Me.ComboBox1.Location = New System.Drawing.Point(138, 35)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(132, 19)
+        Me.ComboBox1.TabIndex = 96
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.BackColor = System.Drawing.Color.White
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.Black
+        Me.Label22.Location = New System.Drawing.Point(138, 11)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(18, 20)
+        Me.Label22.TabIndex = 97
+        Me.Label22.Text = "$"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.BackColor = System.Drawing.Color.White
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.Black
+        Me.Label23.Location = New System.Drawing.Point(313, 38)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(18, 20)
+        Me.Label23.TabIndex = 98
+        Me.Label23.Text = "$"
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(126, 212)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(46, 20)
+        Me.NumericUpDown1.TabIndex = 197
+        '
         'AgregarVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(827, 963)
+        Me.ClientSize = New System.Drawing.Size(831, 963)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label6)
@@ -969,6 +1009,7 @@ Partial Class AgregarVenta
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -976,11 +1017,9 @@ Partial Class AgregarVenta
 
     Friend WithEvents btnRemove As Button
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents txtTotal As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents txtTaxAmt As TextBox
     Friend WithEvents Label24 As Label
-    Friend WithEvents txtTaxPer As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents txtSubTotal As TextBox
     Friend WithEvents Label17 As Label
@@ -997,7 +1036,6 @@ Partial Class AgregarVenta
     Friend WithEvents NroContactoTextBox As TextBox
     Friend WithEvents CorreoElectronicoTextBox As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox10 As TextBox
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents btnAgregar As Button
     Friend WithEvents TextBox8 As TextBox
@@ -1038,4 +1076,10 @@ Partial Class AgregarVenta
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents CBoxFiltroClliente As ComboBox
     Friend WithEvents CBoxFiltroProducto As ComboBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents NumericUpDown1 As NumericUpDown
 End Class

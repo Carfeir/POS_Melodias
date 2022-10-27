@@ -63,12 +63,12 @@ Partial Class Clients
         Me.ClienteTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.clienteTableAdapter()
         Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TSAgregarCliente = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
@@ -434,6 +434,16 @@ Partial Class Clients
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Buscador Por"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"DNI", "Nombre", "Apellido", "Nro. Contacto", "Correo Electronico"})
+        Me.ComboBox1.Location = New System.Drawing.Point(22, 21)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(93, 23)
+        Me.ComboBox1.TabIndex = 166
+        '
         'btnLimpiar
         '
         Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
@@ -483,16 +493,6 @@ Partial Class Clients
         Me.TSAgregarCliente.Size = New System.Drawing.Size(161, 71)
         Me.TSAgregarCliente.Text = "&Agregar Nuevo Cliente"
         Me.TSAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"DNI", "Nombre", "Apellido", "Nro. Contacto", "Correo Electronico"})
-        Me.ComboBox1.Location = New System.Drawing.Point(22, 21)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(93, 23)
-        Me.ComboBox1.TabIndex = 166
         '
         'Clients
         '

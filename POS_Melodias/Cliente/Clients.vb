@@ -42,5 +42,4 @@
         BuscadorTextBox.Clear()
     End Sub
 
-
 End Class
