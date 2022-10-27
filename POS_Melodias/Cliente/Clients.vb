@@ -42,4 +42,8 @@
         BuscadorTextBox.Clear()
     End Sub
 
+    Private Sub TSAgregarCliente_Click(sender As Object, e As EventArgs) Handles TSAgregarCliente.Click
+        AgregarCliente.Show()
+        Me.Hide()
+    End Sub
 End Class

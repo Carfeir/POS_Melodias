@@ -40,6 +40,11 @@ Partial Class AgregarVenta
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AgregarVenta))
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txtTaxAmt = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -61,6 +66,7 @@ Partial Class AgregarVenta
         Me.NroContactoTextBox = New System.Windows.Forms.TextBox()
         Me.CorreoElectronicoTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -99,12 +105,6 @@ Partial Class AgregarVenta
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
@@ -123,167 +123,167 @@ Partial Class AgregarVenta
         Me.Panel2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DNILabel
         '
         DNILabel.AutoSize = True
-        DNILabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        DNILabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         DNILabel.Location = New System.Drawing.Point(13, 24)
         DNILabel.Name = "DNILabel"
-        DNILabel.Size = New System.Drawing.Size(27, 12)
+        DNILabel.Size = New System.Drawing.Size(31, 15)
         DNILabel.TabIndex = 0
         DNILabel.Text = "DNI:"
         '
         'NombresLabel
         '
         NombresLabel.AutoSize = True
-        NombresLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NombresLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         NombresLabel.Location = New System.Drawing.Point(13, 47)
         NombresLabel.Name = "NombresLabel"
-        NombresLabel.Size = New System.Drawing.Size(52, 12)
+        NombresLabel.Size = New System.Drawing.Size(61, 15)
         NombresLabel.TabIndex = 2
         NombresLabel.Text = "Nombres:"
         '
         'ApellidosLabel
         '
         ApellidosLabel.AutoSize = True
-        ApellidosLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        ApellidosLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         ApellidosLabel.Location = New System.Drawing.Point(13, 69)
         ApellidosLabel.Name = "ApellidosLabel"
-        ApellidosLabel.Size = New System.Drawing.Size(50, 12)
+        ApellidosLabel.Size = New System.Drawing.Size(60, 15)
         ApellidosLabel.TabIndex = 4
         ApellidosLabel.Text = "Apellidos:"
         '
         'NroContactoLabel
         '
         NroContactoLabel.AutoSize = True
-        NroContactoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NroContactoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         NroContactoLabel.Location = New System.Drawing.Point(13, 118)
         NroContactoLabel.Name = "NroContactoLabel"
-        NroContactoLabel.Size = New System.Drawing.Size(75, 12)
+        NroContactoLabel.Size = New System.Drawing.Size(84, 15)
         NroContactoLabel.TabIndex = 6
         NroContactoLabel.Text = "Nro. Contacto:"
         '
         'CorreoElectronicoLabel
         '
         CorreoElectronicoLabel.AutoSize = True
-        CorreoElectronicoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        CorreoElectronicoLabel.Location = New System.Drawing.Point(13, 141)
+        CorreoElectronicoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        CorreoElectronicoLabel.Location = New System.Drawing.Point(12, 139)
         CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
-        CorreoElectronicoLabel.Size = New System.Drawing.Size(97, 12)
+        CorreoElectronicoLabel.Size = New System.Drawing.Size(111, 15)
         CorreoElectronicoLabel.TabIndex = 8
         CorreoElectronicoLabel.Text = "Correo Electronico:"
         '
         'Label2
         '
         Label2.AutoSize = True
-        Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label2.Location = New System.Drawing.Point(12, 162)
         Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(49, 12)
+        Label2.Size = New System.Drawing.Size(57, 15)
         Label2.TabIndex = 162
         Label2.Text = "Precio U:"
         '
         'Label5
         '
         Label5.AutoSize = True
-        Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label5.Location = New System.Drawing.Point(12, 185)
         Label5.Name = "Label5"
-        Label5.Size = New System.Drawing.Size(63, 12)
+        Label5.Size = New System.Drawing.Size(71, 15)
         Label5.TabIndex = 164
         Label5.Text = "Cant. Stock:"
         '
         'Label7
         '
         Label7.AutoSize = True
-        Label7.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label7.Location = New System.Drawing.Point(12, 70)
         Label7.Name = "Label7"
-        Label7.Size = New System.Drawing.Size(58, 12)
+        Label7.Size = New System.Drawing.Size(66, 15)
         Label7.TabIndex = 0
         Label7.Text = "Proveedor:"
         '
         'Label9
         '
         Label9.AutoSize = True
-        Label9.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label9.Location = New System.Drawing.Point(12, 47)
         Label9.Name = "Label9"
-        Label9.Size = New System.Drawing.Size(47, 12)
+        Label9.Size = New System.Drawing.Size(55, 15)
         Label9.TabIndex = 2
         Label9.Text = "Nombre:"
         '
         'Label10
         '
         Label10.AutoSize = True
-        Label10.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label10.Location = New System.Drawing.Point(12, 93)
         Label10.Name = "Label10"
-        Label10.Size = New System.Drawing.Size(55, 12)
+        Label10.Size = New System.Drawing.Size(63, 15)
         Label10.TabIndex = 4
         Label10.Text = "Categoria:"
         '
         'Label12
         '
         Label12.AutoSize = True
-        Label12.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label12.Location = New System.Drawing.Point(12, 116)
         Label12.Name = "Label12"
-        Label12.Size = New System.Drawing.Size(38, 12)
+        Label12.Size = New System.Drawing.Size(45, 15)
         Label12.TabIndex = 6
         Label12.Text = "Marca:"
         '
         'Label13
         '
         Label13.AutoSize = True
-        Label13.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label13.Location = New System.Drawing.Point(13, 139)
         Label13.Name = "Label13"
-        Label13.Size = New System.Drawing.Size(34, 12)
+        Label13.Size = New System.Drawing.Size(39, 15)
         Label13.TabIndex = 8
         Label13.Text = "Color:"
         '
         'Label14
         '
         Label14.AutoSize = True
-        Label14.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label14.Location = New System.Drawing.Point(12, 24)
         Label14.Name = "Label14"
-        Label14.Size = New System.Drawing.Size(65, 12)
+        Label14.Size = New System.Drawing.Size(74, 15)
         Label14.TabIndex = 185
         Label14.Text = "ID Producto:"
         '
         'Label18
         '
         Label18.AutoSize = True
-        Label18.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label18.Location = New System.Drawing.Point(69, 216)
         Label18.Name = "Label18"
-        Label18.Size = New System.Drawing.Size(51, 12)
+        Label18.Size = New System.Drawing.Size(59, 15)
         Label18.TabIndex = 187
         Label18.Text = "Cantidad:"
         '
         'Label19
         '
         Label19.AutoSize = True
-        Label19.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label19.Location = New System.Drawing.Point(13, 93)
         Label19.Name = "Label19"
-        Label19.Size = New System.Drawing.Size(55, 12)
+        Label19.Size = New System.Drawing.Size(63, 15)
         Label19.TabIndex = 10
         Label19.Text = "ID Cliente:"
         '
         'btnRemove
         '
         Me.btnRemove.Enabled = False
-        Me.btnRemove.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnRemove.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnRemove.Location = New System.Drawing.Point(566, 892)
         Me.btnRemove.Name = "btnRemove"
         Me.btnRemove.Size = New System.Drawing.Size(102, 36)
@@ -310,13 +310,65 @@ Partial Class AgregarVenta
         Me.Panel2.Size = New System.Drawing.Size(500, 90)
         Me.Panel2.TabIndex = 144
         '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.BackColor = System.Drawing.Color.White
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.Black
+        Me.Label23.Location = New System.Drawing.Point(313, 38)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(18, 20)
+        Me.Label23.TabIndex = 98
+        Me.Label23.Text = "$"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label20.Location = New System.Drawing.Point(344, 16)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(49, 15)
+        Me.Label20.TabIndex = 96
+        Me.Label20.Text = "TOTAL"
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.TextBox13.Location = New System.Drawing.Point(346, 38)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.ReadOnly = True
+        Me.TextBox13.Size = New System.Drawing.Size(132, 20)
+        Me.TextBox13.TabIndex = 95
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.BackColor = System.Drawing.Color.White
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.Black
+        Me.Label22.Location = New System.Drawing.Point(138, 11)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(18, 20)
+        Me.Label22.TabIndex = 97
+        Me.Label22.Text = "$"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Efectivo", "Tarjeta de Debito", "Tarjeta de Credito"})
+        Me.ComboBox1.Location = New System.Drawing.Point(138, 35)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(132, 21)
+        Me.ComboBox1.TabIndex = 96
+        '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label16.Location = New System.Drawing.Point(19, 40)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(98, 12)
+        Me.Label16.Size = New System.Drawing.Size(112, 15)
         Me.Label16.TabIndex = 94
         Me.Label16.Text = "Metodo de Pago"
         '
@@ -344,10 +396,10 @@ Partial Class AgregarVenta
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label15.Location = New System.Drawing.Point(19, 65)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(53, 12)
+        Me.Label15.Size = New System.Drawing.Size(61, 15)
         Me.Label15.TabIndex = 90
         Me.Label15.Text = "Recargo"
         '
@@ -363,10 +415,10 @@ Partial Class AgregarVenta
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label17.Location = New System.Drawing.Point(19, 16)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(60, 12)
+        Me.Label17.Size = New System.Drawing.Size(68, 15)
         Me.Label17.TabIndex = 77
         Me.Label17.Text = "Sub Total"
         '
@@ -374,30 +426,30 @@ Partial Class AgregarVenta
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.LightGray
-        Me.Label1.Font = New System.Drawing.Font("Miriam", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(20, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(122, 19)
+        Me.Label1.Size = New System.Drawing.Size(130, 24)
         Me.Label1.TabIndex = 135
         Me.Label1.Text = "Nueva Venta"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label4.Location = New System.Drawing.Point(526, 52)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 12)
+        Me.Label4.Size = New System.Drawing.Size(80, 15)
         Me.Label4.TabIndex = 132
         Me.Label4.Text = "No. de Venta:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label3.Location = New System.Drawing.Point(299, 52)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 12)
+        Me.Label3.Size = New System.Drawing.Size(95, 15)
         Me.Label3.TabIndex = 133
         Me.Label3.Text = "Fecha de Venta:"
         '
@@ -405,7 +457,7 @@ Partial Class AgregarVenta
         '
         Me.txtOrderNo.BackColor = System.Drawing.SystemColors.Control
         Me.txtOrderNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.txtOrderNo.Location = New System.Drawing.Point(603, 50)
+        Me.txtOrderNo.Location = New System.Drawing.Point(612, 51)
         Me.txtOrderNo.Name = "txtOrderNo"
         Me.txtOrderNo.ReadOnly = True
         Me.txtOrderNo.Size = New System.Drawing.Size(173, 20)
@@ -415,15 +467,15 @@ Partial Class AgregarVenta
         '
         Me.dtpOrderDate.CustomFormat = "dd/MMM/yyyy"
         Me.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpOrderDate.Location = New System.Drawing.Point(389, 50)
+        Me.dtpOrderDate.Location = New System.Drawing.Point(400, 52)
         Me.dtpOrderDate.Name = "dtpOrderDate"
-        Me.dtpOrderDate.Size = New System.Drawing.Size(103, 19)
+        Me.dtpOrderDate.Size = New System.Drawing.Size(103, 20)
         Me.dtpOrderDate.TabIndex = 130
         Me.dtpOrderDate.Value = New Date(2022, 10, 27, 0, 0, 0, 0)
         '
         'Save
         '
-        Me.Save.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Save.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Save.Location = New System.Drawing.Point(698, 892)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(102, 36)
@@ -446,7 +498,7 @@ Partial Class AgregarVenta
         Me.GroupBox3.Controls.Add(Me.NroContactoTextBox)
         Me.GroupBox3.Controls.Add(CorreoElectronicoLabel)
         Me.GroupBox3.Controls.Add(Me.CorreoElectronicoTextBox)
-        Me.GroupBox3.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox3.Location = New System.Drawing.Point(24, 113)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(263, 195)
@@ -457,7 +509,7 @@ Partial Class AgregarVenta
         'btnSeleccionar
         '
         Me.btnSeleccionar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnSeleccionar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnSeleccionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnSeleccionar.Location = New System.Drawing.Point(3, 165)
         Me.btnSeleccionar.Name = "btnSeleccionar"
         Me.btnSeleccionar.Size = New System.Drawing.Size(257, 27)
@@ -541,7 +593,7 @@ Partial Class AgregarVenta
         Me.GroupBox1.Controls.Add(Label10)
         Me.GroupBox1.Controls.Add(Label12)
         Me.GroupBox1.Controls.Add(Label13)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(24, 359)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
@@ -550,6 +602,14 @@ Partial Class AgregarVenta
         Me.GroupBox1.TabIndex = 187
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Producto"
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(126, 212)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(46, 20)
+        Me.NumericUpDown1.TabIndex = 197
         '
         'TextBox9
         '
@@ -563,10 +623,10 @@ Partial Class AgregarVenta
         '
         'btnAgregar
         '
-        Me.btnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnAgregar.Location = New System.Drawing.Point(168, 240)
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.btnAgregar.Location = New System.Drawing.Point(168, 235)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(78, 21)
+        Me.btnAgregar.Size = New System.Drawing.Size(78, 30)
         Me.btnAgregar.TabIndex = 182
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -583,7 +643,7 @@ Partial Class AgregarVenta
         '
         'btnQuitar
         '
-        Me.btnQuitar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnQuitar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnQuitar.Location = New System.Drawing.Point(15, 240)
         Me.btnQuitar.Name = "btnQuitar"
         Me.btnQuitar.Size = New System.Drawing.Size(78, 21)
@@ -655,10 +715,10 @@ Partial Class AgregarVenta
         '
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.LightGray
-        Me.Label11.Font = New System.Drawing.Font("Miriam", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label11.Location = New System.Drawing.Point(24, 329)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(49, 16)
+        Me.Label11.Size = New System.Drawing.Size(55, 20)
         Me.Label11.TabIndex = 186
         Me.Label11.Text = "Stock"
         '
@@ -730,10 +790,10 @@ Partial Class AgregarVenta
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.LightGray
-        Me.Label8.Font = New System.Drawing.Font("Miriam", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.Location = New System.Drawing.Point(21, 654)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(130, 16)
+        Me.Label8.Size = New System.Drawing.Size(144, 20)
         Me.Label8.TabIndex = 188
         Me.Label8.Text = "Detalle de Venta"
         '
@@ -741,7 +801,7 @@ Partial Class AgregarVenta
         '
         Me.BtnAgregarNuevoCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BtnAgregarNuevoCliente.Enabled = False
-        Me.BtnAgregarNuevoCliente.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.BtnAgregarNuevoCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.BtnAgregarNuevoCliente.Image = CType(resources.GetObject("BtnAgregarNuevoCliente.Image"), System.Drawing.Image)
         Me.BtnAgregarNuevoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnAgregarNuevoCliente.Location = New System.Drawing.Point(635, 274)
@@ -755,10 +815,10 @@ Partial Class AgregarVenta
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label21.Location = New System.Drawing.Point(27, 50)
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label21.Location = New System.Drawing.Point(16, 49)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(55, 12)
+        Me.Label21.Size = New System.Drawing.Size(63, 15)
         Me.Label21.TabIndex = 191
         Me.Label21.Text = "ID Cliente:"
         '
@@ -778,7 +838,7 @@ Partial Class AgregarVenta
         Me.GroupBox4.Controls.Add(Me.btnLimpiar)
         Me.GroupBox4.Controls.Add(Me.Button1)
         Me.GroupBox4.Controls.Add(Me.BuscadorTextBox)
-        Me.GroupBox4.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox4.Location = New System.Drawing.Point(312, 113)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(494, 55)
@@ -798,17 +858,17 @@ Partial Class AgregarVenta
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(310, 20)
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.btnLimpiar.Location = New System.Drawing.Point(310, 15)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(79, 21)
+        Me.btnLimpiar.Size = New System.Drawing.Size(79, 35)
         Me.btnLimpiar.TabIndex = 158
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(395, 15)
         Me.Button1.Name = "Button1"
@@ -837,10 +897,10 @@ Partial Class AgregarVenta
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.LightGray
-        Me.Label6.Font = New System.Drawing.Font("Miriam", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.Location = New System.Drawing.Point(21, 85)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(59, 16)
+        Me.Label6.Size = New System.Drawing.Size(65, 20)
         Me.Label6.TabIndex = 194
         Me.Label6.Text = "Cliente"
         '
@@ -858,7 +918,7 @@ Partial Class AgregarVenta
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.TextBox3)
-        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(321, 359)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(494, 55)
@@ -878,17 +938,17 @@ Partial Class AgregarVenta
         '
         'Button2
         '
-        Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Button2.Location = New System.Drawing.Point(301, 20)
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Button2.Location = New System.Drawing.Point(301, 16)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(79, 21)
+        Me.Button2.Size = New System.Drawing.Size(79, 33)
         Me.Button2.TabIndex = 158
         Me.Button2.Text = "Limpiar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button3.Location = New System.Drawing.Point(386, 15)
         Me.Button3.Name = "Button3"
@@ -905,72 +965,12 @@ Partial Class AgregarVenta
         Me.TextBox3.Size = New System.Drawing.Size(162, 21)
         Me.TextBox3.TabIndex = 53
         '
-        'TextBox13
-        '
-        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.TextBox13.Location = New System.Drawing.Point(346, 38)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.ReadOnly = True
-        Me.TextBox13.Size = New System.Drawing.Size(132, 20)
-        Me.TextBox13.TabIndex = 95
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label20.Location = New System.Drawing.Point(344, 16)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(45, 12)
-        Me.Label20.TabIndex = 96
-        Me.Label20.Text = "TOTAL"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Efectivo", "Tarjeta de Debito", "Tarjeta de Credito"})
-        Me.ComboBox1.Location = New System.Drawing.Point(138, 35)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(132, 19)
-        Me.ComboBox1.TabIndex = 96
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.BackColor = System.Drawing.Color.White
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.Black
-        Me.Label22.Location = New System.Drawing.Point(138, 11)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(18, 20)
-        Me.Label22.TabIndex = 97
-        Me.Label22.Text = "$"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.BackColor = System.Drawing.Color.White
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.Black
-        Me.Label23.Location = New System.Drawing.Point(313, 38)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(18, 20)
-        Me.Label23.TabIndex = 98
-        Me.Label23.Text = "$"
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.NumericUpDown1.Location = New System.Drawing.Point(126, 212)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(46, 20)
-        Me.NumericUpDown1.TabIndex = 197
-        '
         'AgregarVenta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(831, 963)
+        Me.ClientSize = New System.Drawing.Size(831, 749)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label6)
@@ -992,7 +992,7 @@ Partial Class AgregarVenta
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtOrderNo)
         Me.Controls.Add(Me.dtpOrderDate)
-        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AgregarVenta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1003,13 +1003,13 @@ Partial Class AgregarVenta
         Me.GroupBox3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

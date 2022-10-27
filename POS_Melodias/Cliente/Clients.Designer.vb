@@ -87,56 +87,56 @@ Partial Class Clients
         'DNILabel
         '
         DNILabel.AutoSize = True
-        DNILabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        DNILabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         DNILabel.Location = New System.Drawing.Point(20, 24)
         DNILabel.Name = "DNILabel"
-        DNILabel.Size = New System.Drawing.Size(27, 12)
+        DNILabel.Size = New System.Drawing.Size(31, 15)
         DNILabel.TabIndex = 0
         DNILabel.Text = "DNI:"
         '
         'NombresLabel
         '
         NombresLabel.AutoSize = True
-        NombresLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NombresLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         NombresLabel.Location = New System.Drawing.Point(20, 47)
         NombresLabel.Name = "NombresLabel"
-        NombresLabel.Size = New System.Drawing.Size(52, 12)
+        NombresLabel.Size = New System.Drawing.Size(61, 15)
         NombresLabel.TabIndex = 2
         NombresLabel.Text = "Nombres:"
         '
         'ApellidosLabel
         '
         ApellidosLabel.AutoSize = True
-        ApellidosLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        ApellidosLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         ApellidosLabel.Location = New System.Drawing.Point(20, 70)
         ApellidosLabel.Name = "ApellidosLabel"
-        ApellidosLabel.Size = New System.Drawing.Size(50, 12)
+        ApellidosLabel.Size = New System.Drawing.Size(60, 15)
         ApellidosLabel.TabIndex = 4
         ApellidosLabel.Text = "Apellidos:"
         '
         'NroContactoLabel
         '
         NroContactoLabel.AutoSize = True
-        NroContactoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NroContactoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         NroContactoLabel.Location = New System.Drawing.Point(20, 93)
         NroContactoLabel.Name = "NroContactoLabel"
-        NroContactoLabel.Size = New System.Drawing.Size(75, 12)
+        NroContactoLabel.Size = New System.Drawing.Size(84, 15)
         NroContactoLabel.TabIndex = 6
         NroContactoLabel.Text = "Nro. Contacto:"
         '
         'CorreoElectronicoLabel
         '
         CorreoElectronicoLabel.AutoSize = True
-        CorreoElectronicoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 116)
+        CorreoElectronicoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        CorreoElectronicoLabel.Location = New System.Drawing.Point(19, 116)
         CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
-        CorreoElectronicoLabel.Size = New System.Drawing.Size(97, 12)
+        CorreoElectronicoLabel.Size = New System.Drawing.Size(111, 15)
         CorreoElectronicoLabel.TabIndex = 8
         CorreoElectronicoLabel.Text = "Correo Electronico:"
         '
         'btnEliminar
         '
-        Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(22, 146)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(93, 21)
@@ -146,7 +146,7 @@ Partial Class Clients
         '
         'btnModificar
         '
-        Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnModificar.Location = New System.Drawing.Point(200, 146)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(93, 21)
@@ -168,7 +168,7 @@ Partial Class Clients
         Me.GroupBox1.Controls.Add(Me.NroContactoTextBox)
         Me.GroupBox1.Controls.Add(CorreoElectronicoLabel)
         Me.GroupBox1.Controls.Add(Me.CorreoElectronicoTextBox)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(321, 182)
@@ -180,7 +180,7 @@ Partial Class Clients
         '
         Me.DNITextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "DNI", True))
         Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(126, 17)
+        Me.DNITextBox.Location = New System.Drawing.Point(138, 21)
         Me.DNITextBox.Name = "DNITextBox"
         Me.DNITextBox.ReadOnly = True
         Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
@@ -200,7 +200,7 @@ Partial Class Clients
         '
         Me.NombresTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nombres", True))
         Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(126, 40)
+        Me.NombresTextBox.Location = New System.Drawing.Point(138, 44)
         Me.NombresTextBox.Name = "NombresTextBox"
         Me.NombresTextBox.ReadOnly = True
         Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
@@ -210,7 +210,7 @@ Partial Class Clients
         '
         Me.ApellidosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "apellidos", True))
         Me.ApellidosTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.ApellidosTextBox.Location = New System.Drawing.Point(126, 63)
+        Me.ApellidosTextBox.Location = New System.Drawing.Point(138, 67)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
         Me.ApellidosTextBox.ReadOnly = True
         Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 21)
@@ -220,7 +220,7 @@ Partial Class Clients
         '
         Me.NroContactoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nroContacto", True))
         Me.NroContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NroContactoTextBox.Location = New System.Drawing.Point(126, 86)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(138, 90)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
         Me.NroContactoTextBox.ReadOnly = True
         Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 21)
@@ -230,7 +230,7 @@ Partial Class Clients
         '
         Me.CorreoElectronicoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "correoElectronico", True))
         Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(126, 109)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(138, 113)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
         Me.CorreoElectronicoTextBox.ReadOnly = True
         Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 21)
@@ -238,7 +238,7 @@ Partial Class Clients
         '
         'btnVolver
         '
-        Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnVolver.Location = New System.Drawing.Point(12, 451)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(79, 22)
@@ -278,8 +278,8 @@ Partial Class Clients
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 18)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 18)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem
@@ -318,6 +318,7 @@ Partial Class Clients
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -402,7 +403,7 @@ Partial Class Clients
         '
         'btnMostrar
         '
-        Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnMostrar.Location = New System.Drawing.Point(374, 162)
         Me.btnMostrar.Name = "btnMostrar"
         Me.btnMostrar.Size = New System.Drawing.Size(175, 30)
@@ -426,7 +427,7 @@ Partial Class Clients
         Me.GroupBox2.Controls.Add(Me.btnLimpiar)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
-        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 210)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(543, 55)
@@ -446,17 +447,17 @@ Partial Class Clients
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(349, 20)
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.btnLimpiar.Location = New System.Drawing.Point(349, 17)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(79, 21)
+        Me.btnLimpiar.Size = New System.Drawing.Size(79, 29)
         Me.btnLimpiar.TabIndex = 158
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'btnBuscar
         '
-        Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBuscar.Location = New System.Drawing.Point(434, 15)
         Me.btnBuscar.Name = "btnBuscar"
@@ -480,23 +481,23 @@ Partial Class Clients
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarCliente})
         Me.MenuStrip1.Location = New System.Drawing.Point(380, 57)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(169, 75)
+        Me.MenuStrip1.Size = New System.Drawing.Size(295, 78)
         Me.MenuStrip1.TabIndex = 165
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'TSAgregarCliente
         '
-        Me.TSAgregarCliente.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.TSAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.TSAgregarCliente.Image = CType(resources.GetObject("TSAgregarCliente.Image"), System.Drawing.Image)
         Me.TSAgregarCliente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.TSAgregarCliente.Name = "TSAgregarCliente"
-        Me.TSAgregarCliente.Size = New System.Drawing.Size(161, 71)
+        Me.TSAgregarCliente.Size = New System.Drawing.Size(167, 74)
         Me.TSAgregarCliente.Text = "&Agregar Nuevo Cliente"
         Me.TSAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'Clients
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(567, 490)
@@ -507,7 +508,7 @@ Partial Class Clients
         Me.Controls.Add(Me.ClienteBindingNavigator)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Clients"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

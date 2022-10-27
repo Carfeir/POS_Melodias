@@ -77,7 +77,7 @@ Partial Class Users
         Me.GroupBox1.Controls.Add(Me.txtProductName)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label13)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 8)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(383, 234)
@@ -97,7 +97,7 @@ Partial Class Users
         '
         'btnEliminar
         '
-        Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(29, 204)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(93, 21)
@@ -108,16 +108,16 @@ Partial Class Users
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label2.Location = New System.Drawing.Point(23, 140)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 12)
+        Me.Label2.Size = New System.Drawing.Size(118, 15)
         Me.Label2.TabIndex = 185
         Me.Label2.Text = "Nombre de Usuario:"
         '
         'btnModificar
         '
-        Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnModificar.Location = New System.Drawing.Point(247, 204)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(93, 21)
@@ -138,20 +138,20 @@ Partial Class Users
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label3.Location = New System.Drawing.Point(23, 53)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 12)
+        Me.Label3.Size = New System.Drawing.Size(110, 15)
         Me.Label3.TabIndex = 183
         Me.Label3.Text = "Nombre y Apellido:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label1.Location = New System.Drawing.Point(23, 169)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(24, 12)
+        Me.Label1.Size = New System.Drawing.Size(29, 15)
         Me.Label1.TabIndex = 174
         Me.Label1.Text = "Rol:"
         '
@@ -188,10 +188,10 @@ Partial Class Users
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label9.Location = New System.Drawing.Point(23, 26)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(34, 12)
+        Me.Label9.Size = New System.Drawing.Size(37, 15)
         Me.Label9.TabIndex = 167
         Me.Label9.Text = "CUIT:"
         '
@@ -208,20 +208,20 @@ Partial Class Users
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label10.Location = New System.Drawing.Point(23, 82)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(75, 12)
+        Me.Label10.Size = New System.Drawing.Size(84, 15)
         Me.Label10.TabIndex = 165
         Me.Label10.Text = "Nro. Contacto:"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label13.Location = New System.Drawing.Point(23, 111)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(97, 12)
+        Me.Label13.Size = New System.Drawing.Size(111, 15)
         Me.Label13.TabIndex = 168
         Me.Label13.Text = "Correo Electronico:"
         '
@@ -284,7 +284,7 @@ Partial Class Users
         '
         'btnMostrar
         '
-        Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnMostrar.Location = New System.Drawing.Point(430, 212)
         Me.btnMostrar.Name = "btnMostrar"
         Me.btnMostrar.Size = New System.Drawing.Size(358, 30)
@@ -294,7 +294,7 @@ Partial Class Users
         '
         'btnVolver
         '
-        Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnVolver.Location = New System.Drawing.Point(12, 493)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(79, 22)
@@ -304,11 +304,11 @@ Partial Class Users
         '
         'TSAgregarUsuario
         '
-        Me.TSAgregarUsuario.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.TSAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.TSAgregarUsuario.Image = CType(resources.GetObject("TSAgregarUsuario.Image"), System.Drawing.Image)
         Me.TSAgregarUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.TSAgregarUsuario.Name = "TSAgregarUsuario"
-        Me.TSAgregarUsuario.Size = New System.Drawing.Size(165, 71)
+        Me.TSAgregarUsuario.Size = New System.Drawing.Size(174, 74)
         Me.TSAgregarUsuario.Text = "&Agregar Nuevo Usuario"
         Me.TSAgregarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -319,7 +319,7 @@ Partial Class Users
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarUsuario})
         Me.MenuStrip1.Location = New System.Drawing.Point(521, 87)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(173, 75)
+        Me.MenuStrip1.Size = New System.Drawing.Size(182, 78)
         Me.MenuStrip1.TabIndex = 164
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -329,7 +329,7 @@ Partial Class Users
         Me.GroupBox2.Controls.Add(Me.btnLimpiar)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
-        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 248)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(776, 56)
@@ -349,17 +349,17 @@ Partial Class Users
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(580, 22)
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.btnLimpiar.Location = New System.Drawing.Point(580, 17)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(79, 21)
+        Me.btnLimpiar.Size = New System.Drawing.Size(79, 28)
         Me.btnLimpiar.TabIndex = 158
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'btnBuscar
         '
-        Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBuscar.Location = New System.Drawing.Point(665, 19)
         Me.btnBuscar.Name = "btnBuscar"
