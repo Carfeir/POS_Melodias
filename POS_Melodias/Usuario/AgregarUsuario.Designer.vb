@@ -139,7 +139,7 @@ Partial Class AgregarUsuario
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(350, 277)
+        Me.GroupBox1.Size = New System.Drawing.Size(331, 277)
         Me.GroupBox1.TabIndex = 154
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Usuario"
@@ -150,36 +150,37 @@ Partial Class AgregarUsuario
         Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnLimpiar.Location = New System.Drawing.Point(3, 252)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(344, 21)
+        Me.btnLimpiar.Size = New System.Drawing.Size(325, 21)
         Me.btnLimpiar.TabIndex = 157
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(154, 196)
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.TextBox2.Location = New System.Drawing.Point(141, 192)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(167, 21)
         Me.TextBox2.TabIndex = 194
         '
         'TextBox3
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(154, 219)
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.TextBox3.Location = New System.Drawing.Point(141, 215)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(167, 21)
         Me.TextBox3.TabIndex = 195
         '
         'ComboBox2
         '
         Me.ComboBox2.BackColor = System.Drawing.Color.White
+        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(154, 160)
+        Me.ComboBox2.Location = New System.Drawing.Point(141, 156)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(167, 20)
+        Me.ComboBox2.Size = New System.Drawing.Size(167, 23)
         Me.ComboBox2.TabIndex = 192
         '
         'Label2
@@ -204,11 +205,11 @@ Partial Class AgregarUsuario
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(154, 137)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(141, 133)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(167, 21)
         Me.TextBox1.TabIndex = 187
         '
         'Label3
@@ -223,53 +224,53 @@ Partial Class AgregarUsuario
         '
         'DNITextBox
         '
-        Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(154, 21)
+        Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.DNITextBox.Location = New System.Drawing.Point(141, 17)
         Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DNITextBox.Name = "DNITextBox"
-        Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
+        Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
         Me.DNITextBox.TabIndex = 1
         '
         'NombresTextBox
         '
-        Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(154, 44)
+        Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NombresTextBox.Location = New System.Drawing.Point(141, 40)
         Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NombresTextBox.Name = "NombresTextBox"
-        Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NombresTextBox.TabIndex = 3
         '
         'ApellidosTextBox
         '
-        Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.ApellidosTextBox.Location = New System.Drawing.Point(154, 67)
+        Me.ApellidosTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.ApellidosTextBox.Location = New System.Drawing.Point(141, 63)
         Me.ApellidosTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
-        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 21)
         Me.ApellidosTextBox.TabIndex = 5
         '
         'NroContactoTextBox
         '
-        Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NroContactoTextBox.Location = New System.Drawing.Point(154, 90)
+        Me.NroContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(141, 86)
         Me.NroContactoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
-        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NroContactoTextBox.TabIndex = 7
         '
         'CorreoElectronicoTextBox
         '
-        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(154, 113)
+        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(141, 109)
         Me.CorreoElectronicoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
-        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 21)
         Me.CorreoElectronicoTextBox.TabIndex = 9
         '
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnAgregar.Location = New System.Drawing.Point(269, 303)
+        Me.btnAgregar.Location = New System.Drawing.Point(250, 303)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(93, 21)
         Me.btnAgregar.TabIndex = 156
@@ -291,7 +292,7 @@ Partial Class AgregarUsuario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(374, 336)
+        Me.ClientSize = New System.Drawing.Size(358, 336)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.GroupBox1)

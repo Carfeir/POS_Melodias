@@ -154,10 +154,11 @@ Partial Class ModificarUsuario
         '
         'ComboBox1
         '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(131, 137)
+        Me.ComboBox1.Location = New System.Drawing.Point(131, 133)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(167, 20)
+        Me.ComboBox1.Size = New System.Drawing.Size(167, 23)
         Me.ComboBox1.TabIndex = 190
         '
         'Label5
@@ -182,48 +183,48 @@ Partial Class ModificarUsuario
         '
         'DNITextBox
         '
-        Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(131, 21)
+        Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.DNITextBox.Location = New System.Drawing.Point(131, 17)
         Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DNITextBox.Name = "DNITextBox"
         Me.DNITextBox.ReadOnly = True
-        Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
+        Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
         Me.DNITextBox.TabIndex = 1
         '
         'NombresTextBox
         '
-        Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(131, 44)
+        Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NombresTextBox.Location = New System.Drawing.Point(131, 40)
         Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NombresTextBox.Name = "NombresTextBox"
-        Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NombresTextBox.TabIndex = 3
         '
         'ApellidosTextBox
         '
-        Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.ApellidosTextBox.Location = New System.Drawing.Point(131, 67)
+        Me.ApellidosTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.ApellidosTextBox.Location = New System.Drawing.Point(131, 63)
         Me.ApellidosTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
-        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 21)
         Me.ApellidosTextBox.TabIndex = 5
         '
         'NroContactoTextBox
         '
-        Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NroContactoTextBox.Location = New System.Drawing.Point(131, 90)
+        Me.NroContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(131, 86)
         Me.NroContactoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
-        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NroContactoTextBox.TabIndex = 7
         '
         'CorreoElectronicoTextBox
         '
-        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(131, 113)
+        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(131, 109)
         Me.CorreoElectronicoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
-        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 21)
         Me.CorreoElectronicoTextBox.TabIndex = 9
         '
         'ModificarUsuario

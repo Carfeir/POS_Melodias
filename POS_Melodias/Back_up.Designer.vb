@@ -22,9 +22,7 @@ Partial Class Back_up
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Back_up))
-
         Me.UserName = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -36,7 +34,7 @@ Partial Class Back_up
         'UserName
         '
         Me.UserName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.UserName.Location = New System.Drawing.Point(182, 33)
+        Me.UserName.Location = New System.Drawing.Point(137, 23)
         Me.UserName.Name = "UserName"
         Me.UserName.Size = New System.Drawing.Size(122, 20)
         Me.UserName.TabIndex = 18
@@ -45,16 +43,16 @@ Partial Class Back_up
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label4.Location = New System.Drawing.Point(43, 35)
+        Me.Label4.Location = New System.Drawing.Point(18, 61)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(97, 12)
+        Me.Label4.Size = New System.Drawing.Size(100, 12)
         Me.Label4.TabIndex = 26
-        Me.Label4.Text = "Nombre de Backup"
+        Me.Label4.Text = "Nombre de Backup:"
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(162, 117)
+        Me.Button1.Location = New System.Drawing.Point(117, 94)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(142, 32)
         Me.Button1.TabIndex = 24
@@ -63,7 +61,7 @@ Partial Class Back_up
         '
         'OldPassword
         '
-        Me.OldPassword.Location = New System.Drawing.Point(182, 66)
+        Me.OldPassword.Location = New System.Drawing.Point(137, 56)
         Me.OldPassword.Name = "OldPassword"
         Me.OldPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.OldPassword.Size = New System.Drawing.Size(122, 20)
@@ -72,19 +70,17 @@ Partial Class Back_up
         'Label1
         '
         Me.Label1.AutoSize = True
-
         Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(43, 69)
+        Me.Label1.Location = New System.Drawing.Point(18, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(49, 12)
+        Me.Label1.Size = New System.Drawing.Size(52, 12)
         Me.Label1.TabIndex = 19
-        Me.Label1.Text = "Direccion"
+        Me.Label1.Text = "Direccion:"
         '
         'Button2
         '
-
         Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Button2.Location = New System.Drawing.Point(45, 123)
+        Me.Button2.Location = New System.Drawing.Point(20, 100)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(79, 26)
         Me.Button2.TabIndex = 148
@@ -95,18 +91,17 @@ Partial Class Back_up
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(367, 176)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(281, 140)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.UserName)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.OldPassword)
         Me.Controls.Add(Me.Label1)
-        
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Back_up"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-
         Me.Text = "Backup"
         Me.ResumeLayout(False)
         Me.PerformLayout()

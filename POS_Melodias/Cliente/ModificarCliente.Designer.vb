@@ -99,6 +99,7 @@ Partial Class ModificarCliente
         Me.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnLimpiar.Location = New System.Drawing.Point(3, 149)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(311, 21)
         Me.btnLimpiar.TabIndex = 157
@@ -108,7 +109,8 @@ Partial Class ModificarCliente
         'btnModificar
         '
         Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnModificar.Location = New System.Drawing.Point(236, 198)
+        Me.btnModificar.Location = New System.Drawing.Point(236, 199)
+        Me.btnModificar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(93, 21)
         Me.btnModificar.TabIndex = 156
@@ -118,7 +120,8 @@ Partial Class ModificarCliente
         'btnCancelar
         '
         Me.btnCancelar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnCancelar.Location = New System.Drawing.Point(12, 198)
+        Me.btnCancelar.Location = New System.Drawing.Point(12, 199)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(93, 21)
         Me.btnCancelar.TabIndex = 159
@@ -150,48 +153,48 @@ Partial Class ModificarCliente
         '
         'DNITextBox
         '
-        Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.DNITextBox.Location = New System.Drawing.Point(130, 20)
         Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DNITextBox.Name = "DNITextBox"
         Me.DNITextBox.ReadOnly = True
-        Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
+        Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
         Me.DNITextBox.TabIndex = 1
         '
         'NombresTextBox
         '
-        Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.NombresTextBox.Location = New System.Drawing.Point(130, 43)
         Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NombresTextBox.Name = "NombresTextBox"
-        Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NombresTextBox.TabIndex = 3
         '
         'ApellidosTextBox
         '
-        Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.ApellidosTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ApellidosTextBox.Location = New System.Drawing.Point(130, 66)
         Me.ApellidosTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
-        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 21)
         Me.ApellidosTextBox.TabIndex = 5
         '
         'NroContactoTextBox
         '
-        Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NroContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.NroContactoTextBox.Location = New System.Drawing.Point(130, 89)
         Me.NroContactoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
-        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NroContactoTextBox.TabIndex = 7
         '
         'CorreoElectronicoTextBox
         '
-        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(130, 112)
         Me.CorreoElectronicoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
-        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 21)
         Me.CorreoElectronicoTextBox.TabIndex = 9
         '
         'ModificarCliente
@@ -199,10 +202,11 @@ Partial Class ModificarCliente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(341, 231)
+        Me.ClientSize = New System.Drawing.Size(341, 230)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "ModificarCliente"
         Me.Text = "Modificar Cliente"
         Me.GroupBox1.ResumeLayout(False)

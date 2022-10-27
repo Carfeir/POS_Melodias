@@ -147,7 +147,7 @@ Partial Class Venta
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(726, 296)
+        Me.ClientSize = New System.Drawing.Size(726, 300)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.MenuStrip1)

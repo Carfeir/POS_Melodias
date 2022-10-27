@@ -29,6 +29,9 @@ Partial Class HomeAdmin
         Me.InvoiceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgregarVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,9 +54,6 @@ Partial Class HomeAdmin
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -118,6 +118,26 @@ Partial Class HomeAdmin
         Me.MenuStrip2.Size = New System.Drawing.Size(800, 24)
         Me.MenuStrip2.TabIndex = 3
         Me.MenuStrip2.Text = "MenuStrip2"
+        '
+        'VentasToolStripMenuItem
+        '
+        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeVentasToolStripMenuItem, Me.AgregarVentaToolStripMenuItem})
+        Me.VentasToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
+        Me.VentasToolStripMenuItem.Text = "Ventas"
+        '
+        'ReporteDeVentasToolStripMenuItem
+        '
+        Me.ReporteDeVentasToolStripMenuItem.Name = "ReporteDeVentasToolStripMenuItem"
+        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas"
+        '
+        'AgregarVentaToolStripMenuItem
+        '
+        Me.AgregarVentaToolStripMenuItem.Name = "AgregarVentaToolStripMenuItem"
+        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarVentaToolStripMenuItem.Text = "Agregar Venta"
         '
         'InventoryToolStripMenuItem
         '
@@ -184,7 +204,7 @@ Partial Class HomeAdmin
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.LightGray
         Me.Label13.Font = New System.Drawing.Font("Miriam", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label13.Location = New System.Drawing.Point(23, 107)
+        Me.Label13.Location = New System.Drawing.Point(12, 107)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(49, 16)
         Me.Label13.TabIndex = 99
@@ -197,7 +217,7 @@ Partial Class HomeAdmin
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(24, 133)
+        Me.ListView1.Location = New System.Drawing.Point(12, 133)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(764, 208)
         Me.ListView1.TabIndex = 144
@@ -257,10 +277,9 @@ Partial Class HomeAdmin
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Panel1.Font = New System.Drawing.Font("Miriam", 8.25!)
         Me.Panel1.Location = New System.Drawing.Point(0, 355)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(800, 26)
@@ -271,28 +290,9 @@ Partial Class HomeAdmin
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(10, 8)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(140, 13)
+        Me.Label1.Size = New System.Drawing.Size(137, 11)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingreso como: Administrador"
-        '
-        'VentasToolStripMenuItem
-        '
-        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeVentasToolStripMenuItem, Me.AgregarVentaToolStripMenuItem})
-        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
-        Me.VentasToolStripMenuItem.Text = "Ventas"
-        '
-        'ReporteDeVentasToolStripMenuItem
-        '
-        Me.ReporteDeVentasToolStripMenuItem.Name = "ReporteDeVentasToolStripMenuItem"
-        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ReporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas"
-        '
-        'AgregarVentaToolStripMenuItem
-        '
-        Me.AgregarVentaToolStripMenuItem.Name = "AgregarVentaToolStripMenuItem"
-        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AgregarVentaToolStripMenuItem.Text = "Agregar Venta"
         '
         'HomeAdmin
         '

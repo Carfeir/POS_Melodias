@@ -31,13 +31,13 @@ Partial Class ModificarProveedor
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.DNITextBox = New System.Windows.Forms.TextBox()
         Me.NombresTextBox = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
@@ -46,6 +46,66 @@ Partial Class ModificarProveedor
         Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'DNILabel
+        '
+        DNILabel.AutoSize = True
+        DNILabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        DNILabel.Location = New System.Drawing.Point(20, 95)
+        DNILabel.Name = "DNILabel"
+        DNILabel.Size = New System.Drawing.Size(75, 12)
+        DNILabel.TabIndex = 0
+        DNILabel.Text = "Nro. Contacto:"
+        '
+        'NombresLabel
+        '
+        NombresLabel.AutoSize = True
+        NombresLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NombresLabel.Location = New System.Drawing.Point(20, 49)
+        NombresLabel.Name = "NombresLabel"
+        NombresLabel.Size = New System.Drawing.Size(47, 12)
+        NombresLabel.TabIndex = 2
+        NombresLabel.Text = "Nombre:"
+        '
+        'ApellidosLabel
+        '
+        ApellidosLabel.AutoSize = True
+        ApellidosLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        ApellidosLabel.Location = New System.Drawing.Point(20, 72)
+        ApellidosLabel.Name = "ApellidosLabel"
+        ApellidosLabel.Size = New System.Drawing.Size(97, 12)
+        ApellidosLabel.TabIndex = 4
+        ApellidosLabel.Text = "Correo Electronico:"
+        '
+        'NroContactoLabel
+        '
+        NroContactoLabel.AutoSize = True
+        NroContactoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NroContactoLabel.Location = New System.Drawing.Point(20, 118)
+        NroContactoLabel.Name = "NroContactoLabel"
+        NroContactoLabel.Size = New System.Drawing.Size(52, 12)
+        NroContactoLabel.TabIndex = 6
+        NroContactoLabel.Text = "Direccion:"
+        '
+        'CorreoElectronicoLabel
+        '
+        CorreoElectronicoLabel.AutoSize = True
+        CorreoElectronicoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 141)
+        CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
+        CorreoElectronicoLabel.Size = New System.Drawing.Size(63, 12)
+        CorreoElectronicoLabel.TabIndex = 8
+        CorreoElectronicoLabel.Text = "Descripcion:"
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label1.Location = New System.Drawing.Point(20, 26)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(72, 12)
+        Label1.TabIndex = 170
+        Label1.Text = "ID Proveedor:"
         '
         'btnAgregar
         '
@@ -92,10 +152,21 @@ Partial Class ModificarProveedor
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Proveedor"
         '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(122, 19)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(167, 21)
+        Me.TextBox1.TabIndex = 169
+        '
         'TextBox5
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.TextBox5.Location = New System.Drawing.Point(123, 138)
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.TextBox5.Location = New System.Drawing.Point(122, 134)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
@@ -104,20 +175,20 @@ Partial Class ModificarProveedor
         '
         'TextBox4
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(123, 92)
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.TextBox4.Location = New System.Drawing.Point(122, 88)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(167, 21)
         Me.TextBox4.TabIndex = 167
         '
         'TextBox3
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(123, 115)
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.TextBox3.Location = New System.Drawing.Point(122, 111)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(167, 21)
         Me.TextBox3.TabIndex = 166
         '
         'btnLimpiar
@@ -131,94 +202,23 @@ Partial Class ModificarProveedor
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
-        'DNILabel
-        '
-        DNILabel.AutoSize = True
-        DNILabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        DNILabel.Location = New System.Drawing.Point(20, 95)
-        DNILabel.Name = "DNILabel"
-        DNILabel.Size = New System.Drawing.Size(75, 12)
-        DNILabel.TabIndex = 0
-        DNILabel.Text = "Nro. Contacto:"
-        '
         'DNITextBox
         '
-        Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(123, 46)
+        Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.DNITextBox.Location = New System.Drawing.Point(122, 42)
         Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DNITextBox.Name = "DNITextBox"
-        Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
+        Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
         Me.DNITextBox.TabIndex = 1
-        '
-        'NombresLabel
-        '
-        NombresLabel.AutoSize = True
-        NombresLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        NombresLabel.Location = New System.Drawing.Point(20, 49)
-        NombresLabel.Name = "NombresLabel"
-        NombresLabel.Size = New System.Drawing.Size(47, 12)
-        NombresLabel.TabIndex = 2
-        NombresLabel.Text = "Nombre:"
         '
         'NombresTextBox
         '
-        Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(123, 69)
+        Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NombresTextBox.Location = New System.Drawing.Point(122, 65)
         Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NombresTextBox.Name = "NombresTextBox"
-        Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NombresTextBox.TabIndex = 3
-        '
-        'ApellidosLabel
-        '
-        ApellidosLabel.AutoSize = True
-        ApellidosLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        ApellidosLabel.Location = New System.Drawing.Point(20, 72)
-        ApellidosLabel.Name = "ApellidosLabel"
-        ApellidosLabel.Size = New System.Drawing.Size(97, 12)
-        ApellidosLabel.TabIndex = 4
-        ApellidosLabel.Text = "Correo Electronico:"
-        '
-        'NroContactoLabel
-        '
-        NroContactoLabel.AutoSize = True
-        NroContactoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        NroContactoLabel.Location = New System.Drawing.Point(20, 118)
-        NroContactoLabel.Name = "NroContactoLabel"
-        NroContactoLabel.Size = New System.Drawing.Size(52, 12)
-        NroContactoLabel.TabIndex = 6
-        NroContactoLabel.Text = "Direccion:"
-        '
-        'CorreoElectronicoLabel
-        '
-        CorreoElectronicoLabel.AutoSize = True
-        CorreoElectronicoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 141)
-        CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
-        CorreoElectronicoLabel.Size = New System.Drawing.Size(63, 12)
-        CorreoElectronicoLabel.TabIndex = 8
-        CorreoElectronicoLabel.Text = "Descripcion:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(123, 23)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(167, 20)
-        Me.TextBox1.TabIndex = 169
-        '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label1.Location = New System.Drawing.Point(20, 26)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(72, 12)
-        Label1.TabIndex = 170
-        Label1.Text = "ID Proveedor:"
         '
         'ModificarProveedor
         '

@@ -28,7 +28,6 @@ Partial Class Clients
         Dim ApellidosLabel As System.Windows.Forms.Label
         Dim NroContactoLabel As System.Windows.Forms.Label
         Dim CorreoElectronicoLabel As System.Windows.Forms.Label
-        Dim Label1 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Clients))
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
@@ -69,12 +68,12 @@ Partial Class Clients
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TSAgregarCliente = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
         NroContactoLabel = New System.Windows.Forms.Label()
         CorreoElectronicoLabel = New System.Windows.Forms.Label()
-        Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,7 +108,7 @@ Partial Class Clients
         '
         ApellidosLabel.AutoSize = True
         ApellidosLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        ApellidosLabel.Location = New System.Drawing.Point(20, 69)
+        ApellidosLabel.Location = New System.Drawing.Point(20, 70)
         ApellidosLabel.Name = "ApellidosLabel"
         ApellidosLabel.Size = New System.Drawing.Size(50, 12)
         ApellidosLabel.TabIndex = 4
@@ -119,7 +118,7 @@ Partial Class Clients
         '
         NroContactoLabel.AutoSize = True
         NroContactoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        NroContactoLabel.Location = New System.Drawing.Point(20, 92)
+        NroContactoLabel.Location = New System.Drawing.Point(20, 93)
         NroContactoLabel.Name = "NroContactoLabel"
         NroContactoLabel.Size = New System.Drawing.Size(75, 12)
         NroContactoLabel.TabIndex = 6
@@ -129,21 +128,11 @@ Partial Class Clients
         '
         CorreoElectronicoLabel.AutoSize = True
         CorreoElectronicoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
-        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 115)
+        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 116)
         CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
         CorreoElectronicoLabel.Size = New System.Drawing.Size(97, 12)
         CorreoElectronicoLabel.TabIndex = 8
         CorreoElectronicoLabel.Text = "Correo Electronico:"
-        '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label1.Location = New System.Drawing.Point(24, 27)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(27, 12)
-        Label1.TabIndex = 54
-        Label1.Text = "DNI:"
         '
         'btnEliminar
         '
@@ -190,11 +179,11 @@ Partial Class Clients
         'DNITextBox
         '
         Me.DNITextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "DNI", True))
-        Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(126, 21)
+        Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.DNITextBox.Location = New System.Drawing.Point(126, 17)
         Me.DNITextBox.Name = "DNITextBox"
         Me.DNITextBox.ReadOnly = True
-        Me.DNITextBox.Size = New System.Drawing.Size(167, 20)
+        Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
         Me.DNITextBox.TabIndex = 1
         '
         'ClienteBindingSource
@@ -210,41 +199,41 @@ Partial Class Clients
         'NombresTextBox
         '
         Me.NombresTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nombres", True))
-        Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(126, 44)
+        Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NombresTextBox.Location = New System.Drawing.Point(126, 40)
         Me.NombresTextBox.Name = "NombresTextBox"
         Me.NombresTextBox.ReadOnly = True
-        Me.NombresTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NombresTextBox.TabIndex = 3
         '
         'ApellidosTextBox
         '
         Me.ApellidosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "apellidos", True))
-        Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.ApellidosTextBox.Location = New System.Drawing.Point(126, 67)
+        Me.ApellidosTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.ApellidosTextBox.Location = New System.Drawing.Point(126, 63)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
         Me.ApellidosTextBox.ReadOnly = True
-        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 21)
         Me.ApellidosTextBox.TabIndex = 5
         '
         'NroContactoTextBox
         '
         Me.NroContactoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nroContacto", True))
-        Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NroContactoTextBox.Location = New System.Drawing.Point(126, 90)
+        Me.NroContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(126, 86)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
         Me.NroContactoTextBox.ReadOnly = True
-        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 21)
         Me.NroContactoTextBox.TabIndex = 7
         '
         'CorreoElectronicoTextBox
         '
         Me.CorreoElectronicoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "correoElectronico", True))
-        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(126, 113)
+        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(126, 109)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
         Me.CorreoElectronicoTextBox.ReadOnly = True
-        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 20)
+        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 21)
         Me.CorreoElectronicoTextBox.TabIndex = 9
         '
         'btnVolver
@@ -329,7 +318,6 @@ Partial Class Clients
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -434,24 +422,24 @@ Partial Class Clients
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Controls.Add(Me.btnLimpiar)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
-        Me.GroupBox2.Controls.Add(Label1)
         Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 210)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(543, 55)
         Me.GroupBox2.TabIndex = 157
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Buscador"
+        Me.GroupBox2.Text = "Buscador Por"
         '
         'btnLimpiar
         '
         Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(349, 22)
+        Me.btnLimpiar.Location = New System.Drawing.Point(349, 20)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(79, 22)
+        Me.btnLimpiar.Size = New System.Drawing.Size(79, 21)
         Me.btnLimpiar.TabIndex = 158
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
@@ -470,9 +458,9 @@ Partial Class Clients
         'BuscadorTextBox
         '
         Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.BuscadorTextBox.Location = New System.Drawing.Point(65, 20)
+        Me.BuscadorTextBox.Location = New System.Drawing.Point(126, 20)
         Me.BuscadorTextBox.Name = "BuscadorTextBox"
-        Me.BuscadorTextBox.Size = New System.Drawing.Size(256, 21)
+        Me.BuscadorTextBox.Size = New System.Drawing.Size(208, 21)
         Me.BuscadorTextBox.TabIndex = 53
         '
         'MenuStrip1
@@ -495,6 +483,16 @@ Partial Class Clients
         Me.TSAgregarCliente.Size = New System.Drawing.Size(161, 71)
         Me.TSAgregarCliente.Text = "&Agregar Nuevo Cliente"
         Me.TSAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"DNI", "Nombre", "Apellido", "Nro. Contacto", "Correo Electronico"})
+        Me.ComboBox1.Location = New System.Drawing.Point(22, 21)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(93, 23)
+        Me.ComboBox1.TabIndex = 166
         '
         'Clients
         '
@@ -569,4 +567,5 @@ Partial Class Clients
     Friend WithEvents btnBuscar As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents TSAgregarCliente As ToolStripMenuItem
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

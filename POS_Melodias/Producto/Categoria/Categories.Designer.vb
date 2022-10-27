@@ -128,18 +128,20 @@ Partial Class Categories
         '
         'txtCategoryName
         '
+        Me.txtCategoryName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtCategoryName.Location = New System.Drawing.Point(73, 49)
         Me.txtCategoryName.Name = "txtCategoryName"
-        Me.txtCategoryName.Size = New System.Drawing.Size(115, 20)
+        Me.txtCategoryName.Size = New System.Drawing.Size(115, 21)
         Me.txtCategoryName.TabIndex = 53
         '
         'txtCategoryID
         '
         Me.txtCategoryID.BackColor = System.Drawing.Color.White
+        Me.txtCategoryID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtCategoryID.Location = New System.Drawing.Point(73, 22)
         Me.txtCategoryID.Name = "txtCategoryID"
         Me.txtCategoryID.ReadOnly = True
-        Me.txtCategoryID.Size = New System.Drawing.Size(115, 20)
+        Me.txtCategoryID.Size = New System.Drawing.Size(115, 21)
         Me.txtCategoryID.TabIndex = 54
         '
         'Label4
@@ -168,20 +170,20 @@ Partial Class Categories
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Controls.Add(Label1)
         Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(15, 127)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(501, 46)
         Me.GroupBox2.TabIndex = 177
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Buscador"
+        Me.GroupBox2.Text = "Buscador Por"
         '
         'btnLimpiar
         '
         Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(293, 16)
+        Me.btnLimpiar.Location = New System.Drawing.Point(305, 16)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(79, 18)
+        Me.btnLimpiar.Size = New System.Drawing.Size(79, 21)
         Me.btnLimpiar.TabIndex = 158
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
@@ -190,9 +192,9 @@ Partial Class Categories
         '
         Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(390, 12)
+        Me.btnBuscar.Location = New System.Drawing.Point(390, 13)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(93, 25)
+        Me.btnBuscar.Size = New System.Drawing.Size(93, 27)
         Me.btnBuscar.TabIndex = 55
         Me.btnBuscar.Text = "&Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
@@ -200,7 +202,7 @@ Partial Class Categories
         'BuscadorTextBox
         '
         Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.BuscadorTextBox.Location = New System.Drawing.Point(77, 16)
+        Me.BuscadorTextBox.Location = New System.Drawing.Point(86, 16)
         Me.BuscadorTextBox.Name = "BuscadorTextBox"
         Me.BuscadorTextBox.Size = New System.Drawing.Size(201, 21)
         Me.BuscadorTextBox.TabIndex = 53
@@ -243,10 +245,11 @@ Partial Class Categories
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.Color.White
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox2.Location = New System.Drawing.Point(71, 30)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(115, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(115, 21)
         Me.TextBox2.TabIndex = 54
         '
         'Label5

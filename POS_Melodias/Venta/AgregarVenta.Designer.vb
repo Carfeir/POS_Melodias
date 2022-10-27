@@ -37,8 +37,6 @@ Partial Class AgregarVenta
         Dim Label14 As System.Windows.Forms.Label
         Dim Label18 As System.Windows.Forms.Label
         Dim Label19 As System.Windows.Forms.Label
-        Dim Label22 As System.Windows.Forms.Label
-        Dim Label23 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AgregarVenta))
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -92,6 +90,7 @@ Partial Class AgregarVenta
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.CBoxFiltroClliente = New System.Windows.Forms.ComboBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
@@ -99,6 +98,7 @@ Partial Class AgregarVenta
         Me.Label6 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.CBoxFiltroProducto = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -117,8 +117,6 @@ Partial Class AgregarVenta
         Label14 = New System.Windows.Forms.Label()
         Label18 = New System.Windows.Forms.Label()
         Label19 = New System.Windows.Forms.Label()
-        Label22 = New System.Windows.Forms.Label()
-        Label23 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -278,26 +276,6 @@ Partial Class AgregarVenta
         Label19.TabIndex = 10
         Label19.Text = "ID Cliente:"
         '
-        'Label22
-        '
-        Label22.AutoSize = True
-        Label22.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label22.Location = New System.Drawing.Point(24, 27)
-        Label22.Name = "Label22"
-        Label22.Size = New System.Drawing.Size(27, 12)
-        Label22.TabIndex = 54
-        Label22.Text = "DNI:"
-        '
-        'Label23
-        '
-        Label23.AutoSize = True
-        Label23.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label23.Location = New System.Drawing.Point(13, 27)
-        Label23.Name = "Label23"
-        Label23.Size = New System.Drawing.Size(47, 12)
-        Label23.TabIndex = 54
-        Label23.Text = "Nombre:"
-        '
         'btnRemove
         '
         Me.btnRemove.Enabled = False
@@ -327,10 +305,11 @@ Partial Class AgregarVenta
         '
         'txtTotal
         '
+        Me.txtTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txtTotal.Location = New System.Drawing.Point(91, 60)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(161, 19)
+        Me.txtTotal.Size = New System.Drawing.Size(161, 20)
         Me.txtTotal.TabIndex = 3
         '
         'Label16
@@ -345,10 +324,11 @@ Partial Class AgregarVenta
         '
         'txtTaxAmt
         '
+        Me.txtTaxAmt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txtTaxAmt.Location = New System.Drawing.Point(178, 36)
         Me.txtTaxAmt.Name = "txtTaxAmt"
         Me.txtTaxAmt.ReadOnly = True
-        Me.txtTaxAmt.Size = New System.Drawing.Size(74, 19)
+        Me.txtTaxAmt.Size = New System.Drawing.Size(74, 20)
         Me.txtTaxAmt.TabIndex = 2
         '
         'Label24
@@ -365,9 +345,10 @@ Partial Class AgregarVenta
         '
         'txtTaxPer
         '
+        Me.txtTaxPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txtTaxPer.Location = New System.Drawing.Point(91, 37)
         Me.txtTaxPer.Name = "txtTaxPer"
-        Me.txtTaxPer.Size = New System.Drawing.Size(52, 19)
+        Me.txtTaxPer.Size = New System.Drawing.Size(52, 20)
         Me.txtTaxPer.TabIndex = 1
         '
         'Label15
@@ -382,10 +363,11 @@ Partial Class AgregarVenta
         '
         'txtSubTotal
         '
+        Me.txtSubTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txtSubTotal.Location = New System.Drawing.Point(91, 11)
         Me.txtSubTotal.Name = "txtSubTotal"
         Me.txtSubTotal.ReadOnly = True
-        Me.txtSubTotal.Size = New System.Drawing.Size(161, 19)
+        Me.txtSubTotal.Size = New System.Drawing.Size(161, 20)
         Me.txtSubTotal.TabIndex = 0
         '
         'Label17
@@ -432,10 +414,11 @@ Partial Class AgregarVenta
         'txtOrderNo
         '
         Me.txtOrderNo.BackColor = System.Drawing.SystemColors.Control
+        Me.txtOrderNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.txtOrderNo.Location = New System.Drawing.Point(603, 50)
         Me.txtOrderNo.Name = "txtOrderNo"
         Me.txtOrderNo.ReadOnly = True
-        Me.txtOrderNo.Size = New System.Drawing.Size(173, 19)
+        Me.txtOrderNo.Size = New System.Drawing.Size(173, 20)
         Me.txtOrderNo.TabIndex = 131
         '
         'dtpOrderDate
@@ -446,7 +429,7 @@ Partial Class AgregarVenta
         Me.dtpOrderDate.Name = "dtpOrderDate"
         Me.dtpOrderDate.Size = New System.Drawing.Size(103, 19)
         Me.dtpOrderDate.TabIndex = 130
-        Me.dtpOrderDate.Value = New Date(2022, 10, 21, 0, 0, 0, 0)
+        Me.dtpOrderDate.Value = New Date(2022, 10, 27, 0, 0, 0, 0)
         '
         'Save
         '
@@ -484,7 +467,7 @@ Partial Class AgregarVenta
         'btnSeleccionar
         '
         Me.btnSeleccionar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnSeleccionar.Font = New System.Drawing.Font("Miriam", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSeleccionar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnSeleccionar.Location = New System.Drawing.Point(3, 165)
         Me.btnSeleccionar.Name = "btnSeleccionar"
         Me.btnSeleccionar.Size = New System.Drawing.Size(257, 27)
@@ -494,56 +477,56 @@ Partial Class AgregarVenta
         '
         'TextBox11
         '
-        Me.TextBox11.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox11.Location = New System.Drawing.Point(119, 90)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(127, 20)
+        Me.TextBox11.Size = New System.Drawing.Size(127, 21)
         Me.TextBox11.TabIndex = 11
         '
         'DNITextBox
         '
-        Me.DNITextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.DNITextBox.Location = New System.Drawing.Point(119, 21)
         Me.DNITextBox.Name = "DNITextBox"
         Me.DNITextBox.ReadOnly = True
-        Me.DNITextBox.Size = New System.Drawing.Size(127, 20)
+        Me.DNITextBox.Size = New System.Drawing.Size(127, 21)
         Me.DNITextBox.TabIndex = 1
         '
         'NombresTextBox
         '
-        Me.NombresTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.NombresTextBox.Location = New System.Drawing.Point(119, 44)
         Me.NombresTextBox.Name = "NombresTextBox"
         Me.NombresTextBox.ReadOnly = True
-        Me.NombresTextBox.Size = New System.Drawing.Size(127, 20)
+        Me.NombresTextBox.Size = New System.Drawing.Size(127, 21)
         Me.NombresTextBox.TabIndex = 3
         '
         'ApellidosTextBox
         '
-        Me.ApellidosTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.ApellidosTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ApellidosTextBox.Location = New System.Drawing.Point(119, 67)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
         Me.ApellidosTextBox.ReadOnly = True
-        Me.ApellidosTextBox.Size = New System.Drawing.Size(127, 20)
+        Me.ApellidosTextBox.Size = New System.Drawing.Size(127, 21)
         Me.ApellidosTextBox.TabIndex = 5
         '
         'NroContactoTextBox
         '
-        Me.NroContactoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NroContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.NroContactoTextBox.Location = New System.Drawing.Point(119, 113)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
         Me.NroContactoTextBox.ReadOnly = True
-        Me.NroContactoTextBox.Size = New System.Drawing.Size(127, 20)
+        Me.NroContactoTextBox.Size = New System.Drawing.Size(127, 21)
         Me.NroContactoTextBox.TabIndex = 7
         '
         'CorreoElectronicoTextBox
         '
-        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(119, 136)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
         Me.CorreoElectronicoTextBox.ReadOnly = True
-        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(127, 20)
+        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(127, 21)
         Me.CorreoElectronicoTextBox.TabIndex = 9
         '
         'GroupBox1
@@ -580,21 +563,22 @@ Partial Class AgregarVenta
         '
         'TextBox10
         '
-        Me.TextBox10.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox10.Location = New System.Drawing.Point(140, 213)
         Me.TextBox10.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(52, 20)
+        Me.TextBox10.Size = New System.Drawing.Size(52, 21)
         Me.TextBox10.TabIndex = 188
         Me.TextBox10.Text = "1"
         '
         'TextBox9
         '
-        Me.TextBox9.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox9.Location = New System.Drawing.Point(83, 21)
         Me.TextBox9.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(163, 20)
+        Me.TextBox9.ReadOnly = True
+        Me.TextBox9.Size = New System.Drawing.Size(163, 21)
         Me.TextBox9.TabIndex = 186
         '
         'btnAgregar
@@ -609,12 +593,12 @@ Partial Class AgregarVenta
         '
         'TextBox8
         '
-        Me.TextBox8.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox8.Location = New System.Drawing.Point(83, 136)
         Me.TextBox8.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(163, 20)
+        Me.TextBox8.Size = New System.Drawing.Size(163, 21)
         Me.TextBox8.TabIndex = 168
         '
         'btnQuitar
@@ -629,59 +613,62 @@ Partial Class AgregarVenta
         '
         'TextBox6
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox6.Location = New System.Drawing.Point(83, 90)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(163, 20)
+        Me.TextBox6.ReadOnly = True
+        Me.TextBox6.Size = New System.Drawing.Size(163, 21)
         Me.TextBox6.TabIndex = 166
         '
         'TextBox7
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox7.Location = New System.Drawing.Point(83, 113)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(163, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(163, 21)
         Me.TextBox7.TabIndex = 167
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox1.Location = New System.Drawing.Point(83, 159)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(163, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(163, 21)
         Me.TextBox1.TabIndex = 163
         '
         'TextBox2
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox2.Location = New System.Drawing.Point(83, 182)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(163, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(163, 21)
         Me.TextBox2.TabIndex = 165
         '
         'TextBox4
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox4.Location = New System.Drawing.Point(83, 67)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(163, 20)
+        Me.TextBox4.ReadOnly = True
+        Me.TextBox4.Size = New System.Drawing.Size(163, 21)
         Me.TextBox4.TabIndex = 1
         '
         'TextBox5
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox5.Location = New System.Drawing.Point(83, 44)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(163, 20)
+        Me.TextBox5.ReadOnly = True
+        Me.TextBox5.Size = New System.Drawing.Size(163, 21)
         Me.TextBox5.TabIndex = 3
         '
         'Label11
@@ -704,7 +691,7 @@ Partial Class AgregarVenta
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(24, 682)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(761, 162)
+        Me.ListView1.Size = New System.Drawing.Size(791, 162)
         Me.ListView1.TabIndex = 184
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -777,7 +764,7 @@ Partial Class AgregarVenta
         Me.BtnAgregarNuevoCliente.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.BtnAgregarNuevoCliente.Image = CType(resources.GetObject("BtnAgregarNuevoCliente.Image"), System.Drawing.Image)
         Me.BtnAgregarNuevoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnAgregarNuevoCliente.Location = New System.Drawing.Point(605, 274)
+        Me.BtnAgregarNuevoCliente.Location = New System.Drawing.Point(635, 274)
         Me.BtnAgregarNuevoCliente.Name = "BtnAgregarNuevoCliente"
         Me.BtnAgregarNuevoCliente.Size = New System.Drawing.Size(171, 34)
         Me.BtnAgregarNuevoCliente.TabIndex = 163
@@ -798,30 +785,41 @@ Partial Class AgregarVenta
         'TextBox12
         '
         Me.TextBox12.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.TextBox12.Location = New System.Drawing.Point(85, 48)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.ReadOnly = True
-        Me.TextBox12.Size = New System.Drawing.Size(185, 19)
+        Me.TextBox12.Size = New System.Drawing.Size(185, 20)
         Me.TextBox12.TabIndex = 190
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.CBoxFiltroClliente)
         Me.GroupBox4.Controls.Add(Me.btnLimpiar)
         Me.GroupBox4.Controls.Add(Me.Button1)
-        Me.GroupBox4.Controls.Add(Label22)
         Me.GroupBox4.Controls.Add(Me.BuscadorTextBox)
-        Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox4.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox4.Location = New System.Drawing.Point(312, 113)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(464, 55)
+        Me.GroupBox4.Size = New System.Drawing.Size(494, 55)
         Me.GroupBox4.TabIndex = 192
         Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Buscar Cliente"
+        Me.GroupBox4.Text = "Buscar Cliente Por"
+        '
+        'CBoxFiltroClliente
+        '
+        Me.CBoxFiltroClliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CBoxFiltroClliente.FormattingEnabled = True
+        Me.CBoxFiltroClliente.Items.AddRange(New Object() {"DNI", "Nombres", "Apellidos", "Nro. Contacto", "Correo Electronico"})
+        Me.CBoxFiltroClliente.Location = New System.Drawing.Point(30, 20)
+        Me.CBoxFiltroClliente.Name = "CBoxFiltroClliente"
+        Me.CBoxFiltroClliente.Size = New System.Drawing.Size(86, 23)
+        Me.CBoxFiltroClliente.TabIndex = 198
         '
         'btnLimpiar
         '
         Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(271, 20)
+        Me.btnLimpiar.Location = New System.Drawing.Point(310, 20)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(79, 21)
         Me.btnLimpiar.TabIndex = 158
@@ -832,7 +830,7 @@ Partial Class AgregarVenta
         '
         Me.Button1.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(356, 15)
+        Me.Button1.Location = New System.Drawing.Point(395, 15)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(93, 34)
         Me.Button1.TabIndex = 55
@@ -842,9 +840,9 @@ Partial Class AgregarVenta
         'BuscadorTextBox
         '
         Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.BuscadorTextBox.Location = New System.Drawing.Point(65, 20)
+        Me.BuscadorTextBox.Location = New System.Drawing.Point(132, 20)
         Me.BuscadorTextBox.Name = "BuscadorTextBox"
-        Me.BuscadorTextBox.Size = New System.Drawing.Size(186, 21)
+        Me.BuscadorTextBox.Size = New System.Drawing.Size(162, 21)
         Me.BuscadorTextBox.TabIndex = 53
         '
         'ClienteDataGridView
@@ -852,7 +850,7 @@ Partial Class AgregarVenta
         Me.ClienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClienteDataGridView.Location = New System.Drawing.Point(312, 174)
         Me.ClienteDataGridView.Name = "ClienteDataGridView"
-        Me.ClienteDataGridView.Size = New System.Drawing.Size(464, 91)
+        Me.ClienteDataGridView.Size = New System.Drawing.Size(494, 91)
         Me.ClienteDataGridView.TabIndex = 193
         '
         'Label6
@@ -871,27 +869,37 @@ Partial Class AgregarVenta
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(321, 420)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(464, 209)
+        Me.DataGridView1.Size = New System.Drawing.Size(494, 209)
         Me.DataGridView1.TabIndex = 196
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.CBoxFiltroProducto)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Controls.Add(Label23)
         Me.GroupBox2.Controls.Add(Me.TextBox3)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(321, 359)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(464, 55)
+        Me.GroupBox2.Size = New System.Drawing.Size(494, 55)
         Me.GroupBox2.TabIndex = 195
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Buscar Producto"
+        Me.GroupBox2.Text = "Buscar Producto Por"
+        '
+        'CBoxFiltroProducto
+        '
+        Me.CBoxFiltroProducto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CBoxFiltroProducto.FormattingEnabled = True
+        Me.CBoxFiltroProducto.Items.AddRange(New Object() {"Nombre", "Proveedor", "Categoria", "Marca", "Color"})
+        Me.CBoxFiltroProducto.Location = New System.Drawing.Point(21, 20)
+        Me.CBoxFiltroProducto.Name = "CBoxFiltroProducto"
+        Me.CBoxFiltroProducto.Size = New System.Drawing.Size(86, 23)
+        Me.CBoxFiltroProducto.TabIndex = 197
         '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Button2.Location = New System.Drawing.Point(271, 20)
+        Me.Button2.Location = New System.Drawing.Point(301, 20)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(79, 21)
         Me.Button2.TabIndex = 158
@@ -902,7 +910,7 @@ Partial Class AgregarVenta
         '
         Me.Button3.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(356, 15)
+        Me.Button3.Location = New System.Drawing.Point(386, 15)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(93, 34)
         Me.Button3.TabIndex = 55
@@ -912,9 +920,9 @@ Partial Class AgregarVenta
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(65, 20)
+        Me.TextBox3.Location = New System.Drawing.Point(123, 20)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(186, 21)
+        Me.TextBox3.Size = New System.Drawing.Size(162, 21)
         Me.TextBox3.TabIndex = 53
         '
         'AgregarVenta
@@ -1028,4 +1036,6 @@ Partial Class AgregarVenta
     Private WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents CBoxFiltroClliente As ComboBox
+    Friend WithEvents CBoxFiltroProducto As ComboBox
 End Class

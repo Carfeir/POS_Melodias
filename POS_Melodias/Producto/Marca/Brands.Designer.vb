@@ -25,10 +25,6 @@ Partial Class Brands
         Dim Label1 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Brands))
         Me.btnVolver = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -44,10 +40,14 @@ Partial Class Brands
         Me.txtCategoryName = New System.Windows.Forms.TextBox()
         Me.txtCategoryID = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
         Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -69,49 +69,6 @@ Partial Class Brands
         Me.btnVolver.TabIndex = 190
         Me.btnVolver.Text = "&Volver"
         Me.btnVolver.UseVisualStyleBackColor = True
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.btnLimpiar)
-        Me.GroupBox2.Controls.Add(Me.btnBuscar)
-        Me.GroupBox2.Controls.Add(Label1)
-        Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 129)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(501, 46)
-        Me.GroupBox2.TabIndex = 189
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Buscador"
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(293, 16)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(79, 18)
-        Me.btnLimpiar.TabIndex = 158
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(390, 12)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(93, 25)
-        Me.btnBuscar.TabIndex = 55
-        Me.btnBuscar.Text = "&Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'BuscadorTextBox
-        '
-        Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.BuscadorTextBox.Location = New System.Drawing.Point(77, 16)
-        Me.BuscadorTextBox.Name = "BuscadorTextBox"
-        Me.BuscadorTextBox.Size = New System.Drawing.Size(201, 21)
-        Me.BuscadorTextBox.TabIndex = 53
         '
         'btnMostrar
         '
@@ -180,10 +137,11 @@ Partial Class Brands
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.Color.White
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox2.Location = New System.Drawing.Point(71, 30)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(115, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(115, 21)
         Me.TextBox2.TabIndex = 54
         '
         'Label5
@@ -235,18 +193,20 @@ Partial Class Brands
         '
         'txtCategoryName
         '
+        Me.txtCategoryName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtCategoryName.Location = New System.Drawing.Point(73, 49)
         Me.txtCategoryName.Name = "txtCategoryName"
-        Me.txtCategoryName.Size = New System.Drawing.Size(115, 20)
+        Me.txtCategoryName.Size = New System.Drawing.Size(115, 21)
         Me.txtCategoryName.TabIndex = 53
         '
         'txtCategoryID
         '
         Me.txtCategoryID.BackColor = System.Drawing.Color.White
+        Me.txtCategoryID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtCategoryID.Location = New System.Drawing.Point(73, 22)
         Me.txtCategoryID.Name = "txtCategoryID"
         Me.txtCategoryID.ReadOnly = True
-        Me.txtCategoryID.Size = New System.Drawing.Size(115, 20)
+        Me.txtCategoryID.Size = New System.Drawing.Size(115, 21)
         Me.txtCategoryID.TabIndex = 54
         '
         'Label4
@@ -259,16 +219,59 @@ Partial Class Brands
         Me.Label4.TabIndex = 55
         Me.Label4.Text = "ID:"
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.btnLimpiar)
+        Me.GroupBox2.Controls.Add(Me.btnBuscar)
+        Me.GroupBox2.Controls.Add(Label1)
+        Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
+        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 129)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(501, 46)
+        Me.GroupBox2.TabIndex = 193
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Buscador Por"
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnLimpiar.Location = New System.Drawing.Point(305, 16)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(79, 21)
+        Me.btnLimpiar.TabIndex = 158
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(390, 13)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(93, 27)
+        Me.btnBuscar.TabIndex = 55
+        Me.btnBuscar.Text = "&Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'BuscadorTextBox
+        '
+        Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.BuscadorTextBox.Location = New System.Drawing.Point(86, 16)
+        Me.BuscadorTextBox.Name = "BuscadorTextBox"
+        Me.BuscadorTextBox.Size = New System.Drawing.Size(201, 21)
+        Me.BuscadorTextBox.TabIndex = 53
+        '
         'Brands
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(525, 324)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnVolver)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.ListView1)
         Me.Font = New System.Drawing.Font("Miriam", 8.25!)
@@ -276,21 +279,17 @@ Partial Class Brands
         Me.Name = "Brands"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Marca"
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Private WithEvents btnVolver As Button
-    Friend WithEvents GroupBox2 As GroupBox
-    Private WithEvents btnLimpiar As Button
-    Friend WithEvents btnBuscar As Button
-    Friend WithEvents BuscadorTextBox As TextBox
     Friend WithEvents btnMostrar As Button
     Friend WithEvents ListView1 As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
@@ -306,4 +305,8 @@ Partial Class Brands
     Friend WithEvents txtCategoryName As TextBox
     Friend WithEvents txtCategoryID As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents GroupBox2 As GroupBox
+    Private WithEvents btnLimpiar As Button
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents BuscadorTextBox As TextBox
 End Class

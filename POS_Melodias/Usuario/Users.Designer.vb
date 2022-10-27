@@ -22,7 +22,6 @@ Partial Class Users
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim Label4 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Users))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -49,28 +48,18 @@ Partial Class Users
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnMostrar = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.TSAgregarUsuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Label4 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.CBoxFiltroBuscador = New System.Windows.Forms.ComboBox()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label4
-        '
-        Label4.AutoSize = True
-        Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label4.Location = New System.Drawing.Point(24, 35)
-        Label4.Name = "Label4"
-        Label4.Size = New System.Drawing.Size(34, 12)
-        Label4.TabIndex = 54
-        Label4.Text = "CUIT:"
         '
         'GroupBox1
         '
@@ -99,10 +88,11 @@ Partial Class Users
         'TextBox7
         '
         Me.TextBox7.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox7.Location = New System.Drawing.Point(156, 166)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(206, 21)
         Me.TextBox7.TabIndex = 186
         '
         'btnEliminar
@@ -138,10 +128,11 @@ Partial Class Users
         'TextBox6
         '
         Me.TextBox6.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox6.Location = New System.Drawing.Point(156, 50)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(206, 21)
         Me.TextBox6.TabIndex = 184
         '
         'Label3
@@ -167,28 +158,31 @@ Partial Class Users
         'TextBox4
         '
         Me.TextBox4.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox4.Location = New System.Drawing.Point(156, 137)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(206, 21)
         Me.TextBox4.TabIndex = 173
         '
         'TextBox3
         '
         Me.TextBox3.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox3.Location = New System.Drawing.Point(156, 108)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(206, 21)
         Me.TextBox3.TabIndex = 172
         '
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.TextBox2.Location = New System.Drawing.Point(156, 79)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(206, 21)
         Me.TextBox2.TabIndex = 171
         '
         'Label9
@@ -204,10 +198,11 @@ Partial Class Users
         'txtProductName
         '
         Me.txtProductName.BackColor = System.Drawing.SystemColors.Control
+        Me.txtProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtProductName.Location = New System.Drawing.Point(156, 23)
         Me.txtProductName.Name = "txtProductName"
         Me.txtProductName.ReadOnly = True
-        Me.txtProductName.Size = New System.Drawing.Size(206, 20)
+        Me.txtProductName.Size = New System.Drawing.Size(206, 21)
         Me.txtProductName.TabIndex = 161
         '
         'Label10
@@ -237,7 +232,7 @@ Partial Class Users
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 333)
+        Me.ListView1.Location = New System.Drawing.Point(12, 310)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(776, 168)
         Me.ListView1.TabIndex = 155
@@ -297,53 +292,10 @@ Partial Class Users
         Me.btnMostrar.Text = "&Mostrar Usuarios"
         Me.btnMostrar.UseVisualStyleBackColor = True
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Label4)
-        Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
-        Me.GroupBox2.Controls.Add(Me.btnBuscar)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 252)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(776, 68)
-        Me.GroupBox2.TabIndex = 160
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Buscador"
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.Button1.Location = New System.Drawing.Point(566, 28)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 23)
-        Me.Button1.TabIndex = 187
-        Me.Button1.Text = "Limpiar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'BuscadorTextBox
-        '
-        Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.BuscadorTextBox.Location = New System.Drawing.Point(65, 28)
-        Me.BuscadorTextBox.Name = "BuscadorTextBox"
-        Me.BuscadorTextBox.Size = New System.Drawing.Size(487, 21)
-        Me.BuscadorTextBox.TabIndex = 53
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(665, 23)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(93, 34)
-        Me.btnBuscar.TabIndex = 2
-        Me.btnBuscar.Text = "&Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
         'btnVolver
         '
         Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnVolver.Location = New System.Drawing.Point(12, 513)
+        Me.btnVolver.Location = New System.Drawing.Point(12, 493)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(79, 22)
         Me.btnVolver.TabIndex = 162
@@ -371,15 +323,68 @@ Partial Class Users
         Me.MenuStrip1.TabIndex = 164
         Me.MenuStrip1.Text = "MenuStrip1"
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.CBoxFiltroBuscador)
+        Me.GroupBox2.Controls.Add(Me.btnLimpiar)
+        Me.GroupBox2.Controls.Add(Me.btnBuscar)
+        Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
+        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 248)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(776, 56)
+        Me.GroupBox2.TabIndex = 196
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Buscador Por"
+        '
+        'CBoxFiltroBuscador
+        '
+        Me.CBoxFiltroBuscador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CBoxFiltroBuscador.FormattingEnabled = True
+        Me.CBoxFiltroBuscador.Items.AddRange(New Object() {"CUIT", "Nombre y Apellido", "Nro. Contacto", "Correo Electronico", "Nombre de Usuario", "Rol"})
+        Me.CBoxFiltroBuscador.Location = New System.Drawing.Point(17, 21)
+        Me.CBoxFiltroBuscador.Name = "CBoxFiltroBuscador"
+        Me.CBoxFiltroBuscador.Size = New System.Drawing.Size(121, 23)
+        Me.CBoxFiltroBuscador.TabIndex = 159
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnLimpiar.Location = New System.Drawing.Point(580, 22)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(79, 21)
+        Me.btnLimpiar.TabIndex = 158
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.Location = New System.Drawing.Point(665, 19)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(93, 27)
+        Me.btnBuscar.TabIndex = 55
+        Me.btnBuscar.Text = "&Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'BuscadorTextBox
+        '
+        Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.BuscadorTextBox.Location = New System.Drawing.Point(160, 20)
+        Me.BuscadorTextBox.Name = "BuscadorTextBox"
+        Me.BuscadorTextBox.Size = New System.Drawing.Size(398, 21)
+        Me.BuscadorTextBox.TabIndex = 53
+        '
         'Users
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(800, 545)
+        Me.ClientSize = New System.Drawing.Size(800, 522)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.btnVolver)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ListView1)
@@ -390,10 +395,10 @@ Partial Class Users
         Me.Text = "Usuario"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -421,13 +426,14 @@ Partial Class Users
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents btnMostrar As Button
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents BuscadorTextBox As TextBox
-    Friend WithEvents btnBuscar As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnModificar As Button
     Private WithEvents btnVolver As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents TSAgregarUsuario As ToolStripMenuItem
     Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents CBoxFiltroBuscador As ComboBox
+    Private WithEvents btnLimpiar As Button
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents BuscadorTextBox As TextBox
 End Class
