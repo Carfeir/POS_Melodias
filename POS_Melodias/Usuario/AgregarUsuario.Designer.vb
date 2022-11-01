@@ -179,7 +179,7 @@ Partial Class AgregarUsuario
         Me.ComboBox2.BackColor = System.Drawing.Color.White
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(141, 156)
+        Me.ComboBox2.Location = New System.Drawing.Point(141, 163)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(167, 23)
         Me.ComboBox2.TabIndex = 192
@@ -207,7 +207,7 @@ Partial Class AgregarUsuario
         'NUsuarioTextBox
         '
         Me.NUsuarioTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NUsuarioTextBox.Location = New System.Drawing.Point(141, 133)
+        Me.NUsuarioTextBox.Location = New System.Drawing.Point(141, 140)
         Me.NUsuarioTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NUsuarioTextBox.Name = "NUsuarioTextBox"
         Me.NUsuarioTextBox.Size = New System.Drawing.Size(167, 21)
@@ -226,7 +226,7 @@ Partial Class AgregarUsuario
         'DNITextBox
         '
         Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(141, 17)
+        Me.DNITextBox.Location = New System.Drawing.Point(141, 24)
         Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DNITextBox.Name = "DNITextBox"
         Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
@@ -235,7 +235,7 @@ Partial Class AgregarUsuario
         'NombresTextBox
         '
         Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(141, 40)
+        Me.NombresTextBox.Location = New System.Drawing.Point(141, 47)
         Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NombresTextBox.Name = "NombresTextBox"
         Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
@@ -244,7 +244,7 @@ Partial Class AgregarUsuario
         'ContactoTextBox
         '
         Me.ContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.ContactoTextBox.Location = New System.Drawing.Point(141, 63)
+        Me.ContactoTextBox.Location = New System.Drawing.Point(141, 70)
         Me.ContactoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ContactoTextBox.Name = "ContactoTextBox"
         Me.ContactoTextBox.Size = New System.Drawing.Size(167, 21)
@@ -253,7 +253,7 @@ Partial Class AgregarUsuario
         'DireccionTextBox
         '
         Me.DireccionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DireccionTextBox.Location = New System.Drawing.Point(141, 86)
+        Me.DireccionTextBox.Location = New System.Drawing.Point(141, 93)
         Me.DireccionTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DireccionTextBox.Name = "DireccionTextBox"
         Me.DireccionTextBox.Size = New System.Drawing.Size(167, 21)
@@ -262,7 +262,7 @@ Partial Class AgregarUsuario
         'CorreoElectronicoTextBox
         '
         Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(141, 109)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(141, 116)
         Me.CorreoElectronicoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
         Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 21)

@@ -141,7 +141,7 @@ Partial Class AgregarProveedor
         'DescripTextBox
         '
         Me.DescripTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DescripTextBox.Location = New System.Drawing.Point(135, 108)
+        Me.DescripTextBox.Location = New System.Drawing.Point(135, 116)
         Me.DescripTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DescripTextBox.Multiline = True
         Me.DescripTextBox.Name = "DescripTextBox"
@@ -151,7 +151,7 @@ Partial Class AgregarProveedor
         'ContactoTextBox
         '
         Me.ContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.ContactoTextBox.Location = New System.Drawing.Point(135, 62)
+        Me.ContactoTextBox.Location = New System.Drawing.Point(135, 70)
         Me.ContactoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ContactoTextBox.Name = "ContactoTextBox"
         Me.ContactoTextBox.Size = New System.Drawing.Size(167, 21)
@@ -160,7 +160,7 @@ Partial Class AgregarProveedor
         'DireccionTextBox
         '
         Me.DireccionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DireccionTextBox.Location = New System.Drawing.Point(135, 85)
+        Me.DireccionTextBox.Location = New System.Drawing.Point(135, 93)
         Me.DireccionTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DireccionTextBox.Name = "DireccionTextBox"
         Me.DireccionTextBox.Size = New System.Drawing.Size(167, 21)
@@ -180,7 +180,7 @@ Partial Class AgregarProveedor
         'NombreTextBox
         '
         Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombreTextBox.Location = New System.Drawing.Point(135, 16)
+        Me.NombreTextBox.Location = New System.Drawing.Point(135, 24)
         Me.NombreTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(167, 21)
@@ -189,7 +189,7 @@ Partial Class AgregarProveedor
         'CorreoTextBox
         '
         Me.CorreoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.CorreoTextBox.Location = New System.Drawing.Point(135, 39)
+        Me.CorreoTextBox.Location = New System.Drawing.Point(135, 47)
         Me.CorreoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CorreoTextBox.Name = "CorreoTextBox"
         Me.CorreoTextBox.Size = New System.Drawing.Size(167, 21)

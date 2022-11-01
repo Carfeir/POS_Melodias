@@ -77,7 +77,7 @@ Partial Class ModificarProveedor
         ApellidosLabel.Size = New System.Drawing.Size(111, 15)
         ApellidosLabel.TabIndex = 4
         ApellidosLabel.Text = "Correo Electronico:"
-        AddHandler ApellidosLabel.Click, AddressOf Me.ApellidosLabel_Click
+
         '
         'NroContactoLabel
         '
