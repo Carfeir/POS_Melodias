@@ -33,12 +33,12 @@ Partial Class ModificarProveedor
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.DescripTextBox = New System.Windows.Forms.TextBox()
+        Me.ContactoTextBox = New System.Windows.Forms.TextBox()
+        Me.DireccionTextBox = New System.Windows.Forms.TextBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.DNITextBox = New System.Windows.Forms.TextBox()
-        Me.NombresTextBox = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.CorreoTextBox = New System.Windows.Forms.TextBox()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
@@ -112,9 +112,9 @@ Partial Class ModificarProveedor
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.btnAgregar.Location = New System.Drawing.Point(227, 269)
+        Me.btnAgregar.Location = New System.Drawing.Point(224, 264)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(93, 21)
+        Me.btnAgregar.Size = New System.Drawing.Size(93, 31)
         Me.btnAgregar.TabIndex = 162
         Me.btnAgregar.Text = "&Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -124,7 +124,7 @@ Partial Class ModificarProveedor
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnCancelar.Location = New System.Drawing.Point(11, 269)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(93, 21)
+        Me.btnCancelar.Size = New System.Drawing.Size(93, 26)
         Me.btnCancelar.TabIndex = 164
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
@@ -133,14 +133,14 @@ Partial Class ModificarProveedor
         '
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.DescripTextBox)
+        Me.GroupBox1.Controls.Add(Me.ContactoTextBox)
+        Me.GroupBox1.Controls.Add(Me.DireccionTextBox)
         Me.GroupBox1.Controls.Add(Me.btnLimpiar)
         Me.GroupBox1.Controls.Add(DNILabel)
-        Me.GroupBox1.Controls.Add(Me.DNITextBox)
+        Me.GroupBox1.Controls.Add(Me.NombreTextBox)
         Me.GroupBox1.Controls.Add(NombresLabel)
-        Me.GroupBox1.Controls.Add(Me.NombresTextBox)
+        Me.GroupBox1.Controls.Add(Me.CorreoTextBox)
         Me.GroupBox1.Controls.Add(ApellidosLabel)
         Me.GroupBox1.Controls.Add(NroContactoLabel)
         Me.GroupBox1.Controls.Add(CorreoElectronicoLabel)
@@ -165,62 +165,62 @@ Partial Class ModificarProveedor
         Me.TextBox1.Size = New System.Drawing.Size(167, 21)
         Me.TextBox1.TabIndex = 169
         '
-        'TextBox5
+        'DescripTextBox
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox5.Location = New System.Drawing.Point(129, 136)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(167, 65)
-        Me.TextBox5.TabIndex = 168
+        Me.DescripTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.DescripTextBox.Location = New System.Drawing.Point(129, 136)
+        Me.DescripTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.DescripTextBox.Multiline = True
+        Me.DescripTextBox.Name = "DescripTextBox"
+        Me.DescripTextBox.Size = New System.Drawing.Size(167, 65)
+        Me.DescripTextBox.TabIndex = 168
         '
-        'TextBox4
+        'ContactoTextBox
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox4.Location = New System.Drawing.Point(129, 90)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(167, 21)
-        Me.TextBox4.TabIndex = 167
+        Me.ContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.ContactoTextBox.Location = New System.Drawing.Point(129, 90)
+        Me.ContactoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ContactoTextBox.Name = "ContactoTextBox"
+        Me.ContactoTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.ContactoTextBox.TabIndex = 167
         '
-        'TextBox3
+        'DireccionTextBox
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(129, 113)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(167, 21)
-        Me.TextBox3.TabIndex = 166
+        Me.DireccionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.DireccionTextBox.Location = New System.Drawing.Point(129, 113)
+        Me.DireccionTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.DireccionTextBox.Name = "DireccionTextBox"
+        Me.DireccionTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.DireccionTextBox.TabIndex = 166
         '
         'btnLimpiar
         '
         Me.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(3, 214)
+        Me.btnLimpiar.Location = New System.Drawing.Point(3, 208)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(302, 21)
+        Me.btnLimpiar.Size = New System.Drawing.Size(302, 27)
         Me.btnLimpiar.TabIndex = 1
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
-        'DNITextBox
+        'NombreTextBox
         '
-        Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(129, 44)
-        Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.DNITextBox.Name = "DNITextBox"
-        Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
-        Me.DNITextBox.TabIndex = 1
+        Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NombreTextBox.Location = New System.Drawing.Point(129, 44)
+        Me.NombreTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.NombreTextBox.TabIndex = 1
         '
-        'NombresTextBox
+        'CorreoTextBox
         '
-        Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(129, 68)
-        Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.NombresTextBox.Name = "NombresTextBox"
-        Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
-        Me.NombresTextBox.TabIndex = 3
+        Me.CorreoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CorreoTextBox.Location = New System.Drawing.Point(129, 68)
+        Me.CorreoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.CorreoTextBox.Name = "CorreoTextBox"
+        Me.CorreoTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.CorreoTextBox.TabIndex = 3
         '
         'ModificarProveedor
         '
@@ -246,10 +246,10 @@ Partial Class ModificarProveedor
     Friend WithEvents btnCancelar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents DescripTextBox As TextBox
+    Friend WithEvents ContactoTextBox As TextBox
+    Friend WithEvents DireccionTextBox As TextBox
     Friend WithEvents btnLimpiar As Button
-    Friend WithEvents DNITextBox As TextBox
-    Friend WithEvents NombresTextBox As TextBox
+    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents CorreoTextBox As TextBox
 End Class
