@@ -113,7 +113,7 @@ Partial Class AgregarCliente
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(307, 171)
+        Me.GroupBox1.Size = New System.Drawing.Size(307, 180)
         Me.GroupBox1.TabIndex = 153
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Cliente"
@@ -122,7 +122,7 @@ Partial Class AgregarCliente
         '
         Me.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(3, 137)
+        Me.btnLimpiar.Location = New System.Drawing.Point(3, 146)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(301, 30)
         Me.btnLimpiar.TabIndex = 1
@@ -132,46 +132,46 @@ Partial Class AgregarCliente
         'DNITextBox
         '
         Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(128, 17)
+        Me.DNITextBox.Location = New System.Drawing.Point(137, 17)
         Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DNITextBox.Name = "DNITextBox"
-        Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
+        Me.DNITextBox.Size = New System.Drawing.Size(158, 21)
         Me.DNITextBox.TabIndex = 1
         '
         'NombresTextBox
         '
         Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(128, 40)
+        Me.NombresTextBox.Location = New System.Drawing.Point(137, 40)
         Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NombresTextBox.Name = "NombresTextBox"
-        Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.NombresTextBox.Size = New System.Drawing.Size(158, 21)
         Me.NombresTextBox.TabIndex = 3
         '
         'ApellidosTextBox
         '
         Me.ApellidosTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.ApellidosTextBox.Location = New System.Drawing.Point(128, 63)
+        Me.ApellidosTextBox.Location = New System.Drawing.Point(137, 63)
         Me.ApellidosTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ApellidosTextBox.Name = "ApellidosTextBox"
-        Me.ApellidosTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.ApellidosTextBox.Size = New System.Drawing.Size(158, 21)
         Me.ApellidosTextBox.TabIndex = 5
         '
         'NroContactoTextBox
         '
         Me.NroContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NroContactoTextBox.Location = New System.Drawing.Point(128, 86)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(137, 86)
         Me.NroContactoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
-        Me.NroContactoTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.NroContactoTextBox.Size = New System.Drawing.Size(158, 21)
         Me.NroContactoTextBox.TabIndex = 7
         '
         'CorreoElectronicoTextBox
         '
         Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(128, 109)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(137, 109)
         Me.CorreoElectronicoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
-        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(158, 21)
         Me.CorreoElectronicoTextBox.TabIndex = 9
         '
         'btnCancelar
@@ -179,7 +179,7 @@ Partial Class AgregarCliente
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnCancelar.Location = New System.Drawing.Point(12, 200)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(93, 21)
+        Me.btnCancelar.Size = New System.Drawing.Size(93, 31)
         Me.btnCancelar.TabIndex = 155
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
@@ -199,7 +199,7 @@ Partial Class AgregarCliente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(330, 233)
+        Me.ClientSize = New System.Drawing.Size(330, 244)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.GroupBox1)

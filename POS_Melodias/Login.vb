@@ -40,5 +40,4 @@ Public Class Login
             Validar_campos = True
         End If
     End Function
-
 End Class

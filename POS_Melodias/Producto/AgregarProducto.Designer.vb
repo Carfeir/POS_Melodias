@@ -56,7 +56,7 @@ Partial Class AgregarProducto
         '
         DNILabel.AutoSize = True
         DNILabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        DNILabel.Location = New System.Drawing.Point(20, 22)
+        DNILabel.Location = New System.Drawing.Point(20, 33)
         DNILabel.Name = "DNILabel"
         DNILabel.Size = New System.Drawing.Size(66, 15)
         DNILabel.TabIndex = 0
@@ -66,7 +66,7 @@ Partial Class AgregarProducto
         '
         NombresLabel.AutoSize = True
         NombresLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        NombresLabel.Location = New System.Drawing.Point(20, 46)
+        NombresLabel.Location = New System.Drawing.Point(20, 57)
         NombresLabel.Name = "NombresLabel"
         NombresLabel.Size = New System.Drawing.Size(55, 15)
         NombresLabel.TabIndex = 2
@@ -76,7 +76,7 @@ Partial Class AgregarProducto
         '
         ApellidosLabel.AutoSize = True
         ApellidosLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        ApellidosLabel.Location = New System.Drawing.Point(20, 70)
+        ApellidosLabel.Location = New System.Drawing.Point(20, 81)
         ApellidosLabel.Name = "ApellidosLabel"
         ApellidosLabel.Size = New System.Drawing.Size(63, 15)
         ApellidosLabel.TabIndex = 4
@@ -86,7 +86,7 @@ Partial Class AgregarProducto
         '
         NroContactoLabel.AutoSize = True
         NroContactoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        NroContactoLabel.Location = New System.Drawing.Point(20, 96)
+        NroContactoLabel.Location = New System.Drawing.Point(20, 107)
         NroContactoLabel.Name = "NroContactoLabel"
         NroContactoLabel.Size = New System.Drawing.Size(45, 15)
         NroContactoLabel.TabIndex = 6
@@ -96,7 +96,7 @@ Partial Class AgregarProducto
         '
         CorreoElectronicoLabel.AutoSize = True
         CorreoElectronicoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 122)
+        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 133)
         CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
         CorreoElectronicoLabel.Size = New System.Drawing.Size(39, 15)
         CorreoElectronicoLabel.TabIndex = 8
@@ -106,7 +106,7 @@ Partial Class AgregarProducto
         '
         Label1.AutoSize = True
         Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Label1.Location = New System.Drawing.Point(20, 148)
+        Label1.Location = New System.Drawing.Point(20, 159)
         Label1.Name = "Label1"
         Label1.Size = New System.Drawing.Size(57, 15)
         Label1.TabIndex = 162
@@ -116,7 +116,7 @@ Partial Class AgregarProducto
         '
         Label2.AutoSize = True
         Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Label2.Location = New System.Drawing.Point(20, 171)
+        Label2.Location = New System.Drawing.Point(20, 182)
         Label2.Name = "Label2"
         Label2.Size = New System.Drawing.Size(59, 15)
         Label2.TabIndex = 164
@@ -127,7 +127,7 @@ Partial Class AgregarProducto
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnAgregar.Location = New System.Drawing.Point(197, 253)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(93, 21)
+        Me.btnAgregar.Size = New System.Drawing.Size(93, 24)
         Me.btnAgregar.TabIndex = 156
         Me.btnAgregar.Text = "&Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -137,7 +137,7 @@ Partial Class AgregarProducto
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnCancelar.Location = New System.Drawing.Point(12, 253)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(93, 21)
+        Me.btnCancelar.Size = New System.Drawing.Size(93, 24)
         Me.btnCancelar.TabIndex = 158
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
@@ -164,7 +164,7 @@ Partial Class AgregarProducto
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(278, 228)
+        Me.GroupBox1.Size = New System.Drawing.Size(278, 233)
         Me.GroupBox1.TabIndex = 157
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Producto"
@@ -172,7 +172,7 @@ Partial Class AgregarProducto
         'NumericUpDown1
         '
         Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NumericUpDown1.Location = New System.Drawing.Point(93, 166)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(93, 177)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(167, 21)
         Me.NumericUpDown1.TabIndex = 159
@@ -180,7 +180,7 @@ Partial Class AgregarProducto
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(93, 141)
+        Me.TextBox1.Location = New System.Drawing.Point(93, 152)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(167, 21)
@@ -190,7 +190,7 @@ Partial Class AgregarProducto
         '
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(93, 115)
+        Me.ComboBox3.Location = New System.Drawing.Point(93, 126)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(167, 23)
         Me.ComboBox3.TabIndex = 161
@@ -199,7 +199,7 @@ Partial Class AgregarProducto
         '
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(93, 89)
+        Me.ComboBox2.Location = New System.Drawing.Point(93, 100)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(167, 23)
         Me.ComboBox2.TabIndex = 160
@@ -208,7 +208,7 @@ Partial Class AgregarProducto
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(93, 63)
+        Me.ComboBox1.Location = New System.Drawing.Point(93, 74)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(167, 23)
         Me.ComboBox1.TabIndex = 159
@@ -217,9 +217,9 @@ Partial Class AgregarProducto
         '
         Me.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(3, 203)
+        Me.btnLimpiar.Location = New System.Drawing.Point(3, 205)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(272, 21)
+        Me.btnLimpiar.Size = New System.Drawing.Size(272, 24)
         Me.btnLimpiar.TabIndex = 1
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
@@ -227,7 +227,7 @@ Partial Class AgregarProducto
         'DNITextBox
         '
         Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(93, 15)
+        Me.DNITextBox.Location = New System.Drawing.Point(93, 26)
         Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DNITextBox.Name = "DNITextBox"
         Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
@@ -236,7 +236,7 @@ Partial Class AgregarProducto
         'NombresTextBox
         '
         Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(93, 39)
+        Me.NombresTextBox.Location = New System.Drawing.Point(93, 50)
         Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NombresTextBox.Name = "NombresTextBox"
         Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
@@ -247,7 +247,7 @@ Partial Class AgregarProducto
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(302, 286)
+        Me.ClientSize = New System.Drawing.Size(302, 289)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.GroupBox1)

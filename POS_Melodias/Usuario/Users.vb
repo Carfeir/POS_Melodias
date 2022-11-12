@@ -9,7 +9,6 @@
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        ModificarUsuario.Show()
 
     End Sub
 

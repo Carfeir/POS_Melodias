@@ -64,7 +64,7 @@
     End Function
 
     Private Function Dni_unico() As Boolean
-        Dim dbDni = Clients.ClienteTableAdapter.BuscarCliente(Clients.MelodiasDataSet.cliente, DNITextBox.Text)
+        Dim dbDni = Clients.ClienteTableAdapter.BuscarCliente(Clients.MelodiasDataSetCliente.cliente, DNITextBox.Text)
         If Trim(DNITextBox.Text) = dbDni Then
             Dni_unico = False
         Else
@@ -93,4 +93,5 @@
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Close()
     End Sub
+
 End Class
