@@ -22,360 +22,187 @@ Partial Class Products
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim IdProductoLabel As System.Windows.Forms.Label
+        Dim IdProveedorLabel As System.Windows.Forms.Label
+        Dim NombreLabel As System.Windows.Forms.Label
+        Dim IdCategoriaLabel As System.Windows.Forms.Label
+        Dim IdMarcaLabel As System.Windows.Forms.Label
+        Dim IdColorLabel As System.Windows.Forms.Label
+        Dim CantidadLabel As System.Windows.Forms.Label
+        Dim PrecioULabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Products))
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ProductID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.btnModificar = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.txtTotalAmount = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtProductCode = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtProductName = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtPrice = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.btnVolver = New System.Windows.Forms.Button()
-        Me.TSAgregarCliente = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TSAgregarProducto = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.CBoxFiltroBuscador = New System.Windows.Forms.ComboBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
-        Me.GroupBox1.SuspendLayout()
+        Me.ProductoBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ProductoBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ProductoDataGridView = New System.Windows.Forms.DataGridView()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.IdProductoTextBox = New System.Windows.Forms.TextBox()
+        Me.IdProveedorTextBox = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.IdCategoriaTextBox = New System.Windows.Forms.TextBox()
+        Me.IdMarcaTextBox = New System.Windows.Forms.TextBox()
+        Me.IdColorTextBox = New System.Windows.Forms.TextBox()
+        Me.CantidadTextBox = New System.Windows.Forms.TextBox()
+        Me.PrecioUTextBox = New System.Windows.Forms.TextBox()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.ProductoTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.productoTableAdapter()
+        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
+        IdProductoLabel = New System.Windows.Forms.Label()
+        IdProveedorLabel = New System.Windows.Forms.Label()
+        NombreLabel = New System.Windows.Forms.Label()
+        IdCategoriaLabel = New System.Windows.Forms.Label()
+        IdMarcaLabel = New System.Windows.Forms.Label()
+        IdColorLabel = New System.Windows.Forms.Label()
+        CantidadLabel = New System.Windows.Forms.Label()
+        PrecioULabel = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.ProductoBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ProductoBindingNavigator.SuspendLayout()
+        CType(Me.ProductoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ListView1
+        'IdProductoLabel
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductID, Me.ColumnHeader8, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
-        Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 231)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(776, 124)
-        Me.ListView1.TabIndex = 145
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
+        IdProductoLabel.AutoSize = True
+        IdProductoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        IdProductoLabel.Location = New System.Drawing.Point(18, 21)
+        IdProductoLabel.Name = "IdProductoLabel"
+        IdProductoLabel.Size = New System.Drawing.Size(63, 12)
+        IdProductoLabel.TabIndex = 182
+        IdProductoLabel.Text = "Id Producto:"
         '
-        'ColumnHeader1
+        'IdProveedorLabel
         '
-        Me.ColumnHeader1.Width = 0
+        IdProveedorLabel.AutoSize = True
+        IdProveedorLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        IdProveedorLabel.Location = New System.Drawing.Point(18, 47)
+        IdProveedorLabel.Name = "IdProveedorLabel"
+        IdProveedorLabel.Size = New System.Drawing.Size(58, 12)
+        IdProveedorLabel.TabIndex = 184
+        IdProveedorLabel.Text = "Proveedor:"
         '
-        'ProductID
+        'NombreLabel
         '
-        Me.ProductID.Text = "ID"
-        Me.ProductID.Width = 38
+        NombreLabel.AutoSize = True
+        NombreLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NombreLabel.Location = New System.Drawing.Point(18, 73)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(47, 12)
+        NombreLabel.TabIndex = 186
+        NombreLabel.Text = "Nombre:"
         '
-        'ColumnHeader8
+        'IdCategoriaLabel
         '
-        Me.ColumnHeader8.Text = "Proveedor"
-        Me.ColumnHeader8.Width = 102
+        IdCategoriaLabel.AutoSize = True
+        IdCategoriaLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        IdCategoriaLabel.Location = New System.Drawing.Point(18, 99)
+        IdCategoriaLabel.Name = "IdCategoriaLabel"
+        IdCategoriaLabel.Size = New System.Drawing.Size(55, 12)
+        IdCategoriaLabel.TabIndex = 188
+        IdCategoriaLabel.Text = "Categoria:"
         '
-        'ColumnHeader2
+        'IdMarcaLabel
         '
-        Me.ColumnHeader2.Text = "Nombre"
-        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 212
+        IdMarcaLabel.AutoSize = True
+        IdMarcaLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        IdMarcaLabel.Location = New System.Drawing.Point(275, 21)
+        IdMarcaLabel.Name = "IdMarcaLabel"
+        IdMarcaLabel.Size = New System.Drawing.Size(38, 12)
+        IdMarcaLabel.TabIndex = 190
+        IdMarcaLabel.Text = "Marca:"
         '
-        'ColumnHeader3
+        'IdColorLabel
         '
-        Me.ColumnHeader3.Text = "Categoria"
-        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 125
+        IdColorLabel.AutoSize = True
+        IdColorLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        IdColorLabel.Location = New System.Drawing.Point(275, 47)
+        IdColorLabel.Name = "IdColorLabel"
+        IdColorLabel.Size = New System.Drawing.Size(31, 12)
+        IdColorLabel.TabIndex = 192
+        IdColorLabel.Text = "Color"
         '
-        'ColumnHeader7
+        'CantidadLabel
         '
-        Me.ColumnHeader7.Text = "Precio U"
-        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader7.Width = 74
+        CantidadLabel.AutoSize = True
+        CantidadLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        CantidadLabel.Location = New System.Drawing.Point(275, 73)
+        CantidadLabel.Name = "CantidadLabel"
+        CantidadLabel.Size = New System.Drawing.Size(51, 12)
+        CantidadLabel.TabIndex = 194
+        CantidadLabel.Text = "Cantidad:"
         '
-        'ColumnHeader4
+        'PrecioULabel
         '
-        Me.ColumnHeader4.Text = "Color"
-        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader4.Width = 88
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "Marca"
-        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader5.Width = 65
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "Cantidad"
-        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader6.Width = 64
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.btnEliminar)
-        Me.GroupBox1.Controls.Add(Me.btnModificar)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.txtTotalAmount)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.txtProductCode)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.txtProductName)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.Label13)
-        Me.GroupBox1.Controls.Add(Me.txtPrice)
-        Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(527, 153)
-        Me.GroupBox1.TabIndex = 147
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Detalles de Producto"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox5.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox5.Location = New System.Drawing.Point(99, 61)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(139, 21)
-        Me.TextBox5.TabIndex = 182
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Enabled = False
-        Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnEliminar.Location = New System.Drawing.Point(25, 118)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(93, 21)
-        Me.btnEliminar.TabIndex = 3
-        Me.btnEliminar.Text = "&Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
-        '
-        'btnModificar
-        '
-        Me.btnModificar.Enabled = False
-        Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnModificar.Location = New System.Drawing.Point(413, 118)
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(93, 21)
-        Me.btnModificar.TabIndex = 2
-        Me.btnModificar.Text = "&Modificar"
-        Me.btnModificar.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox4.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox4.Location = New System.Drawing.Point(368, 85)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(138, 21)
-        Me.TextBox4.TabIndex = 181
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox3.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox3.Location = New System.Drawing.Point(368, 37)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(138, 21)
-        Me.TextBox3.TabIndex = 180
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(296, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 12)
-        Me.Label1.TabIndex = 179
-        Me.Label1.Text = "ID Producto:"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox2.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox2.Location = New System.Drawing.Point(368, 13)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(138, 21)
-        Me.TextBox2.TabIndex = 178
-        '
-        'txtTotalAmount
-        '
-        Me.txtTotalAmount.BackColor = System.Drawing.SystemColors.Control
-        Me.txtTotalAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.txtTotalAmount.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtTotalAmount.Location = New System.Drawing.Point(99, 85)
-        Me.txtTotalAmount.Name = "txtTotalAmount"
-        Me.txtTotalAmount.ReadOnly = True
-        Me.txtTotalAmount.Size = New System.Drawing.Size(139, 21)
-        Me.txtTotalAmount.TabIndex = 174
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(296, 68)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 12)
-        Me.Label5.TabIndex = 172
-        Me.Label5.Text = "Marca:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label7.Location = New System.Drawing.Point(24, 20)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(58, 12)
-        Me.Label7.TabIndex = 166
-        Me.Label7.Text = "Proveedor:"
-        '
-        'txtProductCode
-        '
-        Me.txtProductCode.BackColor = System.Drawing.SystemColors.Control
-        Me.txtProductCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.txtProductCode.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtProductCode.Location = New System.Drawing.Point(99, 13)
-        Me.txtProductCode.Name = "txtProductCode"
-        Me.txtProductCode.ReadOnly = True
-        Me.txtProductCode.Size = New System.Drawing.Size(139, 21)
-        Me.txtProductCode.TabIndex = 160
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label9.Location = New System.Drawing.Point(24, 44)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(47, 12)
-        Me.Label9.TabIndex = 167
-        Me.Label9.Text = "Nombre:"
-        '
-        'txtProductName
-        '
-        Me.txtProductName.BackColor = System.Drawing.SystemColors.Control
-        Me.txtProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.txtProductName.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtProductName.Location = New System.Drawing.Point(99, 37)
-        Me.txtProductName.Name = "txtProductName"
-        Me.txtProductName.ReadOnly = True
-        Me.txtProductName.Size = New System.Drawing.Size(139, 21)
-        Me.txtProductName.TabIndex = 161
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label10.Location = New System.Drawing.Point(296, 44)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(55, 12)
-        Me.Label10.TabIndex = 165
-        Me.Label10.Text = "Categoria:"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label12.Location = New System.Drawing.Point(296, 92)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(49, 12)
-        Me.Label12.TabIndex = 171
-        Me.Label12.Text = "Precio U:"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label13.Location = New System.Drawing.Point(24, 68)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(34, 12)
-        Me.Label13.TabIndex = 168
-        Me.Label13.Text = "Color:"
-        '
-        'txtPrice
-        '
-        Me.txtPrice.BackColor = System.Drawing.SystemColors.Control
-        Me.txtPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.txtPrice.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtPrice.Location = New System.Drawing.Point(368, 61)
-        Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.ReadOnly = True
-        Me.txtPrice.Size = New System.Drawing.Size(138, 21)
-        Me.txtPrice.TabIndex = 163
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label14.Location = New System.Drawing.Point(24, 92)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(51, 12)
-        Me.Label14.TabIndex = 169
-        Me.Label14.Text = "Cantidad:"
+        PrecioULabel.AutoSize = True
+        PrecioULabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        PrecioULabel.Location = New System.Drawing.Point(275, 99)
+        PrecioULabel.Name = "PrecioULabel"
+        PrecioULabel.Size = New System.Drawing.Size(49, 12)
+        PrecioULabel.TabIndex = 196
+        PrecioULabel.Text = "Precio U:"
         '
         'btnVolver
         '
         Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.btnVolver.Location = New System.Drawing.Point(12, 370)
+        Me.btnVolver.Location = New System.Drawing.Point(14, 384)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(79, 19)
         Me.btnVolver.TabIndex = 172
         Me.btnVolver.Text = "&Volver"
         Me.btnVolver.UseVisualStyleBackColor = True
         '
-        'TSAgregarCliente
+        'TSAgregarProducto
         '
-        Me.TSAgregarCliente.Font = New System.Drawing.Font("Miriam", 11.25!)
-        Me.TSAgregarCliente.Image = CType(resources.GetObject("TSAgregarCliente.Image"), System.Drawing.Image)
-        Me.TSAgregarCliente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.TSAgregarCliente.Name = "TSAgregarCliente"
-        Me.TSAgregarCliente.Size = New System.Drawing.Size(173, 71)
-        Me.TSAgregarCliente.Text = "&Agregar Nuevo Producto"
-        Me.TSAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.TSAgregarProducto.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.TSAgregarProducto.Image = CType(resources.GetObject("TSAgregarProducto.Image"), System.Drawing.Image)
+        Me.TSAgregarProducto.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.TSAgregarProducto.Name = "TSAgregarProducto"
+        Me.TSAgregarProducto.Size = New System.Drawing.Size(173, 71)
+        Me.TSAgregarProducto.Text = "&Agregar Nuevo Producto"
+        Me.TSAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarCliente})
-        Me.MenuStrip1.Location = New System.Drawing.Point(574, 50)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarProducto})
+        Me.MenuStrip1.Location = New System.Drawing.Point(581, 51)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(181, 75)
+        Me.MenuStrip1.Size = New System.Drawing.Size(301, 75)
         Me.MenuStrip1.TabIndex = 174
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -384,34 +211,23 @@ Partial Class Products
         Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnMostrar.Location = New System.Drawing.Point(574, 138)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(181, 25)
+        Me.btnMostrar.Size = New System.Drawing.Size(196, 25)
         Me.btnMostrar.TabIndex = 173
         Me.btnMostrar.Text = "&Mostrar Productos"
         Me.btnMostrar.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.CBoxFiltroBuscador)
         Me.GroupBox2.Controls.Add(Me.btnLimpiar)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
         Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 169)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 180)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(776, 56)
         Me.GroupBox2.TabIndex = 194
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Buscador Por"
-        '
-        'CBoxFiltroBuscador
-        '
-        Me.CBoxFiltroBuscador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.CBoxFiltroBuscador.FormattingEnabled = True
-        Me.CBoxFiltroBuscador.Items.AddRange(New Object() {"Nombre", "Proveedor", "Categoria", "Marca", "Color"})
-        Me.CBoxFiltroBuscador.Location = New System.Drawing.Point(17, 21)
-        Me.CBoxFiltroBuscador.Name = "CBoxFiltroBuscador"
-        Me.CBoxFiltroBuscador.Size = New System.Drawing.Size(121, 23)
-        Me.CBoxFiltroBuscador.TabIndex = 159
+        Me.GroupBox2.Text = "Buscador Por Nombre"
         '
         'btnLimpiar
         '
@@ -437,73 +253,399 @@ Partial Class Products
         'BuscadorTextBox
         '
         Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.BuscadorTextBox.Location = New System.Drawing.Point(160, 20)
+        Me.BuscadorTextBox.Location = New System.Drawing.Point(26, 20)
         Me.BuscadorTextBox.Name = "BuscadorTextBox"
-        Me.BuscadorTextBox.Size = New System.Drawing.Size(398, 21)
+        Me.BuscadorTextBox.Size = New System.Drawing.Size(532, 21)
         Me.BuscadorTextBox.TabIndex = 53
+        '
+        'ProductoBindingNavigator
+        '
+        Me.ProductoBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.ProductoBindingNavigator.BindingSource = Me.ProductoBindingSource
+        Me.ProductoBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.ProductoBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.ProductoBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ProductoBindingNavigatorSaveItem})
+        Me.ProductoBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.ProductoBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.ProductoBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.ProductoBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.ProductoBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.ProductoBindingNavigator.Name = "ProductoBindingNavigator"
+        Me.ProductoBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.ProductoBindingNavigator.Size = New System.Drawing.Size(808, 25)
+        Me.ProductoBindingNavigator.TabIndex = 195
+        Me.ProductoBindingNavigator.Text = "BindingNavigator1"
+        Me.ProductoBindingNavigator.Visible = False
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'ProductoBindingNavigatorSaveItem
+        '
+        Me.ProductoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ProductoBindingNavigatorSaveItem.Enabled = False
+        Me.ProductoBindingNavigatorSaveItem.Image = CType(resources.GetObject("ProductoBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.ProductoBindingNavigatorSaveItem.Name = "ProductoBindingNavigatorSaveItem"
+        Me.ProductoBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.ProductoBindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'ProductoDataGridView
+        '
+        Me.ProductoDataGridView.AutoGenerateColumns = False
+        Me.ProductoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ProductoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
+        Me.ProductoDataGridView.DataSource = Me.ProductoBindingSource
+        Me.ProductoDataGridView.Location = New System.Drawing.Point(12, 242)
+        Me.ProductoDataGridView.Name = "ProductoDataGridView"
+        Me.ProductoDataGridView.Size = New System.Drawing.Size(776, 133)
+        Me.ProductoDataGridView.TabIndex = 195
+        '
+        'btnModificar
+        '
+        Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnModificar.Location = New System.Drawing.Point(388, 130)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(93, 21)
+        Me.btnModificar.TabIndex = 2
+        Me.btnModificar.Text = "&Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnEliminar.Location = New System.Drawing.Point(20, 130)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(93, 21)
+        Me.btnEliminar.TabIndex = 3
+        Me.btnEliminar.Text = "&Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(IdProductoLabel)
+        Me.GroupBox1.Controls.Add(Me.IdProductoTextBox)
+        Me.GroupBox1.Controls.Add(IdProveedorLabel)
+        Me.GroupBox1.Controls.Add(Me.IdProveedorTextBox)
+        Me.GroupBox1.Controls.Add(NombreLabel)
+        Me.GroupBox1.Controls.Add(Me.NombreTextBox)
+        Me.GroupBox1.Controls.Add(IdCategoriaLabel)
+        Me.GroupBox1.Controls.Add(Me.IdCategoriaTextBox)
+        Me.GroupBox1.Controls.Add(IdMarcaLabel)
+        Me.GroupBox1.Controls.Add(Me.IdMarcaTextBox)
+        Me.GroupBox1.Controls.Add(IdColorLabel)
+        Me.GroupBox1.Controls.Add(Me.IdColorTextBox)
+        Me.GroupBox1.Controls.Add(CantidadLabel)
+        Me.GroupBox1.Controls.Add(Me.CantidadTextBox)
+        Me.GroupBox1.Controls.Add(PrecioULabel)
+        Me.GroupBox1.Controls.Add(Me.PrecioUTextBox)
+        Me.GroupBox1.Controls.Add(Me.btnEliminar)
+        Me.GroupBox1.Controls.Add(Me.btnModificar)
+        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(502, 164)
+        Me.GroupBox1.TabIndex = 147
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Detalles de Producto"
+        '
+        'IdProductoTextBox
+        '
+        Me.IdProductoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
+        Me.IdProductoTextBox.Location = New System.Drawing.Point(91, 18)
+        Me.IdProductoTextBox.Name = "IdProductoTextBox"
+        Me.IdProductoTextBox.ReadOnly = True
+        Me.IdProductoTextBox.Size = New System.Drawing.Size(133, 20)
+        Me.IdProductoTextBox.TabIndex = 183
+        '
+        'IdProveedorTextBox
+        '
+        Me.IdProveedorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProveedor", True))
+        Me.IdProveedorTextBox.Location = New System.Drawing.Point(91, 44)
+        Me.IdProveedorTextBox.Name = "IdProveedorTextBox"
+        Me.IdProveedorTextBox.ReadOnly = True
+        Me.IdProveedorTextBox.Size = New System.Drawing.Size(133, 20)
+        Me.IdProveedorTextBox.TabIndex = 185
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "nombre", True))
+        Me.NombreTextBox.Location = New System.Drawing.Point(91, 70)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.Size = New System.Drawing.Size(133, 20)
+        Me.NombreTextBox.TabIndex = 187
+        '
+        'IdCategoriaTextBox
+        '
+        Me.IdCategoriaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idCategoria", True))
+        Me.IdCategoriaTextBox.Location = New System.Drawing.Point(91, 96)
+        Me.IdCategoriaTextBox.Name = "IdCategoriaTextBox"
+        Me.IdCategoriaTextBox.Size = New System.Drawing.Size(133, 20)
+        Me.IdCategoriaTextBox.TabIndex = 189
+        '
+        'IdMarcaTextBox
+        '
+        Me.IdMarcaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idMarca", True))
+        Me.IdMarcaTextBox.Location = New System.Drawing.Point(348, 18)
+        Me.IdMarcaTextBox.Name = "IdMarcaTextBox"
+        Me.IdMarcaTextBox.Size = New System.Drawing.Size(133, 20)
+        Me.IdMarcaTextBox.TabIndex = 191
+        '
+        'IdColorTextBox
+        '
+        Me.IdColorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idColor", True))
+        Me.IdColorTextBox.Location = New System.Drawing.Point(348, 44)
+        Me.IdColorTextBox.Name = "IdColorTextBox"
+        Me.IdColorTextBox.Size = New System.Drawing.Size(133, 20)
+        Me.IdColorTextBox.TabIndex = 193
+        '
+        'CantidadTextBox
+        '
+        Me.CantidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "cantidad", True))
+        Me.CantidadTextBox.Location = New System.Drawing.Point(348, 70)
+        Me.CantidadTextBox.Name = "CantidadTextBox"
+        Me.CantidadTextBox.Size = New System.Drawing.Size(133, 20)
+        Me.CantidadTextBox.TabIndex = 195
+        '
+        'PrecioUTextBox
+        '
+        Me.PrecioUTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "precioU", True))
+        Me.PrecioUTextBox.Location = New System.Drawing.Point(348, 96)
+        Me.PrecioUTextBox.Name = "PrecioUTextBox"
+        Me.PrecioUTextBox.Size = New System.Drawing.Size(133, 20)
+        Me.PrecioUTextBox.TabIndex = 197
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "idProducto"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "idProducto"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "idProveedor"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "idProveedor"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "nombre"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "idCategoria"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "idCategoria"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "idMarca"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "idMarca"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "idColor"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "idColor"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "cantidad"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "cantidad"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "precioU"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "precioU"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'ProductoBindingSource
+        '
+        Me.ProductoBindingSource.DataMember = "producto"
+        Me.ProductoBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'MelodiasDataSet
+        '
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProductoTableAdapter
+        '
+        Me.ProductoTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.categoriaTableAdapter = Nothing
+        Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.colorTableAdapter = Nothing
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.marcaTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(800, 397)
+        Me.ClientSize = New System.Drawing.Size(801, 413)
+        Me.Controls.Add(Me.ProductoDataGridView)
+        Me.Controls.Add(Me.ProductoBindingNavigator)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.ListView1)
         Me.Font = New System.Drawing.Font("Miriam", 8.25!)
         Me.Name = "Products"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Producto"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.ProductoBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ProductoBindingNavigator.ResumeLayout(False)
+        Me.ProductoBindingNavigator.PerformLayout()
+        CType(Me.ProductoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ListView1 As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ProductID As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader7 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
-    Friend WithEvents ColumnHeader5 As ColumnHeader
-    Friend WithEvents ColumnHeader6 As ColumnHeader
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txtTotalAmount As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents txtProductCode As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents txtProductName As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents txtPrice As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents btnEliminar As Button
-    Friend WithEvents btnModificar As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ColumnHeader8 As ColumnHeader
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
     Private WithEvents btnVolver As Button
-    Friend WithEvents TSAgregarCliente As ToolStripMenuItem
+    Friend WithEvents TSAgregarProducto As ToolStripMenuItem
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents btnMostrar As Button
     Friend WithEvents GroupBox2 As GroupBox
     Private WithEvents btnLimpiar As Button
     Friend WithEvents btnBuscar As Button
     Friend WithEvents BuscadorTextBox As TextBox
-    Friend WithEvents CBoxFiltroBuscador As ComboBox
+    Friend WithEvents MelodiasDataSet As melodiasDataSet
+    Friend WithEvents ProductoBindingSource As BindingSource
+    Friend WithEvents ProductoTableAdapter As melodiasDataSetTableAdapters.productoTableAdapter
+    Friend WithEvents TableAdapterManager As melodiasDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents ProductoBindingNavigator As BindingNavigator
+    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
+    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
+    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
+    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
+    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
+    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents ProductoBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents ProductoDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents IdProductoTextBox As TextBox
+    Friend WithEvents IdProveedorTextBox As TextBox
+    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents IdCategoriaTextBox As TextBox
+    Friend WithEvents IdMarcaTextBox As TextBox
+    Friend WithEvents IdColorTextBox As TextBox
+    Friend WithEvents CantidadTextBox As TextBox
+    Friend WithEvents PrecioUTextBox As TextBox
 End Class

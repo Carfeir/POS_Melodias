@@ -37,13 +37,13 @@ Partial Public Class melodiasDataSet
     
     Private tableproveedor As proveedorDataTable
     
-    Private relationFK_categoria As Global.System.Data.DataRelation
+    Private relationcategoria_producto As Global.System.Data.DataRelation
     
-    Private relationFK_color As Global.System.Data.DataRelation
+    Private relationcolor_producto As Global.System.Data.DataRelation
     
-    Private relationFK_marca As Global.System.Data.DataRelation
+    Private relationmarca_producto As Global.System.Data.DataRelation
     
-    Private relationFK_proveedor As Global.System.Data.DataRelation
+    Private relationproveedor_producto As Global.System.Data.DataRelation
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -322,10 +322,10 @@ Partial Public Class melodiasDataSet
                 Me.tableproveedor.InitVars
             End If
         End If
-        Me.relationFK_categoria = Me.Relations("FK_categoria")
-        Me.relationFK_color = Me.Relations("FK_color")
-        Me.relationFK_marca = Me.Relations("FK_marca")
-        Me.relationFK_proveedor = Me.Relations("FK_proveedor")
+        Me.relationcategoria_producto = Me.Relations("categoria_producto")
+        Me.relationcolor_producto = Me.Relations("color_producto")
+        Me.relationmarca_producto = Me.Relations("marca_producto")
+        Me.relationproveedor_producto = Me.Relations("proveedor_producto")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -348,14 +348,14 @@ Partial Public Class melodiasDataSet
         MyBase.Tables.Add(Me.tablemarca)
         Me.tableproveedor = New proveedorDataTable()
         MyBase.Tables.Add(Me.tableproveedor)
-        Me.relationFK_categoria = New Global.System.Data.DataRelation("FK_categoria", New Global.System.Data.DataColumn() {Me.tablecategoria.IdCategoriaColumn}, New Global.System.Data.DataColumn() {Me.tableproducto.idCategoriaColumn}, false)
-        Me.Relations.Add(Me.relationFK_categoria)
-        Me.relationFK_color = New Global.System.Data.DataRelation("FK_color", New Global.System.Data.DataColumn() {Me.tablecolor.IdColorColumn}, New Global.System.Data.DataColumn() {Me.tableproducto.idColorColumn}, false)
-        Me.Relations.Add(Me.relationFK_color)
-        Me.relationFK_marca = New Global.System.Data.DataRelation("FK_marca", New Global.System.Data.DataColumn() {Me.tablemarca.IdMarcaColumn}, New Global.System.Data.DataColumn() {Me.tableproducto.idMarcaColumn}, false)
-        Me.Relations.Add(Me.relationFK_marca)
-        Me.relationFK_proveedor = New Global.System.Data.DataRelation("FK_proveedor", New Global.System.Data.DataColumn() {Me.tableproveedor.idProveedorColumn}, New Global.System.Data.DataColumn() {Me.tableproducto.idProveedorColumn}, false)
-        Me.Relations.Add(Me.relationFK_proveedor)
+        Me.relationcategoria_producto = New Global.System.Data.DataRelation("categoria_producto", New Global.System.Data.DataColumn() {Me.tablecategoria.IdCategoriaColumn}, New Global.System.Data.DataColumn() {Me.tableproducto.idCategoriaColumn}, false)
+        Me.Relations.Add(Me.relationcategoria_producto)
+        Me.relationcolor_producto = New Global.System.Data.DataRelation("color_producto", New Global.System.Data.DataColumn() {Me.tablecolor.IdColorColumn}, New Global.System.Data.DataColumn() {Me.tableproducto.idColorColumn}, false)
+        Me.Relations.Add(Me.relationcolor_producto)
+        Me.relationmarca_producto = New Global.System.Data.DataRelation("marca_producto", New Global.System.Data.DataColumn() {Me.tablemarca.IdMarcaColumn}, New Global.System.Data.DataColumn() {Me.tableproducto.idMarcaColumn}, false)
+        Me.Relations.Add(Me.relationmarca_producto)
+        Me.relationproveedor_producto = New Global.System.Data.DataRelation("proveedor_producto", New Global.System.Data.DataColumn() {Me.tableproveedor.idProveedorColumn}, New Global.System.Data.DataColumn() {Me.tableproducto.idProveedorColumn}, false)
+        Me.Relations.Add(Me.relationproveedor_producto)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -798,19 +798,27 @@ Partial Public Class melodiasDataSet
         
         Private columnidProducto As Global.System.Data.DataColumn
         
-        Private columnidProveedor As Global.System.Data.DataColumn
-        
         Private columnnombre As Global.System.Data.DataColumn
+        
+        Private columncantidad As Global.System.Data.DataColumn
+        
+        Private columnprecioU As Global.System.Data.DataColumn
+        
+        Private columnmarca As Global.System.Data.DataColumn
+        
+        Private columncolor As Global.System.Data.DataColumn
+        
+        Private columncategoria As Global.System.Data.DataColumn
+        
+        Private columnproveedor As Global.System.Data.DataColumn
+        
+        Private columnidProveedor As Global.System.Data.DataColumn
         
         Private columnidCategoria As Global.System.Data.DataColumn
         
         Private columnidMarca As Global.System.Data.DataColumn
         
         Private columnidColor As Global.System.Data.DataColumn
-        
-        Private columncantidad As Global.System.Data.DataColumn
-        
-        Private columnprecioU As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -857,17 +865,65 @@ Partial Public Class melodiasDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property idProveedorColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property nombreColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnidProveedor
+                Return Me.columnnombre
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property nombreColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property cantidadColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnnombre
+                Return Me.columncantidad
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property precioUColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnprecioU
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property marcaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmarca
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property colorColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncolor
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property categoriaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncategoria
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property proveedorColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnproveedor
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property idProveedorColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnidProveedor
             End Get
         End Property
         
@@ -892,22 +948,6 @@ Partial Public Class melodiasDataSet
         Public ReadOnly Property idColorColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnidColor
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property cantidadColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncantidad
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property precioUColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnprecioU
             End Get
         End Property
         
@@ -948,20 +988,20 @@ Partial Public Class melodiasDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddproductoRow(ByVal idProducto As Integer, ByVal parentproveedorRowByFK_proveedor As proveedorRow, ByVal nombre As String, ByVal parentcategoriaRowByFK_categoria As categoriaRow, ByVal parentmarcaRowByFK_marca As marcaRow, ByVal parentcolorRowByFK_color As colorRow, ByVal cantidad As Integer, ByVal precioU As Double) As productoRow
+        Public Overloads Function AddproductoRow(ByVal idProducto As Integer, ByVal nombre As String, ByVal cantidad As Integer, ByVal precioU As Double, ByVal marca As String, ByVal color As String, ByVal categoria As String, ByVal proveedor As String, ByVal parentproveedorRowByproveedor_producto As proveedorRow, ByVal parentcategoriaRowBycategoria_producto As categoriaRow, ByVal parentmarcaRowBymarca_producto As marcaRow, ByVal parentcolorRowBycolor_producto As colorRow) As productoRow
             Dim rowproductoRow As productoRow = CType(Me.NewRow,productoRow)
-            Dim columnValuesArray() As Object = New Object() {idProducto, Nothing, nombre, Nothing, Nothing, Nothing, cantidad, precioU}
-            If (Not (parentproveedorRowByFK_proveedor) Is Nothing) Then
-                columnValuesArray(1) = parentproveedorRowByFK_proveedor(0)
+            Dim columnValuesArray() As Object = New Object() {idProducto, nombre, cantidad, precioU, marca, color, categoria, proveedor, Nothing, Nothing, Nothing, Nothing}
+            If (Not (parentproveedorRowByproveedor_producto) Is Nothing) Then
+                columnValuesArray(8) = parentproveedorRowByproveedor_producto(0)
             End If
-            If (Not (parentcategoriaRowByFK_categoria) Is Nothing) Then
-                columnValuesArray(3) = parentcategoriaRowByFK_categoria(0)
+            If (Not (parentcategoriaRowBycategoria_producto) Is Nothing) Then
+                columnValuesArray(9) = parentcategoriaRowBycategoria_producto(0)
             End If
-            If (Not (parentmarcaRowByFK_marca) Is Nothing) Then
-                columnValuesArray(4) = parentmarcaRowByFK_marca(0)
+            If (Not (parentmarcaRowBymarca_producto) Is Nothing) Then
+                columnValuesArray(10) = parentmarcaRowBymarca_producto(0)
             End If
-            If (Not (parentcolorRowByFK_color) Is Nothing) Then
-                columnValuesArray(5) = parentcolorRowByFK_color(0)
+            If (Not (parentcolorRowBycolor_producto) Is Nothing) Then
+                columnValuesArray(11) = parentcolorRowBycolor_producto(0)
             End If
             rowproductoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowproductoRow)
@@ -992,13 +1032,17 @@ Partial Public Class melodiasDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnidProducto = MyBase.Columns("idProducto")
-            Me.columnidProveedor = MyBase.Columns("idProveedor")
             Me.columnnombre = MyBase.Columns("nombre")
+            Me.columncantidad = MyBase.Columns("cantidad")
+            Me.columnprecioU = MyBase.Columns("precioU")
+            Me.columnmarca = MyBase.Columns("marca")
+            Me.columncolor = MyBase.Columns("color")
+            Me.columncategoria = MyBase.Columns("categoria")
+            Me.columnproveedor = MyBase.Columns("proveedor")
+            Me.columnidProveedor = MyBase.Columns("idProveedor")
             Me.columnidCategoria = MyBase.Columns("idCategoria")
             Me.columnidMarca = MyBase.Columns("idMarca")
             Me.columnidColor = MyBase.Columns("idColor")
-            Me.columncantidad = MyBase.Columns("cantidad")
-            Me.columnprecioU = MyBase.Columns("precioU")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1006,24 +1050,36 @@ Partial Public Class melodiasDataSet
         Private Sub InitClass()
             Me.columnidProducto = New Global.System.Data.DataColumn("idProducto", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnidProducto)
-            Me.columnidProveedor = New Global.System.Data.DataColumn("idProveedor", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnidProveedor)
             Me.columnnombre = New Global.System.Data.DataColumn("nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnombre)
+            Me.columncantidad = New Global.System.Data.DataColumn("cantidad", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncantidad)
+            Me.columnprecioU = New Global.System.Data.DataColumn("precioU", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnprecioU)
+            Me.columnmarca = New Global.System.Data.DataColumn("marca", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmarca)
+            Me.columncolor = New Global.System.Data.DataColumn("color", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncolor)
+            Me.columncategoria = New Global.System.Data.DataColumn("categoria", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncategoria)
+            Me.columnproveedor = New Global.System.Data.DataColumn("proveedor", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnproveedor)
+            Me.columnidProveedor = New Global.System.Data.DataColumn("idProveedor", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnidProveedor)
             Me.columnidCategoria = New Global.System.Data.DataColumn("idCategoria", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnidCategoria)
             Me.columnidMarca = New Global.System.Data.DataColumn("idMarca", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnidMarca)
             Me.columnidColor = New Global.System.Data.DataColumn("idColor", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnidColor)
-            Me.columncantidad = New Global.System.Data.DataColumn("cantidad", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncantidad)
-            Me.columnprecioU = New Global.System.Data.DataColumn("precioU", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnprecioU)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnidProducto}, true))
             Me.columnidProducto.AllowDBNull = false
             Me.columnidProducto.Unique = true
             Me.columnnombre.MaxLength = 30
+            Me.columnmarca.MaxLength = 25
+            Me.columncolor.MaxLength = 25
+            Me.columncategoria.MaxLength = 25
+            Me.columnproveedor.MaxLength = 25
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2472,21 +2528,6 @@ Partial Public Class melodiasDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property idProveedor() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableproducto.idProveedorColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'idProveedor' in table 'producto' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableproducto.idProveedorColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property nombre() As String
             Get
                 Try 
@@ -2497,6 +2538,111 @@ Partial Public Class melodiasDataSet
             End Get
             Set
                 Me(Me.tableproducto.nombreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property cantidad() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableproducto.cantidadColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'cantidad' in table 'producto' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableproducto.cantidadColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property precioU() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableproducto.precioUColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'precioU' in table 'producto' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableproducto.precioUColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property marca() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableproducto.marcaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'marca' in table 'producto' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableproducto.marcaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property color() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableproducto.colorColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'color' in table 'producto' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableproducto.colorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property categoria() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableproducto.categoriaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'categoria' in table 'producto' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableproducto.categoriaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property proveedor() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableproducto.proveedorColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'proveedor' in table 'producto' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableproducto.proveedorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property idProveedor() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableproducto.idProveedorColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'idProveedor' in table 'producto' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableproducto.idProveedorColumn) = value
             End Set
         End Property
         
@@ -2547,42 +2693,12 @@ Partial Public Class melodiasDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property cantidad() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableproducto.cantidadColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'cantidad' in table 'producto' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableproducto.cantidadColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property precioU() As Double
-            Get
-                Try 
-                    Return CType(Me(Me.tableproducto.precioUColumn),Double)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'precioU' in table 'producto' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableproducto.precioUColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property categoriaRow() As categoriaRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_categoria")),categoriaRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("categoria_producto")),categoriaRow)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK_categoria"))
+                Me.SetParentRow(value, Me.Table.ParentRelations("categoria_producto"))
             End Set
         End Property
         
@@ -2590,10 +2706,10 @@ Partial Public Class melodiasDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property colorRow() As colorRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_color")),colorRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("color_producto")),colorRow)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK_color"))
+                Me.SetParentRow(value, Me.Table.ParentRelations("color_producto"))
             End Set
         End Property
         
@@ -2601,10 +2717,10 @@ Partial Public Class melodiasDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property marcaRow() As marcaRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_marca")),marcaRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("marca_producto")),marcaRow)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK_marca"))
+                Me.SetParentRow(value, Me.Table.ParentRelations("marca_producto"))
             End Set
         End Property
         
@@ -2612,24 +2728,12 @@ Partial Public Class melodiasDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property proveedorRow() As proveedorRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_proveedor")),proveedorRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("proveedor_producto")),proveedorRow)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK_proveedor"))
+                Me.SetParentRow(value, Me.Table.ParentRelations("proveedor_producto"))
             End Set
         End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsidProveedorNull() As Boolean
-            Return Me.IsNull(Me.tableproducto.idProveedorColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetidProveedorNull()
-            Me(Me.tableproducto.idProveedorColumn) = Global.System.Convert.DBNull
-        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -2641,6 +2745,90 @@ Partial Public Class melodiasDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetnombreNull()
             Me(Me.tableproducto.nombreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IscantidadNull() As Boolean
+            Return Me.IsNull(Me.tableproducto.cantidadColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetcantidadNull()
+            Me(Me.tableproducto.cantidadColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsprecioUNull() As Boolean
+            Return Me.IsNull(Me.tableproducto.precioUColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetprecioUNull()
+            Me(Me.tableproducto.precioUColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsmarcaNull() As Boolean
+            Return Me.IsNull(Me.tableproducto.marcaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetmarcaNull()
+            Me(Me.tableproducto.marcaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IscolorNull() As Boolean
+            Return Me.IsNull(Me.tableproducto.colorColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetcolorNull()
+            Me(Me.tableproducto.colorColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IscategoriaNull() As Boolean
+            Return Me.IsNull(Me.tableproducto.categoriaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetcategoriaNull()
+            Me(Me.tableproducto.categoriaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsproveedorNull() As Boolean
+            Return Me.IsNull(Me.tableproducto.proveedorColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetproveedorNull()
+            Me(Me.tableproducto.proveedorColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsidProveedorNull() As Boolean
+            Return Me.IsNull(Me.tableproducto.idProveedorColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetidProveedorNull()
+            Me(Me.tableproducto.idProveedorColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2677,30 +2865,6 @@ Partial Public Class melodiasDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetidColorNull()
             Me(Me.tableproducto.idColorColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IscantidadNull() As Boolean
-            Return Me.IsNull(Me.tableproducto.cantidadColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetcantidadNull()
-            Me(Me.tableproducto.cantidadColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsprecioUNull() As Boolean
-            Return Me.IsNull(Me.tableproducto.precioUColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetprecioUNull()
-            Me(Me.tableproducto.precioUColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -2760,10 +2924,10 @@ Partial Public Class melodiasDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function GetproductoRows() As productoRow()
-            If (Me.Table.ChildRelations("FK_categoria") Is Nothing) Then
+            If (Me.Table.ChildRelations("categoria_producto") Is Nothing) Then
                 Return New productoRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_categoria")),productoRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("categoria_producto")),productoRow())
             End If
         End Function
     End Class
@@ -2824,10 +2988,10 @@ Partial Public Class melodiasDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function GetproductoRows() As productoRow()
-            If (Me.Table.ChildRelations("FK_color") Is Nothing) Then
+            If (Me.Table.ChildRelations("color_producto") Is Nothing) Then
                 Return New productoRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_color")),productoRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("color_producto")),productoRow())
             End If
         End Function
     End Class
@@ -2888,10 +3052,10 @@ Partial Public Class melodiasDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function GetproductoRows() As productoRow()
-            If (Me.Table.ChildRelations("FK_marca") Is Nothing) Then
+            If (Me.Table.ChildRelations("marca_producto") Is Nothing) Then
                 Return New productoRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_marca")),productoRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("marca_producto")),productoRow())
             End If
         End Function
     End Class
@@ -3060,10 +3224,10 @@ Partial Public Class melodiasDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function GetproductoRows() As productoRow()
-            If (Me.Table.ChildRelations("FK_proveedor") Is Nothing) Then
+            If (Me.Table.ChildRelations("proveedor_producto") Is Nothing) Then
                 Return New productoRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_proveedor")),productoRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("proveedor_producto")),productoRow())
             End If
         End Function
     End Class
@@ -4048,13 +4212,17 @@ Namespace melodiasDataSetTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "producto"
             tableMapping.ColumnMappings.Add("idProducto", "idProducto")
-            tableMapping.ColumnMappings.Add("idProveedor", "idProveedor")
             tableMapping.ColumnMappings.Add("nombre", "nombre")
+            tableMapping.ColumnMappings.Add("cantidad", "cantidad")
+            tableMapping.ColumnMappings.Add("precioU", "precioU")
+            tableMapping.ColumnMappings.Add("marca", "marca")
+            tableMapping.ColumnMappings.Add("color", "color")
+            tableMapping.ColumnMappings.Add("categoria", "categoria")
+            tableMapping.ColumnMappings.Add("proveedor", "proveedor")
+            tableMapping.ColumnMappings.Add("idProveedor", "idProveedor")
             tableMapping.ColumnMappings.Add("idCategoria", "idCategoria")
             tableMapping.ColumnMappings.Add("idMarca", "idMarca")
             tableMapping.ColumnMappings.Add("idColor", "idColor")
-            tableMapping.ColumnMappings.Add("cantidad", "cantidad")
-            tableMapping.ColumnMappings.Add("precioU", "precioU")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -4068,15 +4236,74 @@ Namespace melodiasDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        producto.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            producto INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  "& _ 
-                "       proveedor ON producto.idProveedor = proveedor.idProveedor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
-                "                      marca ON producto.idMarca = marca.IdMarca INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"    "& _ 
-                "                     color ON producto.idColor = color.IdColor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
-                "                    categoria ON producto.idCategoria = categoria.IdCategoria"
+            Me._commandCollection(0).CommandText = "SELECT        producto.*, proveedor.nombre as proveedor, categoria.nombre as cate"& _ 
+                "goria, marca.nombre as marca, color.nombre as color"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            producto IN"& _ 
+                "NER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         proveedor ON producto.idProveedor = proveedor"& _ 
+                ".idProveedor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         marca ON producto.idMarca = ma"& _ 
+                "rca.IdMarca INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         color ON producto.idColor = col"& _ 
+                "or.IdColor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         categoria ON producto.idCategori"& _ 
+                "a = categoria.IdCategoria"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO [dbo].[producto] ([nombre], [cantidad], [precioU], [idProveedor], [id"& _ 
+                "Categoria], [idMarca], [idColor]) VALUES (@nombre, @cantidad, @precioU, @idProve"& _ 
+                "edor, @idCategoria, @idMarca, @idColor);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT producto.*, proveedor.nombre as"& _ 
+                " proveedor, categoria.nombre as categoria, marca.nombre as marca, color.nombre a"& _ 
+                "s color "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            producto INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         proveedo"& _ 
+                "r ON producto.idProveedor = proveedor.idProveedor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  "& _ 
+                "       marca ON producto.idMarca = marca.IdMarca INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
+                "      color ON producto.idColor = color.IdColor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                    "& _ 
+                "     categoria ON producto.idCategoria = categoria.IdCategoria"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (nombr"& _ 
+                "e = @nombre)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cantidad", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "cantidad", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@precioU", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "precioU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idProveedor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idProveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCategoria", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCategoria", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idMarca", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idMarca", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idColor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idColor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT producto.*, proveedor.nombre as proveedor, categoria.nombre as categoria, "& _ 
+                "marca.nombre as marca, color.nombre as color "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            producto INNER JO"& _ 
+                "IN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         proveedor ON producto.idProveedor = proveedor.idPro"& _ 
+                "veedor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         marca ON producto.idMarca = marca.Id"& _ 
+                "Marca INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         color ON producto.idColor = color.IdC"& _ 
+                "olor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         categoria ON producto.idCategoria = ca"& _ 
+                "tegoria.IdCategoria"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (producto.nombre = @Param1)"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "DELETE FROM producto"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (IdProducto = @IdProducto)"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdProducto", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idProducto", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(4).Connection = Me.Connection
+            Me._commandCollection(4).CommandText = "UPDATE        producto"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                idProveedor = @idProveedor, nombre = @"& _ 
+                "nombre, cantidad = @cantidad, precioU = @precioU, idMarca = @idMarca, idCategori"& _ 
+                "a = @idCategoria, idColor = @idColor"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (idProveedor = @Original_idPr"& _ 
+                "oveedor); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT        producto.*, proveedor.nombre as proveedor, categoria.n"& _ 
+                "ombre as categoria, marca.nombre as marca, color.nombre as color"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM          "& _ 
+                "  producto INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         proveedor ON producto.idProveedo"& _ 
+                "r = proveedor.idProveedor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         marca ON producto"& _ 
+                ".idMarca = marca.IdMarca INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         color ON producto."& _ 
+                "idColor = color.IdColor INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         categoria ON produc"& _ 
+                "to.idCategoria = categoria.IdCategoria WHERE (nombre = @nombre)"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idProveedor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idProveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cantidad", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "cantidad", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@precioU", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "precioU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idMarca", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idMarca", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCategoria", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCategoria", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idColor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idColor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idProveedor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idProveedor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4101,6 +4328,182 @@ Namespace melodiasDataSetTableAdapters
             Dim dataTable As melodiasDataSet.productoDataTable = New melodiasDataSet.productoDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function BuscarProducto(ByVal dataTable As melodiasDataSet.productoDataTable, ByVal Param1 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (Param1 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy1(ByVal Param1 As String) As melodiasDataSet.productoDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (Param1 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
+            Dim dataTable As melodiasDataSet.productoDataTable = New melodiasDataSet.productoDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function AgregarProducto(ByVal nombre As String, ByVal cantidad As Global.System.Nullable(Of Integer), ByVal precioU As Global.System.Nullable(Of Double), ByVal idProveedor As Global.System.Nullable(Of Integer), ByVal idCategoria As Global.System.Nullable(Of Integer), ByVal idMarca As Global.System.Nullable(Of Integer), ByVal idColor As Global.System.Nullable(Of Integer)) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            If (nombre Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(0).Value = CType(nombre,String)
+            End If
+            If (cantidad.HasValue = true) Then
+                command.Parameters(1).Value = CType(cantidad.Value,Integer)
+            Else
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (precioU.HasValue = true) Then
+                command.Parameters(2).Value = CType(precioU.Value,Double)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (idProveedor.HasValue = true) Then
+                command.Parameters(3).Value = CType(idProveedor.Value,Integer)
+            Else
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (idCategoria.HasValue = true) Then
+                command.Parameters(4).Value = CType(idCategoria.Value,Integer)
+            Else
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (idMarca.HasValue = true) Then
+                command.Parameters(5).Value = CType(idMarca.Value,Integer)
+            Else
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (idColor.HasValue = true) Then
+                command.Parameters(6).Value = CType(idColor.Value,Integer)
+            Else
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
+        Public Overloads Overridable Function EliminarProducto(ByVal IdProducto As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
+            command.Parameters(0).Value = CType(IdProducto,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function ModificarProducto(ByVal idProveedor As Global.System.Nullable(Of Integer), ByVal nombre As String, ByVal cantidad As Global.System.Nullable(Of Integer), ByVal precioU As Global.System.Nullable(Of Double), ByVal idMarca As Global.System.Nullable(Of Integer), ByVal idCategoria As Global.System.Nullable(Of Integer), ByVal idColor As Global.System.Nullable(Of Integer), ByVal Original_idProveedor As Global.System.Nullable(Of Integer)) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
+            If (idProveedor.HasValue = true) Then
+                command.Parameters(0).Value = CType(idProveedor.Value,Integer)
+            Else
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            End If
+            If (nombre Is Nothing) Then
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(1).Value = CType(nombre,String)
+            End If
+            If (cantidad.HasValue = true) Then
+                command.Parameters(2).Value = CType(cantidad.Value,Integer)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (precioU.HasValue = true) Then
+                command.Parameters(3).Value = CType(precioU.Value,Double)
+            Else
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (idMarca.HasValue = true) Then
+                command.Parameters(4).Value = CType(idMarca.Value,Integer)
+            Else
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (idCategoria.HasValue = true) Then
+                command.Parameters(5).Value = CType(idCategoria.Value,Integer)
+            Else
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (idColor.HasValue = true) Then
+                command.Parameters(6).Value = CType(idColor.Value,Integer)
+            Else
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Original_idProveedor.HasValue = true) Then
+                command.Parameters(7).Value = CType(Original_idProveedor.Value,Integer)
+            Else
+                command.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     
@@ -4748,10 +5151,9 @@ Namespace melodiasDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "INSERT INTO [color] ([IdColor], [nombre]) VALUES (@IdColor, @nombre);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdC"& _ 
-                "olor, nombre FROM color WHERE (IdColor = @IdColor)"
+            Me._commandCollection(1).CommandText = "INSERT INTO [color] ([nombre]) VALUES (@nombre);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdColor, nombre FROM col"& _ 
+                "or"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdColor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "IdColor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.VarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
@@ -4961,13 +5363,12 @@ Namespace melodiasDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function AgregarColor(ByVal IdColor As Integer, ByVal nombre As String) As Integer
+        Public Overloads Overridable Function AgregarColor(ByVal nombre As String) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
-            command.Parameters(0).Value = CType(IdColor,Integer)
             If (nombre Is Nothing) Then
-                command.Parameters(1).Value = Global.System.DBNull.Value
+                command.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(1).Value = CType(nombre,String)
+                command.Parameters(0).Value = CType(nombre,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5214,10 +5615,9 @@ Namespace melodiasDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "INSERT INTO [marca] ([IdMarca], [nombre]) VALUES (@IdMarca, @nombre);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdM"& _ 
-                "arca, nombre FROM marca WHERE (IdMarca = @IdMarca)"
+            Me._commandCollection(1).CommandText = "INSERT INTO [marca] (, [nombre]) VALUES (@nombre);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IdMarca, nombre FROM m"& _ 
+                "arca"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdMarca", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "IdMarca", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.VarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
@@ -5427,13 +5827,12 @@ Namespace melodiasDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function AgregarMarca(ByVal IdMarca As Integer, ByVal nombre As String) As Integer
+        Public Overloads Overridable Function AgregarMarca(ByVal nombre As String) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
-            command.Parameters(0).Value = CType(IdMarca,Integer)
             If (nombre Is Nothing) Then
-                command.Parameters(1).Value = Global.System.DBNull.Value
+                command.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(1).Value = CType(nombre,String)
+                command.Parameters(0).Value = CType(nombre,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5725,18 +6124,16 @@ Namespace melodiasDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "INSERT INTO [proveedor] ([idProveedor], [nombre], [correoElectronico], [nroContac"& _ 
-                "to], [direccion], [descripcion]) VALUES (@idProveedor, @nombre, @correoElectroni"& _ 
-                "co, @nroContacto, @direccion, @descripcion);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idProveedor, nombre, correo"& _ 
-                "Electronico, nroContacto, direccion, descripcion FROM proveedor WHERE (idProveed"& _ 
-                "or = @idProveedor)"
+            Me._commandCollection(1).CommandText = "INSERT INTO [proveedor] ([nombre], [correoElectronico], [nroContacto], [direccion"& _ 
+                "], [descripcion]) VALUES (@idProveedor, @nombre, @correoElectronico, @nroContact"& _ 
+                "o, @direccion, @descripcion);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idProveedor, nombre, correoElectronico, nr"& _ 
+                "oContacto, direccion, descripcion FROM proveedor"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idProveedor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idProveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.VarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correoElectronico", Global.System.Data.SqlDbType.VarChar, 40, Global.System.Data.ParameterDirection.Input, 0, 0, "correoElectronico", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nroContacto", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "nroContacto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@direccion", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idProveedor", Global.System.Data.SqlDbType.VarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.VarChar, 40, Global.System.Data.ParameterDirection.Input, 0, 0, "correoElectronico", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correoElectronico", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "nroContacto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nroContacto", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@direccion", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT        idProveedor, nombre, correoElectronico, nroContacto, direccion, des"& _ 
@@ -6047,9 +6444,13 @@ Namespace melodiasDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function AgregarProveedor(ByVal idProveedor As Integer, ByVal nombre As String, ByVal correoElectronico As String, ByVal nroContacto As String, ByVal direccion As String, ByVal descripcion As String) As Integer
+        Public Overloads Overridable Function AgregarProveedor(ByVal idProveedor As String, ByVal nombre As String, ByVal correoElectronico As String, ByVal nroContacto As String, ByVal direccion As String) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
-            command.Parameters(0).Value = CType(idProveedor,Integer)
+            If (idProveedor Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(0).Value = CType(idProveedor,String)
+            End If
             If (nombre Is Nothing) Then
                 command.Parameters(1).Value = Global.System.DBNull.Value
             Else
@@ -6069,11 +6470,6 @@ Namespace melodiasDataSetTableAdapters
                 command.Parameters(4).Value = Global.System.DBNull.Value
             Else
                 command.Parameters(4).Value = CType(direccion,String)
-            End If
-            If (descripcion Is Nothing) Then
-                command.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(5).Value = CType(descripcion,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _

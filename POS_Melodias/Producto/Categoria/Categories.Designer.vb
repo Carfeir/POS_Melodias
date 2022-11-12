@@ -23,7 +23,6 @@ Partial Class Categories
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Label1 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Categories))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -41,10 +40,6 @@ Partial Class Categories
         Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.MelodiasDataSetCategoria = New POS_Melodias.melodiasDataSet()
-        Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CategoriaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.categoriaTableAdapter()
-        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.CategoriaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -61,26 +56,19 @@ Partial Class Categories
         Me.CategoriaDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Label1 = New System.Windows.Forms.Label()
+        Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.CategoriaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.categoriaTableAdapter()
+        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.MelodiasDataSetCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CategoriaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CategoriaBindingNavigator.SuspendLayout()
         CType(Me.CategoriaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Label1.Location = New System.Drawing.Point(24, 21)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(47, 12)
-        Label1.TabIndex = 54
-        Label1.Text = "Nombre:"
         '
         'GroupBox1
         '
@@ -124,12 +112,13 @@ Partial Class Categories
         Me.txtCategoryName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtCategoryName.Location = New System.Drawing.Point(73, 49)
         Me.txtCategoryName.Name = "txtCategoryName"
+        Me.txtCategoryName.ReadOnly = True
         Me.txtCategoryName.Size = New System.Drawing.Size(115, 21)
         Me.txtCategoryName.TabIndex = 53
         '
         'txtCategoryID
         '
-        Me.txtCategoryID.BackColor = System.Drawing.Color.White
+        Me.txtCategoryID.BackColor = System.Drawing.SystemColors.Control
         Me.txtCategoryID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtCategoryID.Location = New System.Drawing.Point(73, 22)
         Me.txtCategoryID.Name = "txtCategoryID"
@@ -152,7 +141,7 @@ Partial Class Categories
         Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnMostrar.Location = New System.Drawing.Point(237, 92)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(277, 29)
+        Me.btnMostrar.Size = New System.Drawing.Size(279, 29)
         Me.btnMostrar.TabIndex = 175
         Me.btnMostrar.Text = "&Mostrar Categorias"
         Me.btnMostrar.UseVisualStyleBackColor = True
@@ -161,7 +150,6 @@ Partial Class Categories
         '
         Me.GroupBox2.Controls.Add(Me.btnLimpiar)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
-        Me.GroupBox2.Controls.Add(Label1)
         Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
         Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(15, 127)
@@ -169,7 +157,7 @@ Partial Class Categories
         Me.GroupBox2.Size = New System.Drawing.Size(501, 46)
         Me.GroupBox2.TabIndex = 177
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Buscador Por"
+        Me.GroupBox2.Text = "Buscador Por Nombre"
         '
         'btnLimpiar
         '
@@ -195,9 +183,9 @@ Partial Class Categories
         'BuscadorTextBox
         '
         Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.BuscadorTextBox.Location = New System.Drawing.Point(86, 16)
+        Me.BuscadorTextBox.Location = New System.Drawing.Point(13, 16)
         Me.BuscadorTextBox.Name = "BuscadorTextBox"
-        Me.BuscadorTextBox.Size = New System.Drawing.Size(201, 21)
+        Me.BuscadorTextBox.Size = New System.Drawing.Size(274, 21)
         Me.BuscadorTextBox.TabIndex = 53
         '
         'btnVolver
@@ -254,30 +242,6 @@ Partial Class Categories
         Me.Label5.Size = New System.Drawing.Size(47, 12)
         Me.Label5.TabIndex = 55
         Me.Label5.Text = "Nombre:"
-        '
-        'MelodiasDataSetCategoria
-        '
-        Me.MelodiasDataSetCategoria.DataSetName = "melodiasDataSet"
-        Me.MelodiasDataSetCategoria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CategoriaBindingSource
-        '
-        Me.CategoriaBindingSource.DataMember = "categoria"
-        Me.CategoriaBindingSource.DataSource = Me.MelodiasDataSetCategoria
-        '
-        'CategoriaTableAdapter
-        '
-        Me.CategoriaTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.categoriaTableAdapter = Me.CategoriaTableAdapter
-        Me.TableAdapterManager.clienteTableAdapter = Nothing
-        Me.TableAdapterManager.colorTableAdapter = Nothing
-        Me.TableAdapterManager.marcaTableAdapter = Nothing
-        Me.TableAdapterManager.proveedorTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'CategoriaBindingNavigator
         '
@@ -415,6 +379,30 @@ Partial Class Categories
         Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
+        'CategoriaBindingSource
+        '
+        Me.CategoriaBindingSource.DataMember = "categoria"
+        Me.CategoriaBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'MelodiasDataSet
+        '
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CategoriaTableAdapter
+        '
+        Me.CategoriaTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.categoriaTableAdapter = Me.CategoriaTableAdapter
+        Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.colorTableAdapter = Nothing
+        Me.TableAdapterManager.marcaTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'Categories
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
@@ -439,12 +427,12 @@ Partial Class Categories
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.MelodiasDataSetCategoria, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CategoriaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CategoriaBindingNavigator.ResumeLayout(False)
         Me.CategoriaBindingNavigator.PerformLayout()
         CType(Me.CategoriaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -465,7 +453,7 @@ Partial Class Categories
     Friend WithEvents BtnAgregar As Button
     Friend WithEvents NombreTextBox As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents MelodiasDataSetCategoria As melodiasDataSet
+    Friend WithEvents MelodiasDataSet As melodiasDataSet
     Friend WithEvents CategoriaBindingSource As BindingSource
     Friend WithEvents CategoriaTableAdapter As melodiasDataSetTableAdapters.categoriaTableAdapter
     Friend WithEvents TableAdapterManager As melodiasDataSetTableAdapters.TableAdapterManager

@@ -22,6 +22,7 @@ Partial Class AgregarProducto
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim DNILabel As System.Windows.Forms.Label
         Dim NombresLabel As System.Windows.Forms.Label
         Dim ApellidosLabel As System.Windows.Forms.Label
@@ -33,14 +34,23 @@ Partial Class AgregarProducto
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ProveedorComboBox = New System.Windows.Forms.ComboBox()
+        Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.CantidadNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.PrecioUTextBox = New System.Windows.Forms.TextBox()
+        Me.ColorComboBox = New System.Windows.Forms.ComboBox()
+        Me.ColorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MarcaComboBox = New System.Windows.Forms.ComboBox()
+        Me.MarcaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CategoriaComboBox = New System.Windows.Forms.ComboBox()
+        Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.DNITextBox = New System.Windows.Forms.TextBox()
-        Me.NombresTextBox = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.CategoriaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.categoriaTableAdapter()
+        Me.MarcaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.marcaTableAdapter()
+        Me.ColorTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.colorTableAdapter()
+        Me.ProveedorTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.proveedorTableAdapter()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
@@ -49,7 +59,12 @@ Partial Class AgregarProducto
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CantidadNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ColorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MarcaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DNILabel
@@ -144,18 +159,18 @@ Partial Class AgregarProducto
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
+        Me.GroupBox1.Controls.Add(Me.ProveedorComboBox)
+        Me.GroupBox1.Controls.Add(Me.CantidadNumericUpDown)
         Me.GroupBox1.Controls.Add(Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.PrecioUTextBox)
         Me.GroupBox1.Controls.Add(Label2)
-        Me.GroupBox1.Controls.Add(Me.ComboBox3)
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.ColorComboBox)
+        Me.GroupBox1.Controls.Add(Me.MarcaComboBox)
+        Me.GroupBox1.Controls.Add(Me.CategoriaComboBox)
         Me.GroupBox1.Controls.Add(Me.btnLimpiar)
         Me.GroupBox1.Controls.Add(DNILabel)
-        Me.GroupBox1.Controls.Add(Me.DNITextBox)
         Me.GroupBox1.Controls.Add(NombresLabel)
-        Me.GroupBox1.Controls.Add(Me.NombresTextBox)
+        Me.GroupBox1.Controls.Add(Me.NombreTextBox)
         Me.GroupBox1.Controls.Add(ApellidosLabel)
         Me.GroupBox1.Controls.Add(NroContactoLabel)
         Me.GroupBox1.Controls.Add(CorreoElectronicoLabel)
@@ -169,49 +184,95 @@ Partial Class AgregarProducto
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Producto"
         '
-        'NumericUpDown1
+        'ProveedorComboBox
         '
-        Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NumericUpDown1.Location = New System.Drawing.Point(93, 177)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(167, 21)
-        Me.NumericUpDown1.TabIndex = 159
+        Me.ProveedorComboBox.DataSource = Me.ProveedorBindingSource
+        Me.ProveedorComboBox.DisplayMember = "nombre"
+        Me.ProveedorComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.ProveedorComboBox.FormattingEnabled = True
+        Me.ProveedorComboBox.Location = New System.Drawing.Point(93, 24)
+        Me.ProveedorComboBox.Name = "ProveedorComboBox"
+        Me.ProveedorComboBox.Size = New System.Drawing.Size(167, 23)
+        Me.ProveedorComboBox.TabIndex = 165
+        Me.ProveedorComboBox.Text = "Seleccionar"
         '
-        'TextBox1
+        'ProveedorBindingSource
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(93, 152)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(167, 21)
-        Me.TextBox1.TabIndex = 163
+        Me.ProveedorBindingSource.DataMember = "proveedor"
+        Me.ProveedorBindingSource.DataSource = Me.MelodiasDataSet
         '
-        'ComboBox3
+        'MelodiasDataSet
         '
-        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(93, 126)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(167, 23)
-        Me.ComboBox3.TabIndex = 161
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ComboBox2
+        'CantidadNumericUpDown
         '
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(93, 100)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(167, 23)
-        Me.ComboBox2.TabIndex = 160
+        Me.CantidadNumericUpDown.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CantidadNumericUpDown.Location = New System.Drawing.Point(93, 177)
+        Me.CantidadNumericUpDown.Name = "CantidadNumericUpDown"
+        Me.CantidadNumericUpDown.Size = New System.Drawing.Size(167, 21)
+        Me.CantidadNumericUpDown.TabIndex = 159
         '
-        'ComboBox1
+        'PrecioUTextBox
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(93, 74)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(167, 23)
-        Me.ComboBox1.TabIndex = 159
+        Me.PrecioUTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.PrecioUTextBox.Location = New System.Drawing.Point(93, 152)
+        Me.PrecioUTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PrecioUTextBox.Name = "PrecioUTextBox"
+        Me.PrecioUTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.PrecioUTextBox.TabIndex = 163
+        '
+        'ColorComboBox
+        '
+        Me.ColorComboBox.DataSource = Me.ColorBindingSource
+        Me.ColorComboBox.DisplayMember = "nombre"
+        Me.ColorComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.ColorComboBox.FormattingEnabled = True
+        Me.ColorComboBox.Location = New System.Drawing.Point(93, 126)
+        Me.ColorComboBox.Name = "ColorComboBox"
+        Me.ColorComboBox.Size = New System.Drawing.Size(167, 23)
+        Me.ColorComboBox.TabIndex = 161
+        Me.ColorComboBox.Text = "Seleccionar"
+        '
+        'ColorBindingSource
+        '
+        Me.ColorBindingSource.DataMember = "color"
+        Me.ColorBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'MarcaComboBox
+        '
+        Me.MarcaComboBox.DataSource = Me.MarcaBindingSource
+        Me.MarcaComboBox.DisplayMember = "nombre"
+        Me.MarcaComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.MarcaComboBox.FormattingEnabled = True
+        Me.MarcaComboBox.Location = New System.Drawing.Point(93, 100)
+        Me.MarcaComboBox.Name = "MarcaComboBox"
+        Me.MarcaComboBox.Size = New System.Drawing.Size(167, 23)
+        Me.MarcaComboBox.TabIndex = 160
+        Me.MarcaComboBox.Text = "Seleccionar"
+        '
+        'MarcaBindingSource
+        '
+        Me.MarcaBindingSource.DataMember = "marca"
+        Me.MarcaBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'CategoriaComboBox
+        '
+        Me.CategoriaComboBox.DataSource = Me.CategoriaBindingSource
+        Me.CategoriaComboBox.DisplayMember = "nombre"
+        Me.CategoriaComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CategoriaComboBox.FormattingEnabled = True
+        Me.CategoriaComboBox.Location = New System.Drawing.Point(93, 74)
+        Me.CategoriaComboBox.Name = "CategoriaComboBox"
+        Me.CategoriaComboBox.Size = New System.Drawing.Size(167, 23)
+        Me.CategoriaComboBox.TabIndex = 159
+        Me.CategoriaComboBox.Text = "Seleccionar"
+        '
+        'CategoriaBindingSource
+        '
+        Me.CategoriaBindingSource.DataMember = "categoria"
+        Me.CategoriaBindingSource.DataSource = Me.MelodiasDataSet
         '
         'btnLimpiar
         '
@@ -224,23 +285,30 @@ Partial Class AgregarProducto
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
-        'DNITextBox
+        'NombreTextBox
         '
-        Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(93, 26)
-        Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.DNITextBox.Name = "DNITextBox"
-        Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
-        Me.DNITextBox.TabIndex = 1
+        Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NombreTextBox.Location = New System.Drawing.Point(93, 50)
+        Me.NombreTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.NombreTextBox.TabIndex = 3
         '
-        'NombresTextBox
+        'CategoriaTableAdapter
         '
-        Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(93, 50)
-        Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.NombresTextBox.Name = "NombresTextBox"
-        Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
-        Me.NombresTextBox.TabIndex = 3
+        Me.CategoriaTableAdapter.ClearBeforeFill = True
+        '
+        'MarcaTableAdapter
+        '
+        Me.MarcaTableAdapter.ClearBeforeFill = True
+        '
+        'ColorTableAdapter
+        '
+        Me.ColorTableAdapter.ClearBeforeFill = True
+        '
+        'ProveedorTableAdapter
+        '
+        Me.ProveedorTableAdapter.ClearBeforeFill = True
         '
         'AgregarProducto
         '
@@ -258,7 +326,12 @@ Partial Class AgregarProducto
         Me.Text = "Agregar Producto"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CantidadNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ColorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MarcaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -267,11 +340,20 @@ Partial Class AgregarProducto
     Friend WithEvents btnCancelar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnLimpiar As Button
-    Friend WithEvents DNITextBox As TextBox
-    Friend WithEvents NombresTextBox As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents CategoriaComboBox As ComboBox
+    Friend WithEvents ColorComboBox As ComboBox
+    Friend WithEvents MarcaComboBox As ComboBox
+    Friend WithEvents PrecioUTextBox As TextBox
+    Friend WithEvents CantidadNumericUpDown As NumericUpDown
+    Friend WithEvents MelodiasDataSet As melodiasDataSet
+    Friend WithEvents CategoriaBindingSource As BindingSource
+    Friend WithEvents CategoriaTableAdapter As melodiasDataSetTableAdapters.categoriaTableAdapter
+    Friend WithEvents MarcaBindingSource As BindingSource
+    Friend WithEvents MarcaTableAdapter As melodiasDataSetTableAdapters.marcaTableAdapter
+    Friend WithEvents ColorBindingSource As BindingSource
+    Friend WithEvents ColorTableAdapter As melodiasDataSetTableAdapters.colorTableAdapter
+    Friend WithEvents ProveedorComboBox As ComboBox
+    Friend WithEvents ProveedorBindingSource As BindingSource
+    Friend WithEvents ProveedorTableAdapter As melodiasDataSetTableAdapters.proveedorTableAdapter
 End Class
