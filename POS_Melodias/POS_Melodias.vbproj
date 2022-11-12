@@ -159,6 +159,12 @@
     <Compile Include="Usuario\AgregarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Usuario\Rol\Rols.Designer.vb">
+      <DependentUpon>Rols.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\Rol\Rols.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Usuario\Users.Designer.vb">
       <DependentUpon>Users.vb</DependentUpon>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario\AgregarUsuario.resx">
       <DependentUpon>AgregarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\Rol\Rols.resx">
+      <DependentUpon>Rols.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario\Users.resx">
       <DependentUpon>Users.vb</DependentUpon>

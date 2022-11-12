@@ -683,6 +683,31 @@ SELECT idProveedor, nombre, correoElectronico, nroContacto, direccion, descripci
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="melodiasConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        usuario.*, rol.*
+FROM            usuario INNER JOIN
+                         rol ON usuario.IdRol = rol.IdRol</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CUIT" DataSetColumn="CUIT" />
+              <Mapping SourceColumn="nomYApe" DataSetColumn="nomYApe" />
+              <Mapping SourceColumn="nroContacto" DataSetColumn="nroContacto" />
+              <Mapping SourceColumn="correoElectronico" DataSetColumn="correoElectronico" />
+              <Mapping SourceColumn="nombreUsuario" DataSetColumn="nombreUsuario" />
+              <Mapping SourceColumn="IdRol" DataSetColumn="IdRol" />
+              <Mapping SourceColumn="IdRol1" DataSetColumn="IdRol1" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -864,6 +889,50 @@ SELECT idProveedor, nombre, correoElectronico, nroContacto, direccion, descripci
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUIT" msprop:Generator_ColumnVarNameInTable="columnCUIT" msprop:Generator_ColumnPropNameInRow="CUIT" msprop:Generator_ColumnPropNameInTable="CUITColumn" msprop:Generator_UserColumnName="CUIT" type="xs:int" />
+              <xs:element name="nomYApe" msprop:Generator_ColumnVarNameInTable="columnnomYApe" msprop:Generator_ColumnPropNameInRow="nomYApe" msprop:Generator_ColumnPropNameInTable="nomYApeColumn" msprop:Generator_UserColumnName="nomYApe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nroContacto" msprop:Generator_ColumnVarNameInTable="columnnroContacto" msprop:Generator_ColumnPropNameInRow="nroContacto" msprop:Generator_ColumnPropNameInTable="nroContactoColumn" msprop:Generator_UserColumnName="nroContacto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="correoElectronico" msprop:Generator_ColumnVarNameInTable="columncorreoElectronico" msprop:Generator_ColumnPropNameInRow="correoElectronico" msprop:Generator_ColumnPropNameInTable="correoElectronicoColumn" msprop:Generator_UserColumnName="correoElectronico" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombreUsuario" msprop:Generator_ColumnVarNameInTable="columnnombreUsuario" msprop:Generator_ColumnPropNameInRow="nombreUsuario" msprop:Generator_ColumnPropNameInTable="nombreUsuarioColumn" msprop:Generator_UserColumnName="nombreUsuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdRol" msprop:Generator_ColumnVarNameInTable="columnIdRol" msprop:Generator_ColumnPropNameInRow="IdRol" msprop:Generator_ColumnPropNameInTable="IdRolColumn" msprop:Generator_UserColumnName="IdRol" type="xs:int" minOccurs="0" />
+              <xs:element name="IdRol1" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdRol1" msprop:Generator_ColumnPropNameInRow="IdRol1" msprop:Generator_ColumnPropNameInTable="IdRol1Column" msprop:Generator_UserColumnName="IdRol1" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -889,6 +958,11 @@ SELECT idProveedor, nombre, correoElectronico, nroContacto, direccion, descripci
     <xs:unique name="proveedor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:proveedor" />
       <xs:field xpath="mstns:idProveedor" />
+    </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:CUIT" />
+      <xs:field xpath="mstns:IdRol1" />
     </xs:unique>
   </xs:element>
   <xs:annotation>
