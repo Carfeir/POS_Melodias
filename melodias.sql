@@ -8,15 +8,31 @@ IdRol int identity primary key,
 nombre varchar(25)
 )
 
+if object_id('usuario') is not null DROP TABLE visita;
+go
+
+drop table usuario;
+drop table venta;
+drop table rol;
+drop table detalleVenta;
+
 create table usuario(
 CUIT int primary key,
 nomYApe varchar(50),
 nroContacto varchar (15),
 correoElectronico varchar(40) unique,
 nombreUsuario varchar (30),
-idRol int,
-Constraint FK_rol FOREIGN KEY (idRol)  REFERENCES rol(idRol)					 					     					     					     				     					    
+IdRol int,
+Constraint FK_rol FOREIGN KEY (IdRol)  REFERENCES rol(IdRol)			
+
+IdMarca int identity primary key,
+
+idMarca int,
+Constraint FK_marca FOREIGN KEY (idMarca)  REFERENCES marca(idMarca),					 					     					     					     				     					     
+
 )
+
+select * from usuario;
 
 create table categoria(
 IdCategoria int identity primary key,
@@ -42,7 +58,7 @@ direccion varchar (30),
 descripcion varchar (100),
 )
 
-create table producto(
+create table producto (
 idProducto int identity primary key,
 idProveedor int,
 nombre varchar (30),
@@ -73,7 +89,7 @@ recargo float
 
 create table venta(
 idVenta int identity,
-idDetalleVenta int identity,
+idDetalleVenta int,
 CUIT int,
 DNI int,
 montoTotal float,
@@ -87,7 +103,7 @@ Constraint FK_metodoPago FOREIGN KEY (idMetodoPago)  REFERENCES metodoPago(idMet
 
 create table detalleVenta(
 idDetalleVenta int identity,
-idVenta int identity,
+idVenta int,
 idProducto int,
 Constraint PK_detalleVenta PRIMARY KEY (idDetalleVenta, idVenta),
 Constraint FK_producto FOREIGN KEY (idProducto)  REFERENCES producto(idProducto),					 					     					     					     				     					     
