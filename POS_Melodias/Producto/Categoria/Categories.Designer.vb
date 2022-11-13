@@ -27,8 +27,6 @@ Partial Class Categories
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtCategoryName = New System.Windows.Forms.TextBox()
-        Me.txtCategoryID = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -38,12 +36,10 @@ Partial Class Categories
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.BtnAgregar = New System.Windows.Forms.Button()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.AgregarNombreTextBox = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CategoriaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -55,11 +51,15 @@ Partial Class Categories
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CategoriaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.CategoriaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.categoriaTableAdapter()
+        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.CategoriaDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CategoriaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.categoriaTableAdapter()
-        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
+        Me.IdCategoriaTextBox = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -72,15 +72,15 @@ Partial Class Categories
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.NombreTextBox)
+        Me.GroupBox1.Controls.Add(Me.IdCategoriaTextBox)
         Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtCategoryName)
-        Me.GroupBox1.Controls.Add(Me.txtCategoryID)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(15, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(202, 111)
+        Me.GroupBox1.Size = New System.Drawing.Size(199, 111)
         Me.GroupBox1.TabIndex = 158
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Categoria"
@@ -91,7 +91,7 @@ Partial Class Categories
         Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(3, 86)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(196, 22)
+        Me.btnEliminar.Size = New System.Drawing.Size(193, 22)
         Me.btnEliminar.TabIndex = 163
         Me.btnEliminar.Text = "&Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
@@ -105,25 +105,6 @@ Partial Class Categories
         Me.Label2.Size = New System.Drawing.Size(47, 12)
         Me.Label2.TabIndex = 56
         Me.Label2.Text = "Nombre:"
-        '
-        'txtCategoryName
-        '
-        Me.txtCategoryName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.txtCategoryName.Location = New System.Drawing.Point(73, 49)
-        Me.txtCategoryName.Name = "txtCategoryName"
-        Me.txtCategoryName.ReadOnly = True
-        Me.txtCategoryName.Size = New System.Drawing.Size(115, 21)
-        Me.txtCategoryName.TabIndex = 53
-        '
-        'txtCategoryID
-        '
-        Me.txtCategoryID.BackColor = System.Drawing.SystemColors.Control
-        Me.txtCategoryID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.txtCategoryID.Location = New System.Drawing.Point(73, 22)
-        Me.txtCategoryID.Name = "txtCategoryID"
-        Me.txtCategoryID.ReadOnly = True
-        Me.txtCategoryID.Size = New System.Drawing.Size(115, 21)
-        Me.txtCategoryID.TabIndex = 54
         '
         'Label4
         '
@@ -200,7 +181,7 @@ Partial Class Categories
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.BtnAgregar)
-        Me.GroupBox3.Controls.Add(Me.NombreTextBox)
+        Me.GroupBox3.Controls.Add(Me.AgregarNombreTextBox)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox3.Location = New System.Drawing.Point(237, 10)
@@ -221,15 +202,14 @@ Partial Class Categories
         Me.BtnAgregar.TabIndex = 163
         Me.BtnAgregar.UseVisualStyleBackColor = True
         '
-        'NombreTextBox
+        'AgregarNombreTextBox
         '
-        Me.NombreTextBox.BackColor = System.Drawing.Color.White
-        Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombreTextBox.Location = New System.Drawing.Point(71, 30)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.ReadOnly = True
-        Me.NombreTextBox.Size = New System.Drawing.Size(115, 21)
-        Me.NombreTextBox.TabIndex = 54
+        Me.AgregarNombreTextBox.BackColor = System.Drawing.Color.White
+        Me.AgregarNombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarNombreTextBox.Location = New System.Drawing.Point(71, 30)
+        Me.AgregarNombreTextBox.Name = "AgregarNombreTextBox"
+        Me.AgregarNombreTextBox.Size = New System.Drawing.Size(115, 21)
+        Me.AgregarNombreTextBox.TabIndex = 54
         '
         'Label5
         '
@@ -255,7 +235,7 @@ Partial Class Categories
         Me.CategoriaBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.CategoriaBindingNavigator.Name = "CategoriaBindingNavigator"
         Me.CategoriaBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CategoriaBindingNavigator.Size = New System.Drawing.Size(536, 25)
+        Me.CategoriaBindingNavigator.Size = New System.Drawing.Size(530, 25)
         Me.CategoriaBindingNavigator.TabIndex = 180
         Me.CategoriaBindingNavigator.Text = "BindingNavigator1"
         Me.CategoriaBindingNavigator.Visible = False
@@ -268,16 +248,6 @@ Partial Class Categories
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'CategoriaBindingSource
-        '
-        Me.CategoriaBindingSource.DataMember = "categoria"
-        Me.CategoriaBindingSource.DataSource = Me.MelodiasDataSet
-        '
-        'MelodiasDataSet
-        '
-        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
-        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -322,7 +292,6 @@ Partial Class Categories
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -364,28 +333,15 @@ Partial Class Categories
         Me.CategoriaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CategoriaBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'CategoriaDataGridView
+        'CategoriaBindingSource
         '
-        Me.CategoriaDataGridView.AutoGenerateColumns = False
-        Me.CategoriaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CategoriaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.CategoriaDataGridView.DataSource = Me.CategoriaBindingSource
-        Me.CategoriaDataGridView.Location = New System.Drawing.Point(15, 179)
-        Me.CategoriaDataGridView.Name = "CategoriaDataGridView"
-        Me.CategoriaDataGridView.Size = New System.Drawing.Size(501, 109)
-        Me.CategoriaDataGridView.TabIndex = 180
+        Me.CategoriaBindingSource.DataMember = "categoria"
+        Me.CategoriaBindingSource.DataSource = Me.MelodiasDataSet
         '
-        'DataGridViewTextBoxColumn1
+        'MelodiasDataSet
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdCategoria"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "IdCategoria"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CategoriaTableAdapter
         '
@@ -396,18 +352,59 @@ Partial Class Categories
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.categoriaTableAdapter = Me.CategoriaTableAdapter
         Me.TableAdapterManager.clienteTableAdapter = Nothing
-        Me.TableAdapterManager.colorTableAdapter = Nothing
-        Me.TableAdapterManager.marcaTableAdapter = Nothing
-        Me.TableAdapterManager.proveedorTableAdapter = Nothing
         Me.TableAdapterManager.rolTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'CategoriaDataGridView
+        '
+        Me.CategoriaDataGridView.AutoGenerateColumns = False
+        Me.CategoriaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CategoriaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
+        Me.CategoriaDataGridView.DataSource = Me.CategoriaBindingSource
+        Me.CategoriaDataGridView.Location = New System.Drawing.Point(15, 179)
+        Me.CategoriaDataGridView.Name = "CategoriaDataGridView"
+        Me.CategoriaDataGridView.Size = New System.Drawing.Size(501, 112)
+        Me.CategoriaDataGridView.TabIndex = 180
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdCategoria"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "IdCategoria"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'IdCategoriaTextBox
+        '
+        Me.IdCategoriaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CategoriaBindingSource, "IdCategoria", True))
+        Me.IdCategoriaTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.IdCategoriaTextBox.Location = New System.Drawing.Point(75, 25)
+        Me.IdCategoriaTextBox.Name = "IdCategoriaTextBox"
+        Me.IdCategoriaTextBox.ReadOnly = True
+        Me.IdCategoriaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.IdCategoriaTextBox.TabIndex = 164
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CategoriaBindingSource, "nombre", True))
+        Me.NombreTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombreTextBox.Location = New System.Drawing.Point(75, 52)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.ReadOnly = True
+        Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NombreTextBox.TabIndex = 165
         '
         'Categories
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(536, 336)
+        Me.ClientSize = New System.Drawing.Size(529, 329)
         Me.Controls.Add(Me.CategoriaDataGridView)
         Me.Controls.Add(Me.CategoriaBindingNavigator)
         Me.Controls.Add(Me.GroupBox3)
@@ -438,8 +435,6 @@ Partial Class Categories
     End Sub
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtCategoryName As TextBox
-    Friend WithEvents txtCategoryID As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnMostrar As Button
@@ -450,7 +445,7 @@ Partial Class Categories
     Private WithEvents btnVolver As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents BtnAgregar As Button
-    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents AgregarNombreTextBox As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents MelodiasDataSet As melodiasDataSet
     Friend WithEvents CategoriaBindingSource As BindingSource
@@ -469,6 +464,8 @@ Partial Class Categories
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents CategoriaBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents IdCategoriaTextBox As TextBox
     Friend WithEvents CategoriaDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn

@@ -75,7 +75,6 @@ Partial Class Products
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
-        Me.ProductoTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.productoTableAdapter()
         Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         IdProductoLabel = New System.Windows.Forms.Label()
         IdProveedorLabel = New System.Windows.Forms.Label()
@@ -555,19 +554,12 @@ Partial Class Products
         Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
         Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ProductoTableAdapter
-        '
-        Me.ProductoTableAdapter.ClearBeforeFill = True
-        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.categoriaTableAdapter = Nothing
         Me.TableAdapterManager.clienteTableAdapter = Nothing
-        Me.TableAdapterManager.colorTableAdapter = Nothing
         Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.marcaTableAdapter = Nothing
-        Me.TableAdapterManager.proveedorTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Products
@@ -613,7 +605,6 @@ Partial Class Products
     Friend WithEvents BuscadorTextBox As TextBox
     Friend WithEvents MelodiasDataSet As melodiasDataSet
     Friend WithEvents ProductoBindingSource As BindingSource
-    Friend WithEvents ProductoTableAdapter As melodiasDataSetTableAdapters.productoTableAdapter
     Friend WithEvents TableAdapterManager As melodiasDataSetTableAdapters.TableAdapterManager
     Friend WithEvents ProductoBindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton

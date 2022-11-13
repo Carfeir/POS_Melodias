@@ -10,5 +10,4 @@ End Class
 
 Namespace melodiasDataSetTableAdapters
 
-
 End Namespace

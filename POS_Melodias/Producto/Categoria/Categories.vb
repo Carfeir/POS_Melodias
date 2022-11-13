@@ -1,9 +1,5 @@
 ﻿Public Class Categories
 
-    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
-        Me.Close()
-    End Sub
-
     Private Sub CategoriaBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CategoriaBindingNavigatorSaveItem.Click
         Me.Validate()
         Me.CategoriaBindingSource.EndEdit()
@@ -15,7 +11,7 @@
         Me.CategoriaTableAdapter.Fill(Me.MelodiasDataSet.categoria)
     End Sub
 
-    Private Sub NombreTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NombreTextBox.KeyPress
+    Private Sub NombreTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles AgregarNombreTextBox.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -28,7 +24,7 @@
     End Sub
 
     Private Function Validar_campo() As Boolean 'Se valida que el campo Nombre no este vacio'
-        If Trim(NombreTextBox.Text) = "" Then
+        If Trim(AgregarNombreTextBox.Text) = "" Then
             Validar_campo = False
         Else
             Validar_campo = True
@@ -37,22 +33,27 @@
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         If Not Validar_campo() Then
-            MessageBox.Show("Completar el campo Nombre para agregar la categoria", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            MessageBox.Show("Completar el campo Nombre para agregar el Categoria", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         Else
-            Me.CategoriaTableAdapter.AgregarCategoria(NombreTextBox.Text)
+            Me.CategoriaTableAdapter.AgregarCategoria(AgregarNombreTextBox.Text)
+            Me.CategoriaTableAdapter.Fill(Me.MelodiasDataSet.categoria)
         End If
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Dim result As DialogResult = MessageBox.Show("Seguro que quieres eliminar esta categoria?", "Eliminar Categoria", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        Dim result As DialogResult = MessageBox.Show("Seguro que quieres eliminar este Categoria?", "Eliminar Categoria", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If result = DialogResult.Yes Then
-            Me.CategoriaTableAdapter.EliminarCategoria(NombreTextBox.Text)
+            Me.CategoriaTableAdapter.EliminarCategoria(IdCategoriaTextBox.Text)
             Me.CategoriaTableAdapter.Fill(Me.MelodiasDataSet.categoria)
         End If
     End Sub
 
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
         Me.CategoriaTableAdapter.Fill(Me.MelodiasDataSet.categoria)
+    End Sub
+
+    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
+        Me.Close()
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
@@ -62,4 +63,5 @@
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Me.CategoriaTableAdapter.BuscarCategoria(MelodiasDataSet.categoria, BuscadorTextBox.Text)
     End Sub
+
 End Class

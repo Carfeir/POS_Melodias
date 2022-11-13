@@ -334,9 +334,6 @@ Partial Class Users
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.categoriaTableAdapter = Nothing
         Me.TableAdapterManager.clienteTableAdapter = Nothing
-        Me.TableAdapterManager.colorTableAdapter = Nothing
-        Me.TableAdapterManager.marcaTableAdapter = Nothing
-        Me.TableAdapterManager.proveedorTableAdapter = Nothing
         Me.TableAdapterManager.rolTableAdapter = Me.RolTableAdapter
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '

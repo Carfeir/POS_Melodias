@@ -1,11 +1,5 @@
 ﻿Public Class AgregarProducto
     Private Sub AgregarProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'MelodiasDataSet.proveedor' table. You can move, or remove it, as needed.
-        Me.ProveedorTableAdapter.Fill(Me.MelodiasDataSet.proveedor)
-        'TODO: This line of code loads data into the 'MelodiasDataSet.color' table. You can move, or remove it, as needed.
-        Me.ColorTableAdapter.Fill(Me.MelodiasDataSet.color)
-        'TODO: This line of code loads data into the 'MelodiasDataSet.marca' table. You can move, or remove it, as needed.
-        Me.MarcaTableAdapter.Fill(Me.MelodiasDataSet.marca)
         'TODO: This line of code loads data into the 'MelodiasDataSet.categoria' table. You can move, or remove it, as needed.
         Me.CategoriaTableAdapter.Fill(Me.MelodiasDataSet.categoria)
 

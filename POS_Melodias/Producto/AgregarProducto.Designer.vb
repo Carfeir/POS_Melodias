@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AgregarProducto
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class AgregarProducto
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DNILabel As System.Windows.Forms.Label
@@ -48,9 +48,6 @@ Partial Class AgregarProducto
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.CategoriaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.categoriaTableAdapter()
-        Me.MarcaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.marcaTableAdapter()
-        Me.ColorTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.colorTableAdapter()
-        Me.ProveedorTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.proveedorTableAdapter()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
@@ -298,18 +295,6 @@ Partial Class AgregarProducto
         '
         Me.CategoriaTableAdapter.ClearBeforeFill = True
         '
-        'MarcaTableAdapter
-        '
-        Me.MarcaTableAdapter.ClearBeforeFill = True
-        '
-        'ColorTableAdapter
-        '
-        Me.ColorTableAdapter.ClearBeforeFill = True
-        '
-        'ProveedorTableAdapter
-        '
-        Me.ProveedorTableAdapter.ClearBeforeFill = True
-        '
         'AgregarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -350,10 +335,7 @@ Partial Class AgregarProducto
     Friend WithEvents CategoriaBindingSource As BindingSource
     Friend WithEvents CategoriaTableAdapter As melodiasDataSetTableAdapters.categoriaTableAdapter
     Friend WithEvents MarcaBindingSource As BindingSource
-    Friend WithEvents MarcaTableAdapter As melodiasDataSetTableAdapters.marcaTableAdapter
     Friend WithEvents ColorBindingSource As BindingSource
-    Friend WithEvents ColorTableAdapter As melodiasDataSetTableAdapters.colorTableAdapter
     Friend WithEvents ProveedorComboBox As ComboBox
     Friend WithEvents ProveedorBindingSource As BindingSource
-    Friend WithEvents ProveedorTableAdapter As melodiasDataSetTableAdapters.proveedorTableAdapter
 End Class

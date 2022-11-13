@@ -1,8 +1,4 @@
 ﻿Public Class Brands
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-        Me.Close()
-    End Sub
-
     Private Sub MarcaBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MarcaBindingNavigatorSaveItem.Click
         Me.Validate()
         Me.MarcaBindingSource.EndEdit()
@@ -14,7 +10,7 @@
         Me.MarcaTableAdapter.Fill(Me.MelodiasDataSet.marca)
     End Sub
 
-    Private Sub NombreTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NombreTextBox.KeyPress
+    Private Sub NombreTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles AgregarNombreTextBox.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -27,7 +23,7 @@
     End Sub
 
     Private Function Validar_campo() As Boolean 'Se valida que el campo Nombre no este vacio'
-        If Trim(NombreTextBox.Text) = "" Then
+        If Trim(AgregarNombreTextBox.Text) = "" Then
             Validar_campo = False
         Else
             Validar_campo = True
@@ -36,22 +32,27 @@
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         If Not Validar_campo() Then
-            MessageBox.Show("Completar el campo Nombre para agregar la marca", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            MessageBox.Show("Completar el campo Nombre para agregar la Marca", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         Else
-            Me.MarcaTableAdapter.AgregarMarca(NombreTextBox.Text)
+            Me.MarcaTableAdapter.AgregarMarca(AgregarNombreTextBox.Text)
+            Me.MarcaTableAdapter.Fill(Me.MelodiasDataSet.marca)
         End If
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Dim result As DialogResult = MessageBox.Show("Seguro que quieres eliminar esta Marca?", "Eliminar marca", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        Dim result As DialogResult = MessageBox.Show("Seguro que quieres eliminar esta Marca?", "Eliminar Marca", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If result = DialogResult.Yes Then
-            Me.MarcaTableAdapter.EliminarMarca(NombreTextBox.Text)
+            Me.MarcaTableAdapter.EliminarMarca(IdMarcaTextBox.Text)
             Me.MarcaTableAdapter.Fill(Me.MelodiasDataSet.marca)
         End If
     End Sub
 
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
         Me.MarcaTableAdapter.Fill(Me.MelodiasDataSet.marca)
+    End Sub
+
+    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
+        Me.Close()
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click

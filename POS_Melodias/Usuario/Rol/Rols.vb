@@ -11,7 +11,7 @@
         Me.RolTableAdapter.Fill(Me.MelodiasDataSet.rol)
     End Sub
 
-    Private Sub NombreTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NombreTextBox.KeyPress
+    Private Sub NombreTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles AgregarNombreTextBox.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -24,7 +24,7 @@
     End Sub
 
     Private Function Validar_campo() As Boolean 'Se valida que el campo Nombre no este vacio'
-        If Trim(NombreTextBox.Text) = "" Then
+        If Trim(AgregarNombreTextBox.Text) = "" Then
             Validar_campo = False
         Else
             Validar_campo = True
@@ -35,7 +35,7 @@
         If Not Validar_campo() Then
             MessageBox.Show("Completar el campo Nombre para agregar el rol", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         Else
-            Me.RolTableAdapter.AgregarRol(NombreTextBox.Text)
+            Me.RolTableAdapter.AgregarRol(AgregarNombreTextBox.Text)
             Me.RolTableAdapter.Fill(Me.MelodiasDataSet.rol)
         End If
     End Sub
@@ -43,7 +43,7 @@
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Dim result As DialogResult = MessageBox.Show("Seguro que quieres eliminar este rol?", "Eliminar Rol", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If result = DialogResult.Yes Then
-            Me.RolTableAdapter.EliminarRol(NombreTextBox.Text)
+            Me.RolTableAdapter.EliminarRol(IdRolTextBox.Text)
             Me.RolTableAdapter.Fill(Me.MelodiasDataSet.rol)
         End If
     End Sub

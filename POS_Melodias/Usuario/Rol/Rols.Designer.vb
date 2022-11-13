@@ -30,10 +30,12 @@ Partial Class Rols
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.AgregarNombreTextBox = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.NombreTextBox1 = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.RolBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
         Me.IdRolTextBox = New System.Windows.Forms.TextBox()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -56,18 +58,16 @@ Partial Class Rols
         Me.RolDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RolBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
         Me.RolTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.rolTableAdapter()
         Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RolBindingNavigator.SuspendLayout()
         CType(Me.RolDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -115,7 +115,7 @@ Partial Class Rols
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.btnAgregar)
-        Me.GroupBox3.Controls.Add(Me.NombreTextBox)
+        Me.GroupBox3.Controls.Add(Me.AgregarNombreTextBox)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox3.Location = New System.Drawing.Point(234, 10)
@@ -136,14 +136,14 @@ Partial Class Rols
         Me.btnAgregar.TabIndex = 163
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'NombreTextBox
+        'AgregarNombreTextBox
         '
-        Me.NombreTextBox.BackColor = System.Drawing.Color.White
-        Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombreTextBox.Location = New System.Drawing.Point(71, 30)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(115, 21)
-        Me.NombreTextBox.TabIndex = 54
+        Me.AgregarNombreTextBox.BackColor = System.Drawing.Color.White
+        Me.AgregarNombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarNombreTextBox.Location = New System.Drawing.Point(71, 30)
+        Me.AgregarNombreTextBox.Name = "AgregarNombreTextBox"
+        Me.AgregarNombreTextBox.Size = New System.Drawing.Size(115, 21)
+        Me.AgregarNombreTextBox.TabIndex = 54
         '
         'Label5
         '
@@ -157,7 +157,7 @@ Partial Class Rols
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.NombreTextBox1)
+        Me.GroupBox1.Controls.Add(Me.NombreTextBox)
         Me.GroupBox1.Controls.Add(Me.IdRolTextBox)
         Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -165,26 +165,36 @@ Partial Class Rols
         Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(202, 111)
+        Me.GroupBox1.Size = New System.Drawing.Size(198, 111)
         Me.GroupBox1.TabIndex = 197
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Rol"
         '
-        'NombreTextBox1
+        'NombreTextBox
         '
-        Me.NombreTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RolBindingSource, "nombre", True))
-        Me.NombreTextBox1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NombreTextBox1.Location = New System.Drawing.Point(71, 26)
-        Me.NombreTextBox1.Name = "NombreTextBox1"
-        Me.NombreTextBox1.ReadOnly = True
-        Me.NombreTextBox1.Size = New System.Drawing.Size(117, 20)
-        Me.NombreTextBox1.TabIndex = 201
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RolBindingSource, "nombre", True))
+        Me.NombreTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombreTextBox.Location = New System.Drawing.Point(68, 51)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.ReadOnly = True
+        Me.NombreTextBox.Size = New System.Drawing.Size(117, 20)
+        Me.NombreTextBox.TabIndex = 204
+        '
+        'RolBindingSource
+        '
+        Me.RolBindingSource.DataMember = "rol"
+        Me.RolBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'MelodiasDataSet
+        '
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'IdRolTextBox
         '
         Me.IdRolTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RolBindingSource, "IdRol", True))
         Me.IdRolTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.IdRolTextBox.Location = New System.Drawing.Point(71, 51)
+        Me.IdRolTextBox.Location = New System.Drawing.Point(68, 25)
         Me.IdRolTextBox.Name = "IdRolTextBox"
         Me.IdRolTextBox.ReadOnly = True
         Me.IdRolTextBox.Size = New System.Drawing.Size(117, 20)
@@ -196,7 +206,7 @@ Partial Class Rols
         Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(3, 86)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(196, 22)
+        Me.btnEliminar.Size = New System.Drawing.Size(192, 22)
         Me.btnEliminar.TabIndex = 163
         Me.btnEliminar.Text = "&Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
@@ -312,6 +322,7 @@ Partial Class Rols
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -377,16 +388,6 @@ Partial Class Rols
         Me.DataGridViewTextBoxColumn1.HeaderText = "nombre"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         '
-        'RolBindingSource
-        '
-        Me.RolBindingSource.DataMember = "rol"
-        Me.RolBindingSource.DataSource = Me.MelodiasDataSet
-        '
-        'MelodiasDataSet
-        '
-        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
-        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'RolTableAdapter
         '
         Me.RolTableAdapter.ClearBeforeFill = True
@@ -396,9 +397,6 @@ Partial Class Rols
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.categoriaTableAdapter = Nothing
         Me.TableAdapterManager.clienteTableAdapter = Nothing
-        Me.TableAdapterManager.colorTableAdapter = Nothing
-        Me.TableAdapterManager.marcaTableAdapter = Nothing
-        Me.TableAdapterManager.proveedorTableAdapter = Nothing
         Me.TableAdapterManager.rolTableAdapter = Me.RolTableAdapter
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
@@ -417,19 +415,19 @@ Partial Class Rols
         Me.Controls.Add(Me.btnMostrar)
         Me.Font = New System.Drawing.Font("Miriam", 8.25!)
         Me.Name = "Rols"
-        Me.Text = "Rols"
+        Me.Text = "Rol"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RolBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RolBindingNavigator.ResumeLayout(False)
         Me.RolBindingNavigator.PerformLayout()
         CType(Me.RolDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -440,7 +438,7 @@ Partial Class Rols
     Friend WithEvents BuscadorTextBox As TextBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents btnAgregar As Button
-    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents AgregarNombreTextBox As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnEliminar As Button
@@ -465,9 +463,9 @@ Partial Class Rols
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents RolBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents NombreTextBox1 As TextBox
     Friend WithEvents IdRolTextBox As TextBox
     Friend WithEvents RolDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents NombreTextBox As TextBox
 End Class

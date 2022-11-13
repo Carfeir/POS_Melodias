@@ -28,22 +28,16 @@ Partial Class Brands
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.AgregarNombreTextBox = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtCategoryName = New System.Windows.Forms.TextBox()
-        Me.txtCategoryID = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
-        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
-        Me.MarcaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MarcaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.marcaTableAdapter()
-        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.MarcaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -57,16 +51,25 @@ Partial Class Brands
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.MarcaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.MarcaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
+        Me.MarcaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.marcaTableAdapter()
+        Me.CategoriaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.categoriaTableAdapter()
         Me.MarcaDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdMarcaTextBox = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MarcaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MarcaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MarcaBindingNavigator.SuspendLayout()
+        CType(Me.MarcaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MarcaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -93,7 +96,7 @@ Partial Class Brands
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.btnAgregar)
-        Me.GroupBox3.Controls.Add(Me.NombreTextBox)
+        Me.GroupBox3.Controls.Add(Me.AgregarNombreTextBox)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox3.Location = New System.Drawing.Point(234, 12)
@@ -114,15 +117,14 @@ Partial Class Brands
         Me.btnAgregar.TabIndex = 163
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'NombreTextBox
+        'AgregarNombreTextBox
         '
-        Me.NombreTextBox.BackColor = System.Drawing.Color.White
-        Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombreTextBox.Location = New System.Drawing.Point(71, 30)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.ReadOnly = True
-        Me.NombreTextBox.Size = New System.Drawing.Size(115, 21)
-        Me.NombreTextBox.TabIndex = 54
+        Me.AgregarNombreTextBox.BackColor = System.Drawing.Color.White
+        Me.AgregarNombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarNombreTextBox.Location = New System.Drawing.Point(71, 30)
+        Me.AgregarNombreTextBox.Name = "AgregarNombreTextBox"
+        Me.AgregarNombreTextBox.Size = New System.Drawing.Size(115, 21)
+        Me.AgregarNombreTextBox.TabIndex = 54
         '
         'Label5
         '
@@ -136,15 +138,15 @@ Partial Class Brands
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.NombreTextBox)
+        Me.GroupBox1.Controls.Add(Me.IdMarcaTextBox)
         Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtCategoryName)
-        Me.GroupBox1.Controls.Add(Me.txtCategoryID)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(202, 111)
+        Me.GroupBox1.Size = New System.Drawing.Size(191, 111)
         Me.GroupBox1.TabIndex = 191
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Marca"
@@ -155,7 +157,7 @@ Partial Class Brands
         Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(3, 86)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(196, 22)
+        Me.btnEliminar.Size = New System.Drawing.Size(185, 22)
         Me.btnEliminar.TabIndex = 163
         Me.btnEliminar.Text = "&Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
@@ -169,30 +171,6 @@ Partial Class Brands
         Me.Label2.Size = New System.Drawing.Size(47, 12)
         Me.Label2.TabIndex = 56
         Me.Label2.Text = "Nombre:"
-        '
-        'txtCategoryName
-        '
-        Me.txtCategoryName.BackColor = System.Drawing.SystemColors.Control
-        Me.txtCategoryName.Enabled = False
-        Me.txtCategoryName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.txtCategoryName.HideSelection = False
-        Me.txtCategoryName.Location = New System.Drawing.Point(73, 49)
-        Me.txtCategoryName.Name = "txtCategoryName"
-        Me.txtCategoryName.ReadOnly = True
-        Me.txtCategoryName.Size = New System.Drawing.Size(115, 21)
-        Me.txtCategoryName.TabIndex = 53
-        '
-        'txtCategoryID
-        '
-        Me.txtCategoryID.BackColor = System.Drawing.SystemColors.Control
-        Me.txtCategoryID.Enabled = False
-        Me.txtCategoryID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.txtCategoryID.HideSelection = False
-        Me.txtCategoryID.Location = New System.Drawing.Point(73, 22)
-        Me.txtCategoryID.Name = "txtCategoryID"
-        Me.txtCategoryID.ReadOnly = True
-        Me.txtCategoryID.Size = New System.Drawing.Size(115, 21)
-        Me.txtCategoryID.TabIndex = 54
         '
         'Label4
         '
@@ -245,31 +223,6 @@ Partial Class Brands
         Me.BuscadorTextBox.Name = "BuscadorTextBox"
         Me.BuscadorTextBox.Size = New System.Drawing.Size(274, 21)
         Me.BuscadorTextBox.TabIndex = 53
-        '
-        'MelodiasDataSet
-        '
-        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
-        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MarcaBindingSource
-        '
-        Me.MarcaBindingSource.DataMember = "marca"
-        Me.MarcaBindingSource.DataSource = Me.MelodiasDataSet
-        '
-        'MarcaTableAdapter
-        '
-        Me.MarcaTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.categoriaTableAdapter = Nothing
-        Me.TableAdapterManager.clienteTableAdapter = Nothing
-        Me.TableAdapterManager.colorTableAdapter = Nothing
-        Me.TableAdapterManager.marcaTableAdapter = Me.MarcaTableAdapter
-        Me.TableAdapterManager.proveedorTableAdapter = Nothing
-        Me.TableAdapterManager.rolTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'MarcaBindingNavigator
         '
@@ -342,7 +295,6 @@ Partial Class Brands
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -384,6 +336,39 @@ Partial Class Brands
         Me.MarcaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.MarcaBindingNavigatorSaveItem.Text = "Save Data"
         '
+        'MarcaBindingSource
+        '
+        Me.MarcaBindingSource.DataMember = "marca"
+        Me.MarcaBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'MelodiasDataSet
+        '
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CategoriaBindingSource
+        '
+        Me.CategoriaBindingSource.DataMember = "categoria"
+        Me.CategoriaBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.categoriaTableAdapter = Nothing
+        Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.marcaTableAdapter = Nothing
+        Me.TableAdapterManager.rolTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'MarcaTableAdapter
+        '
+        Me.MarcaTableAdapter.ClearBeforeFill = True
+        '
+        'CategoriaTableAdapter
+        '
+        Me.CategoriaTableAdapter.ClearBeforeFill = True
+        '
         'MarcaDataGridView
         '
         Me.MarcaDataGridView.AutoGenerateColumns = False
@@ -407,12 +392,32 @@ Partial Class Brands
         Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
+        'IdMarcaTextBox
+        '
+        Me.IdMarcaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MarcaBindingSource, "IdMarca", True))
+        Me.IdMarcaTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.IdMarcaTextBox.Location = New System.Drawing.Point(68, 25)
+        Me.IdMarcaTextBox.Name = "IdMarcaTextBox"
+        Me.IdMarcaTextBox.ReadOnly = True
+        Me.IdMarcaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.IdMarcaTextBox.TabIndex = 164
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MarcaBindingSource, "nombre", True))
+        Me.NombreTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombreTextBox.Location = New System.Drawing.Point(68, 52)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.ReadOnly = True
+        Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NombreTextBox.TabIndex = 165
+        '
         'Brands
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(533, 328)
+        Me.ClientSize = New System.Drawing.Size(533, 326)
         Me.Controls.Add(Me.MarcaDataGridView)
         Me.Controls.Add(Me.MarcaBindingNavigator)
         Me.Controls.Add(Me.GroupBox2)
@@ -431,11 +436,12 @@ Partial Class Brands
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MarcaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MarcaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MarcaBindingNavigator.ResumeLayout(False)
         Me.MarcaBindingNavigator.PerformLayout()
+        CType(Me.MarcaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MarcaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -446,13 +452,11 @@ Partial Class Brands
     Friend WithEvents btnMostrar As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents btnAgregar As Button
-    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents AgregarNombreTextBox As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnEliminar As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtCategoryName As TextBox
-    Friend WithEvents txtCategoryID As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Private WithEvents btnLimpiar As Button
@@ -460,7 +464,6 @@ Partial Class Brands
     Friend WithEvents BuscadorTextBox As TextBox
     Friend WithEvents MelodiasDataSet As melodiasDataSet
     Friend WithEvents MarcaBindingSource As BindingSource
-    Friend WithEvents MarcaTableAdapter As melodiasDataSetTableAdapters.marcaTableAdapter
     Friend WithEvents TableAdapterManager As melodiasDataSetTableAdapters.TableAdapterManager
     Friend WithEvents MarcaBindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
@@ -475,6 +478,11 @@ Partial Class Brands
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents MarcaBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents MarcaTableAdapter As melodiasDataSetTableAdapters.marcaTableAdapter
+    Friend WithEvents CategoriaBindingSource As BindingSource
+    Friend WithEvents CategoriaTableAdapter As melodiasDataSetTableAdapters.categoriaTableAdapter
+    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents IdMarcaTextBox As TextBox
     Friend WithEvents MarcaDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn

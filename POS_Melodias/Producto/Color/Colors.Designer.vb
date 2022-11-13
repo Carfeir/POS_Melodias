@@ -28,22 +28,20 @@ Partial Class Colors
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.AgregarNombreTextBox = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.ColorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.IdColorTextBox = New System.Windows.Forms.TextBox()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtCategoryName = New System.Windows.Forms.TextBox()
-        Me.txtCategoryID = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
-        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
-        Me.ColorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ColorTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.colorTableAdapter()
-        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.ColorBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -60,11 +58,13 @@ Partial Class Colors
         Me.ColorDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
+        Me.ColorTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.colorTableAdapter()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ColorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         CType(Me.ColorBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ColorBindingNavigator.SuspendLayout()
         CType(Me.ColorDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,7 +93,7 @@ Partial Class Colors
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.btnAgregar)
-        Me.GroupBox3.Controls.Add(Me.NombreTextBox)
+        Me.GroupBox3.Controls.Add(Me.AgregarNombreTextBox)
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox3.Location = New System.Drawing.Point(236, 12)
@@ -114,14 +114,14 @@ Partial Class Colors
         Me.btnAgregar.TabIndex = 163
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'NombreTextBox
+        'AgregarNombreTextBox
         '
-        Me.NombreTextBox.BackColor = System.Drawing.Color.White
-        Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombreTextBox.Location = New System.Drawing.Point(71, 30)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(115, 21)
-        Me.NombreTextBox.TabIndex = 54
+        Me.AgregarNombreTextBox.BackColor = System.Drawing.Color.White
+        Me.AgregarNombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarNombreTextBox.Location = New System.Drawing.Point(71, 30)
+        Me.AgregarNombreTextBox.Name = "AgregarNombreTextBox"
+        Me.AgregarNombreTextBox.Size = New System.Drawing.Size(115, 21)
+        Me.AgregarNombreTextBox.TabIndex = 54
         '
         'Label5
         '
@@ -135,18 +135,48 @@ Partial Class Colors
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.NombreTextBox)
+        Me.GroupBox1.Controls.Add(Me.IdColorTextBox)
         Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.txtCategoryName)
-        Me.GroupBox1.Controls.Add(Me.txtCategoryID)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(202, 111)
+        Me.GroupBox1.Size = New System.Drawing.Size(194, 111)
         Me.GroupBox1.TabIndex = 186
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Color"
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ColorBindingSource, "nombre", True))
+        Me.NombreTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombreTextBox.Location = New System.Drawing.Point(75, 51)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.ReadOnly = True
+        Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NombreTextBox.TabIndex = 165
+        '
+        'ColorBindingSource
+        '
+        Me.ColorBindingSource.DataMember = "color"
+        Me.ColorBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'MelodiasDataSet
+        '
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'IdColorTextBox
+        '
+        Me.IdColorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ColorBindingSource, "IdColor", True))
+        Me.IdColorTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.IdColorTextBox.Location = New System.Drawing.Point(75, 25)
+        Me.IdColorTextBox.Name = "IdColorTextBox"
+        Me.IdColorTextBox.ReadOnly = True
+        Me.IdColorTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.IdColorTextBox.TabIndex = 164
         '
         'btnEliminar
         '
@@ -154,7 +184,7 @@ Partial Class Colors
         Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(3, 86)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(196, 22)
+        Me.btnEliminar.Size = New System.Drawing.Size(188, 22)
         Me.btnEliminar.TabIndex = 163
         Me.btnEliminar.Text = "&Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
@@ -163,33 +193,11 @@ Partial Class Colors
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(11, 55)
+        Me.Label2.Location = New System.Drawing.Point(11, 54)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 12)
         Me.Label2.TabIndex = 56
         Me.Label2.Text = "Nombre:"
-        '
-        'txtCategoryName
-        '
-        Me.txtCategoryName.BackColor = System.Drawing.SystemColors.Control
-        Me.txtCategoryName.Enabled = False
-        Me.txtCategoryName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.txtCategoryName.Location = New System.Drawing.Point(73, 49)
-        Me.txtCategoryName.Name = "txtCategoryName"
-        Me.txtCategoryName.ReadOnly = True
-        Me.txtCategoryName.Size = New System.Drawing.Size(115, 21)
-        Me.txtCategoryName.TabIndex = 53
-        '
-        'txtCategoryID
-        '
-        Me.txtCategoryID.BackColor = System.Drawing.SystemColors.Control
-        Me.txtCategoryID.Enabled = False
-        Me.txtCategoryID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.txtCategoryID.Location = New System.Drawing.Point(73, 22)
-        Me.txtCategoryID.Name = "txtCategoryID"
-        Me.txtCategoryID.ReadOnly = True
-        Me.txtCategoryID.Size = New System.Drawing.Size(115, 21)
-        Me.txtCategoryID.TabIndex = 54
         '
         'Label4
         '
@@ -242,31 +250,6 @@ Partial Class Colors
         Me.BuscadorTextBox.Name = "BuscadorTextBox"
         Me.BuscadorTextBox.Size = New System.Drawing.Size(274, 21)
         Me.BuscadorTextBox.TabIndex = 53
-        '
-        'MelodiasDataSet
-        '
-        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
-        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ColorBindingSource
-        '
-        Me.ColorBindingSource.DataMember = "color"
-        Me.ColorBindingSource.DataSource = Me.MelodiasDataSet
-        '
-        'ColorTableAdapter
-        '
-        Me.ColorTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.categoriaTableAdapter = Nothing
-        Me.TableAdapterManager.clienteTableAdapter = Nothing
-        Me.TableAdapterManager.colorTableAdapter = Me.ColorTableAdapter
-        Me.TableAdapterManager.marcaTableAdapter = Nothing
-        Me.TableAdapterManager.proveedorTableAdapter = Nothing
-        Me.TableAdapterManager.rolTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'ColorBindingNavigator
         '
@@ -397,6 +380,7 @@ Partial Class Colors
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "IdColor"
         Me.DataGridViewTextBoxColumn1.HeaderText = "IdColor"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
         'DataGridViewTextBoxColumn2
         '
@@ -404,13 +388,28 @@ Partial Class Colors
         Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.categoriaTableAdapter = Nothing
+        Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.colorTableAdapter = Nothing
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.marcaTableAdapter = Nothing
+        Me.TableAdapterManager.rolTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'ColorTableAdapter
+        '
+        Me.ColorTableAdapter.ClearBeforeFill = True
+        '
         'Colors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(535, 323)
+        Me.ClientSize = New System.Drawing.Size(530, 322)
         Me.Controls.Add(Me.ColorDataGridView)
         Me.Controls.Add(Me.ColorBindingNavigator)
         Me.Controls.Add(Me.GroupBox2)
@@ -427,10 +426,10 @@ Partial Class Colors
         Me.GroupBox3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.ColorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ColorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ColorBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ColorBindingNavigator.ResumeLayout(False)
         Me.ColorBindingNavigator.PerformLayout()
@@ -443,13 +442,11 @@ Partial Class Colors
     Friend WithEvents btnMostrar As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents btnAgregar As Button
-    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents AgregarNombreTextBox As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnEliminar As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtCategoryName As TextBox
-    Friend WithEvents txtCategoryID As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Private WithEvents btnLimpiar As Button
@@ -457,7 +454,6 @@ Partial Class Colors
     Friend WithEvents BuscadorTextBox As TextBox
     Friend WithEvents MelodiasDataSet As melodiasDataSet
     Friend WithEvents ColorBindingSource As BindingSource
-    Friend WithEvents ColorTableAdapter As melodiasDataSetTableAdapters.colorTableAdapter
     Friend WithEvents TableAdapterManager As melodiasDataSetTableAdapters.TableAdapterManager
     Friend WithEvents ColorBindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
@@ -472,6 +468,9 @@ Partial Class Colors
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents ColorBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents NombreTextBox As TextBox
+    Friend WithEvents IdColorTextBox As TextBox
+    Friend WithEvents ColorTableAdapter As melodiasDataSetTableAdapters.colorTableAdapter
     Friend WithEvents ColorDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
