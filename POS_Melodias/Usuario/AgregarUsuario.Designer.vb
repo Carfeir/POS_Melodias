@@ -22,8 +22,8 @@ Partial Class AgregarUsuario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim NombresLabel As System.Windows.Forms.Label
-        Dim NroContactoLabel As System.Windows.Forms.Label
         Dim CorreoElectronicoLabel As System.Windows.Forms.Label
         Dim Label1 As System.Windows.Forms.Label
         Dim Label4 As System.Windows.Forms.Label
@@ -38,20 +38,23 @@ Partial Class AgregarUsuario
         Me.Label5 = New System.Windows.Forms.Label()
         Me.NUsuarioTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DNITextBox = New System.Windows.Forms.TextBox()
-        Me.NombresTextBox = New System.Windows.Forms.TextBox()
+        Me.CUITTextBox = New System.Windows.Forms.TextBox()
+        Me.NomYApeTextBox = New System.Windows.Forms.TextBox()
         Me.ContactoTextBox = New System.Windows.Forms.TextBox()
-        Me.DireccionTextBox = New System.Windows.Forms.TextBox()
         Me.CorreoElectronicoTextBox = New System.Windows.Forms.TextBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.RolBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RolTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.rolTableAdapter()
         NombresLabel = New System.Windows.Forms.Label()
-        NroContactoLabel = New System.Windows.Forms.Label()
         CorreoElectronicoLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NombresLabel
@@ -64,21 +67,11 @@ Partial Class AgregarUsuario
         NombresLabel.TabIndex = 2
         NombresLabel.Text = "Nombre y Apellido:"
         '
-        'NroContactoLabel
-        '
-        NroContactoLabel.AutoSize = True
-        NroContactoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        NroContactoLabel.Location = New System.Drawing.Point(20, 93)
-        NroContactoLabel.Name = "NroContactoLabel"
-        NroContactoLabel.Size = New System.Drawing.Size(62, 15)
-        NroContactoLabel.TabIndex = 6
-        NroContactoLabel.Text = "Direccion:"
-        '
         'CorreoElectronicoLabel
         '
         CorreoElectronicoLabel.AutoSize = True
         CorreoElectronicoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 117)
+        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 94)
         CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
         CorreoElectronicoLabel.Size = New System.Drawing.Size(111, 15)
         CorreoElectronicoLabel.TabIndex = 8
@@ -98,7 +91,7 @@ Partial Class AgregarUsuario
         '
         Label4.AutoSize = True
         Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Label4.Location = New System.Drawing.Point(20, 219)
+        Label4.Location = New System.Drawing.Point(20, 210)
         Label4.Name = "Label4"
         Label4.Size = New System.Drawing.Size(130, 15)
         Label4.TabIndex = 196
@@ -108,7 +101,7 @@ Partial Class AgregarUsuario
         '
         Label6.AutoSize = True
         Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Label6.Location = New System.Drawing.Point(20, 199)
+        Label6.Location = New System.Drawing.Point(20, 190)
         Label6.Name = "Label6"
         Label6.Size = New System.Drawing.Size(73, 15)
         Label6.TabIndex = 193
@@ -127,12 +120,10 @@ Partial Class AgregarUsuario
         Me.GroupBox1.Controls.Add(Me.NUsuarioTextBox)
         Me.GroupBox1.Controls.Add(Label1)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.DNITextBox)
+        Me.GroupBox1.Controls.Add(Me.CUITTextBox)
         Me.GroupBox1.Controls.Add(NombresLabel)
-        Me.GroupBox1.Controls.Add(Me.NombresTextBox)
+        Me.GroupBox1.Controls.Add(Me.NomYApeTextBox)
         Me.GroupBox1.Controls.Add(Me.ContactoTextBox)
-        Me.GroupBox1.Controls.Add(NroContactoLabel)
-        Me.GroupBox1.Controls.Add(Me.DireccionTextBox)
         Me.GroupBox1.Controls.Add(CorreoElectronicoLabel)
         Me.GroupBox1.Controls.Add(Me.CorreoElectronicoTextBox)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
@@ -159,7 +150,7 @@ Partial Class AgregarUsuario
         'ContraseñaTextBox
         '
         Me.ContraseñaTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.ContraseñaTextBox.Location = New System.Drawing.Point(163, 192)
+        Me.ContraseñaTextBox.Location = New System.Drawing.Point(163, 183)
         Me.ContraseñaTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ContraseñaTextBox.Name = "ContraseñaTextBox"
         Me.ContraseñaTextBox.Size = New System.Drawing.Size(167, 21)
@@ -168,7 +159,7 @@ Partial Class AgregarUsuario
         'ConfTextBox
         '
         Me.ConfTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.ConfTextBox.Location = New System.Drawing.Point(163, 216)
+        Me.ConfTextBox.Location = New System.Drawing.Point(163, 207)
         Me.ConfTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ConfTextBox.Name = "ConfTextBox"
         Me.ConfTextBox.Size = New System.Drawing.Size(167, 21)
@@ -177,9 +168,11 @@ Partial Class AgregarUsuario
         'ComboBox2
         '
         Me.ComboBox2.BackColor = System.Drawing.Color.White
+        Me.ComboBox2.DataSource = Me.RolBindingSource
+        Me.ComboBox2.DisplayMember = "nombre"
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(163, 163)
+        Me.ComboBox2.Location = New System.Drawing.Point(163, 139)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(167, 23)
         Me.ComboBox2.TabIndex = 192
@@ -188,7 +181,7 @@ Partial Class AgregarUsuario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(20, 163)
+        Me.Label2.Location = New System.Drawing.Point(20, 139)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(29, 15)
         Me.Label2.TabIndex = 191
@@ -198,7 +191,7 @@ Partial Class AgregarUsuario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(20, 140)
+        Me.Label5.Location = New System.Drawing.Point(20, 116)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(116, 15)
         Me.Label5.TabIndex = 190
@@ -207,7 +200,7 @@ Partial Class AgregarUsuario
         'NUsuarioTextBox
         '
         Me.NUsuarioTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NUsuarioTextBox.Location = New System.Drawing.Point(163, 140)
+        Me.NUsuarioTextBox.Location = New System.Drawing.Point(163, 116)
         Me.NUsuarioTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.NUsuarioTextBox.Name = "NUsuarioTextBox"
         Me.NUsuarioTextBox.Size = New System.Drawing.Size(167, 21)
@@ -223,23 +216,23 @@ Partial Class AgregarUsuario
         Me.Label3.TabIndex = 184
         Me.Label3.Text = "CUIT:"
         '
-        'DNITextBox
+        'CUITTextBox
         '
-        Me.DNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DNITextBox.Location = New System.Drawing.Point(163, 24)
-        Me.DNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.DNITextBox.Name = "DNITextBox"
-        Me.DNITextBox.Size = New System.Drawing.Size(167, 21)
-        Me.DNITextBox.TabIndex = 1
+        Me.CUITTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.CUITTextBox.Location = New System.Drawing.Point(163, 24)
+        Me.CUITTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.CUITTextBox.Name = "CUITTextBox"
+        Me.CUITTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.CUITTextBox.TabIndex = 1
         '
-        'NombresTextBox
+        'NomYApeTextBox
         '
-        Me.NombresTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NombresTextBox.Location = New System.Drawing.Point(163, 47)
-        Me.NombresTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.NombresTextBox.Name = "NombresTextBox"
-        Me.NombresTextBox.Size = New System.Drawing.Size(167, 21)
-        Me.NombresTextBox.TabIndex = 3
+        Me.NomYApeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.NomYApeTextBox.Location = New System.Drawing.Point(163, 47)
+        Me.NomYApeTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.NomYApeTextBox.Name = "NomYApeTextBox"
+        Me.NomYApeTextBox.Size = New System.Drawing.Size(167, 21)
+        Me.NomYApeTextBox.TabIndex = 3
         '
         'ContactoTextBox
         '
@@ -250,19 +243,10 @@ Partial Class AgregarUsuario
         Me.ContactoTextBox.Size = New System.Drawing.Size(167, 21)
         Me.ContactoTextBox.TabIndex = 5
         '
-        'DireccionTextBox
-        '
-        Me.DireccionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DireccionTextBox.Location = New System.Drawing.Point(163, 93)
-        Me.DireccionTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.DireccionTextBox.Name = "DireccionTextBox"
-        Me.DireccionTextBox.Size = New System.Drawing.Size(167, 21)
-        Me.DireccionTextBox.TabIndex = 7
-        '
         'CorreoElectronicoTextBox
         '
         Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(163, 116)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(163, 93)
         Me.CorreoElectronicoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
         Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(167, 21)
@@ -288,6 +272,20 @@ Partial Class AgregarUsuario
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
+        'MelodiasDataSet
+        '
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RolBindingSource
+        '
+        Me.RolBindingSource.DataMember = "rol"
+        Me.RolBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'RolTableAdapter
+        '
+        Me.RolTableAdapter.ClearBeforeFill = True
+        '
         'AgregarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -304,15 +302,16 @@ Partial Class AgregarUsuario
         Me.Text = "Agregar Usuario"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DNITextBox As TextBox
-    Friend WithEvents NombresTextBox As TextBox
+    Friend WithEvents CUITTextBox As TextBox
+    Friend WithEvents NomYApeTextBox As TextBox
     Friend WithEvents ContactoTextBox As TextBox
-    Friend WithEvents DireccionTextBox As TextBox
     Friend WithEvents CorreoElectronicoTextBox As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -324,4 +323,7 @@ Partial Class AgregarUsuario
     Friend WithEvents btnCancelar As Button
     Friend WithEvents ContraseñaTextBox As TextBox
     Friend WithEvents ConfTextBox As TextBox
+    Friend WithEvents MelodiasDataSet As melodiasDataSet
+    Friend WithEvents RolBindingSource As BindingSource
+    Friend WithEvents RolTableAdapter As melodiasDataSetTableAdapters.rolTableAdapter
 End Class

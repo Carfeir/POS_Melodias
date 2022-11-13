@@ -53,4 +53,12 @@
     Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
         Me.Close()
     End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        BuscadorTextBox.Clear()
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Me.ColorTableAdapter.BuscarColor(MelodiasDataSet.color, BuscadorTextBox.Text)
+    End Sub
 End Class

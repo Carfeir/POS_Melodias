@@ -54,4 +54,12 @@
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
         Me.CategoriaTableAdapter.Fill(Me.MelodiasDataSet.categoria)
     End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        BuscadorTextBox.Clear()
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Me.CategoriaTableAdapter.BuscarCategoria(MelodiasDataSet.categoria, BuscadorTextBox.Text)
+    End Sub
 End Class

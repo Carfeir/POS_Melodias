@@ -481,6 +481,7 @@ Partial Class Clients
         Me.TableAdapterManager.colorTableAdapter = Nothing
         Me.TableAdapterManager.marcaTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.rolTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Clients

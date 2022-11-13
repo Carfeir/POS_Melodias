@@ -1,12 +1,10 @@
 ﻿Public Class AgregarUsuario
     Private Function Validar_campos() As Boolean 'Se validan que los campos no esten vacio'
-        If Trim(DNITextBox.Text) = "" Then
+        If Trim(CUITTextBox.Text) = "" Then
             Validar_campos = False
-        ElseIf Trim(NombresTextBox.Text) = "" Then
+        ElseIf Trim(NomYApeTextBox.Text) = "" Then
             Validar_campos = False
         ElseIf Trim(ContactoTextBox.Text) = "" Then
-            Validar_campos = False
-        ElseIf Trim(DireccionTextBox.Text) = "" Then
             Validar_campos = False
         ElseIf Trim(CorreoElectronicoTextBox.Text) = "" Then
             Validar_campos = False
@@ -25,10 +23,9 @@
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
 
-        DNITextBox.Clear()
-        NombresTextBox.Clear()
+        CUITTextBox.Clear()
+        NomYApeTextBox.Clear()
         ContactoTextBox.Clear()
-        DireccionTextBox.Clear()
         CorreoElectronicoTextBox.Clear()
         NUsuarioTextBox.Clear()
         ContraseñaTextBox.Clear()
@@ -40,7 +37,7 @@
         Me.Close()
     End Sub
 
-    Private Sub NombresTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NombresTextBox.KeyPress
+    Private Sub NombresTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NomYApeTextBox.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -53,7 +50,7 @@
     End Sub
 
 
-    Private Sub DNITextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles DNITextBox.KeyPress
+    Private Sub DNITextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CUITTextBox.KeyPress
         If Char.IsNumber(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -77,4 +74,9 @@
         End If
     End Sub
 
+    Private Sub AgregarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'MelodiasDataSet.rol' table. You can move, or remove it, as needed.
+        Me.RolTableAdapter.Fill(Me.MelodiasDataSet.rol)
+
+    End Sub
 End Class

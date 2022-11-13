@@ -20,4 +20,7 @@
         Back_up.Show()
     End Sub
 
+    Private Sub RolesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RolesToolStripMenuItem.Click
+        Rols.Show()
+    End Sub
 End Class

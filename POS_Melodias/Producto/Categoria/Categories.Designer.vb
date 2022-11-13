@@ -42,6 +42,8 @@ Partial Class Categories
         Me.Label5 = New System.Windows.Forms.Label()
         Me.CategoriaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -56,8 +58,6 @@ Partial Class Categories
         Me.CategoriaDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
         Me.CategoriaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.categoriaTableAdapter()
         Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.GroupBox1.SuspendLayout()
@@ -65,9 +65,9 @@ Partial Class Categories
         Me.GroupBox3.SuspendLayout()
         CType(Me.CategoriaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CategoriaBindingNavigator.SuspendLayout()
-        CType(Me.CategoriaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CategoriaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -88,7 +88,6 @@ Partial Class Categories
         'btnEliminar
         '
         Me.btnEliminar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnEliminar.Enabled = False
         Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(3, 86)
         Me.btnEliminar.Name = "btnEliminar"
@@ -214,7 +213,6 @@ Partial Class Categories
         'BtnAgregar
         '
         Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnAgregar.Enabled = False
         Me.BtnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
         Me.BtnAgregar.Location = New System.Drawing.Point(199, 21)
@@ -270,6 +268,16 @@ Partial Class Categories
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'CategoriaBindingSource
+        '
+        Me.CategoriaBindingSource.DataMember = "categoria"
+        Me.CategoriaBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'MelodiasDataSet
+        '
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -379,16 +387,6 @@ Partial Class Categories
         Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
-        'CategoriaBindingSource
-        '
-        Me.CategoriaBindingSource.DataMember = "categoria"
-        Me.CategoriaBindingSource.DataSource = Me.MelodiasDataSet
-        '
-        'MelodiasDataSet
-        '
-        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
-        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'CategoriaTableAdapter
         '
         Me.CategoriaTableAdapter.ClearBeforeFill = True
@@ -401,6 +399,7 @@ Partial Class Categories
         Me.TableAdapterManager.colorTableAdapter = Nothing
         Me.TableAdapterManager.marcaTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.rolTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Categories
@@ -430,9 +429,9 @@ Partial Class Categories
         CType(Me.CategoriaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CategoriaBindingNavigator.ResumeLayout(False)
         Me.CategoriaBindingNavigator.PerformLayout()
-        CType(Me.CategoriaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CategoriaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

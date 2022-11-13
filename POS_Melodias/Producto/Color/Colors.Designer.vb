@@ -106,7 +106,6 @@ Partial Class Colors
         'btnAgregar
         '
         Me.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnAgregar.Enabled = False
         Me.btnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnAgregar.Image = CType(resources.GetObject("btnAgregar.Image"), System.Drawing.Image)
         Me.btnAgregar.Location = New System.Drawing.Point(199, 21)
@@ -121,7 +120,6 @@ Partial Class Colors
         Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.NombreTextBox.Location = New System.Drawing.Point(71, 30)
         Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.ReadOnly = True
         Me.NombreTextBox.Size = New System.Drawing.Size(115, 21)
         Me.NombreTextBox.TabIndex = 54
         '
@@ -153,7 +151,6 @@ Partial Class Colors
         'btnEliminar
         '
         Me.btnEliminar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnEliminar.Enabled = False
         Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(3, 86)
         Me.btnEliminar.Name = "btnEliminar"
@@ -175,6 +172,7 @@ Partial Class Colors
         'txtCategoryName
         '
         Me.txtCategoryName.BackColor = System.Drawing.SystemColors.Control
+        Me.txtCategoryName.Enabled = False
         Me.txtCategoryName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtCategoryName.Location = New System.Drawing.Point(73, 49)
         Me.txtCategoryName.Name = "txtCategoryName"
@@ -185,6 +183,7 @@ Partial Class Colors
         'txtCategoryID
         '
         Me.txtCategoryID.BackColor = System.Drawing.SystemColors.Control
+        Me.txtCategoryID.Enabled = False
         Me.txtCategoryID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.txtCategoryID.Location = New System.Drawing.Point(73, 22)
         Me.txtCategoryID.Name = "txtCategoryID"
@@ -266,6 +265,7 @@ Partial Class Colors
         Me.TableAdapterManager.colorTableAdapter = Me.ColorTableAdapter
         Me.TableAdapterManager.marcaTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.rolTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'ColorBindingNavigator

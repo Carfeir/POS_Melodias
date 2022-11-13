@@ -28,6 +28,7 @@ Partial Class HomeSupervisor
         Me.Label13 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.VendorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.RecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,7 +45,7 @@ Partial Class HomeSupervisor
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RolesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
@@ -102,6 +103,16 @@ Partial Class HomeSupervisor
         Me.VendorToolStripMenuItem.Text = "Usuario"
         Me.VendorToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Miriam", 11.25!)
+        Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(66, 69)
+        Me.ToolStripMenuItem1.Text = "Backup"
+        Me.ToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 11.25!)
@@ -124,7 +135,7 @@ Partial Class HomeSupervisor
         '
         'RecordToolStripMenuItem
         '
-        Me.RecordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarUsuarioToolStripMenuItem})
+        Me.RecordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarUsuarioToolStripMenuItem, Me.RolesToolStripMenuItem})
         Me.RecordToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.RecordToolStripMenuItem.Name = "RecordToolStripMenuItem"
         Me.RecordToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
@@ -133,7 +144,7 @@ Partial Class HomeSupervisor
         'AgregarUsuarioToolStripMenuItem
         '
         Me.AgregarUsuarioToolStripMenuItem.Name = "AgregarUsuarioToolStripMenuItem"
-        Me.AgregarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.AgregarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AgregarUsuarioToolStripMenuItem.Text = "Agregar Usuario"
         '
         'ReportsToolStripMenuItem
@@ -213,15 +224,11 @@ Partial Class HomeSupervisor
         Me.ColumnHeader6.Text = "Rol"
         Me.ColumnHeader6.Width = 70
         '
-        'ToolStripMenuItem1
+        'RolesToolStripMenuItem
         '
-        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Miriam", 11.25!)
-        Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
-        Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(66, 69)
-        Me.ToolStripMenuItem1.Text = "Backup"
-        Me.ToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.RolesToolStripMenuItem.Name = "RolesToolStripMenuItem"
+        Me.RolesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RolesToolStripMenuItem.Text = "Roles"
         '
         'HomeSupervisor
         '
@@ -272,4 +279,5 @@ Partial Class HomeSupervisor
     Friend WithEvents ColumnHeader6 As ColumnHeader
     Friend WithEvents AgregarUsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents RolesToolStripMenuItem As ToolStripMenuItem
 End Class
