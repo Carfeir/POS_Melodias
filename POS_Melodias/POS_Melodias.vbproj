@@ -97,12 +97,6 @@
     <Compile Include="ChangePassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente\AgregarCliente.Designer.vb">
-      <DependentUpon>AgregarCliente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Cliente\AgregarCliente.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Cliente\Clients.Designer.vb">
       <DependentUpon>Clients.vb</DependentUpon>
     </Compile>
@@ -211,6 +205,12 @@
     <Compile Include="Producto\Products.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Venta\metodoPago\PaymentMethod.Designer.vb">
+      <DependentUpon>PaymentMethod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Venta\metodoPago\PaymentMethod.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Venta\ReporteVenta.Designer.vb">
       <DependentUpon>ReporteVenta.vb</DependentUpon>
     </Compile>
@@ -236,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cliente\AgregarCliente.resx">
-      <DependentUpon>AgregarCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\Clients.resx">
       <DependentUpon>Clients.vb</DependentUpon>
@@ -287,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Producto\Products.resx">
       <DependentUpon>Products.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\metodoPago\PaymentMethod.resx">
+      <DependentUpon>PaymentMethod.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\ReporteVenta.resx">
       <DependentUpon>ReporteVenta.vb</DependentUpon>

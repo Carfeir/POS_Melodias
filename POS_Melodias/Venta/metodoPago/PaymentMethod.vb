@@ -1,13 +1,13 @@
-﻿Public Class PaymentMethod
-    Private Sub MarcaBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MarcaBindingNavigatorSaveItem.Click
+﻿Public Class MetodoDePago
+    Private Sub MetodoPagoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MetodoPagoBindingNavigatorSaveItem.Click
         Me.Validate()
-        Me.MarcaBindingSource.EndEdit()
+        Me.MetodoPagoBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.MelodiasDataSet)
     End Sub
 
-    Private Sub Brands_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'MelodiasDataSet.marca' table. You can move, or remove it, as needed.
-        Me.MarcaTableAdapter.Fill(Me.MelodiasDataSet.marca)
+    Private Sub MetodoDePago_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'MelodiasDataSet.metodoPago' table. You can move, or remove it, as needed.
+        Me.MetodoPagoTableAdapter.Fill(Me.MelodiasDataSet.metodoPago)
     End Sub
 
     Private Sub NombreTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles AgregarNombreTextBox.KeyPress
@@ -32,23 +32,23 @@
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         If Not Validar_campo() Then
-            MessageBox.Show("Completar el campo Nombre para agregar la Marca", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            MessageBox.Show("Completar el campo Nombre para agregar el metodo de pago", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         Else
-            Me.MarcaTableAdapter.AgregarMarca(AgregarNombreTextBox.Text)
-            Me.MarcaTableAdapter.Fill(Me.MelodiasDataSet.marca)
+            Me.MetodoPagoTableAdapter.AgregarMetodoPago(AgregarNombreTextBox.Text)
+            Me.MetodoPagoTableAdapter.Fill(Me.MelodiasDataSet.metodoPago)
         End If
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Dim result As DialogResult = MessageBox.Show("Seguro que quieres eliminar esta Marca?", "Eliminar Marca", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        Dim result As DialogResult = MessageBox.Show("Seguro que quieres eliminar este metodo de pago?", "Eliminar MetodoPago", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If result = DialogResult.Yes Then
-            Me.MarcaTableAdapter.EliminarMarca(IdMarcaTextBox.Text)
-            Me.MarcaTableAdapter.Fill(Me.MelodiasDataSet.marca)
+            Me.MetodoPagoTableAdapter.EliminarMetodoPago(IdMetodoPagoTextBox.Text)
+            Me.MetodoPagoTableAdapter.Fill(Me.MelodiasDataSet.metodoPago)
         End If
     End Sub
 
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
-        Me.MarcaTableAdapter.Fill(Me.MelodiasDataSet.marca)
+        Me.MetodoPagoTableAdapter.Fill(Me.MelodiasDataSet.metodoPago)
     End Sub
 
     Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
@@ -60,6 +60,6 @@
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        Me.MarcaTableAdapter.BuscarMarca(MelodiasDataSet.marca, BuscadorTextBox.Text)
+        Me.MetodoPagoTableAdapter.BuscarMetodoPago(MelodiasDataSet.metodoPago, BuscadorTextBox.Text)
     End Sub
 End Class

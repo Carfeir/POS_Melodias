@@ -41,5 +41,7 @@ Public Class HomeAdmin
         Login.Show()
     End Sub
 
-
+    Private Sub MetodosDePagoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MetodosDePagoToolStripMenuItem.Click
+        PaymentMethod.Show()
+    End Sub
 End Class

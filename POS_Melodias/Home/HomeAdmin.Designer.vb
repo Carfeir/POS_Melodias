@@ -54,6 +54,7 @@ Partial Class HomeAdmin
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.MetodosDePagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -121,7 +122,7 @@ Partial Class HomeAdmin
         '
         'VentasToolStripMenuItem
         '
-        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeVentasToolStripMenuItem, Me.AgregarVentaToolStripMenuItem})
+        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeVentasToolStripMenuItem, Me.AgregarVentaToolStripMenuItem, Me.MetodosDePagoToolStripMenuItem})
         Me.VentasToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
         Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
@@ -294,6 +295,12 @@ Partial Class HomeAdmin
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingreso como: Administrador"
         '
+        'MetodosDePagoToolStripMenuItem
+        '
+        Me.MetodosDePagoToolStripMenuItem.Name = "MetodosDePagoToolStripMenuItem"
+        Me.MetodosDePagoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MetodosDePagoToolStripMenuItem.Text = "Metodos de Pago"
+        '
         'HomeAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
@@ -352,4 +359,5 @@ Partial Class HomeAdmin
     Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDeVentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregarVentaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MetodosDePagoToolStripMenuItem As ToolStripMenuItem
 End Class
