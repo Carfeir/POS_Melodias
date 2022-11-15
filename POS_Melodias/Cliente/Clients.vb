@@ -110,15 +110,6 @@
         End If
     End Function
 
-    Private Function Dni_unico() As Boolean
-        Dim dbDni = Me.ClienteTableAdapter.BuscarCliente(Me.MelodiasDataSet.cliente, AgregarDNITextBox.Text)
-        If Trim(AgregarDNITextBox.Text) = dbDni Then
-            Dni_unico = False
-        Else
-            Dni_unico = True
-        End If
-    End Function
-
     Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
         Me.Close()
     End Sub
@@ -126,11 +117,9 @@
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         If Not Validar_campos() Then
             MessageBox.Show("Completar todos los campos para agregar el cliente", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
-        ElseIf Dni_unico() Then
+        Else
             Me.ClienteTableAdapter.AgregarCliente(AgregarDNITextBox.Text, AgregarNomYapeTextBox.Text, AgregarCorreoElectronicoTextBox.Text, AgregarNroContactoTextBox.Text, AgregarDireccionTextBox.Text)
             Me.ClienteTableAdapter.Fill(Me.MelodiasDataSet.cliente)
-        Else
-            MessageBox.Show("Ya existe un usuario con el DNI ingresado. Por favor, ingrese uno distinto", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End If
     End Sub
 End Class

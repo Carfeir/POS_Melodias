@@ -639,6 +639,7 @@ Partial Class Products
         'IdProductoTextBox
         '
         Me.IdProductoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
+        Me.IdProductoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.IdProductoTextBox.Location = New System.Drawing.Point(89, 18)
         Me.IdProductoTextBox.Name = "IdProductoTextBox"
         Me.IdProductoTextBox.ReadOnly = True
@@ -648,6 +649,7 @@ Partial Class Products
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "nombre", True))
+        Me.NombreTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.NombreTextBox.Location = New System.Drawing.Point(279, 19)
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(106, 20)
@@ -761,6 +763,7 @@ Partial Class Products
         Me.AgregarCategoriaComboBox.Name = "AgregarCategoriaComboBox"
         Me.AgregarCategoriaComboBox.Size = New System.Drawing.Size(106, 20)
         Me.AgregarCategoriaComboBox.TabIndex = 201
+        Me.AgregarCategoriaComboBox.Text = "Seleccionar"
         Me.AgregarCategoriaComboBox.ValueMember = "IdCategoria"
         '
         'CategoriaBindingSource

@@ -35,7 +35,6 @@ Partial Class Users
         Me.Label2 = New System.Windows.Forms.Label()
         Me.NombreUsuarioTextBox = New System.Windows.Forms.TextBox()
         Me.btnModificar = New System.Windows.Forms.Button()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -59,16 +58,41 @@ Partial Class Users
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.AgregarTextBoxCUIT = New System.Windows.Forms.TextBox()
+        Me.AgregarTextBoxNomApe = New System.Windows.Forms.TextBox()
+        Me.AgregarTextBoxContacto = New System.Windows.Forms.TextBox()
+        Me.AgregarBtnLimpiar = New System.Windows.Forms.Button()
+        Me.AgregarTextBoxCorreo = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.AgregarTextBoxNomUsuario = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.AgregarComboBoxRol = New System.Windows.Forms.ComboBox()
+        Me.RolBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdRolComboBox = New System.Windows.Forms.ComboBox()
+        Me.RolBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AgregarTextBoxContra = New System.Windows.Forms.TextBox()
+        Me.TextBoxConfirmarContra = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.RolBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RolBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.IdRolComboBox)
         Me.GroupBox1.Controls.Add(Me.CUITTextBox)
         Me.GroupBox1.Controls.Add(Me.NomYApeTextBox)
         Me.GroupBox1.Controls.Add(Me.NroContactoTextBox)
@@ -77,16 +101,15 @@ Partial Class Users
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.NombreUsuarioTextBox)
         Me.GroupBox1.Controls.Add(Me.btnModificar)
-        Me.GroupBox1.Controls.Add(Me.NombreTextBox)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 310)
+        Me.GroupBox1.Location = New System.Drawing.Point(14, 294)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(762, 108)
+        Me.GroupBox1.Size = New System.Drawing.Size(764, 108)
         Me.GroupBox1.TabIndex = 157
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Usuario"
@@ -172,14 +195,6 @@ Partial Class Users
         Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
-        'NombreTextBox
-        '
-        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(465, 76)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(155, 21)
-        Me.NombreTextBox.TabIndex = 209
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -233,7 +248,7 @@ Partial Class Users
         'btnMostrar
         '
         Me.btnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.btnMostrar.Location = New System.Drawing.Point(592, 257)
+        Me.btnMostrar.Location = New System.Drawing.Point(594, 241)
         Me.btnMostrar.Name = "btnMostrar"
         Me.btnMostrar.Size = New System.Drawing.Size(169, 45)
         Me.btnMostrar.TabIndex = 159
@@ -243,7 +258,7 @@ Partial Class Users
         'btnVolver
         '
         Me.btnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.btnVolver.Location = New System.Drawing.Point(12, 652)
+        Me.btnVolver.Location = New System.Drawing.Point(14, 636)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(79, 26)
         Me.btnVolver.TabIndex = 162
@@ -256,7 +271,7 @@ Partial Class Users
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 248)
+        Me.GroupBox2.Location = New System.Drawing.Point(14, 232)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(563, 56)
         Me.GroupBox2.TabIndex = 196
@@ -325,7 +340,7 @@ Partial Class Users
         Me.UsuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.UsuarioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.UsuarioDataGridView.DataSource = Me.UsuarioBindingSource
-        Me.UsuarioDataGridView.Location = New System.Drawing.Point(12, 424)
+        Me.UsuarioDataGridView.Location = New System.Drawing.Point(14, 408)
         Me.UsuarioDataGridView.Name = "UsuarioDataGridView"
         Me.UsuarioDataGridView.Size = New System.Drawing.Size(762, 222)
         Me.UsuarioDataGridView.TabIndex = 196
@@ -371,7 +386,7 @@ Partial Class Users
         Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BtnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
         Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(372, 87)
+        Me.BtnAgregar.Location = New System.Drawing.Point(598, 111)
         Me.BtnAgregar.Name = "BtnAgregar"
         Me.BtnAgregar.Size = New System.Drawing.Size(113, 36)
         Me.BtnAgregar.TabIndex = 200
@@ -380,13 +395,222 @@ Partial Class Users
         Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnAgregar.UseVisualStyleBackColor = True
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.AgregarTextBoxContra)
+        Me.GroupBox3.Controls.Add(Me.TextBoxConfirmarContra)
+        Me.GroupBox3.Controls.Add(Me.Label12)
+        Me.GroupBox3.Controls.Add(Me.Label14)
+        Me.GroupBox3.Controls.Add(Me.AgregarComboBoxRol)
+        Me.GroupBox3.Controls.Add(Me.BtnAgregar)
+        Me.GroupBox3.Controls.Add(Me.AgregarTextBoxCUIT)
+        Me.GroupBox3.Controls.Add(Me.AgregarTextBoxNomApe)
+        Me.GroupBox3.Controls.Add(Me.AgregarTextBoxContacto)
+        Me.GroupBox3.Controls.Add(Me.AgregarBtnLimpiar)
+        Me.GroupBox3.Controls.Add(Me.AgregarTextBoxCorreo)
+        Me.GroupBox3.Controls.Add(Me.Label4)
+        Me.GroupBox3.Controls.Add(Me.AgregarTextBoxNomUsuario)
+        Me.GroupBox3.Controls.Add(Me.Label5)
+        Me.GroupBox3.Controls.Add(Me.Label6)
+        Me.GroupBox3.Controls.Add(Me.Label7)
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Controls.Add(Me.Label11)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(762, 191)
+        Me.GroupBox3.TabIndex = 201
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Agregar Nuevo Usuario"
+        '
+        'AgregarTextBoxCUIT
+        '
+        Me.AgregarTextBoxCUIT.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "CUIT", True))
+        Me.AgregarTextBoxCUIT.Location = New System.Drawing.Point(152, 24)
+        Me.AgregarTextBoxCUIT.Name = "AgregarTextBoxCUIT"
+        Me.AgregarTextBoxCUIT.Size = New System.Drawing.Size(157, 21)
+        Me.AgregarTextBoxCUIT.TabIndex = 197
+        '
+        'AgregarTextBoxNomApe
+        '
+        Me.AgregarTextBoxNomApe.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nomYApe", True))
+        Me.AgregarTextBoxNomApe.Location = New System.Drawing.Point(152, 50)
+        Me.AgregarTextBoxNomApe.Name = "AgregarTextBoxNomApe"
+        Me.AgregarTextBoxNomApe.Size = New System.Drawing.Size(157, 21)
+        Me.AgregarTextBoxNomApe.TabIndex = 199
+        '
+        'AgregarTextBoxContacto
+        '
+        Me.AgregarTextBoxContacto.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nroContacto", True))
+        Me.AgregarTextBoxContacto.Location = New System.Drawing.Point(152, 76)
+        Me.AgregarTextBoxContacto.Name = "AgregarTextBoxContacto"
+        Me.AgregarTextBoxContacto.Size = New System.Drawing.Size(157, 21)
+        Me.AgregarTextBoxContacto.TabIndex = 201
+        '
+        'AgregarBtnLimpiar
+        '
+        Me.AgregarBtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.AgregarBtnLimpiar.Location = New System.Drawing.Point(409, 116)
+        Me.AgregarBtnLimpiar.Name = "AgregarBtnLimpiar"
+        Me.AgregarBtnLimpiar.Size = New System.Drawing.Size(93, 24)
+        Me.AgregarBtnLimpiar.TabIndex = 3
+        Me.AgregarBtnLimpiar.Text = "Limpiar"
+        Me.AgregarBtnLimpiar.UseVisualStyleBackColor = True
+        '
+        'AgregarTextBoxCorreo
+        '
+        Me.AgregarTextBoxCorreo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "correoElectronico", True))
+        Me.AgregarTextBoxCorreo.Location = New System.Drawing.Point(152, 103)
+        Me.AgregarTextBoxCorreo.Name = "AgregarTextBoxCorreo"
+        Me.AgregarTextBoxCorreo.Size = New System.Drawing.Size(157, 21)
+        Me.AgregarTextBoxCorreo.TabIndex = 203
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label4.Location = New System.Drawing.Point(23, 132)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(118, 15)
+        Me.Label4.TabIndex = 185
+        Me.Label4.Text = "Nombre de Usuario:"
+        '
+        'AgregarTextBoxNomUsuario
+        '
+        Me.AgregarTextBoxNomUsuario.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nombreUsuario", True))
+        Me.AgregarTextBoxNomUsuario.Location = New System.Drawing.Point(152, 129)
+        Me.AgregarTextBoxNomUsuario.Name = "AgregarTextBoxNomUsuario"
+        Me.AgregarTextBoxNomUsuario.Size = New System.Drawing.Size(157, 21)
+        Me.AgregarTextBoxNomUsuario.TabIndex = 205
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label5.Location = New System.Drawing.Point(23, 53)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(110, 15)
+        Me.Label5.TabIndex = 183
+        Me.Label5.Text = "Nombre y Apellido:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label6.Location = New System.Drawing.Point(23, 158)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(29, 15)
+        Me.Label6.TabIndex = 174
+        Me.Label6.Text = "Rol:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label7.Location = New System.Drawing.Point(23, 27)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(37, 15)
+        Me.Label7.TabIndex = 167
+        Me.Label7.Text = "CUIT:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label8.Location = New System.Drawing.Point(23, 79)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(84, 15)
+        Me.Label8.TabIndex = 165
+        Me.Label8.Text = "Nro. Contacto:"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label11.Location = New System.Drawing.Point(23, 106)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(111, 15)
+        Me.Label11.TabIndex = 168
+        Me.Label11.Text = "Correo Electronico:"
+        '
+        'AgregarComboBoxRol
+        '
+        Me.AgregarComboBoxRol.DataSource = Me.RolBindingSource1
+        Me.AgregarComboBoxRol.DisplayMember = "nombre"
+        Me.AgregarComboBoxRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarComboBoxRol.FormattingEnabled = True
+        Me.AgregarComboBoxRol.Location = New System.Drawing.Point(152, 155)
+        Me.AgregarComboBoxRol.Name = "AgregarComboBoxRol"
+        Me.AgregarComboBoxRol.Size = New System.Drawing.Size(157, 23)
+        Me.AgregarComboBoxRol.TabIndex = 206
+        Me.AgregarComboBoxRol.ValueMember = "IdRol"
+        '
+        'RolBindingSource1
+        '
+        Me.RolBindingSource1.DataMember = "rol"
+        Me.RolBindingSource1.DataSource = Me.MelodiasDataSet
+        '
+        'IdRolComboBox
+        '
+        Me.IdRolComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "IdRol", True))
+        Me.IdRolComboBox.DataSource = Me.RolBindingSource2
+        Me.IdRolComboBox.DisplayMember = "nombre"
+        Me.IdRolComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.IdRolComboBox.FormattingEnabled = True
+        Me.IdRolComboBox.Location = New System.Drawing.Point(465, 76)
+        Me.IdRolComboBox.Name = "IdRolComboBox"
+        Me.IdRolComboBox.Size = New System.Drawing.Size(155, 23)
+        Me.IdRolComboBox.TabIndex = 206
+        Me.IdRolComboBox.ValueMember = "IdRol"
+        '
+        'RolBindingSource2
+        '
+        Me.RolBindingSource2.DataMember = "rol"
+        Me.RolBindingSource2.DataSource = Me.MelodiasDataSet
+        '
+        'AgregarTextBoxContra
+        '
+        Me.AgregarTextBoxContra.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "CUIT", True))
+        Me.AgregarTextBoxContra.Location = New System.Drawing.Point(556, 24)
+        Me.AgregarTextBoxContra.Name = "AgregarTextBoxContra"
+        Me.AgregarTextBoxContra.Size = New System.Drawing.Size(155, 21)
+        Me.AgregarTextBoxContra.TabIndex = 209
+        '
+        'TextBoxConfirmarContra
+        '
+        Me.TextBoxConfirmarContra.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "correoElectronico", True))
+        Me.TextBoxConfirmarContra.Location = New System.Drawing.Point(556, 56)
+        Me.TextBoxConfirmarContra.Name = "TextBoxConfirmarContra"
+        Me.TextBoxConfirmarContra.Size = New System.Drawing.Size(155, 21)
+        Me.TextBoxConfirmarContra.TabIndex = 210
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label12.Location = New System.Drawing.Point(406, 27)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(73, 15)
+        Me.Label12.TabIndex = 207
+        Me.Label12.Text = "Contraseña:"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label14.Location = New System.Drawing.Point(406, 59)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(130, 15)
+        Me.Label14.TabIndex = 208
+        Me.Label14.Text = "Confirmar Contraseña:"
+        '
         'Users
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(788, 687)
-        Me.Controls.Add(Me.BtnAgregar)
+        Me.ClientSize = New System.Drawing.Size(788, 669)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.UsuarioDataGridView)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnVolver)
@@ -405,6 +629,10 @@ Partial Class Users
         Me.GroupBox2.PerformLayout()
         CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuarioDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.RolBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RolBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -434,7 +662,6 @@ Partial Class Users
     Friend WithEvents NroContactoTextBox As TextBox
     Friend WithEvents CorreoElectronicoTextBox As TextBox
     Friend WithEvents NombreUsuarioTextBox As TextBox
-    Friend WithEvents NombreTextBox As TextBox
     Friend WithEvents UsuarioDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
@@ -444,4 +671,25 @@ Partial Class Users
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents BtnAgregar As Button
+    Friend WithEvents IdRolComboBox As ComboBox
+    Friend WithEvents RolBindingSource2 As BindingSource
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents AgregarComboBoxRol As ComboBox
+    Friend WithEvents RolBindingSource1 As BindingSource
+    Friend WithEvents AgregarTextBoxCUIT As TextBox
+    Friend WithEvents AgregarTextBoxNomApe As TextBox
+    Friend WithEvents AgregarTextBoxContacto As TextBox
+    Friend WithEvents AgregarBtnLimpiar As Button
+    Friend WithEvents AgregarTextBoxCorreo As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents AgregarTextBoxNomUsuario As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents AgregarTextBoxContra As TextBox
+    Friend WithEvents TextBoxConfirmarContra As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label14 As Label
 End Class

@@ -9136,7 +9136,7 @@ Namespace melodiasDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        usuario.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            usuario"
@@ -9164,25 +9164,31 @@ Namespace melodiasDataSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.VarChar, 11, Global.System.Data.ParameterDirection.Input, 0, 0, "CUIT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "DELETE FROM usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CUIT = @Original_CUIT)"
+            Me._commandCollection(3).CommandText = "UPDATE       usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                contraseña = @contraseña"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
+                "nombreUsuario = @Param1); "
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CUIT", Global.System.Data.SqlDbType.VarChar, 11, Global.System.Data.ParameterDirection.Input, 0, 0, "CUIT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@contraseña", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "contraseña", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "UPDATE       usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                CUIT = @CUIT, nomYApe = @nomYApe, nroCon"& _ 
-                "tacto = @nroContacto, correoElectronico = @correoElectronico, nombreUsuario = @n"& _ 
-                "ombreUsuario, contraseña = @contraseña, IdRol = @IdRol"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CUIT = @Or"& _ 
-                "iginal_CUIT); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CUIT, nomYApe, nroContacto, correoElectronico, nombreUsua"& _ 
-                "rio, contraseña, IdRol FROM usuario WHERE (CUIT = @CUIT)"
+            Me._commandCollection(4).CommandText = "DELETE FROM usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CUIT = @Original_CUIT)"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CUIT", Global.System.Data.SqlDbType.VarChar, 11, Global.System.Data.ParameterDirection.Input, 0, 0, "CUIT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nomYApe", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nomYApe", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nroContacto", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "nroContacto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correoElectronico", Global.System.Data.SqlDbType.VarChar, 40, Global.System.Data.ParameterDirection.Input, 0, 0, "correoElectronico", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreUsuario", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@contraseña", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "contraseña", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "IdRol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CUIT", Global.System.Data.SqlDbType.VarChar, 11, Global.System.Data.ParameterDirection.Input, 0, 0, "CUIT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "UPDATE       usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                CUIT = @CUIT, nomYApe = @nomYApe, nroCon"& _ 
+                "tacto = @nroContacto, correoElectronico = @correoElectronico, nombreUsuario = @n"& _ 
+                "ombreUsuario, IdRol = @IdRol"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CUIT = @Original_CUIT); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CUI"& _ 
+                "T, nomYApe, nroContacto, correoElectronico, nombreUsuario, IdRol FROM usuario WH"& _ 
+                "ERE (CUIT = @CUIT)"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CUIT", Global.System.Data.SqlDbType.VarChar, 11, Global.System.Data.ParameterDirection.Input, 0, 0, "CUIT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nomYApe", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nomYApe", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nroContacto", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "nroContacto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correoElectronico", Global.System.Data.SqlDbType.VarChar, 40, Global.System.Data.ParameterDirection.Input, 0, 0, "correoElectronico", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreUsuario", Global.System.Data.SqlDbType.VarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IdRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "IdRol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CUIT", Global.System.Data.SqlDbType.VarChar, 11, Global.System.Data.ParameterDirection.Input, 0, 0, "CUIT", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9563,9 +9569,41 @@ Namespace melodiasDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function CambiarContraseña(ByVal contraseña As String, ByVal Param1 As String) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
+            If (contraseña Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(0).Value = CType(contraseña,String)
+            End If
+            If (Param1 Is Nothing) Then
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(1).Value = CType(Param1,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
         Public Overloads Overridable Function EliminarUsuario(ByVal Original_CUIT As String) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
             If (Original_CUIT Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_CUIT")
             Else
@@ -9591,8 +9629,8 @@ Namespace melodiasDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function ModificarUsuario(ByVal CUIT As String, ByVal nomYApe As String, ByVal nroContacto As String, ByVal correoElectronico As String, ByVal nombreUsuario As String, ByVal contraseña As String, ByVal IdRol As Global.System.Nullable(Of Integer), ByVal Original_CUIT As String) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
+        Public Overloads Overridable Function ModificarUsuario(ByVal CUIT As String, ByVal nomYApe As String, ByVal nroContacto As String, ByVal correoElectronico As String, ByVal nombreUsuario As String, ByVal IdRol As Global.System.Nullable(Of Integer), ByVal Original_CUIT As String) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(5)
             If (CUIT Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("CUIT")
             Else
@@ -9618,20 +9656,15 @@ Namespace melodiasDataSetTableAdapters
             Else
                 command.Parameters(4).Value = CType(nombreUsuario,String)
             End If
-            If (contraseña Is Nothing) Then
-                command.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(5).Value = CType(contraseña,String)
-            End If
             If (IdRol.HasValue = true) Then
-                command.Parameters(6).Value = CType(IdRol.Value,Integer)
+                command.Parameters(5).Value = CType(IdRol.Value,Integer)
             Else
-                command.Parameters(6).Value = Global.System.DBNull.Value
+                command.Parameters(5).Value = Global.System.DBNull.Value
             End If
             If (Original_CUIT Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_CUIT")
             Else
-                command.Parameters(7).Value = CType(Original_CUIT,String)
+                command.Parameters(6).Value = CType(Original_CUIT,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
