@@ -1,4 +1,6 @@
-﻿Public Class Clients
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class Clients
     Private Sub NomYapeTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NomYapeTextBox.KeyPress, AgregarNomYapeTextBox.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
@@ -124,6 +126,7 @@
     End Sub
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
+
         If Not Validar_campos() Then
             MessageBox.Show("Completar todos los campos para agregar el cliente", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         ElseIf Dni_unico() Then
