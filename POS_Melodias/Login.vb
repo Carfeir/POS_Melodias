@@ -45,7 +45,7 @@ Public Class Login
     End Function
 
 
-    Private Sub Button1_Click(ByVal sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             If m.User(TNombre.Text) = True Then
                 Dim contra As String = m.contrasenia(TNombre.Text)
