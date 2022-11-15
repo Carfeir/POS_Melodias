@@ -72,4 +72,54 @@ Public Class Metodos
         End Try
         Return salida
     End Function
+
+    Public Function User(ByVal nombreUsuario As String) As Boolean
+        Dim resultado As Boolean = False
+        Try
+            enunciado = New SqlCommand("Select * from Usuarios where Usuario='" & nombreUsuario & "'", con)
+            dr = enunciado.ExecuteReader
+
+            If dr.Read Then
+                resultado = True
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Return resultado
+    End Function
+
+
+    Function contrasenia(ByVal nombreUsuario As String) As String
+        Dim resultado As String = ""
+        Try
+            enunciado = New SqlCommand("Select Contrasena from Usuarios where Usuario='" & nombreUsuario & "'", con)
+            dr = enunciado.ExecuteReader
+
+            If dr.Read Then
+                resultado = dr.Item("Contrasena")
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Return resultado
+    End Function
+
+    Function ConsultaTipoUsuario(ByVal nombreUsuario As String) As Integer
+        Dim resultado As Integer
+        Try
+            enunciado = New SqlCommand("Select IdTipoUsuario from Usuarios where Usuario='" & nombreUsuario & "'", con)
+            dr = enunciado.ExecuteReader
+
+            If dr.Read Then
+                resultado = CInt(dr.Item("IdTipoUsuario"))
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        Return resultado
+    End Function
+
 End Class
