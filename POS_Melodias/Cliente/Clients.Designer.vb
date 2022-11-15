@@ -38,6 +38,8 @@ Partial Class Clients
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DireccionTextBox = New System.Windows.Forms.TextBox()
+        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
         Me.CorreoElectronicoTextBox = New System.Windows.Forms.TextBox()
         Me.NroContactoTextBox = New System.Windows.Forms.TextBox()
         Me.NomYapeTextBox = New System.Windows.Forms.TextBox()
@@ -62,23 +64,21 @@ Partial Class Clients
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
         Me.ClienteDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.AgregarBtnLimpiar = New System.Windows.Forms.Button()
         Me.AgregarDNITextBox = New System.Windows.Forms.TextBox()
         Me.AgregarNomYapeTextBox = New System.Windows.Forms.TextBox()
         Me.AgregarNroContactoTextBox = New System.Windows.Forms.TextBox()
         Me.AgregarCorreoElectronicoTextBox = New System.Windows.Forms.TextBox()
         Me.AgregarDireccionTextBox = New System.Windows.Forms.TextBox()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
         Me.ClienteTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.clienteTableAdapter()
         Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         NroContactoLabel = New System.Windows.Forms.Label()
@@ -90,13 +90,13 @@ Partial Class Clients
         Label5 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClienteBindingNavigator.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DNILabel
@@ -201,7 +201,7 @@ Partial Class Clients
         '
         'btnEliminar
         '
-        Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(22, 146)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(93, 30)
@@ -211,7 +211,7 @@ Partial Class Clients
         '
         'btnModificar
         '
-        Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnModificar.Location = New System.Drawing.Point(228, 149)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(93, 30)
@@ -249,6 +249,16 @@ Partial Class Clients
         Me.DireccionTextBox.Name = "DireccionTextBox"
         Me.DireccionTextBox.Size = New System.Drawing.Size(162, 21)
         Me.DireccionTextBox.TabIndex = 15
+        '
+        'ClienteBindingSource
+        '
+        Me.ClienteBindingSource.DataMember = "cliente"
+        Me.ClienteBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'MelodiasDataSet
+        '
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CorreoElectronicoTextBox
         '
@@ -289,7 +299,7 @@ Partial Class Clients
         '
         'btnVolver
         '
-        Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnVolver.Location = New System.Drawing.Point(827, 428)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(79, 27)
@@ -329,8 +339,8 @@ Partial Class Clients
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem
@@ -413,7 +423,7 @@ Partial Class Clients
         '
         'btnMostrar
         '
-        Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnMostrar.Location = New System.Drawing.Point(599, 177)
         Me.btnMostrar.Name = "btnMostrar"
         Me.btnMostrar.Size = New System.Drawing.Size(260, 34)
@@ -436,7 +446,7 @@ Partial Class Clients
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnLimpiar.Location = New System.Drawing.Point(321, 17)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(79, 29)
@@ -446,7 +456,7 @@ Partial Class Clients
         '
         'btnBuscar
         '
-        Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBuscar.Location = New System.Drawing.Point(406, 15)
         Me.btnBuscar.Name = "btnBuscar"
@@ -474,6 +484,36 @@ Partial Class Clients
         Me.ClienteDataGridView.Size = New System.Drawing.Size(543, 179)
         Me.ClienteDataGridView.TabIndex = 165
         '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "DNI"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "DNI"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "nomYape"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "nomYape"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "nroContacto"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "nroContacto"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "correoElectronico"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "correoElectronico"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "direccion"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "direccion"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.BtnAgregar)
@@ -498,6 +538,20 @@ Partial Class Clients
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Agregar Nuevo Cliente"
         '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
+        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
+        Me.BtnAgregar.Location = New System.Drawing.Point(704, 22)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(113, 36)
+        Me.BtnAgregar.TabIndex = 199
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnAgregar.UseVisualStyleBackColor = True
+        '
         'AgregarBtnLimpiar
         '
         Me.AgregarBtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
@@ -513,6 +567,7 @@ Partial Class Clients
         Me.AgregarDNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.AgregarDNITextBox.Location = New System.Drawing.Point(145, 22)
         Me.AgregarDNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AgregarDNITextBox.MaxLength = 8
         Me.AgregarDNITextBox.Name = "AgregarDNITextBox"
         Me.AgregarDNITextBox.Size = New System.Drawing.Size(158, 21)
         Me.AgregarDNITextBox.TabIndex = 1
@@ -553,46 +608,6 @@ Partial Class Clients
         Me.AgregarDireccionTextBox.Size = New System.Drawing.Size(158, 21)
         Me.AgregarDireccionTextBox.TabIndex = 9
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "DNI"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "DNI"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "nomYape"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "nomYape"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "nroContacto"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "nroContacto"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "correoElectronico"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "correoElectronico"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "direccion"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "direccion"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'ClienteBindingSource
-        '
-        Me.ClienteBindingSource.DataMember = "cliente"
-        Me.ClienteBindingSource.DataSource = Me.MelodiasDataSet
-        '
-        'MelodiasDataSet
-        '
-        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
-        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ClienteTableAdapter
         '
         Me.ClienteTableAdapter.ClearBeforeFill = True
@@ -610,20 +625,6 @@ Partial Class Clients
         Me.TableAdapterManager.rolTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.usuarioTableAdapter = Nothing
-        '
-        'BtnAgregar
-        '
-        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(704, 22)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(113, 36)
-        Me.BtnAgregar.TabIndex = 199
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'Clients
         '
@@ -645,6 +646,8 @@ Partial Class Clients
         Me.Text = "Cliente"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClienteBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClienteBindingNavigator.ResumeLayout(False)
         Me.ClienteBindingNavigator.PerformLayout()
@@ -653,8 +656,6 @@ Partial Class Clients
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -75,7 +75,7 @@ Partial Class Rols
         Me.GroupBox2.Controls.Add(Me.btnLimpiar)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
-        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 127)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(501, 46)
@@ -85,7 +85,7 @@ Partial Class Rols
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnLimpiar.Location = New System.Drawing.Point(305, 16)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(79, 21)
@@ -95,7 +95,7 @@ Partial Class Rols
         '
         'btnBuscar
         '
-        Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBuscar.Location = New System.Drawing.Point(390, 13)
         Me.btnBuscar.Name = "btnBuscar"
@@ -117,7 +117,7 @@ Partial Class Rols
         Me.GroupBox3.Controls.Add(Me.btnAgregar)
         Me.GroupBox3.Controls.Add(Me.AgregarNombreTextBox)
         Me.GroupBox3.Controls.Add(Me.Label5)
-        Me.GroupBox3.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox3.Location = New System.Drawing.Point(234, 10)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(279, 69)
@@ -128,7 +128,7 @@ Partial Class Rols
         'btnAgregar
         '
         Me.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnAgregar.Image = CType(resources.GetObject("btnAgregar.Image"), System.Drawing.Image)
         Me.btnAgregar.Location = New System.Drawing.Point(199, 21)
         Me.btnAgregar.Name = "btnAgregar"
@@ -148,10 +148,10 @@ Partial Class Rols
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label5.Location = New System.Drawing.Point(18, 33)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(47, 12)
+        Me.Label5.Size = New System.Drawing.Size(55, 15)
         Me.Label5.TabIndex = 55
         Me.Label5.Text = "Nombre:"
         '
@@ -162,7 +162,7 @@ Partial Class Rols
         Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(198, 111)
@@ -173,11 +173,11 @@ Partial Class Rols
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RolBindingSource, "nombre", True))
-        Me.NombreTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.NombreTextBox.Location = New System.Drawing.Point(68, 51)
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.ReadOnly = True
-        Me.NombreTextBox.Size = New System.Drawing.Size(117, 20)
+        Me.NombreTextBox.Size = New System.Drawing.Size(117, 21)
         Me.NombreTextBox.TabIndex = 204
         '
         'RolBindingSource
@@ -193,17 +193,17 @@ Partial Class Rols
         'IdRolTextBox
         '
         Me.IdRolTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RolBindingSource, "IdRol", True))
-        Me.IdRolTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.IdRolTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.IdRolTextBox.Location = New System.Drawing.Point(68, 25)
         Me.IdRolTextBox.Name = "IdRolTextBox"
         Me.IdRolTextBox.ReadOnly = True
-        Me.IdRolTextBox.Size = New System.Drawing.Size(117, 20)
+        Me.IdRolTextBox.Size = New System.Drawing.Size(117, 21)
         Me.IdRolTextBox.TabIndex = 203
         '
         'btnEliminar
         '
         Me.btnEliminar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(3, 86)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(192, 22)
@@ -214,26 +214,26 @@ Partial Class Rols
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label2.Location = New System.Drawing.Point(11, 54)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 12)
+        Me.Label2.Size = New System.Drawing.Size(55, 15)
         Me.Label2.TabIndex = 56
         Me.Label2.Text = "Nombre:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.Label4.Location = New System.Drawing.Point(11, 28)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(19, 12)
+        Me.Label4.Size = New System.Drawing.Size(22, 15)
         Me.Label4.TabIndex = 55
         Me.Label4.Text = "ID:"
         '
         'btnVolver
         '
-        Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnVolver.Location = New System.Drawing.Point(12, 297)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(79, 28)
@@ -243,7 +243,7 @@ Partial Class Rols
         '
         'btnMostrar
         '
-        Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnMostrar.Location = New System.Drawing.Point(234, 92)
         Me.btnMostrar.Name = "btnMostrar"
         Me.btnMostrar.Size = New System.Drawing.Size(279, 29)
@@ -282,8 +282,8 @@ Partial Class Rols
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem
@@ -397,12 +397,18 @@ Partial Class Rols
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.categoriaTableAdapter = Nothing
         Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.colorTableAdapter = Nothing
+        Me.TableAdapterManager.marcaTableAdapter = Nothing
+        Me.TableAdapterManager.metodoPagoTableAdapter = Nothing
+        Me.TableAdapterManager.productoTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
         Me.TableAdapterManager.rolTableAdapter = Me.RolTableAdapter
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usuarioTableAdapter = Nothing
         '
         'Rols
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(533, 337)
@@ -413,8 +419,10 @@ Partial Class Rols
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.btnMostrar)
-        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Rols"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Rol"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
