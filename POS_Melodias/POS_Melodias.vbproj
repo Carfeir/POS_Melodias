@@ -73,12 +73,19 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackUp2.Designer.vb">
+      <DependentUpon>BackUp2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BackUp2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Back_up.Designer.vb">
       <DependentUpon>Back_up.vb</DependentUpon>
     </Compile>
     <Compile Include="Back_up.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Metodos.vb" />
     <Compile Include="Producto\Marca\Brands.Designer.vb">
       <DependentUpon>Brands.vb</DependentUpon>
     </Compile>
@@ -129,28 +136,10 @@
     <Compile Include="melodiasDataSet.vb">
       <DependentUpon>melodiasDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Producto\AgregarProducto.Designer.vb">
-      <DependentUpon>AgregarProducto.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Producto\AgregarProducto.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Proveedor\AgregarProveedor.Designer.vb">
-      <DependentUpon>AgregarProveedor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Proveedor\AgregarProveedor.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Proveedor\Suppliers.Designer.vb">
       <DependentUpon>Suppliers.vb</DependentUpon>
     </Compile>
     <Compile Include="Proveedor\Suppliers.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuario\AgregarUsuario.Designer.vb">
-      <DependentUpon>AgregarUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Usuario\AgregarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Usuario\Rol\Rols.Designer.vb">
@@ -225,6 +214,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BackUp2.resx">
+      <DependentUpon>BackUp2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Back_up.resx">
       <DependentUpon>Back_up.vb</DependentUpon>
     </EmbeddedResource>
@@ -249,17 +241,8 @@
     <EmbeddedResource Include="Home\HomeSupervisor.resx">
       <DependentUpon>HomeSupervisor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Producto\AgregarProducto.resx">
-      <DependentUpon>AgregarProducto.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Proveedor\AgregarProveedor.resx">
-      <DependentUpon>AgregarProveedor.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Proveedor\Suppliers.resx">
       <DependentUpon>Suppliers.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuario\AgregarUsuario.resx">
-      <DependentUpon>AgregarUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario\Rol\Rols.resx">
       <DependentUpon>Rols.vb</DependentUpon>

@@ -9,7 +9,7 @@ Public Class Back_up
     'Falta hacer referencia a la BD'
     'Busca y conecta con cualquier base de datos que se necesite'
     Private Sub btnConectar_Click(sender As Object, e As EventArgs) Handles btnConectar.Click
-        Dim conString As String = "server=localhost\SQLEXPRESS; uid=; pwd=; database=master"
+        Dim conString As String = "server=LAPTOP-CV4L1LJF\SQLEXPRESS; uid=LAPTOP-CV4L1LJF\Maurizio; pwd=; database=melodias"
 
         Dim conexion As New SqlClient.SqlConnection
         conexion.ConnectionString = conString
@@ -58,4 +58,5 @@ Public Class Back_up
             MessageBox.Show(Err.Description)
         End Try
     End Sub
+
 End Class

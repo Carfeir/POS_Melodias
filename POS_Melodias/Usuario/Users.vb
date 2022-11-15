@@ -3,10 +3,12 @@
         Me.Close()
     End Sub
 
-    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TSAgregarUsuario.Click
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs)
         AgregarUsuario.Show()
 
     End Sub
+
+
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 

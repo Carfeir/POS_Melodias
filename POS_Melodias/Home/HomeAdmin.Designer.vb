@@ -22,6 +22,7 @@ Partial Class HomeAdmin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeAdmin))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.RegistrationToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -32,6 +33,7 @@ Partial Class HomeAdmin
         Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MetodosDePagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,22 +44,42 @@ Partial Class HomeAdmin
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrationToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ProductID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MetodosDePagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductoTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.productoTableAdapter()
+        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
+        Me.ProductoBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.ProductoBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.ProductoDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductoBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ProductoBindingNavigator.SuspendLayout()
+        CType(Me.ProductoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -131,14 +153,20 @@ Partial Class HomeAdmin
         'ReporteDeVentasToolStripMenuItem
         '
         Me.ReporteDeVentasToolStripMenuItem.Name = "ReporteDeVentasToolStripMenuItem"
-        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.ReporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas"
         '
         'AgregarVentaToolStripMenuItem
         '
         Me.AgregarVentaToolStripMenuItem.Name = "AgregarVentaToolStripMenuItem"
-        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.AgregarVentaToolStripMenuItem.Text = "Agregar Venta"
+        '
+        'MetodosDePagoToolStripMenuItem
+        '
+        Me.MetodosDePagoToolStripMenuItem.Name = "MetodosDePagoToolStripMenuItem"
+        Me.MetodosDePagoToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.MetodosDePagoToolStripMenuItem.Text = "Metodos de Pago"
         '
         'InventoryToolStripMenuItem
         '
@@ -211,77 +239,13 @@ Partial Class HomeAdmin
         Me.Label13.TabIndex = 99
         Me.Label13.Text = "Stock"
         '
-        'ListView1
-        '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ProductID, Me.ColumnHeader8, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
-        Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.GridLines = True
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 133)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(764, 208)
-        Me.ListView1.TabIndex = 144
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Width = 0
-        '
-        'ProductID
-        '
-        Me.ProductID.Text = "ID Producto"
-        Me.ProductID.Width = 65
-        '
-        'ColumnHeader8
-        '
-        Me.ColumnHeader8.Text = "Proveedor"
-        Me.ColumnHeader8.Width = 82
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Nombre"
-        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 176
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Categoria"
-        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 90
-        '
-        'ColumnHeader7
-        '
-        Me.ColumnHeader7.Text = "Precio U"
-        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader7.Width = 80
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Color"
-        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader4.Width = 85
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "Marca"
-        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader5.Width = 90
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "Cantidad"
-        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader6.Width = 92
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Font = New System.Drawing.Font("Miriam", 8.25!)
-        Me.Panel1.Location = New System.Drawing.Point(0, 355)
+        Me.Panel1.Location = New System.Drawing.Point(0, 433)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(800, 26)
         Me.Panel1.TabIndex = 145
@@ -295,20 +259,215 @@ Partial Class HomeAdmin
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Ingreso como: Administrador"
         '
-        'MetodosDePagoToolStripMenuItem
+        'MelodiasDataSet
         '
-        Me.MetodosDePagoToolStripMenuItem.Name = "MetodosDePagoToolStripMenuItem"
-        Me.MetodosDePagoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.MetodosDePagoToolStripMenuItem.Text = "Metodos de Pago"
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProductoBindingSource
+        '
+        Me.ProductoBindingSource.DataMember = "producto"
+        Me.ProductoBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'ProductoTableAdapter
+        '
+        Me.ProductoTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.categoriaTableAdapter = Nothing
+        Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.colorTableAdapter = Nothing
+        Me.TableAdapterManager.marcaTableAdapter = Nothing
+        Me.TableAdapterManager.metodoPagoTableAdapter = Nothing
+        Me.TableAdapterManager.productoTableAdapter = Me.ProductoTableAdapter
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.rolTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usuarioTableAdapter = Nothing
+        '
+        'ProductoBindingNavigator
+        '
+        Me.ProductoBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.ProductoBindingNavigator.BindingSource = Me.ProductoBindingSource
+        Me.ProductoBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.ProductoBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.ProductoBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ProductoBindingNavigatorSaveItem})
+        Me.ProductoBindingNavigator.Location = New System.Drawing.Point(0, 97)
+        Me.ProductoBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.ProductoBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.ProductoBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.ProductoBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.ProductoBindingNavigator.Name = "ProductoBindingNavigator"
+        Me.ProductoBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.ProductoBindingNavigator.Size = New System.Drawing.Size(800, 25)
+        Me.ProductoBindingNavigator.TabIndex = 146
+        Me.ProductoBindingNavigator.Text = "BindingNavigator1"
+        Me.ProductoBindingNavigator.Visible = False
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
+        'ProductoBindingNavigatorSaveItem
+        '
+        Me.ProductoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ProductoBindingNavigatorSaveItem.Image = CType(resources.GetObject("ProductoBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.ProductoBindingNavigatorSaveItem.Name = "ProductoBindingNavigatorSaveItem"
+        Me.ProductoBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.ProductoBindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'ProductoDataGridView
+        '
+        Me.ProductoDataGridView.AutoGenerateColumns = False
+        Me.ProductoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ProductoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
+        Me.ProductoDataGridView.DataSource = Me.ProductoBindingSource
+        Me.ProductoDataGridView.Location = New System.Drawing.Point(12, 136)
+        Me.ProductoDataGridView.Name = "ProductoDataGridView"
+        Me.ProductoDataGridView.Size = New System.Drawing.Size(776, 277)
+        Me.ProductoDataGridView.TabIndex = 146
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "idProducto"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "idProducto"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "idProveedor"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "idProveedor"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "nombre"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "idCategoria"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "idCategoria"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "idMarca"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "idMarca"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "idColor"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "idColor"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "cantidad"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "cantidad"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "precioU"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "precioU"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         '
         'HomeAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(800, 381)
+        Me.ClientSize = New System.Drawing.Size(800, 459)
+        Me.Controls.Add(Me.ProductoDataGridView)
+        Me.Controls.Add(Me.ProductoBindingNavigator)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.MenuStrip2)
@@ -323,6 +482,12 @@ Partial Class HomeAdmin
         Me.MenuStrip2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductoBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ProductoBindingNavigator.ResumeLayout(False)
+        Me.ProductoBindingNavigator.PerformLayout()
+        CType(Me.ProductoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -340,24 +505,40 @@ Partial Class HomeAdmin
     Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrationToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents Label13 As Label
-    Friend WithEvents ListView1 As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ProductID As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader7 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
-    Friend WithEvents ColumnHeader5 As ColumnHeader
-    Friend WithEvents ColumnHeader6 As ColumnHeader
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents ColorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MarcaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ColumnHeader8 As ColumnHeader
     Friend WithEvents ProductoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregarProveedorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDeVentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AgregarVentaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MetodosDePagoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MelodiasDataSet As melodiasDataSet
+    Friend WithEvents ProductoBindingSource As BindingSource
+    Friend WithEvents ProductoTableAdapter As melodiasDataSetTableAdapters.productoTableAdapter
+    Friend WithEvents TableAdapterManager As melodiasDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents ProductoBindingNavigator As BindingNavigator
+    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
+    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
+    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
+    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
+    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
+    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents ProductoBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents ProductoDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
 End Class

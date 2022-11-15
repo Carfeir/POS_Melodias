@@ -24,7 +24,6 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TContraseña = New System.Windows.Forms.TextBox()
@@ -32,13 +31,14 @@ Partial Class Login
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.TContraseña)
@@ -50,17 +50,6 @@ Partial Class Login
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(334, 390)
         Me.Panel1.TabIndex = 8
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Miriam", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(137, 55)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 20)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Ingreso"
         '
         'Button2
         '
@@ -132,6 +121,16 @@ Partial Class Login
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Miriam", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(123, 46)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(81, 21)
+        Me.Label4.TabIndex = 168
+        Me.Label4.Text = "Ingreso"
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -153,7 +152,6 @@ Partial Class Login
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents TContraseña As TextBox
@@ -161,4 +159,5 @@ Partial Class Login
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label4 As Label
 End Class

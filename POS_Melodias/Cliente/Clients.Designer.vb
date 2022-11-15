@@ -38,8 +38,6 @@ Partial Class Clients
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DireccionTextBox = New System.Windows.Forms.TextBox()
-        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
         Me.CorreoElectronicoTextBox = New System.Windows.Forms.TextBox()
         Me.NroContactoTextBox = New System.Windows.Forms.TextBox()
         Me.NomYapeTextBox = New System.Windows.Forms.TextBox()
@@ -63,16 +61,7 @@ Partial Class Clients
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.BuscadorTextBox = New System.Windows.Forms.TextBox()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.TSAgregarCliente = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClienteTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.clienteTableAdapter()
-        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.ClienteDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.AgregarBtnLimpiar = New System.Windows.Forms.Button()
         Me.AgregarDNITextBox = New System.Windows.Forms.TextBox()
@@ -80,6 +69,16 @@ Partial Class Clients
         Me.AgregarNroContactoTextBox = New System.Windows.Forms.TextBox()
         Me.AgregarCorreoElectronicoTextBox = New System.Windows.Forms.TextBox()
         Me.AgregarDireccionTextBox = New System.Windows.Forms.TextBox()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.ClienteTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.clienteTableAdapter()
+        Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         DNILabel = New System.Windows.Forms.Label()
         NombresLabel = New System.Windows.Forms.Label()
         NroContactoLabel = New System.Windows.Forms.Label()
@@ -91,14 +90,13 @@ Partial Class Clients
         Label5 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClienteBindingNavigator.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DNILabel
@@ -125,7 +123,7 @@ Partial Class Clients
         '
         NroContactoLabel.AutoSize = True
         NroContactoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        NroContactoLabel.Location = New System.Drawing.Point(20, 70)
+        NroContactoLabel.Location = New System.Drawing.Point(20, 71)
         NroContactoLabel.Name = "NroContactoLabel"
         NroContactoLabel.Size = New System.Drawing.Size(84, 15)
         NroContactoLabel.TabIndex = 6
@@ -135,7 +133,7 @@ Partial Class Clients
         '
         CorreoElectronicoLabel.AutoSize = True
         CorreoElectronicoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 93)
+        CorreoElectronicoLabel.Location = New System.Drawing.Point(20, 95)
         CorreoElectronicoLabel.Name = "CorreoElectronicoLabel"
         CorreoElectronicoLabel.Size = New System.Drawing.Size(111, 15)
         CorreoElectronicoLabel.TabIndex = 8
@@ -145,7 +143,7 @@ Partial Class Clients
         '
         Label1.AutoSize = True
         Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Label1.Location = New System.Drawing.Point(20, 116)
+        Label1.Location = New System.Drawing.Point(20, 119)
         Label1.Name = "Label1"
         Label1.Size = New System.Drawing.Size(62, 15)
         Label1.TabIndex = 10
@@ -155,7 +153,7 @@ Partial Class Clients
         '
         Label2.AutoSize = True
         Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Label2.Location = New System.Drawing.Point(318, 48)
+        Label2.Location = New System.Drawing.Point(318, 50)
         Label2.Name = "Label2"
         Label2.Size = New System.Drawing.Size(62, 15)
         Label2.TabIndex = 10
@@ -175,7 +173,7 @@ Partial Class Clients
         '
         Label4.AutoSize = True
         Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Label4.Location = New System.Drawing.Point(28, 48)
+        Label4.Location = New System.Drawing.Point(28, 50)
         Label4.Name = "Label4"
         Label4.Size = New System.Drawing.Size(110, 15)
         Label4.TabIndex = 2
@@ -185,7 +183,7 @@ Partial Class Clients
         '
         Label5.AutoSize = True
         Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Label5.Location = New System.Drawing.Point(28, 71)
+        Label5.Location = New System.Drawing.Point(28, 75)
         Label5.Name = "Label5"
         Label5.Size = New System.Drawing.Size(84, 15)
         Label5.TabIndex = 6
@@ -247,26 +245,16 @@ Partial Class Clients
         '
         Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "direccion", True))
         Me.DireccionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.DireccionTextBox.Location = New System.Drawing.Point(159, 113)
+        Me.DireccionTextBox.Location = New System.Drawing.Point(159, 116)
         Me.DireccionTextBox.Name = "DireccionTextBox"
         Me.DireccionTextBox.Size = New System.Drawing.Size(162, 21)
         Me.DireccionTextBox.TabIndex = 15
-        '
-        'ClienteBindingSource
-        '
-        Me.ClienteBindingSource.DataMember = "cliente"
-        Me.ClienteBindingSource.DataSource = Me.MelodiasDataSet
-        '
-        'MelodiasDataSet
-        '
-        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
-        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CorreoElectronicoTextBox
         '
         Me.CorreoElectronicoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "correoElectronico", True))
         Me.CorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(159, 90)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(159, 92)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
         Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(162, 21)
         Me.CorreoElectronicoTextBox.TabIndex = 14
@@ -275,7 +263,7 @@ Partial Class Clients
         '
         Me.NroContactoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nroContacto", True))
         Me.NroContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.NroContactoTextBox.Location = New System.Drawing.Point(159, 67)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(159, 68)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
         Me.NroContactoTextBox.Size = New System.Drawing.Size(162, 21)
         Me.NroContactoTextBox.TabIndex = 13
@@ -426,9 +414,9 @@ Partial Class Clients
         'btnMostrar
         '
         Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
-        Me.btnMostrar.Location = New System.Drawing.Point(579, 179)
+        Me.btnMostrar.Location = New System.Drawing.Point(599, 177)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(327, 30)
+        Me.btnMostrar.Size = New System.Drawing.Size(260, 34)
         Me.btnMostrar.TabIndex = 4
         Me.btnMostrar.Text = "&Mostrar Clientes"
         Me.btnMostrar.UseVisualStyleBackColor = True
@@ -475,42 +463,6 @@ Partial Class Clients
         Me.BuscadorTextBox.Size = New System.Drawing.Size(269, 21)
         Me.BuscadorTextBox.TabIndex = 53
         '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarCliente})
-        Me.MenuStrip1.Location = New System.Drawing.Point(684, 33)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(175, 78)
-        Me.MenuStrip1.TabIndex = 165
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'TSAgregarCliente
-        '
-        Me.TSAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.TSAgregarCliente.Image = CType(resources.GetObject("TSAgregarCliente.Image"), System.Drawing.Image)
-        Me.TSAgregarCliente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.TSAgregarCliente.Name = "TSAgregarCliente"
-        Me.TSAgregarCliente.Size = New System.Drawing.Size(167, 74)
-        Me.TSAgregarCliente.Text = "&Agregar Nuevo Cliente"
-        Me.TSAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'ClienteTableAdapter
-        '
-        Me.ClienteTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.categoriaTableAdapter = Nothing
-        Me.TableAdapterManager.clienteTableAdapter = Me.ClienteTableAdapter
-        Me.TableAdapterManager.colorTableAdapter = Nothing
-        Me.TableAdapterManager.marcaTableAdapter = Nothing
-        Me.TableAdapterManager.metodoPagoTableAdapter = Nothing
-        Me.TableAdapterManager.rolTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'ClienteDataGridView
         '
         Me.ClienteDataGridView.AutoGenerateColumns = False
@@ -521,6 +473,85 @@ Partial Class Clients
         Me.ClienteDataGridView.Name = "ClienteDataGridView"
         Me.ClienteDataGridView.Size = New System.Drawing.Size(543, 179)
         Me.ClienteDataGridView.TabIndex = 165
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.BtnAgregar)
+        Me.GroupBox3.Controls.Add(Label2)
+        Me.GroupBox3.Controls.Add(Me.AgregarBtnLimpiar)
+        Me.GroupBox3.Controls.Add(Label3)
+        Me.GroupBox3.Controls.Add(Me.AgregarDNITextBox)
+        Me.GroupBox3.Controls.Add(Label4)
+        Me.GroupBox3.Controls.Add(Me.AgregarNomYapeTextBox)
+        Me.GroupBox3.Controls.Add(Me.AgregarNroContactoTextBox)
+        Me.GroupBox3.Controls.Add(Label5)
+        Me.GroupBox3.Controls.Add(Me.AgregarCorreoElectronicoTextBox)
+        Me.GroupBox3.Controls.Add(Label6)
+        Me.GroupBox3.Controls.Add(Me.AgregarDireccionTextBox)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 13)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox3.Size = New System.Drawing.Size(894, 117)
+        Me.GroupBox3.TabIndex = 166
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Agregar Nuevo Cliente"
+        '
+        'AgregarBtnLimpiar
+        '
+        Me.AgregarBtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarBtnLimpiar.Location = New System.Drawing.Point(718, 75)
+        Me.AgregarBtnLimpiar.Name = "AgregarBtnLimpiar"
+        Me.AgregarBtnLimpiar.Size = New System.Drawing.Size(88, 24)
+        Me.AgregarBtnLimpiar.TabIndex = 1
+        Me.AgregarBtnLimpiar.Text = "Limpiar"
+        Me.AgregarBtnLimpiar.UseVisualStyleBackColor = True
+        '
+        'AgregarDNITextBox
+        '
+        Me.AgregarDNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarDNITextBox.Location = New System.Drawing.Point(145, 22)
+        Me.AgregarDNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AgregarDNITextBox.Name = "AgregarDNITextBox"
+        Me.AgregarDNITextBox.Size = New System.Drawing.Size(158, 21)
+        Me.AgregarDNITextBox.TabIndex = 1
+        '
+        'AgregarNomYapeTextBox
+        '
+        Me.AgregarNomYapeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarNomYapeTextBox.Location = New System.Drawing.Point(145, 47)
+        Me.AgregarNomYapeTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AgregarNomYapeTextBox.Name = "AgregarNomYapeTextBox"
+        Me.AgregarNomYapeTextBox.Size = New System.Drawing.Size(158, 21)
+        Me.AgregarNomYapeTextBox.TabIndex = 3
+        '
+        'AgregarNroContactoTextBox
+        '
+        Me.AgregarNroContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarNroContactoTextBox.Location = New System.Drawing.Point(145, 72)
+        Me.AgregarNroContactoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AgregarNroContactoTextBox.Name = "AgregarNroContactoTextBox"
+        Me.AgregarNroContactoTextBox.Size = New System.Drawing.Size(158, 21)
+        Me.AgregarNroContactoTextBox.TabIndex = 5
+        '
+        'AgregarCorreoElectronicoTextBox
+        '
+        Me.AgregarCorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarCorreoElectronicoTextBox.Location = New System.Drawing.Point(435, 22)
+        Me.AgregarCorreoElectronicoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AgregarCorreoElectronicoTextBox.Name = "AgregarCorreoElectronicoTextBox"
+        Me.AgregarCorreoElectronicoTextBox.Size = New System.Drawing.Size(158, 21)
+        Me.AgregarCorreoElectronicoTextBox.TabIndex = 7
+        '
+        'AgregarDireccionTextBox
+        '
+        Me.AgregarDireccionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarDireccionTextBox.Location = New System.Drawing.Point(435, 47)
+        Me.AgregarDireccionTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AgregarDireccionTextBox.Name = "AgregarDireccionTextBox"
+        Me.AgregarDireccionTextBox.Size = New System.Drawing.Size(158, 21)
+        Me.AgregarDireccionTextBox.TabIndex = 9
         '
         'DataGridViewTextBoxColumn1
         '
@@ -552,83 +583,47 @@ Partial Class Clients
         Me.DataGridViewTextBoxColumn7.HeaderText = "direccion"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
-        'GroupBox3
+        'ClienteBindingSource
         '
-        Me.GroupBox3.Controls.Add(Label2)
-        Me.GroupBox3.Controls.Add(Me.AgregarBtnLimpiar)
-        Me.GroupBox3.Controls.Add(Label3)
-        Me.GroupBox3.Controls.Add(Me.AgregarDNITextBox)
-        Me.GroupBox3.Controls.Add(Label4)
-        Me.GroupBox3.Controls.Add(Me.AgregarNomYapeTextBox)
-        Me.GroupBox3.Controls.Add(Me.AgregarNroContactoTextBox)
-        Me.GroupBox3.Controls.Add(Label5)
-        Me.GroupBox3.Controls.Add(Me.AgregarCorreoElectronicoTextBox)
-        Me.GroupBox3.Controls.Add(Label6)
-        Me.GroupBox3.Controls.Add(Me.AgregarDireccionTextBox)
-        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 13)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox3.Size = New System.Drawing.Size(610, 122)
-        Me.GroupBox3.TabIndex = 166
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Agregar Nuevo Cliente"
+        Me.ClienteBindingSource.DataMember = "cliente"
+        Me.ClienteBindingSource.DataSource = Me.MelodiasDataSet
         '
-        'AgregarBtnLimpiar
+        'MelodiasDataSet
         '
-        Me.AgregarBtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.AgregarBtnLimpiar.Location = New System.Drawing.Point(485, 85)
-        Me.AgregarBtnLimpiar.Name = "AgregarBtnLimpiar"
-        Me.AgregarBtnLimpiar.Size = New System.Drawing.Size(108, 24)
-        Me.AgregarBtnLimpiar.TabIndex = 1
-        Me.AgregarBtnLimpiar.Text = "Limpiar"
-        Me.AgregarBtnLimpiar.UseVisualStyleBackColor = True
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'AgregarDNITextBox
+        'ClienteTableAdapter
         '
-        Me.AgregarDNITextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.AgregarDNITextBox.Location = New System.Drawing.Point(145, 22)
-        Me.AgregarDNITextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.AgregarDNITextBox.Name = "AgregarDNITextBox"
-        Me.AgregarDNITextBox.Size = New System.Drawing.Size(158, 21)
-        Me.AgregarDNITextBox.TabIndex = 1
+        Me.ClienteTableAdapter.ClearBeforeFill = True
         '
-        'AgregarNomYapeTextBox
+        'TableAdapterManager
         '
-        Me.AgregarNomYapeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.AgregarNomYapeTextBox.Location = New System.Drawing.Point(145, 45)
-        Me.AgregarNomYapeTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.AgregarNomYapeTextBox.Name = "AgregarNomYapeTextBox"
-        Me.AgregarNomYapeTextBox.Size = New System.Drawing.Size(158, 21)
-        Me.AgregarNomYapeTextBox.TabIndex = 3
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.categoriaTableAdapter = Nothing
+        Me.TableAdapterManager.clienteTableAdapter = Me.ClienteTableAdapter
+        Me.TableAdapterManager.colorTableAdapter = Nothing
+        Me.TableAdapterManager.marcaTableAdapter = Nothing
+        Me.TableAdapterManager.metodoPagoTableAdapter = Nothing
+        Me.TableAdapterManager.productoTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.rolTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usuarioTableAdapter = Nothing
         '
-        'AgregarNroContactoTextBox
+        'BtnAgregar
         '
-        Me.AgregarNroContactoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.AgregarNroContactoTextBox.Location = New System.Drawing.Point(145, 68)
-        Me.AgregarNroContactoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.AgregarNroContactoTextBox.Name = "AgregarNroContactoTextBox"
-        Me.AgregarNroContactoTextBox.Size = New System.Drawing.Size(158, 21)
-        Me.AgregarNroContactoTextBox.TabIndex = 5
-        '
-        'AgregarCorreoElectronicoTextBox
-        '
-        Me.AgregarCorreoElectronicoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.AgregarCorreoElectronicoTextBox.Location = New System.Drawing.Point(435, 22)
-        Me.AgregarCorreoElectronicoTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.AgregarCorreoElectronicoTextBox.Name = "AgregarCorreoElectronicoTextBox"
-        Me.AgregarCorreoElectronicoTextBox.Size = New System.Drawing.Size(158, 21)
-        Me.AgregarCorreoElectronicoTextBox.TabIndex = 7
-        '
-        'AgregarDireccionTextBox
-        '
-        Me.AgregarDireccionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.AgregarDireccionTextBox.Location = New System.Drawing.Point(435, 45)
-        Me.AgregarDireccionTextBox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.AgregarDireccionTextBox.Name = "AgregarDireccionTextBox"
-        Me.AgregarDireccionTextBox.Size = New System.Drawing.Size(158, 21)
-        Me.AgregarDireccionTextBox.TabIndex = 9
+        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
+        Me.BtnAgregar.Location = New System.Drawing.Point(704, 22)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(113, 36)
+        Me.BtnAgregar.TabIndex = 199
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'Clients
         '
@@ -638,7 +633,6 @@ Partial Class Clients
         Me.ClientSize = New System.Drawing.Size(920, 466)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.ClienteDataGridView)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.btnVolver)
@@ -651,18 +645,16 @@ Partial Class Clients
         Me.Text = "Cliente"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClienteBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClienteBindingNavigator.ResumeLayout(False)
         Me.ClienteBindingNavigator.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -695,8 +687,6 @@ Partial Class Clients
     Friend WithEvents BuscadorTextBox As TextBox
     Private WithEvents btnLimpiar As Button
     Friend WithEvents btnBuscar As Button
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents TSAgregarCliente As ToolStripMenuItem
     Friend WithEvents DireccionTextBox As TextBox
     Friend WithEvents CorreoElectronicoTextBox As TextBox
     Friend WithEvents NroContactoTextBox As TextBox
@@ -715,4 +705,5 @@ Partial Class Clients
     Friend WithEvents AgregarCorreoElectronicoTextBox As TextBox
     Friend WithEvents AgregarDireccionTextBox As TextBox
     Friend WithEvents AgregarBtnLimpiar As Button
+    Friend WithEvents BtnAgregar As Button
 End Class

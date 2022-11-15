@@ -1,4 +1,4 @@
-﻿Public Class PaymentMethod
+﻿Public Class Brands
     Private Sub MarcaBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MarcaBindingNavigatorSaveItem.Click
         Me.Validate()
         Me.MarcaBindingSource.EndEdit()

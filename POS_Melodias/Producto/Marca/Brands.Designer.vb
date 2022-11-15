@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class PaymentMethod
+Partial Class Brands
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class PaymentMethod
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PaymentMethod))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Brands))
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -31,6 +31,10 @@ Partial Class PaymentMethod
         Me.AgregarNombreTextBox = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.MarcaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.IdMarcaTextBox = New System.Windows.Forms.TextBox()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -51,8 +55,6 @@ Partial Class PaymentMethod
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.MarcaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.MarcaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
         Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager = New POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager()
         Me.MarcaTableAdapter = New POS_Melodias.melodiasDataSetTableAdapters.marcaTableAdapter()
@@ -60,15 +62,13 @@ Partial Class PaymentMethod
         Me.MarcaDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdMarcaTextBox = New System.Windows.Forms.TextBox()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.MarcaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.MarcaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MarcaBindingNavigator.SuspendLayout()
-        CType(Me.MarcaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MarcaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -150,6 +150,36 @@ Partial Class PaymentMethod
         Me.GroupBox1.TabIndex = 191
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Marca"
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MarcaBindingSource, "nombre", True))
+        Me.NombreTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombreTextBox.Location = New System.Drawing.Point(68, 52)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.ReadOnly = True
+        Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NombreTextBox.TabIndex = 165
+        '
+        'MarcaBindingSource
+        '
+        Me.MarcaBindingSource.DataMember = "marca"
+        Me.MarcaBindingSource.DataSource = Me.MelodiasDataSet
+        '
+        'MelodiasDataSet
+        '
+        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
+        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'IdMarcaTextBox
+        '
+        Me.IdMarcaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MarcaBindingSource, "IdMarca", True))
+        Me.IdMarcaTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.IdMarcaTextBox.Location = New System.Drawing.Point(68, 25)
+        Me.IdMarcaTextBox.Name = "IdMarcaTextBox"
+        Me.IdMarcaTextBox.ReadOnly = True
+        Me.IdMarcaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.IdMarcaTextBox.TabIndex = 164
         '
         'btnEliminar
         '
@@ -295,6 +325,7 @@ Partial Class PaymentMethod
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -336,16 +367,6 @@ Partial Class PaymentMethod
         Me.MarcaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.MarcaBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'MarcaBindingSource
-        '
-        Me.MarcaBindingSource.DataMember = "marca"
-        Me.MarcaBindingSource.DataSource = Me.MelodiasDataSet
-        '
-        'MelodiasDataSet
-        '
-        Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
-        Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'CategoriaBindingSource
         '
         Me.CategoriaBindingSource.DataMember = "categoria"
@@ -356,10 +377,15 @@ Partial Class PaymentMethod
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.categoriaTableAdapter = Nothing
         Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.colorTableAdapter = Nothing
         Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.marcaTableAdapter = Nothing
+        Me.TableAdapterManager.metodoPagoTableAdapter = Nothing
+        Me.TableAdapterManager.productoTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
         Me.TableAdapterManager.rolTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usuarioTableAdapter = Nothing
         '
         'MarcaTableAdapter
         '
@@ -392,26 +418,6 @@ Partial Class PaymentMethod
         Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
-        'IdMarcaTextBox
-        '
-        Me.IdMarcaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MarcaBindingSource, "IdMarca", True))
-        Me.IdMarcaTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.IdMarcaTextBox.Location = New System.Drawing.Point(68, 25)
-        Me.IdMarcaTextBox.Name = "IdMarcaTextBox"
-        Me.IdMarcaTextBox.ReadOnly = True
-        Me.IdMarcaTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.IdMarcaTextBox.TabIndex = 164
-        '
-        'NombreTextBox
-        '
-        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MarcaBindingSource, "nombre", True))
-        Me.NombreTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.NombreTextBox.Location = New System.Drawing.Point(68, 52)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.ReadOnly = True
-        Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.NombreTextBox.TabIndex = 165
-        '
         'Brands
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
@@ -434,13 +440,13 @@ Partial Class PaymentMethod
         Me.GroupBox3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.MarcaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.MarcaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MarcaBindingNavigator.ResumeLayout(False)
         Me.MarcaBindingNavigator.PerformLayout()
-        CType(Me.MarcaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MarcaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

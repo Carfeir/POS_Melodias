@@ -119,7 +119,11 @@
         End If
     End Function
 
-    Private Sub TSAgregarCliente_Click(sender As Object, e As EventArgs) Handles TSAgregarCliente.Click
+    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
+        Me.Close()
+    End Sub
+
+    Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         If Not Validar_campos() Then
             MessageBox.Show("Completar todos los campos para agregar el cliente", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         ElseIf Dni_unico() Then
@@ -128,9 +132,5 @@
         Else
             MessageBox.Show("Ya existe un usuario con el DNI ingresado. Por favor, ingrese uno distinto", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         End If
-    End Sub
-
-    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
-        Me.Close()
     End Sub
 End Class

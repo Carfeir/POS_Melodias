@@ -43,8 +43,6 @@ Partial Class Users
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.btnVolver = New System.Windows.Forms.Button()
-        Me.TSAgregarUsuario = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
@@ -60,11 +58,10 @@ Partial Class Users
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,9 +84,9 @@ Partial Class Users
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 8)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 310)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(383, 234)
+        Me.GroupBox1.Size = New System.Drawing.Size(762, 108)
         Me.GroupBox1.TabIndex = 157
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Usuario"
@@ -97,10 +94,10 @@ Partial Class Users
         'CUITTextBox
         '
         Me.CUITTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "CUIT", True))
-        Me.CUITTextBox.Location = New System.Drawing.Point(156, 24)
+        Me.CUITTextBox.Location = New System.Drawing.Point(149, 24)
         Me.CUITTextBox.Name = "CUITTextBox"
         Me.CUITTextBox.ReadOnly = True
-        Me.CUITTextBox.Size = New System.Drawing.Size(198, 21)
+        Me.CUITTextBox.Size = New System.Drawing.Size(155, 21)
         Me.CUITTextBox.TabIndex = 197
         '
         'UsuarioBindingSource
@@ -116,23 +113,23 @@ Partial Class Users
         'NomYApeTextBox
         '
         Me.NomYApeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nomYApe", True))
-        Me.NomYApeTextBox.Location = New System.Drawing.Point(156, 50)
+        Me.NomYApeTextBox.Location = New System.Drawing.Point(149, 50)
         Me.NomYApeTextBox.Name = "NomYApeTextBox"
-        Me.NomYApeTextBox.Size = New System.Drawing.Size(198, 21)
+        Me.NomYApeTextBox.Size = New System.Drawing.Size(155, 21)
         Me.NomYApeTextBox.TabIndex = 199
         '
         'NroContactoTextBox
         '
         Me.NroContactoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nroContacto", True))
-        Me.NroContactoTextBox.Location = New System.Drawing.Point(156, 76)
+        Me.NroContactoTextBox.Location = New System.Drawing.Point(149, 76)
         Me.NroContactoTextBox.Name = "NroContactoTextBox"
-        Me.NroContactoTextBox.Size = New System.Drawing.Size(198, 21)
+        Me.NroContactoTextBox.Size = New System.Drawing.Size(155, 21)
         Me.NroContactoTextBox.TabIndex = 201
         '
         'btnEliminar
         '
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.btnEliminar.Location = New System.Drawing.Point(26, 195)
+        Me.btnEliminar.Location = New System.Drawing.Point(651, 71)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(93, 24)
         Me.btnEliminar.TabIndex = 3
@@ -142,16 +139,16 @@ Partial Class Users
         'CorreoElectronicoTextBox
         '
         Me.CorreoElectronicoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "correoElectronico", True))
-        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(156, 102)
+        Me.CorreoElectronicoTextBox.Location = New System.Drawing.Point(465, 24)
         Me.CorreoElectronicoTextBox.Name = "CorreoElectronicoTextBox"
-        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(198, 21)
+        Me.CorreoElectronicoTextBox.Size = New System.Drawing.Size(155, 21)
         Me.CorreoElectronicoTextBox.TabIndex = 203
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(23, 131)
+        Me.Label2.Location = New System.Drawing.Point(339, 53)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(118, 15)
         Me.Label2.TabIndex = 185
@@ -160,17 +157,17 @@ Partial Class Users
         'NombreUsuarioTextBox
         '
         Me.NombreUsuarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nombreUsuario", True))
-        Me.NombreUsuarioTextBox.Location = New System.Drawing.Point(156, 128)
+        Me.NombreUsuarioTextBox.Location = New System.Drawing.Point(465, 50)
         Me.NombreUsuarioTextBox.Name = "NombreUsuarioTextBox"
-        Me.NombreUsuarioTextBox.Size = New System.Drawing.Size(198, 21)
+        Me.NombreUsuarioTextBox.Size = New System.Drawing.Size(155, 21)
         Me.NombreUsuarioTextBox.TabIndex = 205
         '
         'btnModificar
         '
         Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.btnModificar.Location = New System.Drawing.Point(261, 195)
+        Me.btnModificar.Location = New System.Drawing.Point(651, 24)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(93, 24)
+        Me.btnModificar.Size = New System.Drawing.Size(93, 32)
         Me.btnModificar.TabIndex = 1
         Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
@@ -178,9 +175,9 @@ Partial Class Users
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(156, 154)
+        Me.NombreTextBox.Location = New System.Drawing.Point(465, 76)
         Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(198, 21)
+        Me.NombreTextBox.Size = New System.Drawing.Size(155, 21)
         Me.NombreTextBox.TabIndex = 209
         '
         'Label3
@@ -197,7 +194,7 @@ Partial Class Users
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(23, 157)
+        Me.Label1.Location = New System.Drawing.Point(339, 79)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(29, 15)
         Me.Label1.TabIndex = 174
@@ -227,7 +224,7 @@ Partial Class Users
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.Label13.Location = New System.Drawing.Point(23, 105)
+        Me.Label13.Location = New System.Drawing.Point(339, 27)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(111, 15)
         Me.Label13.TabIndex = 168
@@ -236,9 +233,9 @@ Partial Class Users
         'btnMostrar
         '
         Me.btnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        Me.btnMostrar.Location = New System.Drawing.Point(430, 212)
+        Me.btnMostrar.Location = New System.Drawing.Point(592, 257)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(358, 30)
+        Me.btnMostrar.Size = New System.Drawing.Size(169, 45)
         Me.btnMostrar.TabIndex = 159
         Me.btnMostrar.Text = "&Mostrar Usuarios"
         Me.btnMostrar.UseVisualStyleBackColor = True
@@ -246,33 +243,12 @@ Partial Class Users
         'btnVolver
         '
         Me.btnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.btnVolver.Location = New System.Drawing.Point(12, 496)
+        Me.btnVolver.Location = New System.Drawing.Point(12, 652)
         Me.btnVolver.Name = "btnVolver"
-        Me.btnVolver.Size = New System.Drawing.Size(79, 34)
+        Me.btnVolver.Size = New System.Drawing.Size(79, 26)
         Me.btnVolver.TabIndex = 162
         Me.btnVolver.Text = "&Volver"
         Me.btnVolver.UseVisualStyleBackColor = True
-        '
-        'TSAgregarUsuario
-        '
-        Me.TSAgregarUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.TSAgregarUsuario.Image = CType(resources.GetObject("TSAgregarUsuario.Image"), System.Drawing.Image)
-        Me.TSAgregarUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.TSAgregarUsuario.Name = "TSAgregarUsuario"
-        Me.TSAgregarUsuario.Size = New System.Drawing.Size(174, 74)
-        Me.TSAgregarUsuario.Text = "&Agregar Nuevo Usuario"
-        Me.TSAgregarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSAgregarUsuario})
-        Me.MenuStrip1.Location = New System.Drawing.Point(521, 87)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(182, 78)
-        Me.MenuStrip1.TabIndex = 164
-        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'GroupBox2
         '
@@ -282,7 +258,7 @@ Partial Class Users
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 248)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(776, 56)
+        Me.GroupBox2.Size = New System.Drawing.Size(563, 56)
         Me.GroupBox2.TabIndex = 196
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Buscador Por CUIT"
@@ -290,9 +266,9 @@ Partial Class Users
         'btnLimpiar
         '
         Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.btnLimpiar.Location = New System.Drawing.Point(580, 17)
+        Me.btnLimpiar.Location = New System.Drawing.Point(371, 18)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(79, 28)
+        Me.btnLimpiar.Size = New System.Drawing.Size(79, 23)
         Me.btnLimpiar.TabIndex = 158
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
@@ -301,9 +277,9 @@ Partial Class Users
         '
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.Location = New System.Drawing.Point(665, 19)
+        Me.btnBuscar.Location = New System.Drawing.Point(456, 15)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(93, 27)
+        Me.btnBuscar.Size = New System.Drawing.Size(93, 31)
         Me.btnBuscar.TabIndex = 55
         Me.btnBuscar.Text = "&Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
@@ -313,7 +289,7 @@ Partial Class Users
         Me.BuscadorTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.BuscadorTextBox.Location = New System.Drawing.Point(26, 20)
         Me.BuscadorTextBox.Name = "BuscadorTextBox"
-        Me.BuscadorTextBox.Size = New System.Drawing.Size(532, 21)
+        Me.BuscadorTextBox.Size = New System.Drawing.Size(328, 21)
         Me.BuscadorTextBox.TabIndex = 53
         '
         'RolBindingSource
@@ -334,18 +310,24 @@ Partial Class Users
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.categoriaTableAdapter = Nothing
         Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.colorTableAdapter = Nothing
+        Me.TableAdapterManager.marcaTableAdapter = Nothing
+        Me.TableAdapterManager.metodoPagoTableAdapter = Nothing
+        Me.TableAdapterManager.productoTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
         Me.TableAdapterManager.rolTableAdapter = Me.RolTableAdapter
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usuarioTableAdapter = Nothing
         '
         'UsuarioDataGridView
         '
         Me.UsuarioDataGridView.AutoGenerateColumns = False
         Me.UsuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.UsuarioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
+        Me.UsuarioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.UsuarioDataGridView.DataSource = Me.UsuarioBindingSource
-        Me.UsuarioDataGridView.Location = New System.Drawing.Point(12, 310)
+        Me.UsuarioDataGridView.Location = New System.Drawing.Point(12, 424)
         Me.UsuarioDataGridView.Name = "UsuarioDataGridView"
-        Me.UsuarioDataGridView.Size = New System.Drawing.Size(776, 177)
+        Me.UsuarioDataGridView.Size = New System.Drawing.Size(762, 222)
         Me.UsuarioDataGridView.TabIndex = 196
         '
         'DataGridViewTextBoxColumn1
@@ -384,21 +366,29 @@ Partial Class Users
         Me.DataGridViewTextBoxColumn6.HeaderText = "IdRol"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'DataGridViewTextBoxColumn7
+        'BtnAgregar
         '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "nombre"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "nombre"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
+        Me.BtnAgregar.Location = New System.Drawing.Point(372, 87)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(113, 36)
+        Me.BtnAgregar.TabIndex = 200
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'Users
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(808, 539)
+        Me.ClientSize = New System.Drawing.Size(788, 687)
+        Me.Controls.Add(Me.BtnAgregar)
         Me.Controls.Add(Me.UsuarioDataGridView)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.GroupBox1)
@@ -411,14 +401,11 @@ Partial Class Users
         Me.GroupBox1.PerformLayout()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuarioDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As GroupBox
@@ -432,8 +419,6 @@ Partial Class Users
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnModificar As Button
     Private WithEvents btnVolver As Button
-    Friend WithEvents TSAgregarUsuario As ToolStripMenuItem
-    Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents GroupBox2 As GroupBox
     Private WithEvents btnLimpiar As Button
     Friend WithEvents btnBuscar As Button
@@ -458,4 +443,5 @@ Partial Class Users
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents BtnAgregar As Button
 End Class

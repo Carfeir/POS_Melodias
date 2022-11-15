@@ -42,6 +42,19 @@ Public Class HomeAdmin
     End Sub
 
     Private Sub MetodosDePagoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MetodosDePagoToolStripMenuItem.Click
-        PaymentMethod.Show()
+        MetodoDePago.Show()
+    End Sub
+
+    Private Sub ProductoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles ProductoBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.ProductoBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.MelodiasDataSet)
+
+    End Sub
+
+    Private Sub HomeAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'MelodiasDataSet.producto' table. You can move, or remove it, as needed.
+        Me.ProductoTableAdapter.Fill(Me.MelodiasDataSet.producto)
+
     End Sub
 End Class

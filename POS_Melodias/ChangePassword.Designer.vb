@@ -33,12 +33,13 @@ Partial Class ChangePassword
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnVolver = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'UserName
         '
         Me.UserName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.UserName.Location = New System.Drawing.Point(155, 22)
+        Me.UserName.Location = New System.Drawing.Point(155, 67)
         Me.UserName.Name = "UserName"
         Me.UserName.Size = New System.Drawing.Size(122, 20)
         Me.UserName.TabIndex = 9
@@ -47,7 +48,7 @@ Partial Class ChangePassword
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label4.Location = New System.Drawing.Point(17, 27)
+        Me.Label4.Location = New System.Drawing.Point(17, 72)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(102, 12)
         Me.Label4.TabIndex = 17
@@ -56,7 +57,7 @@ Partial Class ChangePassword
         'BtnCambiarContraseña
         '
         Me.BtnCambiarContraseña.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.BtnCambiarContraseña.Location = New System.Drawing.Point(135, 167)
+        Me.BtnCambiarContraseña.Location = New System.Drawing.Point(135, 212)
         Me.BtnCambiarContraseña.Name = "BtnCambiarContraseña"
         Me.BtnCambiarContraseña.Size = New System.Drawing.Size(142, 32)
         Me.BtnCambiarContraseña.TabIndex = 15
@@ -67,7 +68,7 @@ Partial Class ChangePassword
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(17, 133)
+        Me.Label3.Location = New System.Drawing.Point(17, 178)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(115, 12)
         Me.Label3.TabIndex = 16
@@ -75,7 +76,7 @@ Partial Class ChangePassword
         '
         'ConfirmPassword
         '
-        Me.ConfirmPassword.Location = New System.Drawing.Point(155, 127)
+        Me.ConfirmPassword.Location = New System.Drawing.Point(155, 172)
         Me.ConfirmPassword.Name = "ConfirmPassword"
         Me.ConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.ConfirmPassword.Size = New System.Drawing.Size(122, 20)
@@ -83,7 +84,7 @@ Partial Class ChangePassword
         '
         'NewPassword
         '
-        Me.NewPassword.Location = New System.Drawing.Point(155, 91)
+        Me.NewPassword.Location = New System.Drawing.Point(155, 136)
         Me.NewPassword.Name = "NewPassword"
         Me.NewPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.NewPassword.Size = New System.Drawing.Size(122, 20)
@@ -91,7 +92,7 @@ Partial Class ChangePassword
         '
         'OldPassword
         '
-        Me.OldPassword.Location = New System.Drawing.Point(155, 55)
+        Me.OldPassword.Location = New System.Drawing.Point(155, 100)
         Me.OldPassword.Name = "OldPassword"
         Me.OldPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.OldPassword.Size = New System.Drawing.Size(122, 20)
@@ -101,7 +102,7 @@ Partial Class ChangePassword
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(17, 97)
+        Me.Label2.Location = New System.Drawing.Point(17, 142)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(98, 12)
         Me.Label2.TabIndex = 12
@@ -111,7 +112,7 @@ Partial Class ChangePassword
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(17, 61)
+        Me.Label1.Location = New System.Drawing.Point(17, 106)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(90, 12)
         Me.Label1.TabIndex = 10
@@ -120,19 +121,30 @@ Partial Class ChangePassword
         'BtnVolver
         '
         Me.BtnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.BtnVolver.Location = New System.Drawing.Point(19, 173)
+        Me.BtnVolver.Location = New System.Drawing.Point(19, 218)
         Me.BtnVolver.Name = "BtnVolver"
         Me.BtnVolver.Size = New System.Drawing.Size(79, 26)
         Me.BtnVolver.TabIndex = 148
         Me.BtnVolver.Text = "&Volver"
         Me.BtnVolver.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Miriam", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(48, 24)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(207, 21)
+        Me.Label5.TabIndex = 168
+        Me.Label5.Text = "Cambiar Contraseña"
+        '
         'ChangePassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(303, 215)
+        Me.ClientSize = New System.Drawing.Size(303, 256)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BtnVolver)
         Me.Controls.Add(Me.UserName)
         Me.Controls.Add(Me.Label4)
@@ -163,4 +175,5 @@ Partial Class ChangePassword
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Private WithEvents BtnVolver As Button
+    Friend WithEvents Label5 As Label
 End Class
