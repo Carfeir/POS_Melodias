@@ -47,7 +47,7 @@ CUIT varchar(11),
 nomYApe varchar(50),
 nroContacto varchar (15),
 correoElectronico varchar(40),
-nombreUsuario varchar (30) unique,
+nombreUsuario varchar (30),
 contraseña varchar (30),
 IdRol int,
 Constraint PK_usuario PRIMARY KEY (idUsuario),
@@ -59,8 +59,8 @@ insert into usuario values
 ('20472477162', 'Ignacio Perez', '3794362514', 'nachop@gmail.com', 'IgnacioEmple', 'empleignacio', 3),
 ('20425368942', 'Jorge Sanchez', '3794124587', 'jorgitosz@gmail.com', 'JorgeEmple', 'emplejorge', 3),
 ('20412547892', 'Santiago Campos', '3794652389', 'santiagocampos@gmail.com', 'SantiAdmin', 'adminsanti', 2),
-('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'HernanAdmin', 'admingomez', 2),
-('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'HernanSuper', 'supergomez', 1),
+('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'Hernan', 'admingomez', 2),
+('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'Hernan', 'supergomez', 1),
 ('20424514782', 'Miguel Martinez', '3794123123', 'mmartinez@gmail.com', 'MiguelSuper', 'supermiguel', 1);
 
 select * from usuario;
@@ -207,9 +207,9 @@ Constraint FK_metodoPago FOREIGN KEY (idMetodoPago)  REFERENCES metodoPago(idMet
 )
 
 insert into venta values
-(1,6,1,131101.98, '20201004', 1),
-(2,6,2,55599.99, '20201108', 1),
-(3,7,2, 209000.97, '20200210', 2);
+(1,1,1,131101.98, '20201004', 1),
+(2,1,2,55599.99, '20201108', 1),
+(3,2,2, 209000.97, '20200210', 2);
 
 select * from venta
 
