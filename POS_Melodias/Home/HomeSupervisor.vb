@@ -13,14 +13,18 @@
     End Sub
 
     Private Sub BackupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackupToolStripMenuItem.Click
-        Back_up.Show()
+        BackUp2.Show()
     End Sub
 
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
-        Back_up.Show()
+        BackUp2.Show()
     End Sub
 
     Private Sub RolesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RolesToolStripMenuItem.Click
         Rols.Show()
+    End Sub
+
+    Private Sub HomeSupervisor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.UsuarioTableAdapter.Fill(Me.MelodiasDataSet.usuario)
     End Sub
 End Class

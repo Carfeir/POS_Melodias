@@ -20,12 +20,8 @@ Public Class HomeAdmin
         Suppliers.Show()
     End Sub
 
-    Private Sub RegistrationToolStripMenuItem2_Click(sender As Object, e As EventArgs) 
-        ChangePassword.Show()
-    End Sub
-
     Private Sub RegistrationToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RegistrationToolStripMenuItem1.Click
-        Venta.Show()
+        ReporteVenta.Show()
     End Sub
 
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
@@ -55,6 +51,5 @@ Public Class HomeAdmin
     Private Sub HomeAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'MelodiasDataSet.producto' table. You can move, or remove it, as needed.
         Me.ProductoTableAdapter.Fill(Me.MelodiasDataSet.producto)
-
     End Sub
 End Class

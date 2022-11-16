@@ -32,7 +32,6 @@ Partial Class HomeAdmin
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MetodosDePagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -96,8 +95,8 @@ Partial Class HomeAdmin
         Me.RegistrationToolStripMenuItem1.Image = CType(resources.GetObject("RegistrationToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.RegistrationToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RegistrationToolStripMenuItem1.Name = "RegistrationToolStripMenuItem1"
-        Me.RegistrationToolStripMenuItem1.Size = New System.Drawing.Size(63, 69)
-        Me.RegistrationToolStripMenuItem1.Text = "Ventas"
+        Me.RegistrationToolStripMenuItem1.Size = New System.Drawing.Size(137, 69)
+        Me.RegistrationToolStripMenuItem1.Text = "Reporte de Ventas"
         Me.RegistrationToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripMenuItem1
@@ -142,7 +141,7 @@ Partial Class HomeAdmin
         '
         'VentasToolStripMenuItem
         '
-        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeVentasToolStripMenuItem, Me.AgregarVentaToolStripMenuItem, Me.MetodosDePagoToolStripMenuItem})
+        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeVentasToolStripMenuItem, Me.MetodosDePagoToolStripMenuItem})
         Me.VentasToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
         Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
@@ -153,12 +152,6 @@ Partial Class HomeAdmin
         Me.ReporteDeVentasToolStripMenuItem.Name = "ReporteDeVentasToolStripMenuItem"
         Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ReporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas"
-        '
-        'AgregarVentaToolStripMenuItem
-        '
-        Me.AgregarVentaToolStripMenuItem.Name = "AgregarVentaToolStripMenuItem"
-        Me.AgregarVentaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AgregarVentaToolStripMenuItem.Text = "Agregar Venta"
         '
         'MetodosDePagoToolStripMenuItem
         '
@@ -177,25 +170,25 @@ Partial Class HomeAdmin
         'ProductoToolStripMenuItem
         '
         Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
-        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProductoToolStripMenuItem.Text = "Producto"
         '
         'CategoryToolStripMenuItem
         '
         Me.CategoryToolStripMenuItem.Name = "CategoryToolStripMenuItem"
-        Me.CategoryToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.CategoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CategoryToolStripMenuItem.Text = "Categoria"
         '
         'ColorToolStripMenuItem
         '
         Me.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
-        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ColorToolStripMenuItem.Text = "Color"
         '
         'MarcaToolStripMenuItem
         '
         Me.MarcaToolStripMenuItem.Name = "MarcaToolStripMenuItem"
-        Me.MarcaToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.MarcaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MarcaToolStripMenuItem.Text = "Marca"
         '
         'CustomersToolStripMenuItem
@@ -209,7 +202,7 @@ Partial Class HomeAdmin
         'AgregarProveedorToolStripMenuItem
         '
         Me.AgregarProveedorToolStripMenuItem.Name = "AgregarProveedorToolStripMenuItem"
-        Me.AgregarProveedorToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.AgregarProveedorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AgregarProveedorToolStripMenuItem.Text = "Agregar Proveedor"
         '
         'Label13
@@ -498,7 +491,6 @@ Partial Class HomeAdmin
     Friend WithEvents AgregarProveedorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteDeVentasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgregarVentaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MetodosDePagoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MelodiasDataSet As melodiasDataSet
     Friend WithEvents ProductoBindingSource As BindingSource

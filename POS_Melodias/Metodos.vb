@@ -43,8 +43,7 @@ Public Class Metodos
                 ' seguridad integrada
                 ' si la autenticación se hace con usuario y password hay
                 ' que cambiar la cadena
-                cadenaConexion = "Data Source=" & servidor & " ;Integrated Security=True;Initial Catalog=master"
-
+                cadenaConexion = "Data Source=LAPTOP-CV4L1LJF\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True"
 
                 con = New SqlConnection(cadenaConexion)
 
@@ -75,8 +74,14 @@ Public Class Metodos
 
     Public Function User(ByVal nombreUsuario As String) As Boolean
         Dim resultado As Boolean = False
+        Dim cadenaConexion As String
+
         Try
-            enunciado = New SqlCommand("Select * from Usuarios where Usuario='" & nombreUsuario & "'", con)
+            cadenaConexion = "Data Source=LAPTOP-CV4L1LJF\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True"
+            con = New SqlConnection(cadenaConexion)
+            con.Open()
+
+            enunciado = New SqlCommand("Select nombreUsuario from usuario where nombreUsuario='" & nombreUsuario & "'", con)
             dr = enunciado.ExecuteReader
 
             If dr.Read Then
@@ -92,12 +97,18 @@ Public Class Metodos
 
     Function contrasenia(ByVal nombreUsuario As String) As String
         Dim resultado As String = ""
+        Dim cadenaConexion As String
+
         Try
-            enunciado = New SqlCommand("Select Contrasena from Usuarios where Usuario='" & nombreUsuario & "'", con)
+            cadenaConexion = "Data Source=LAPTOP-CV4L1LJF\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True"
+            con = New SqlConnection(cadenaConexion)
+            con.Open()
+
+            enunciado = New SqlCommand("Select contraseña from usuario where nombreUsuario='" & nombreUsuario & "'", con)
             dr = enunciado.ExecuteReader
 
             If dr.Read Then
-                resultado = dr.Item("Contrasena")
+                resultado = dr.Item("contraseña")
             End If
             dr.Close()
         Catch ex As Exception
@@ -108,12 +119,18 @@ Public Class Metodos
 
     Function ConsultaTipoUsuario(ByVal nombreUsuario As String) As Integer
         Dim resultado As Integer
+        Dim cadenaConexion As String
+
         Try
-            enunciado = New SqlCommand("Select IdTipoUsuario from Usuarios where Usuario='" & nombreUsuario & "'", con)
+            cadenaConexion = "Data Source=LAPTOP-CV4L1LJF\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True"
+            con = New SqlConnection(cadenaConexion)
+            con.Open()
+
+            enunciado = New SqlCommand("Select IdRol from usuario where nombreUsuario='" & nombreUsuario & "'", con)
             dr = enunciado.ExecuteReader
 
             If dr.Read Then
-                resultado = CInt(dr.Item("IdTipoUsuario"))
+                resultado = CInt(dr.Item("IdRol"))
             End If
             dr.Close()
         Catch ex As Exception
