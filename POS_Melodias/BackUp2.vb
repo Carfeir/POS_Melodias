@@ -2,42 +2,58 @@
 Imports System.Data.SqlClient
 
 Public Class BackUp2
-    Public m As New Metodos
-    Private Sub btnBackup_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBackup.Click
+    Dim con As New SqlConnection("Data Source=LAPTOP-CV4L1LJF\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True")
 
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Close()
     End Sub
 
-    Private Function crear_backup() As Boolean
-
-        Dim conecsb As New SqlConnectionStringBuilder
-        conecsb.DataSource = "LAPTOP-CV4L1LJF\SQLEXPRESS"
-        conecsb.InitialCatalog = "melodias"
-        conecsb.IntegratedSecurity = True
-
-        If txtDirPathBackup.Text.Length <> 3 Then
-            txtDirPathBackup.Text = txtDirPathBackup.Text + "\" + txtNom_Backup.Text + ".bak"
-        Else
-            txtDirPathBackup.Text = txtDirPathBackup.Text + txtNom_Backup.Text + ".bak"
+    Private Sub btnExaminar_Click(sender As Object, e As EventArgs) Handles btnExaminar.Click
+        Dim dlg As New FolderBrowserDialog()
+        If (dlg.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            TextBoxDirectorio.Text = dlg.SelectedPath
         End If
+    End Sub
 
-        Using con As New SqlConnection(conecsb.ConnectionString)
-            Try
-                con.Open()
-                Dim sCmd As New StringBuilder
+    Private Sub btnBackup_Click(sender As Object, e As EventArgs) Handles btnBackup.Click
+        Dim database As String = con.Database.ToString()
+        If (TextBoxDirectorio.Text Is String.Empty) Then
+            MessageBox.Show("Por favor ingresar ubicacion del archivo Backup")
+        Else
+            Dim str As String = "BACKUP DE BASE DE DATOS [" + database + "] A = " + TextBoxDirectorio.Text + "\" + "database" + "-" + DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") + ".bak"
+            con.Open()
+            Dim cmd As New SqlCommand(str, con)
+            cmd.ExecuteNonQuery()
+            con.Close()
+            MessageBox.Show("Backup de base de datos se realizo correctamente")
+        End If
+    End Sub
 
-                sCmd.Append("BACKUP DATABASE [melodias] TO  DISK = N'" + txtDirPathBackup.Text + "' ")
-                sCmd.Append("WITH DESCRIPTION = N'" + txtDescrip_Backup.Text + "', NOFORMAT, NOINIT, ")
-                sCmd.Append("NAME = N'" + txtNom_Backup.Text + "', SKIP, NOREWIND, NOUNLOAD,  STATS = 10")
-                Dim cmd As New SqlCommand(sCmd.ToString, con)
-                cmd.ExecuteNonQuery()
-                crear_backup = True
-            Catch ex As Exception
-                crear_backup = False
-                MessageBox.Show(ex.Message)
-            Finally
-                con.Close()
-            End Try
-        End Using
-    End Function
+    Private Sub btnExaminarRecuperar_Click(sender As Object, e As EventArgs) Handles btnExaminarRecuperar.Click
+        Dim dlg As OpenFileDialog = New OpenFileDialog()
+        dlg.Filter = "SQL SERVER BACKUP FILE|* .bak"
+        dlg.Title = "Restore Database"
+        If (dlg.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            TextBoxDirectorioRecuperar.Text = dlg.FileName
+        End If
+    End Sub
 
+    Private Sub btnRecuperar_Click(sender As Object, e As EventArgs) Handles btnRecuperar.Click
+        Dim database As String = con.Database.ToString()
+        con.Open()
+        Dim str1 As String = String.Format("ALTER DATABASE [" + database + "] SET SINGLE_USER WITH ROLLBACK INMEDIATE")
+        Dim cmd1 As New SqlCommand(str1, con)
+        cmd1.ExecuteNonQuery()
+
+        Dim str2 As String = "USE MASTER RESTORE DATABASE [" + database + "] FROM DISK ='" + TextBoxDirectorioRecuperar.Text + "WITH REPLACE"
+        Dim cmd2 As New SqlCommand(str2, con)
+        cmd2.ExecuteNonQuery()
+
+        Dim str3 As String = String.Format("ALTER DATABASE [" + database + "] SER MULTI_USER")
+        Dim cmd3 As New SqlCommand(str3, con)
+        cmd3.ExecuteNonQuery()
+
+        MessageBox.Show("RESTAURACION DE BASE DE DATOS SE REALIZO CORRECTAMENTE")
+        con.Close()
+    End Sub
 End Class
