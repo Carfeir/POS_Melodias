@@ -8,7 +8,7 @@
         Login.Show()
     End Sub
 
-    Private Sub RegistrationToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles RegistrationToolStripMenuItem2.Click
+    Private Sub RegistrationToolStripMenuItem2_Click(sender As Object, e As EventArgs) 
         ChangePassword.Show()
     End Sub
 

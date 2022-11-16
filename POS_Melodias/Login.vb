@@ -69,4 +69,7 @@ Public Class Login
         End Try
     End Sub
 
+    Private Sub LinkLabelCambiarContraseña_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabelCambiarContraseña.LinkClicked
+        ChangePassword.Show()
+    End Sub
 End Class

@@ -23,26 +23,26 @@ Partial Class ChangePassword
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChangePassword))
-        Me.UserName = New System.Windows.Forms.TextBox()
+        Me.TextBoxNombreUsuario = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BtnCambiarContraseña = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ConfirmPassword = New System.Windows.Forms.TextBox()
-        Me.NewPassword = New System.Windows.Forms.TextBox()
-        Me.OldPassword = New System.Windows.Forms.TextBox()
+        Me.TextBoxConfirmarContraseña = New System.Windows.Forms.TextBox()
+        Me.TextBoxNuevaContraseña = New System.Windows.Forms.TextBox()
+        Me.TextBoxContraseña = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnVolver = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'UserName
+        'TextBoxNombreUsuario
         '
-        Me.UserName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.UserName.Location = New System.Drawing.Point(155, 67)
-        Me.UserName.Name = "UserName"
-        Me.UserName.Size = New System.Drawing.Size(122, 20)
-        Me.UserName.TabIndex = 9
+        Me.TextBoxNombreUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
+        Me.TextBoxNombreUsuario.Location = New System.Drawing.Point(155, 67)
+        Me.TextBoxNombreUsuario.Name = "TextBoxNombreUsuario"
+        Me.TextBoxNombreUsuario.Size = New System.Drawing.Size(122, 20)
+        Me.TextBoxNombreUsuario.TabIndex = 9
         '
         'Label4
         '
@@ -68,41 +68,41 @@ Partial Class ChangePassword
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(17, 178)
+        Me.Label3.Location = New System.Drawing.Point(17, 170)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(115, 12)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Confirmar Contraseña:"
         '
-        'ConfirmPassword
+        'TextBoxConfirmarContraseña
         '
-        Me.ConfirmPassword.Location = New System.Drawing.Point(155, 172)
-        Me.ConfirmPassword.Name = "ConfirmPassword"
-        Me.ConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.ConfirmPassword.Size = New System.Drawing.Size(122, 20)
-        Me.ConfirmPassword.TabIndex = 14
+        Me.TextBoxConfirmarContraseña.Location = New System.Drawing.Point(155, 164)
+        Me.TextBoxConfirmarContraseña.Name = "TextBoxConfirmarContraseña"
+        Me.TextBoxConfirmarContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxConfirmarContraseña.Size = New System.Drawing.Size(122, 20)
+        Me.TextBoxConfirmarContraseña.TabIndex = 14
         '
-        'NewPassword
+        'TextBoxNuevaContraseña
         '
-        Me.NewPassword.Location = New System.Drawing.Point(155, 136)
-        Me.NewPassword.Name = "NewPassword"
-        Me.NewPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.NewPassword.Size = New System.Drawing.Size(122, 20)
-        Me.NewPassword.TabIndex = 13
+        Me.TextBoxNuevaContraseña.Location = New System.Drawing.Point(155, 138)
+        Me.TextBoxNuevaContraseña.Name = "TextBoxNuevaContraseña"
+        Me.TextBoxNuevaContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxNuevaContraseña.Size = New System.Drawing.Size(122, 20)
+        Me.TextBoxNuevaContraseña.TabIndex = 13
         '
-        'OldPassword
+        'TextBoxContraseña
         '
-        Me.OldPassword.Location = New System.Drawing.Point(155, 100)
-        Me.OldPassword.Name = "OldPassword"
-        Me.OldPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.OldPassword.Size = New System.Drawing.Size(122, 20)
-        Me.OldPassword.TabIndex = 11
+        Me.TextBoxContraseña.Location = New System.Drawing.Point(155, 92)
+        Me.TextBoxContraseña.Name = "TextBoxContraseña"
+        Me.TextBoxContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBoxContraseña.Size = New System.Drawing.Size(122, 20)
+        Me.TextBoxContraseña.TabIndex = 11
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(17, 142)
+        Me.Label2.Location = New System.Drawing.Point(17, 143)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(98, 12)
         Me.Label2.TabIndex = 12
@@ -112,11 +112,11 @@ Partial Class ChangePassword
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(17, 106)
+        Me.Label1.Location = New System.Drawing.Point(17, 97)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 12)
+        Me.Label1.Size = New System.Drawing.Size(64, 12)
         Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Contraseña Vieja:"
+        Me.Label1.Text = "Contraseña:"
         '
         'BtnVolver
         '
@@ -146,13 +146,13 @@ Partial Class ChangePassword
         Me.ClientSize = New System.Drawing.Size(303, 256)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BtnVolver)
-        Me.Controls.Add(Me.UserName)
+        Me.Controls.Add(Me.TextBoxNombreUsuario)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.BtnCambiarContraseña)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ConfirmPassword)
-        Me.Controls.Add(Me.NewPassword)
-        Me.Controls.Add(Me.OldPassword)
+        Me.Controls.Add(Me.TextBoxConfirmarContraseña)
+        Me.Controls.Add(Me.TextBoxNuevaContraseña)
+        Me.Controls.Add(Me.TextBoxContraseña)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
@@ -165,13 +165,13 @@ Partial Class ChangePassword
 
     End Sub
 
-    Friend WithEvents UserName As TextBox
+    Friend WithEvents TextBoxNombreUsuario As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents BtnCambiarContraseña As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents ConfirmPassword As TextBox
-    Friend WithEvents NewPassword As TextBox
-    Friend WithEvents OldPassword As TextBox
+    Friend WithEvents TextBoxConfirmarContraseña As TextBox
+    Friend WithEvents TextBoxNuevaContraseña As TextBox
+    Friend WithEvents TextBoxContraseña As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Private WithEvents BtnVolver As Button

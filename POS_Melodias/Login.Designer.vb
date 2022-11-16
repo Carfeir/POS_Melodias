@@ -24,6 +24,7 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TContraseña = New System.Windows.Forms.TextBox()
@@ -31,13 +32,14 @@ Partial Class Login
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.LinkLabelCambiarContraseña = New System.Windows.Forms.LinkLabel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.LinkLabelCambiarContraseña)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -50,6 +52,16 @@ Partial Class Login
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(334, 390)
         Me.Panel1.TabIndex = 8
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Miriam", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(123, 46)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(81, 21)
+        Me.Label4.TabIndex = 168
+        Me.Label4.Text = "Ingreso"
         '
         'Button2
         '
@@ -68,7 +80,7 @@ Partial Class Login
         Me.Button1.BackColor = System.Drawing.SystemColors.Control
         Me.Button1.Font = New System.Drawing.Font("Miriam", 12.0!)
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(98, 224)
+        Me.Button1.Location = New System.Drawing.Point(98, 247)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(141, 31)
         Me.Button1.TabIndex = 12
@@ -121,15 +133,15 @@ Partial Class Login
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'Label4
+        'LinkLabelCambiarContraseña
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Miriam", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(123, 46)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 21)
-        Me.Label4.TabIndex = 168
-        Me.Label4.Text = "Ingreso"
+        Me.LinkLabelCambiarContraseña.AutoSize = True
+        Me.LinkLabelCambiarContraseña.Location = New System.Drawing.Point(68, 208)
+        Me.LinkLabelCambiarContraseña.Name = "LinkLabelCambiarContraseña"
+        Me.LinkLabelCambiarContraseña.Size = New System.Drawing.Size(102, 13)
+        Me.LinkLabelCambiarContraseña.TabIndex = 169
+        Me.LinkLabelCambiarContraseña.TabStop = True
+        Me.LinkLabelCambiarContraseña.Text = "Cambiar Contraseña"
         '
         'Login
         '
@@ -160,4 +172,5 @@ Partial Class Login
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents LinkLabelCambiarContraseña As LinkLabel
 End Class

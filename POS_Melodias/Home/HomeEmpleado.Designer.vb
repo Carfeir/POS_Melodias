@@ -34,8 +34,6 @@ Partial Class HomeEmpleado
         Me.RegistroDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VendorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgregarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrationToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -107,7 +105,7 @@ Partial Class HomeEmpleado
         'MenuStrip2
         '
         Me.MenuStrip2.BackColor = System.Drawing.SystemColors.Control
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsersToolStripMenuItem, Me.VendorsToolStripMenuItem, Me.ReportsToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsersToolStripMenuItem, Me.VendorsToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(800, 24)
@@ -147,20 +145,6 @@ Partial Class HomeEmpleado
         Me.AgregarClienteToolStripMenuItem.Name = "AgregarClienteToolStripMenuItem"
         Me.AgregarClienteToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.AgregarClienteToolStripMenuItem.Text = "Agregar Cliente"
-        '
-        'ReportsToolStripMenuItem
-        '
-        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrationToolStripMenuItem2})
-        Me.ReportsToolStripMenuItem.Font = New System.Drawing.Font("Miriam", 9.0!)
-        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(83, 20)
-        Me.ReportsToolStripMenuItem.Text = "Configuracion"
-        '
-        'RegistrationToolStripMenuItem2
-        '
-        Me.RegistrationToolStripMenuItem2.Name = "RegistrationToolStripMenuItem2"
-        Me.RegistrationToolStripMenuItem2.Size = New System.Drawing.Size(170, 22)
-        Me.RegistrationToolStripMenuItem2.Text = "Cambiar Contraseña"
         '
         'Label13
         '
@@ -291,8 +275,6 @@ Partial Class HomeEmpleado
     Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VendorsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RegistrationToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents Label13 As Label
     Friend WithEvents ListView1 As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
