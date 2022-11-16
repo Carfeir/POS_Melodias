@@ -1,0 +1,21 @@
+Claves de Acceso
+
+Nombre de Usuario: IgnacioEmple
+Contraseña: empleignacio
+Rol: Empleado
+
+Nombre de Usuario: JorgeEmple
+Contraseña: emplejorge
+Rol: Empleado
+
+Nombre de Usuario: SantiAdmin
+Contraseña: adminsanti
+Rol: Administrador
+
+Nombre de Usuario: hGomez
+Contraseña: gomez
+Rol: Administrador / Supervisor
+
+Nombre de Usuario: MiguelSuper
+Contraseña: supermiguel
+Rol: Supervisor
