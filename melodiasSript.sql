@@ -7,19 +7,23 @@ if object_id('rol') is not null DROP TABLE rol;
 go
 if object_id('usuario') is not null DROP TABLE usuario;
 go
-if object_id('usuarioRol') is not null DROP TABLE usuarioRol;
+if object_id('categoria') is not null DROP TABLE categoria;
 go
-if object_id('usuario') is not null DROP TABLE visita;
+if object_id('marca') is not null DROP TABLE marca;
 go
-if object_id('usuario') is not null DROP TABLE visita;
+if object_id('color') is not null DROP TABLE color;
 go
-if object_id('usuario') is not null DROP TABLE visita;
+if object_id('proveedor') is not null DROP TABLE proveedor;
 go
-if object_id('usuario') is not null DROP TABLE visita;
+if object_id('producto') is not null DROP TABLE producto;
 go
-if object_id('usuario') is not null DROP TABLE visita;
+if object_id('cliente') is not null DROP TABLE cliente;
 go
-if object_id('usuario') is not null DROP TABLE visita;
+if object_id('metodoPago') is not null DROP TABLE metodoPago;
+go
+if object_id('venta') is not null DROP TABLE venta;
+go
+if object_id('detalleVenta') is not null DROP TABLE detalleVenta;
 go
 
 /***************** ROL *****************/
@@ -43,39 +47,22 @@ nomYApe varchar(50),
 nroContacto varchar (15),
 correoElectronico varchar(40),
 nombreUsuario varchar (30) unique,
-contraseña varchar (30)
-Constraint PK_usuario PRIMARY KEY (CUIT)
+contraseÃ±a varchar (30),
+IdRol int,
+Constraint PK_usuario PRIMARY KEY (CUIT),
+Constraint FK_rol FOREIGN KEY (IdRol)  REFERENCES rol(IdRol)			 					     					     					     				     					     
 )
 
 -- 1 Supervisor, 1 Supervisor y Administrador, 1 Admin y 2 Empleados
 insert into usuario values
-('20472477162', 'Ignacio Perez', '3794362514', 'nachop@gmail.com', 'IgnacioEmple', 'empleignacio'),
-('20425368942', 'Jorge Sanchez', '3794124587', 'jorgitosz@gmail.com', 'JorgeEmple', 'emplejorge'),
-('20412547892', 'Santiago Campos', '3794652389', 'santiagocampos@gmail.com', 'SantiAdmin', 'adminsanti'),
-('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'hGomez', 'gomez'),
-('20424514782', 'Miguel Martinez', '3794123123', 'mmartinez@gmail.com', 'MiguelSuper', 'supermiguel');
+('20472477162', 'Ignacio Perez', '3794362514', 'nachop@gmail.com', 'IgnacioEmple', 'empleignacio', 3),
+('20425368942', 'Jorge Sanchez', '3794124587', 'jorgitosz@gmail.com', 'JorgeEmple', 'emplejorge', 3),
+('20412547892', 'Santiago Campos', '3794652389', 'santiagocampos@gmail.com', 'SantiAdmin', 'adminsanti', 2),
+('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'hGomez', 'admingomez', 2),
+('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'hGomez', 'supergomez', 1),
+('20424514782', 'Miguel Martinez', '3794123123', 'mmartinez@gmail.com', 'MiguelSuper', 'supermiguel', 1);
 
 select * from usuario;
-
-/***************** USUARIO-ROL *****************/
-create table usuarioRol(
-idUsuarioRol int identity,
-IdRol int,
-CUIT varchar(11),
-Constraint PK_usuarioRol PRIMARY KEY (idUsuarioRol),
-Constraint FK_usuario FOREIGN KEY (CUIT)  REFERENCES usuario(CUIT),			 					     					     					     				     					     
-Constraint FK_rol FOREIGN KEY (IdRol)  REFERENCES rol(IdRol)			 					     					     					     				     					     
-)
-
-insert into usuarioRol values
-(1,'20424514782'),
-(1,'20435625312'),
-(2,'20435625312'),
-(2,'20412547892'),
-(3,'20425368942'),
-(3,'20472477162');
-
-select * from usuarioRol;
 
 /***************** CATEGORIA *****************/
 create table categoria(
@@ -141,7 +128,7 @@ Constraint PK_proveedor PRIMARY KEY (idProveedor)
 
 insert into proveedor values
 ('Todomusica SA', 'todomusica@gmail.com', '01155448000', 'Av. Warnes 2280, Buenos Aires', 'Principal proveedor de Melodias'),
-('MJ Music', 'ventas@mjmusic.com.ar', '01147932400', 'Av. Santa Fé 1882, Buenos Aires', 'Principal proveedor de instrumentos de cuerdas de Melodias'),
+('MJ Music', 'ventas@mjmusic.com.ar', '01147932400', 'Av. Santa FÃ© 1882, Buenos Aires', 'Principal proveedor de instrumentos de cuerdas de Melodias'),
 ('Import Music', 'ventas@importmusic.com.ar', '01148509170', 'Lola Mora 421, Buenos Aires', 'Principal proveedor de guitarras de Melodias');
 
 select * from proveedor;
@@ -219,9 +206,9 @@ Constraint FK_metodoPago FOREIGN KEY (idMetodoPago)  REFERENCES metodoPago(idMet
 )
 
 insert into venta values
-('1','20425368942','47247716',131101.98, '20201004','09:30', 1),
-('2','20425368942','42369852',55599.99, '20201108','18:05', 1),
-('3','20472477162','40123456', 209000.97, '20200210','08:12', 2);
+(1,'20425368942','47247716',131101.98, '20201004','09:30', 1),
+(2,'20425368942','42369852',55599.99, '20201108','18:05', 1),
+(3,'20472477162','40123456', 209000.97, '20200210','08:12', 2);
 
 select * from venta
 
