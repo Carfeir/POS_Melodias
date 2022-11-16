@@ -76,4 +76,39 @@
             Me.UsuarioTableAdapter.Fill(Me.MelodiasDataSet.usuario)
         End If
     End Sub
+    Private Sub NomYapeTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NomYApeTextBox.KeyPress, AgregarTextBoxNomApe.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub NroContactoTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NroContactoTextBox.KeyPress, AgregarTextBoxContacto.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub CUITTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CUITTextBox.KeyPress, AgregarTextBoxCUIT.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
 End Class

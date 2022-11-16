@@ -1,6 +1,8 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Clients
+
     Private Sub NomYapeTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NomYapeTextBox.KeyPress, AgregarNomYapeTextBox.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
@@ -120,9 +122,29 @@ Public Class Clients
 
         If Not Validar_campos() Then
             MessageBox.Show("Completar todos los campos para agregar el cliente", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+        ElseIf ClienteRegistrado(AgregarDNITextBox.Text) Then
+            MessageBox.Show("El Cliente ya existe", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         Else
             Me.ClienteTableAdapter.AgregarCliente(AgregarDNITextBox.Text, AgregarNomYapeTextBox.Text, AgregarCorreoElectronicoTextBox.Text, AgregarNroContactoTextBox.Text, AgregarDireccionTextBox.Text)
             Me.ClienteTableAdapter.Fill(Me.MelodiasDataSet.cliente)
         End If
     End Sub
+    Function ClienteRegistrado(ByVal DNI As String) As Boolean
+        Dim con As New SqlConnection("Data Source=DESKTOP-R1FDA93\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True")
+        Dim dr As SqlDataReader
+        Dim resultado As Boolean = False
+        con.Open()
+        Try
+            Dim cmd As New SqlCommand("Select * From cliente where DNI='" & DNI & "'", con)
+            dr = cmd.ExecuteReader
+            If dr.Read Then
+                resultado = True
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox("Error en el procedemiento: " + ex.ToString)
+        End Try
+        Return resultado
+    End Function
+
 End Class

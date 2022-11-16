@@ -25,9 +25,11 @@ Partial Class Users
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Users))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CUITTextBox = New System.Windows.Forms.TextBox()
+        Me.IdRolComboBox = New System.Windows.Forms.ComboBox()
         Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MelodiasDataSet = New POS_Melodias.melodiasDataSet()
+        Me.RolBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CUITTextBox = New System.Windows.Forms.TextBox()
         Me.NomYApeTextBox = New System.Windows.Forms.TextBox()
         Me.NroContactoTextBox = New System.Windows.Forms.TextBox()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -59,6 +61,12 @@ Partial Class Users
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.AgregarTextBoxContra = New System.Windows.Forms.TextBox()
+        Me.TextBoxConfirmarContra = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.AgregarComboBoxRol = New System.Windows.Forms.ComboBox()
+        Me.RolBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AgregarTextBoxCUIT = New System.Windows.Forms.TextBox()
         Me.AgregarTextBoxNomApe = New System.Windows.Forms.TextBox()
         Me.AgregarTextBoxContacto = New System.Windows.Forms.TextBox()
@@ -71,23 +79,15 @@ Partial Class Users
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.AgregarComboBoxRol = New System.Windows.Forms.ComboBox()
-        Me.RolBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IdRolComboBox = New System.Windows.Forms.ComboBox()
-        Me.RolBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AgregarTextBoxContra = New System.Windows.Forms.TextBox()
-        Me.TextBoxConfirmarContra = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RolBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         CType(Me.RolBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RolBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -114,14 +114,18 @@ Partial Class Users
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles de Usuario"
         '
-        'CUITTextBox
+        'IdRolComboBox
         '
-        Me.CUITTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "CUIT", True))
-        Me.CUITTextBox.Location = New System.Drawing.Point(149, 24)
-        Me.CUITTextBox.Name = "CUITTextBox"
-        Me.CUITTextBox.ReadOnly = True
-        Me.CUITTextBox.Size = New System.Drawing.Size(155, 21)
-        Me.CUITTextBox.TabIndex = 197
+        Me.IdRolComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "IdRol", True))
+        Me.IdRolComboBox.DataSource = Me.RolBindingSource2
+        Me.IdRolComboBox.DisplayMember = "nombre"
+        Me.IdRolComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.IdRolComboBox.FormattingEnabled = True
+        Me.IdRolComboBox.Location = New System.Drawing.Point(465, 76)
+        Me.IdRolComboBox.Name = "IdRolComboBox"
+        Me.IdRolComboBox.Size = New System.Drawing.Size(155, 23)
+        Me.IdRolComboBox.TabIndex = 206
+        Me.IdRolComboBox.ValueMember = "IdRol"
         '
         'UsuarioBindingSource
         '
@@ -132,6 +136,20 @@ Partial Class Users
         '
         Me.MelodiasDataSet.DataSetName = "melodiasDataSet"
         Me.MelodiasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RolBindingSource2
+        '
+        Me.RolBindingSource2.DataMember = "rol"
+        Me.RolBindingSource2.DataSource = Me.MelodiasDataSet
+        '
+        'CUITTextBox
+        '
+        Me.CUITTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "CUIT", True))
+        Me.CUITTextBox.Location = New System.Drawing.Point(149, 24)
+        Me.CUITTextBox.Name = "CUITTextBox"
+        Me.CUITTextBox.ReadOnly = True
+        Me.CUITTextBox.Size = New System.Drawing.Size(155, 21)
+        Me.CUITTextBox.TabIndex = 197
         '
         'NomYApeTextBox
         '
@@ -326,6 +344,7 @@ Partial Class Users
         Me.TableAdapterManager.categoriaTableAdapter = Nothing
         Me.TableAdapterManager.clienteTableAdapter = Nothing
         Me.TableAdapterManager.colorTableAdapter = Nothing
+        Me.TableAdapterManager.detalleVentaTableAdapter = Nothing
         Me.TableAdapterManager.marcaTableAdapter = Nothing
         Me.TableAdapterManager.metodoPagoTableAdapter = Nothing
         Me.TableAdapterManager.productoTableAdapter = Nothing
@@ -333,6 +352,7 @@ Partial Class Users
         Me.TableAdapterManager.rolTableAdapter = Me.RolTableAdapter
         Me.TableAdapterManager.UpdateOrder = POS_Melodias.melodiasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.usuarioTableAdapter = Nothing
+        Me.TableAdapterManager.ventaTableAdapter = Nothing
         '
         'UsuarioDataGridView
         '
@@ -384,7 +404,7 @@ Partial Class Users
         'BtnAgregar
         '
         Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
         Me.BtnAgregar.Location = New System.Drawing.Point(598, 111)
         Me.BtnAgregar.Name = "BtnAgregar"
@@ -423,10 +443,64 @@ Partial Class Users
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Agregar Nuevo Usuario"
         '
+        'AgregarTextBoxContra
+        '
+        Me.AgregarTextBoxContra.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "CUIT", True))
+        Me.AgregarTextBoxContra.Location = New System.Drawing.Point(556, 24)
+        Me.AgregarTextBoxContra.Name = "AgregarTextBoxContra"
+        Me.AgregarTextBoxContra.Size = New System.Drawing.Size(155, 21)
+        Me.AgregarTextBoxContra.TabIndex = 209
+        '
+        'TextBoxConfirmarContra
+        '
+        Me.TextBoxConfirmarContra.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "correoElectronico", True))
+        Me.TextBoxConfirmarContra.Location = New System.Drawing.Point(556, 56)
+        Me.TextBoxConfirmarContra.Name = "TextBoxConfirmarContra"
+        Me.TextBoxConfirmarContra.Size = New System.Drawing.Size(155, 21)
+        Me.TextBoxConfirmarContra.TabIndex = 210
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label12.Location = New System.Drawing.Point(406, 27)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(73, 15)
+        Me.Label12.TabIndex = 207
+        Me.Label12.Text = "Contraseña:"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.Label14.Location = New System.Drawing.Point(406, 59)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(130, 15)
+        Me.Label14.TabIndex = 208
+        Me.Label14.Text = "Confirmar Contraseña:"
+        '
+        'AgregarComboBoxRol
+        '
+        Me.AgregarComboBoxRol.DataSource = Me.RolBindingSource1
+        Me.AgregarComboBoxRol.DisplayMember = "nombre"
+        Me.AgregarComboBoxRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
+        Me.AgregarComboBoxRol.FormattingEnabled = True
+        Me.AgregarComboBoxRol.Location = New System.Drawing.Point(152, 155)
+        Me.AgregarComboBoxRol.Name = "AgregarComboBoxRol"
+        Me.AgregarComboBoxRol.Size = New System.Drawing.Size(157, 23)
+        Me.AgregarComboBoxRol.TabIndex = 206
+        Me.AgregarComboBoxRol.ValueMember = "IdRol"
+        '
+        'RolBindingSource1
+        '
+        Me.RolBindingSource1.DataMember = "rol"
+        Me.RolBindingSource1.DataSource = Me.MelodiasDataSet
+        '
         'AgregarTextBoxCUIT
         '
         Me.AgregarTextBoxCUIT.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "CUIT", True))
         Me.AgregarTextBoxCUIT.Location = New System.Drawing.Point(152, 24)
+        Me.AgregarTextBoxCUIT.MaxLength = 11
         Me.AgregarTextBoxCUIT.Name = "AgregarTextBoxCUIT"
         Me.AgregarTextBoxCUIT.Size = New System.Drawing.Size(157, 21)
         Me.AgregarTextBoxCUIT.TabIndex = 197
@@ -533,77 +607,6 @@ Partial Class Users
         Me.Label11.TabIndex = 168
         Me.Label11.Text = "Correo Electronico:"
         '
-        'AgregarComboBoxRol
-        '
-        Me.AgregarComboBoxRol.DataSource = Me.RolBindingSource1
-        Me.AgregarComboBoxRol.DisplayMember = "nombre"
-        Me.AgregarComboBoxRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.AgregarComboBoxRol.FormattingEnabled = True
-        Me.AgregarComboBoxRol.Location = New System.Drawing.Point(152, 155)
-        Me.AgregarComboBoxRol.Name = "AgregarComboBoxRol"
-        Me.AgregarComboBoxRol.Size = New System.Drawing.Size(157, 23)
-        Me.AgregarComboBoxRol.TabIndex = 206
-        Me.AgregarComboBoxRol.ValueMember = "IdRol"
-        '
-        'RolBindingSource1
-        '
-        Me.RolBindingSource1.DataMember = "rol"
-        Me.RolBindingSource1.DataSource = Me.MelodiasDataSet
-        '
-        'IdRolComboBox
-        '
-        Me.IdRolComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "IdRol", True))
-        Me.IdRolComboBox.DataSource = Me.RolBindingSource2
-        Me.IdRolComboBox.DisplayMember = "nombre"
-        Me.IdRolComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.IdRolComboBox.FormattingEnabled = True
-        Me.IdRolComboBox.Location = New System.Drawing.Point(465, 76)
-        Me.IdRolComboBox.Name = "IdRolComboBox"
-        Me.IdRolComboBox.Size = New System.Drawing.Size(155, 23)
-        Me.IdRolComboBox.TabIndex = 206
-        Me.IdRolComboBox.ValueMember = "IdRol"
-        '
-        'RolBindingSource2
-        '
-        Me.RolBindingSource2.DataMember = "rol"
-        Me.RolBindingSource2.DataSource = Me.MelodiasDataSet
-        '
-        'AgregarTextBoxContra
-        '
-        Me.AgregarTextBoxContra.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "CUIT", True))
-        Me.AgregarTextBoxContra.Location = New System.Drawing.Point(556, 24)
-        Me.AgregarTextBoxContra.Name = "AgregarTextBoxContra"
-        Me.AgregarTextBoxContra.Size = New System.Drawing.Size(155, 21)
-        Me.AgregarTextBoxContra.TabIndex = 209
-        '
-        'TextBoxConfirmarContra
-        '
-        Me.TextBoxConfirmarContra.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuarioBindingSource, "correoElectronico", True))
-        Me.TextBoxConfirmarContra.Location = New System.Drawing.Point(556, 56)
-        Me.TextBoxConfirmarContra.Name = "TextBoxConfirmarContra"
-        Me.TextBoxConfirmarContra.Size = New System.Drawing.Size(155, 21)
-        Me.TextBoxConfirmarContra.TabIndex = 210
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.Label12.Location = New System.Drawing.Point(406, 27)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(73, 15)
-        Me.Label12.TabIndex = 207
-        Me.Label12.Text = "Contraseña:"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.Label14.Location = New System.Drawing.Point(406, 59)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(130, 15)
-        Me.Label14.TabIndex = 208
-        Me.Label14.Text = "Confirmar Contraseña:"
-        '
         'Users
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -625,6 +628,7 @@ Partial Class Users
         Me.GroupBox1.PerformLayout()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MelodiasDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RolBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.RolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -632,7 +636,6 @@ Partial Class Users
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.RolBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RolBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
