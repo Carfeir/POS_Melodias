@@ -6,7 +6,7 @@
     End Sub
 
     Private Sub ReporteDeVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeVentasToolStripMenuItem.Click
-        ReporteVenta.Show()
+        ReporteVentas.Show()
         Me.Hide()
     End Sub
 End Class

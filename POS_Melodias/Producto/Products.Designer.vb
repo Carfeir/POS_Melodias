@@ -138,156 +138,156 @@ Partial Class Products
         'IdProductoLabel
         '
         IdProductoLabel.AutoSize = True
-        IdProductoLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        IdProductoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         IdProductoLabel.Location = New System.Drawing.Point(18, 22)
         IdProductoLabel.Name = "IdProductoLabel"
-        IdProductoLabel.Size = New System.Drawing.Size(63, 12)
+        IdProductoLabel.Size = New System.Drawing.Size(72, 15)
         IdProductoLabel.TabIndex = 182
         IdProductoLabel.Text = "Id Producto:"
         '
         'IdProveedorLabel
         '
         IdProveedorLabel.AutoSize = True
-        IdProveedorLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        IdProveedorLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         IdProveedorLabel.Location = New System.Drawing.Point(18, 48)
         IdProveedorLabel.Name = "IdProveedorLabel"
-        IdProveedorLabel.Size = New System.Drawing.Size(58, 12)
+        IdProveedorLabel.Size = New System.Drawing.Size(66, 15)
         IdProveedorLabel.TabIndex = 184
         IdProveedorLabel.Text = "Proveedor:"
         '
         'NombreLabel
         '
         NombreLabel.AutoSize = True
-        NombreLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        NombreLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         NombreLabel.Location = New System.Drawing.Point(217, 22)
         NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(47, 12)
+        NombreLabel.Size = New System.Drawing.Size(55, 15)
         NombreLabel.TabIndex = 186
         NombreLabel.Text = "Nombre:"
         '
         'IdCategoriaLabel
         '
         IdCategoriaLabel.AutoSize = True
-        IdCategoriaLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        IdCategoriaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         IdCategoriaLabel.Location = New System.Drawing.Point(217, 48)
         IdCategoriaLabel.Name = "IdCategoriaLabel"
-        IdCategoriaLabel.Size = New System.Drawing.Size(55, 12)
+        IdCategoriaLabel.Size = New System.Drawing.Size(63, 15)
         IdCategoriaLabel.TabIndex = 188
         IdCategoriaLabel.Text = "Categoria:"
         '
         'IdMarcaLabel
         '
         IdMarcaLabel.AutoSize = True
-        IdMarcaLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        IdMarcaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         IdMarcaLabel.Location = New System.Drawing.Point(404, 22)
         IdMarcaLabel.Name = "IdMarcaLabel"
-        IdMarcaLabel.Size = New System.Drawing.Size(38, 12)
+        IdMarcaLabel.Size = New System.Drawing.Size(45, 15)
         IdMarcaLabel.TabIndex = 190
         IdMarcaLabel.Text = "Marca:"
         '
         'IdColorLabel
         '
         IdColorLabel.AutoSize = True
-        IdColorLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        IdColorLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         IdColorLabel.Location = New System.Drawing.Point(404, 48)
         IdColorLabel.Name = "IdColorLabel"
-        IdColorLabel.Size = New System.Drawing.Size(34, 12)
+        IdColorLabel.Size = New System.Drawing.Size(39, 15)
         IdColorLabel.TabIndex = 192
         IdColorLabel.Text = "Color:"
         '
         'CantidadLabel
         '
         CantidadLabel.AutoSize = True
-        CantidadLabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        CantidadLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         CantidadLabel.Location = New System.Drawing.Point(591, 21)
         CantidadLabel.Name = "CantidadLabel"
-        CantidadLabel.Size = New System.Drawing.Size(51, 12)
+        CantidadLabel.Size = New System.Drawing.Size(59, 15)
         CantidadLabel.TabIndex = 194
         CantidadLabel.Text = "Cantidad:"
         '
         'PrecioULabel
         '
         PrecioULabel.AutoSize = True
-        PrecioULabel.Font = New System.Drawing.Font("Miriam", 9.0!)
+        PrecioULabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         PrecioULabel.Location = New System.Drawing.Point(591, 47)
         PrecioULabel.Name = "PrecioULabel"
-        PrecioULabel.Size = New System.Drawing.Size(49, 12)
+        PrecioULabel.Size = New System.Drawing.Size(57, 15)
         PrecioULabel.TabIndex = 196
         PrecioULabel.Text = "Precio U:"
         '
         'Label2
         '
         Label2.AutoSize = True
-        Label2.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label2.Location = New System.Drawing.Point(18, 47)
         Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(58, 12)
+        Label2.Size = New System.Drawing.Size(66, 15)
         Label2.TabIndex = 184
         Label2.Text = "Proveedor:"
         '
         'Label3
         '
         Label3.AutoSize = True
-        Label3.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label3.Location = New System.Drawing.Point(18, 21)
         Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(47, 12)
+        Label3.Size = New System.Drawing.Size(55, 15)
         Label3.TabIndex = 186
         Label3.Text = "Nombre:"
         '
         'Label4
         '
         Label4.AutoSize = True
-        Label4.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label4.Location = New System.Drawing.Point(225, 48)
         Label4.Name = "Label4"
-        Label4.Size = New System.Drawing.Size(55, 12)
+        Label4.Size = New System.Drawing.Size(63, 15)
         Label4.TabIndex = 188
         Label4.Text = "Categoria:"
         '
         'Label5
         '
         Label5.AutoSize = True
-        Label5.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label5.Location = New System.Drawing.Point(18, 74)
         Label5.Name = "Label5"
-        Label5.Size = New System.Drawing.Size(38, 12)
+        Label5.Size = New System.Drawing.Size(45, 15)
         Label5.TabIndex = 190
         Label5.Text = "Marca:"
         '
         'Label6
         '
         Label6.AutoSize = True
-        Label6.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label6.Location = New System.Drawing.Point(225, 77)
         Label6.Name = "Label6"
-        Label6.Size = New System.Drawing.Size(34, 12)
+        Label6.Size = New System.Drawing.Size(39, 15)
         Label6.TabIndex = 192
         Label6.Text = "Color:"
         '
         'Label7
         '
         Label7.AutoSize = True
-        Label7.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label7.Location = New System.Drawing.Point(422, 47)
         Label7.Name = "Label7"
-        Label7.Size = New System.Drawing.Size(51, 12)
+        Label7.Size = New System.Drawing.Size(59, 15)
         Label7.TabIndex = 194
         Label7.Text = "Cantidad:"
         '
         'Label8
         '
         Label8.AutoSize = True
-        Label8.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Label8.Location = New System.Drawing.Point(422, 73)
         Label8.Name = "Label8"
-        Label8.Size = New System.Drawing.Size(49, 12)
+        Label8.Size = New System.Drawing.Size(57, 15)
         Label8.TabIndex = 196
         Label8.Text = "Precio U:"
         '
         'btnVolver
         '
-        Me.btnVolver.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnVolver.Location = New System.Drawing.Point(12, 460)
         Me.btnVolver.Name = "btnVolver"
         Me.btnVolver.Size = New System.Drawing.Size(79, 27)
@@ -297,7 +297,7 @@ Partial Class Products
         '
         'btnMostrar
         '
-        Me.btnMostrar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnMostrar.Location = New System.Drawing.Point(595, 143)
         Me.btnMostrar.Name = "btnMostrar"
         Me.btnMostrar.Size = New System.Drawing.Size(176, 50)
@@ -310,7 +310,7 @@ Partial Class Products
         Me.GroupBox2.Controls.Add(Me.btnLimpiar)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Controls.Add(Me.BuscadorTextBox)
-        Me.GroupBox2.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 138)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(550, 56)
@@ -320,7 +320,7 @@ Partial Class Products
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.btnLimpiar.Location = New System.Drawing.Point(354, 21)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(79, 21)
@@ -330,7 +330,7 @@ Partial Class Products
         '
         'btnBuscar
         '
-        Me.btnBuscar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBuscar.Location = New System.Drawing.Point(439, 18)
         Me.btnBuscar.Name = "btnBuscar"
@@ -388,8 +388,8 @@ Partial Class Products
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorDeleteItem
@@ -533,7 +533,7 @@ Partial Class Products
         '
         'btnModificar
         '
-        Me.btnModificar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnModificar.Location = New System.Drawing.Point(646, 81)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(113, 21)
@@ -543,7 +543,7 @@ Partial Class Products
         '
         'btnEliminar
         '
-        Me.btnEliminar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.btnEliminar.Location = New System.Drawing.Point(20, 81)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(93, 21)
@@ -571,7 +571,7 @@ Partial Class Products
         Me.GroupBox1.Controls.Add(Me.PrecioUTextBox)
         Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Controls.Add(Me.btnModificar)
-        Me.GroupBox1.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 200)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(777, 115)
@@ -584,11 +584,11 @@ Partial Class Products
         Me.IdProveedorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProveedor", True))
         Me.IdProveedorComboBox.DataSource = Me.ProveedorBindingSource1
         Me.IdProveedorComboBox.DisplayMember = "nombre"
-        Me.IdProveedorComboBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.IdProveedorComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.IdProveedorComboBox.FormattingEnabled = True
         Me.IdProveedorComboBox.Location = New System.Drawing.Point(89, 44)
         Me.IdProveedorComboBox.Name = "IdProveedorComboBox"
-        Me.IdProveedorComboBox.Size = New System.Drawing.Size(106, 20)
+        Me.IdProveedorComboBox.Size = New System.Drawing.Size(106, 23)
         Me.IdProveedorComboBox.TabIndex = 202
         Me.IdProveedorComboBox.ValueMember = "idProveedor"
         '
@@ -600,68 +600,68 @@ Partial Class Products
         'IdCategoriaComboBox
         '
         Me.IdCategoriaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idCategoria", True))
-        Me.IdCategoriaComboBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.IdCategoriaComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.IdCategoriaComboBox.FormattingEnabled = True
         Me.IdCategoriaComboBox.Location = New System.Drawing.Point(279, 45)
         Me.IdCategoriaComboBox.Name = "IdCategoriaComboBox"
-        Me.IdCategoriaComboBox.Size = New System.Drawing.Size(106, 20)
+        Me.IdCategoriaComboBox.Size = New System.Drawing.Size(106, 23)
         Me.IdCategoriaComboBox.TabIndex = 201
         '
         'CantidadNumericUpDown
         '
         Me.CantidadNumericUpDown.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ProductoBindingSource, "cantidad", True))
-        Me.CantidadNumericUpDown.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.CantidadNumericUpDown.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.CantidadNumericUpDown.Location = New System.Drawing.Point(653, 18)
         Me.CantidadNumericUpDown.Name = "CantidadNumericUpDown"
-        Me.CantidadNumericUpDown.Size = New System.Drawing.Size(106, 20)
+        Me.CantidadNumericUpDown.Size = New System.Drawing.Size(106, 21)
         Me.CantidadNumericUpDown.TabIndex = 200
         '
         'IdColorComboBox
         '
         Me.IdColorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idColor", True))
-        Me.IdColorComboBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.IdColorComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.IdColorComboBox.FormattingEnabled = True
         Me.IdColorComboBox.Location = New System.Drawing.Point(452, 44)
         Me.IdColorComboBox.Name = "IdColorComboBox"
-        Me.IdColorComboBox.Size = New System.Drawing.Size(106, 20)
+        Me.IdColorComboBox.Size = New System.Drawing.Size(106, 23)
         Me.IdColorComboBox.TabIndex = 199
         '
         'IdMarcaComboBox
         '
         Me.IdMarcaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idMarca", True))
-        Me.IdMarcaComboBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.IdMarcaComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.IdMarcaComboBox.FormattingEnabled = True
         Me.IdMarcaComboBox.Location = New System.Drawing.Point(452, 18)
         Me.IdMarcaComboBox.Name = "IdMarcaComboBox"
-        Me.IdMarcaComboBox.Size = New System.Drawing.Size(106, 20)
+        Me.IdMarcaComboBox.Size = New System.Drawing.Size(106, 23)
         Me.IdMarcaComboBox.TabIndex = 198
         '
         'IdProductoTextBox
         '
         Me.IdProductoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProducto", True))
-        Me.IdProductoTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.IdProductoTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.IdProductoTextBox.Location = New System.Drawing.Point(89, 18)
         Me.IdProductoTextBox.Name = "IdProductoTextBox"
         Me.IdProductoTextBox.ReadOnly = True
-        Me.IdProductoTextBox.Size = New System.Drawing.Size(106, 20)
+        Me.IdProductoTextBox.Size = New System.Drawing.Size(106, 21)
         Me.IdProductoTextBox.TabIndex = 183
         '
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "nombre", True))
-        Me.NombreTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.NombreTextBox.Location = New System.Drawing.Point(279, 19)
         Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(106, 20)
+        Me.NombreTextBox.Size = New System.Drawing.Size(106, 21)
         Me.NombreTextBox.TabIndex = 187
         '
         'PrecioUTextBox
         '
         Me.PrecioUTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "precioU", True))
-        Me.PrecioUTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.PrecioUTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.PrecioUTextBox.Location = New System.Drawing.Point(653, 45)
         Me.PrecioUTextBox.Name = "PrecioUTextBox"
-        Me.PrecioUTextBox.Size = New System.Drawing.Size(106, 20)
+        Me.PrecioUTextBox.Size = New System.Drawing.Size(106, 21)
         Me.PrecioUTextBox.TabIndex = 197
         '
         'TableAdapterManager
@@ -701,7 +701,7 @@ Partial Class Products
         Me.GroupBox3.Controls.Add(Label7)
         Me.GroupBox3.Controls.Add(Label8)
         Me.GroupBox3.Controls.Add(Me.AgregarPrecioTextBox)
-        Me.GroupBox3.Font = New System.Drawing.Font("Miriam", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox3.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(777, 106)
@@ -711,7 +711,7 @@ Partial Class Products
         '
         'AgregarBtnLimpiar
         '
-        Me.AgregarBtnLimpiar.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.AgregarBtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.AgregarBtnLimpiar.Location = New System.Drawing.Point(631, 71)
         Me.AgregarBtnLimpiar.Name = "AgregarBtnLimpiar"
         Me.AgregarBtnLimpiar.Size = New System.Drawing.Size(113, 21)
@@ -722,7 +722,7 @@ Partial Class Products
         'BtnAgregar
         '
         Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnAgregar.Font = New System.Drawing.Font("Miriam", 9.75!)
+        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
         Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
         Me.BtnAgregar.Location = New System.Drawing.Point(631, 18)
         Me.BtnAgregar.Name = "BtnAgregar"
@@ -738,13 +738,12 @@ Partial Class Products
         Me.AgregarProveedorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idProveedor", True))
         Me.AgregarProveedorComboBox.DataSource = Me.ProveedorBindingSource
         Me.AgregarProveedorComboBox.DisplayMember = "nombre"
-        Me.AgregarProveedorComboBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.AgregarProveedorComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.AgregarProveedorComboBox.FormattingEnabled = True
         Me.AgregarProveedorComboBox.Location = New System.Drawing.Point(85, 44)
         Me.AgregarProveedorComboBox.Name = "AgregarProveedorComboBox"
-        Me.AgregarProveedorComboBox.Size = New System.Drawing.Size(106, 20)
+        Me.AgregarProveedorComboBox.Size = New System.Drawing.Size(106, 23)
         Me.AgregarProveedorComboBox.TabIndex = 202
-        Me.AgregarProveedorComboBox.Text = "Seleccionar"
         Me.AgregarProveedorComboBox.ValueMember = "idProveedor"
         '
         'ProveedorBindingSource
@@ -757,13 +756,12 @@ Partial Class Products
         Me.AgregarCategoriaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idCategoria", True))
         Me.AgregarCategoriaComboBox.DataSource = Me.CategoriaBindingSource
         Me.AgregarCategoriaComboBox.DisplayMember = "nombre"
-        Me.AgregarCategoriaComboBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.AgregarCategoriaComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.AgregarCategoriaComboBox.FormattingEnabled = True
         Me.AgregarCategoriaComboBox.Location = New System.Drawing.Point(287, 45)
         Me.AgregarCategoriaComboBox.Name = "AgregarCategoriaComboBox"
-        Me.AgregarCategoriaComboBox.Size = New System.Drawing.Size(106, 20)
+        Me.AgregarCategoriaComboBox.Size = New System.Drawing.Size(106, 23)
         Me.AgregarCategoriaComboBox.TabIndex = 201
-        Me.AgregarCategoriaComboBox.Text = "Seleccionar"
         Me.AgregarCategoriaComboBox.ValueMember = "IdCategoria"
         '
         'CategoriaBindingSource
@@ -774,10 +772,10 @@ Partial Class Products
         'AgregarCantidadNumericUpDown
         '
         Me.AgregarCantidadNumericUpDown.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.ProductoBindingSource, "cantidad", True))
-        Me.AgregarCantidadNumericUpDown.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.AgregarCantidadNumericUpDown.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.AgregarCantidadNumericUpDown.Location = New System.Drawing.Point(486, 44)
         Me.AgregarCantidadNumericUpDown.Name = "AgregarCantidadNumericUpDown"
-        Me.AgregarCantidadNumericUpDown.Size = New System.Drawing.Size(106, 20)
+        Me.AgregarCantidadNumericUpDown.Size = New System.Drawing.Size(106, 21)
         Me.AgregarCantidadNumericUpDown.TabIndex = 200
         Me.AgregarCantidadNumericUpDown.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
@@ -786,11 +784,11 @@ Partial Class Products
         Me.AgregarColorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idColor", True))
         Me.AgregarColorComboBox.DataSource = Me.ColorBindingSource
         Me.AgregarColorComboBox.DisplayMember = "nombre"
-        Me.AgregarColorComboBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.AgregarColorComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.AgregarColorComboBox.FormattingEnabled = True
         Me.AgregarColorComboBox.Location = New System.Drawing.Point(287, 74)
         Me.AgregarColorComboBox.Name = "AgregarColorComboBox"
-        Me.AgregarColorComboBox.Size = New System.Drawing.Size(106, 20)
+        Me.AgregarColorComboBox.Size = New System.Drawing.Size(106, 23)
         Me.AgregarColorComboBox.TabIndex = 199
         Me.AgregarColorComboBox.Text = "Seleccionar"
         Me.AgregarColorComboBox.ValueMember = "nombre"
@@ -805,11 +803,11 @@ Partial Class Products
         Me.AgregarMarcaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "idMarca", True))
         Me.AgregarMarcaComboBox.DataSource = Me.MarcaBindingSource
         Me.AgregarMarcaComboBox.DisplayMember = "nombre"
-        Me.AgregarMarcaComboBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.AgregarMarcaComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.AgregarMarcaComboBox.FormattingEnabled = True
         Me.AgregarMarcaComboBox.Location = New System.Drawing.Point(85, 70)
         Me.AgregarMarcaComboBox.Name = "AgregarMarcaComboBox"
-        Me.AgregarMarcaComboBox.Size = New System.Drawing.Size(106, 20)
+        Me.AgregarMarcaComboBox.Size = New System.Drawing.Size(106, 23)
         Me.AgregarMarcaComboBox.TabIndex = 198
         Me.AgregarMarcaComboBox.Text = "Seleccionar"
         Me.AgregarMarcaComboBox.ValueMember = "IdMarca"
@@ -824,16 +822,16 @@ Partial Class Products
         Me.AgregarNombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "nombre", True))
         Me.AgregarNombreTextBox.Location = New System.Drawing.Point(85, 18)
         Me.AgregarNombreTextBox.Name = "AgregarNombreTextBox"
-        Me.AgregarNombreTextBox.Size = New System.Drawing.Size(507, 20)
+        Me.AgregarNombreTextBox.Size = New System.Drawing.Size(507, 21)
         Me.AgregarNombreTextBox.TabIndex = 187
         '
         'AgregarPrecioTextBox
         '
         Me.AgregarPrecioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductoBindingSource, "precioU", True))
-        Me.AgregarPrecioTextBox.Font = New System.Drawing.Font("Miriam", 9.0!)
+        Me.AgregarPrecioTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
         Me.AgregarPrecioTextBox.Location = New System.Drawing.Point(486, 71)
         Me.AgregarPrecioTextBox.Name = "AgregarPrecioTextBox"
-        Me.AgregarPrecioTextBox.Size = New System.Drawing.Size(106, 20)
+        Me.AgregarPrecioTextBox.Size = New System.Drawing.Size(106, 21)
         Me.AgregarPrecioTextBox.TabIndex = 197
         '
         'ProveedorTableAdapter
@@ -859,7 +857,7 @@ Partial Class Products
         '
         'Products
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 11.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(801, 493)
@@ -870,7 +868,8 @@ Partial Class Products
         Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Font = New System.Drawing.Font("Miriam", 8.25!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Products"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Producto"
