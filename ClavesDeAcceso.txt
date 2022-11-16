@@ -12,9 +12,13 @@ Nombre de Usuario: SantiAdmin
 Contraseña: adminsanti
 Rol: Administrador
 
-Nombre de Usuario: hGomez
-Contraseña: gomez
-Rol: Administrador / Supervisor
+Nombre de Usuario: Hernan
+Contraseña: admingomez
+Rol: Administrador
+
+Nombre de Usuario: Hernan
+Contraseña: supergomez
+Rol: Supervisor
 
 Nombre de Usuario: MiguelSuper
 Contraseña: supermiguel
