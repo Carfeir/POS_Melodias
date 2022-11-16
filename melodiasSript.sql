@@ -42,14 +42,15 @@ select * from rol;
 
 /***************** USUARIO *****************/
 create table usuario(
+idUsuario int identity,
 CUIT varchar(11),
 nomYApe varchar(50),
 nroContacto varchar (15),
 correoElectronico varchar(40),
-nombreUsuario varchar (30) unique,
+nombreUsuario varchar (30),
 contraseña varchar (30),
 IdRol int,
-Constraint PK_usuario PRIMARY KEY (CUIT),
+Constraint PK_usuario PRIMARY KEY (idUsuario),
 Constraint FK_rol FOREIGN KEY (IdRol)  REFERENCES rol(IdRol)			 					     					     					     				     					     
 )
 
@@ -58,8 +59,8 @@ insert into usuario values
 ('20472477162', 'Ignacio Perez', '3794362514', 'nachop@gmail.com', 'IgnacioEmple', 'empleignacio', 3),
 ('20425368942', 'Jorge Sanchez', '3794124587', 'jorgitosz@gmail.com', 'JorgeEmple', 'emplejorge', 3),
 ('20412547892', 'Santiago Campos', '3794652389', 'santiagocampos@gmail.com', 'SantiAdmin', 'adminsanti', 2),
-('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'hGomez', 'admingomez', 2),
-('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'hGomez', 'supergomez', 1),
+('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'Hernan', 'admingomez', 2),
+('20435625312', 'Hernan Gomez', '3794147741', 'h_gomez@gmail.com', 'Hernan', 'supergomez', 1),
 ('20424514782', 'Miguel Martinez', '3794123123', 'mmartinez@gmail.com', 'MiguelSuper', 'supermiguel', 1);
 
 select * from usuario;
@@ -161,12 +162,13 @@ select * from producto;
 
 /***************** CLIENTE *****************/
 create table cliente(
+idCliente int identity,
 DNI varchar(8),
 nomYape varchar(50),
 nroContacto varchar (15),
 correoElectronico varchar(40) unique,
 direccion varchar (50),
-Constraint PK_cliente PRIMARY KEY (DNI)
+Constraint PK_cliente PRIMARY KEY (idCliente)
 )
 
 insert into cliente values
@@ -193,22 +195,21 @@ select * from metodoPago;
 create table venta(
 idVenta int identity,
 idDetalleVenta int,
-CUIT varchar(11),
-DNI varchar(8),
+idUsuario int,
+idCliente int,
 montoTotal float,
 fecha DATE,
-hora TIME,
 idMetodoPago int,
 Constraint PK_venta PRIMARY KEY (idVenta, idDetalleVenta),
-Constraint FK_usuario FOREIGN KEY (CUIT)  REFERENCES usuario(CUIT),
-Constraint FK_cliente FOREIGN KEY (DNI)  REFERENCES cliente(DNI),
+Constraint FK_usuario FOREIGN KEY (idUsuario)  REFERENCES usuario(idUsuario),
+Constraint FK_cliente FOREIGN KEY (idCliente)  REFERENCES cliente(idCliente),
 Constraint FK_metodoPago FOREIGN KEY (idMetodoPago)  REFERENCES metodoPago(idMetodoPago)
 )
 
 insert into venta values
-(1,'20425368942','47247716',131101.98, '20201004','09:30', 1),
-(2,'20425368942','42369852',55599.99, '20201108','18:05', 1),
-(3,'20472477162','40123456', 209000.97, '20200210','08:12', 2);
+(1,1,1,131101.98, '20201004', 1),
+(2,1,2,55599.99, '20201108', 1),
+(3,2,2, 209000.97, '20200210', 2);
 
 select * from venta
 
@@ -228,4 +229,4 @@ insert into detalleVenta values
 (3, 3, 1),
 (3, 4, 1);
 
-select * from venta;
+select * from detalleVenta;
