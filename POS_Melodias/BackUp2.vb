@@ -1,8 +1,11 @@
-﻿Imports System.Text
+
 Imports System.Data.SqlClient
 
 Public Class BackUp2
+
     Dim con As New SqlConnection("Data Source=DESKTOP-R1FDA93\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True")
+
+  
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
@@ -20,6 +23,7 @@ Public Class BackUp2
         If (TextBoxDirectorio.Text Is String.Empty) Then
             MessageBox.Show("Por favor ingresar ubicacion del archivo Backup")
         Else
+
 
             Dim str As String = "BACKUP  [" & database & "]  A = " & TextBoxDirectorio.Text & "\" & "database" & "-" & DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") & ".bak"
             Dim cmd As New SqlCommand(str, con)
@@ -45,16 +49,6 @@ Public Class BackUp2
         Dim str1 As String = String.Format("ALTER DATABASE [" + database + "] Set SINGLE_USER With ROLLBACK INMEDIATE")
         Dim cmd1 As New SqlCommand(str1, con)
         cmd1.ExecuteNonQuery()
-
-        Dim str2 As String = "USE MASTER RESTORE DATABASE [" + database + "] FROM DISK ='" + TextBoxDirectorioRecuperar.Text + "WITH REPLACE"
-        Dim cmd2 As New SqlCommand(str2, con)
-        cmd2.ExecuteNonQuery()
-
-        Dim str3 As String = String.Format("ALTER DATABASE [" + database + "] SER MULTI_USER")
-        Dim cmd3 As New SqlCommand(str3, con)
-        cmd3.ExecuteNonQuery()
-
-        MessageBox.Show("RESTAURACION DE BASE DE DATOS SE REALIZO CORRECTAMENTE")
-        con.Close()
-    End Sub
 End Class
+
+          
