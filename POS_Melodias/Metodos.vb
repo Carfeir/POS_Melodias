@@ -16,7 +16,7 @@ Public Class Metodos
         Dim cadenaConexion As String
 
         Try
-            cadenaConexion = "Data Source=LAPTOP-CV4L1LJF\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True"
+            cadenaConexion = "Data Source=DESKTOP-R1FDA93\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True"
             con = New SqlConnection(cadenaConexion)
             con.Open()
 
@@ -39,7 +39,7 @@ Public Class Metodos
         Dim cadenaConexion As String
 
         Try
-            cadenaConexion = "Data Source=LAPTOP-CV4L1LJF\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True"
+            cadenaConexion = "Data Source=DESKTOP-R1FDA93\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True"
             con = New SqlConnection(cadenaConexion)
             con.Open()
 
@@ -61,7 +61,7 @@ Public Class Metodos
         Dim cadenaConexion As String
 
         Try
-            cadenaConexion = "Data Source=LAPTOP-CV4L1LJF\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True"
+            cadenaConexion = "Data Source=DESKTOP-R1FDA93\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True"
             con = New SqlConnection(cadenaConexion)
             con.Open()
 
