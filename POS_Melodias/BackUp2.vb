@@ -5,8 +5,6 @@ Public Class BackUp2
 
     Dim con As New SqlConnection("Data Source=DESKTOP-R1FDA93\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True")
 
-  
-
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
     End Sub
@@ -49,6 +47,7 @@ Public Class BackUp2
         Dim str1 As String = String.Format("ALTER DATABASE [" + database + "] Set SINGLE_USER With ROLLBACK INMEDIATE")
         Dim cmd1 As New SqlCommand(str1, con)
         cmd1.ExecuteNonQuery()
+    End Sub
 End Class
 
           

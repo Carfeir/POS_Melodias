@@ -123,7 +123,7 @@ Public Class Clients
         If Not Validar_campos() Then
             MessageBox.Show("Completar todos los campos para agregar el cliente", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
         ElseIf ClienteRegistrado(AgregarDNITextBox.Text) Then
-            MessageBox.Show("El Cliente ya existe", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+            MessageBox.Show("El Cliente ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             Me.ClienteTableAdapter.AgregarCliente(AgregarDNITextBox.Text, AgregarNomYapeTextBox.Text, AgregarCorreoElectronicoTextBox.Text, AgregarNroContactoTextBox.Text, AgregarDireccionTextBox.Text)
             Me.ClienteTableAdapter.Fill(Me.MelodiasDataSet.cliente)

@@ -1,4 +1,6 @@
-﻿Public Class Users
+﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Public Class Users
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         Dim result As DialogResult = MessageBox.Show("Seguro que quieres modificar este usuario?", "Modificar Usuario", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If result = DialogResult.Yes Then
@@ -16,6 +18,14 @@
         Me.UsuarioTableAdapter.Fill(Me.MelodiasDataSet.usuario)
         'TODO: This line of code loads data into the 'MelodiasDataSet.rol' table. You can move, or remove it, as needed.
         Me.RolTableAdapter.Fill(Me.MelodiasDataSet.rol)
+        AgregarComboBoxRol.SelectedValue = -1
+        AgregarTextBoxContacto.Clear()
+        AgregarTextBoxContra.Clear()
+        AgregarTextBoxCorreo.Clear()
+        AgregarTextBoxCUIT.Clear()
+        AgregarTextBoxNomApe.Clear()
+        AgregarTextBoxNomUsuario.Clear()
+        TextBoxConfirmarContra.Clear()
     End Sub
 
     Private Function Validar_campos() As Boolean 'Se validan que los campos no esten vacio'
@@ -41,6 +51,8 @@
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         If Not Validar_campos() Then
             MessageBox.Show("Completar todos los campos para agregar el cliente", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error)
+        ElseIf UsuarioRegistrado(AgregarTextBoxCUIT.Text) Then
+            MessageBox.Show("El Usuario ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             Me.UsuarioTableAdapter.AgregarUsuario(AgregarTextBoxCUIT.Text, AgregarTextBoxNomApe.Text, AgregarTextBoxContacto.Text, AgregarTextBoxCorreo.Text, AgregarTextBoxNomUsuario.Text, AgregarTextBoxContra.Text, AgregarComboBoxRol.ValueMember)
             Me.UsuarioTableAdapter.Fill(Me.MelodiasDataSet.usuario)
@@ -55,6 +67,8 @@
         AgregarTextBoxCUIT.Clear()
         AgregarTextBoxNomApe.Clear()
         AgregarTextBoxNomUsuario.Clear()
+        TextBoxConfirmarContra.Clear()
+
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
@@ -110,5 +124,22 @@
             e.Handled = True
         End If
     End Sub
+    Function UsuarioRegistrado(ByVal CUIT As String) As Boolean
+        Dim con As New SqlConnection("Data Source=DESKTOP-R1FDA93\SQLEXPRESS;Initial Catalog=melodias;Integrated Security=True")
+        Dim dr As SqlDataReader
+        Dim resultado As Boolean = False
+        con.Open()
+        Try
+            Dim cmd As New SqlCommand("Select * From usuario where CUIT='" & CUIT & "'", con)
+            dr = cmd.ExecuteReader
+            If dr.Read Then
+                resultado = True
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox("Error en el procedemiento: " + ex.ToString)
+        End Try
+        Return resultado
+    End Function
 
 End Class
